@@ -2659,3 +2659,34 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+@media print {
+    /* Force backgrounds to print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Fix sections not showing */
+    .screen {
+        page-break-inside: avoid;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 40px !important;
+    }
+    
+    /* Hide animations */
+    .particle,
+    .hero-shape-1,
+    .hero-shape-2,
+    .hero-shape-3,
+    .cta-particle {
+        display: none !important;
+    }
+    
+    /* Ensure content is visible */
+    .fade-in,
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
