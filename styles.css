@@ -2713,3 +2713,24 @@ h2 {
 }
 #pager button:hover{background:rgba(255,255,255,.35);}
 #pager.hidden{opacity:0;transition:opacity .3s;}
+/* --- Case‑study tweaks --- */
+.case-study.advisory .case-label{
+  /* violet label with subtle glow */
+  font-size:.75rem;font-weight:600;letter-spacing:.6px;
+  color:#fff;background:#7434ac;padding:4px 10px;border-radius:4px;
+  box-shadow:0 0 6px rgba(116,52,172,.6);
+}
+.case-study .story-point{margin:60px 0;display:flex;gap:40px}
+.case-study .point-marker{flex:0 0 110px}
+.case-study .point-marker.alt{order:2} /* switch side */
+.case-study .point-content{flex:1;background:#faf7ff;padding:25px 30px;border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.case-study .bullet li{margin:6px 0}
+.case-study .rec-actions{margin-left:20px}
+.case-results .result-footnote{font-size:.75rem;color:#666;margin-top:12px}
+.case-disclaimer{font-size:.7rem;color:#888;margin-top:25px;text-align:center}
+.case-pager{text-align:center;margin-top:40px}
+.pager-btn{background:#7434ac;color:#fff;border:none;padding:10px 20px;
+  border-radius:30px;cursor:pointer;margin:0 8px;font-size:.85rem;
+  transition:background .25s}
+.pager-btn:hover{background:#5e2d8e}
