@@ -1159,5 +1159,36 @@ window.addEventListener('scroll',()=>requestAnimationFrame(updatePager));
 updatePager();
 
     </script>
+	<script>
+/* -------- Full‑screen pager -------- */
+const screens = Array.from(document.querySelectorAll('.screen'));
+let currentIdx = 0;
+
+function updatePager(){
+  prevSec.disabled = currentIdx === 0;
+  nextSec.disabled = currentIdx === screens.length-1;
+}
+function goto(idx){
+  if(idx<0||idx>=screens.length) return;
+  currentIdx = idx;
+  screens[idx].scrollIntoView({behavior:'smooth'});
+  updatePager();
+}
+document.getElementById('prevSec').onclick = ()=> goto(currentIdx-1);
+document.getElementById('nextSec').onclick = ()=> goto(currentIdx+1);
+
+/* keep pager state in sync when user scrolls manually */
+const secObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      currentIdx = screens.indexOf(e.target);
+      updatePager();
+    }
+  });
+},{threshold:.6});
+screens.forEach(s=>secObserver.observe(s));
+updatePager();
+</script>
+
 </body>
 </html>
