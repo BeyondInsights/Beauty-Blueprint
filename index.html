@@ -19,7 +19,12 @@
         <div class="particle"></div>
         <div class="particle"></div>
     </div>
+<nav id="pager">
+   <button id="prevBtn" aria-label="Previous section">←</button>
+   <button id="nextBtn" aria-label="Next section">→</button>
+</nav>
 
+	
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-content">
@@ -52,18 +57,23 @@
                     <span class="cta-arrow">→</span>
                 </a>
                 <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
-                        <span class="stat-label">Higher CAC</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-value="3">0</span><span class="stat-symbol">X</span>
-                        <span class="stat-label">Brand Switching</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
-                        <span class="stat-label">Feel Vulnerable</span>
-                    </div>
+                    <!-- HERO KPI CARDS -->
+<div class="stat-item">
+   <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
+   <sup class="kpi-ref"><a href="#src-cac">1</a></sup>
+   <span class="stat-label">Higher CAC</span>
+</div>
+<div class="stat-item">
+   <span class="stat-number" data-value="3">0</span><span class="stat-symbol">X</span>
+   <sup class="kpi-ref"><a href="#src-switch">2</a></sup>
+   <span class="stat-label">Brand Switching</span>
+</div>
+<div class="stat-item">
+   <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
+   <sup class="kpi-ref"><a href="#src-vulnerable">3</a></sup>
+   <span class="stat-label">Feel Vulnerable</span>
+</div>
+
                 </div>
             </div>
         </div>
@@ -1009,6 +1019,15 @@
             </div>
             <p class="copyright">&copy; 2025 BEYOND Insights. All rights reserved.</p>
         </div>
+	    <section id="sources" class="kpi-sources">
+  <h4>Source Notes</h4>
+  <ol>
+    <li id="src-cac">¹ 2024 McKinsey Beauty CPM &amp; CAC Tracker (<em>US Direct‑to‑Consumer Index</em>).</li>
+    <li id="src-switch">² Beyond Insights Loyalty Multiverse™ database, 12‑country rolling study, Q1‑2025.</li>
+    <li id="src-vulnerable">³ PowerReviews “Beauty Consumer Confidence Pulse” wave 6, Feb 2025.</li>
+  </ol>
+</section>
+
     </footer>
 
     <!-- Sticky CTA -->
@@ -1129,6 +1148,33 @@
         aosElements.forEach(el => {
             aosObserver.observe(el);
         });
+	    /* --- section pager --- */
+const screens = Array.from(document.querySelectorAll('.screen'));
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const pager   = document.getElementById('pager');
+
+function visibleIndex(){
+  const offset = window.innerHeight*0.4;
+  return screens.findIndex(scr =>
+      scr.getBoundingClientRect().top < offset &&
+      scr.getBoundingClientRect().bottom > offset);
+}
+function scrollTo(idx){
+  if(idx<0||idx>=screens.length) return;
+  screens[idx].scrollIntoView({behavior:'smooth'});
+}
+function updatePager(){
+  const i = visibleIndex();
+  pager.classList.toggle('hidden', i===-1);
+  prevBtn.disabled = (i<=0);
+  nextBtn.disabled = (i>=screens.length-1);
+}
+nextBtn.onclick = ()=>scrollTo(visibleIndex()+1);
+prevBtn.onclick = ()=>scrollTo(visibleIndex()-1);
+window.addEventListener('scroll',()=>requestAnimationFrame(updatePager));
+updatePager();
+
     </script>
 </body>
 </html>
