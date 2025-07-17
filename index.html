@@ -19,10 +19,19 @@
         <div class="particle"></div>
         <div class="particle"></div>
     </div>
-<nav id="pager">
-   <button id="prevBtn" aria-label="Previous section">←</button>
-   <button id="nextBtn" aria-label="Next section">→</button>
-</nav>
+<div class="page-nav">
+  <button id="prevPage">← Previous</button>
+  <button id="nextPage">Next →</button>
+</div>
+
+<script>
+  const screens=[...document.querySelectorAll('.screen')];
+  let idx=0;
+  const scrollToIdx=i=>screens[i]?.scrollIntoView({behavior:'smooth'});
+  document.getElementById('nextPage').onclick=()=>{ idx=Math.min(idx+1,screens.length-1);scrollToIdx(idx); };
+  document.getElementById('prevPage').onclick=()=>{ idx=Math.max(idx-1,0);scrollToIdx(idx); };
+</script>
+
 
 	
     <!-- Navigation -->
@@ -450,124 +459,64 @@
         </div>
     </section>
 
-    <!-- ----------  CASE STUDY  (ADVISORY SCENARIO) ---------- -->
-<section id="case-laneige" class="screen case-study advisory">
-  <div class="case-bg-pattern"></div>
+    <!-- CASE STUDY : LANEIGE -->
+<section class="screen case-study" id="laneige">
   <div class="container fade-in">
 
-    <!-- HEADER -->
-    <div class="case-header">
-      <span class="case-label">ADVISORY&nbsp;SCENARIO&nbsp;•&nbsp;HYPOTHETICAL</span>
-      <h2 class="section-title">
-        From Viral <span class="text-red">Igniter</span> to Multi‑SKU <span class="gradient-text">Fire Icon</span><br>
-        <small style="font-size:.55em;font-weight:400;letter-spacing:.3px">
-          How BEYOND Insights <em>would</em> apply the Beauty Brand Blueprint™ to Laneige<sup>†</sup>
-        </small>
-      </h2>
-    </div>
+    <h2 class="section-title center">
+      From Viral <span class="text-red">Igniter</span> to Multi‑SKU <span class="gradient-text">Fire Icon</span>
+      <small class="subtitle">How BEYOND Insights <em>would</em> apply the Beauty Brand Blueprint™ to Laneige*</small>
+    </h2>
 
-    <!-- TIMELINE -->
-    <div class="story-timeline">
+    <!-- 3‑column grid collapses to 1‑col -->
+    <div class="cs-grid">
+      <!-- Challenge -->
+      <div class="cs-box">
+        <h3 class="cs-head">The Challenge</h3>
+        <ul class="cs-body">
+          <li><b>Hero‑SKU dependency</b> (Lip Sleeping Mask) drives outsized buzz yet anchors <b>63 % of sales*</b>.</li>
+          <li>Repeat purchase curve stalls after 2–3 uses.</li>
+          <li>Awareness is strong in <b>Gen Z</b> but conversion isn’t.</li>
+        </ul>
+      </div>
 
-      <!-- 1. The Challenge -->
-      <article class="story-point" data-aos="fade-right" aria-label="Challenge">
-        <div class="point-marker"></div>
-        <div class="point-content">
-          <h3>The Challenge</h3>
-          <p>
-            <strong>Hero‑SKU dependency.</strong> Lip Sleeping Mask drives outsized buzz yet anchors
-            <em>&gt;65 % of U.S. sell‑out.</em> Repeat purchase stalls once novelty fades.
-          </p>
-          <ul class="bullet">
-            <li>Single‑purchase pattern across Gen Z trialists</li>
-            <li>Low awareness of supporting SKUs (Cream Skin, Water Bank, etc.)</li>
-            <li>Margin erosion from duplication &amp; promotions to reignite interest</li>
-          </ul>
-        </div>
-      </article>
+      <!-- What the Blueprint would uncover -->
+      <div class="cs-box">
+        <h3 class="cs-head">What the Blueprint Would Uncover</h3>
+        <ul class="cs-body">
+          <li><b>46 % of category “aware ➜ curious”* non‑buyers</b> are emotionally drawn to Korean innovation but stalled at <i>“product life cycle”</i> &amp; <i>“ingredient comprehension”</i>.</li>
+          <li>Purchase blockers cluster around <i>“product life cost”</i> and <i>“ingredient complexity”</i>, not price.</li>
+          <li>High‑value segments—<em>Purpose‑Driven Changemakers, Designer Trendsetters, Cultural Visionaries</em>—align strongly with Laneige’s authentic equity.</li>
+        </ul>
+      </div>
 
-      <!-- 2. Discovery -->
-      <article class="story-point" data-aos="fade-left" aria-label="Blueprint Discovery">
-        <div class="point-marker alt"></div>
-        <div class="point-content">
-          <h3>What the Blueprint Would Uncover</h3>
-          <p>
-            Using <strong>Consumer Segmentation + Brand Edge + Infidelity Index™</strong>,
-            BEYOND Insights models indicate:
-          </p>
-          <ul class="bullet">
-            <li>
-              <em>~40–60 %</em> of category buyers sit in a <u>“Curious but Reconciliable”</u>
-              zone – emotionally drawn to Korean innovation but unsure of broader regimen fit.
-            </li>
-            <li>
-              Purchase blockers cluster around “product‑line clarity” and “Ingredient
-              comprehension”, not price sensitivity.
-            </li>
-            <li>
-              Three micro‑segments (<span class="code">Purpose‑Driven Changemakers</span>,
-              <span class="code">Designer Trendsetters</span>, <span class="code">Cultural Visionaries</span>)
-              align strongest with Laneige’s authentic equity.
-            </li>
-          </ul>
-        </div>
-      </article>
+      <!-- Recommended actions -->
+      <div class="cs-box">
+        <h3 class="cs-head">Recommended Strategic Actions</h3>
+        <ul class="cs-body">
+          <li><b>Portfolio Laddering :</b> recast hero mask as gateway into serum + sun care routine (Instagram carousel).</li>
+          <li><b>Gen Z series :</b> 7‑video TikTok micro‑series featuring <u>use‑case clusters</u> vs. individual SKUs.</li>
+          <li><b>Data‑guided conquest :</b> use typing tool to target “Curious” &amp; “Reconcilable” audiences with ingredient‑literacy content.</li>
+        </ul>
+      </div>
 
-      <!-- 3. Recommended Strategy -->
-      <article class="story-point" data-aos="fade-right" aria-label="Recommended Strategy">
-        <div class="point-marker"></div>
-        <div class="point-content">
-          <h3>Recommended Strategic Actions</h3>
-          <ol class="rec-actions">
-            <li><b>Portfolio Ladder.</b> Re‑message hero to introduce a “hydration pathway” that links mask ➜ serum ➜ SPF.  </li>
-            <li><b>Gen Z Re‑intro.</b> TikTok micro‑series featuring *use‑case stacks* rather than individual SKUs. </li>
-            <li><b>CRM Sequencing.</b> Deploy typing‑tool tags to nudge “Curious” ➜ “Reconcilable” with ingredient literacy content, then automate replenishment offers.</li>
-          </ol>
-        </div>
-      </article>
-    </div><!-- /.story‑timeline -->
-
-    <!-- POTENTIAL IMPACT -->
-    <div class="case-results">
-      <h3 class="results-title">Modeled <em>Potential</em> Impact*</h3>
-      <div class="results-grid">
-        <div class="result-card">
-          <span class="metric-badge">EST.</span>
-          <div class="result-glow"></div>
-          <span class="result-number">+50‑70 %</span>
-          <span class="result-label">Incremental portfolio buyers (12 mo.)</span>
-        </div>
-        <div class="result-card">
-          <span class="metric-badge">EST.</span>
-          <div class="result-glow"></div>
-          <span class="result-number">2‑4×</span>
-          <span class="result-label">Lift in repeat on hero users</span>
-        </div>
-        <div class="result-card">
-          <span class="metric-badge">EST.</span>
-          <div class="result-glow"></div>
-          <span class="result-number">‑25 %</span>
-          <span class="result-label">CAC vs paid‑social average</span>
+      <!-- Modeled impact panel spans full width -->
+      <div class="cs-impact">
+        <h4 class="impact-title">Modeled <i>Potential</i> Impact*</h4>
+        <div class="impact-grid">
+          <div class="impact-card"><span class="metric">+50–70 %</span><small>Incremental portfolio buyers (12 mo.)</small></div>
+          <div class="impact-card"><span class="metric">2–4 ×</span><small>Lift in repeat + basket size</small></div>
+          <div class="impact-card"><span class="metric">‑25 %</span><small>CAC vs. paid‑social average</small></div>
         </div>
       </div>
-      <p class="result-footnote">
-        *Directional output from the Blueprint ROI simulator. Actual results depend on spend levels and market conditions.
-      </p>
     </div>
 
-    <!-- FOOTNOTE -->
-    <p class="case-disclaimer">
-      <sup>†</sup>Illustrative only – BEYOND Insights has not been commissioned by AmorePacific or Laneige for
-      this program.  Numbers represent modeled scenarios for demonstration purposes.
+    <p class="footnote">
+      *Illustrative metrics modeled on category benchmarks &amp; proprietary BEYOND Insights Blueprint simulations.
     </p>
-
-    <!-- Pager buttons -->
-    <div class="case-pager">
-      <button class="pager-btn prev" onclick="document.querySelector('#solution').scrollIntoView({behavior:'smooth'})">←&nbsp;Previous</button>
-      <button class="pager-btn next" onclick="document.querySelector('#process').scrollIntoView({behavior:'smooth'})">Next&nbsp;→</button>
-    </div>
-  </div><!-- /.container -->
+  </div>
 </section>
+
 <!-- ----------  END CASE STUDY  ---------- -->
 
 
