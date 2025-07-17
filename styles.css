@@ -2743,3 +2743,25 @@ h2 {
 }
 #section-pager button:hover{background:#eb0473; transform:scale(1.08);}
 #section-pager button:disabled{opacity:.25; cursor:default; transform:none;}
+/* ---------- Case Study v2 ---------- */
+.story-grid      {display:grid; gap:2.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:2.5rem;}
+.story-card      {background:#fff; border-radius:12px; padding:2rem 1.6rem; position:relative; box-shadow:0 4px 12px rgba(0,0,0,.08);}
+.story-card h3   {margin-top:0; font-size:1.2rem; line-height:1.3; color:#7434ac;}
+.story-lede      {font-weight:600; margin:.6rem 0 1rem;}
+.story-bullets   {padding-left:1.2rem; margin:0;}
+.story-bullets li{margin-bottom:.5rem; font-size:.95rem;}
+.segment-donut   {display:flex; flex-direction:column; align-items:center; margin-top:1.2rem;}
+.segment-donut .slice{--p:50; width:120px; aspect-ratio:1; border-radius:50%; background:conic-gradient(var(--col,#7434ac) calc(var(--p)*1%),#eee 0);}
+.slice1{--col:#7434ac;}
+.slice2{--col:#e4a324;}
+.segment-donut figcaption{font-size:.8rem; margin-top:.5rem; color:#555;}
+.story-steps     {margin:.8rem 0 0 1.2rem; padding:0; counter-reset:step;}
+.story-steps li  {margin-bottom:.6rem; position:relative;}
+.story-steps li::before{counter-increment:step; content:counter(step) "."; position:absolute; left:-1.4rem; color:#eb0473; font-weight:700;}
+.impact-metrics  {display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin-top:1.4rem;}
+.impact-metrics .metric{display:block; font-size:1.6rem; font-weight:700; color:#e4096f;}
+.case-footnotes  {font-size:.75rem; color:#777; margin-top:1.5rem; text-align:center;}
+
+@media (min-width:768px){
+  .impact-metrics{grid-template-columns:repeat(4,1fr);}
+}
