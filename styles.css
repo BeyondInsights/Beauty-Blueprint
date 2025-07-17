@@ -2690,3 +2690,26 @@ h2 {
         transform: none !important;
     }
 }
+#pager{
+  position:fixed;
+  bottom:24px;
+  right:24px;
+  z-index:9999;
+  display:flex;
+  gap:8px;
+  pointer-events:none;      /* let page receive clicks unless showing */
+}
+#pager button{
+  pointer-events:auto;
+  width:44px;height:44px;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(6px);
+  color:#fff;
+  font-size:1.3rem;
+  cursor:pointer;
+  transition:background .25s;
+}
+#pager button:hover{background:rgba(255,255,255,.35);}
+#pager.hidden{opacity:0;transition:opacity .3s;}
