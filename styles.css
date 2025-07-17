@@ -32,8 +32,7 @@ body {
     line-height: 1.6;
 }
 
-/* Particles Background */
-.particles-container {
+/* Particles Background */.particles-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -2734,3 +2733,13 @@ h2 {
   border-radius:30px;cursor:pointer;margin:0 8px;font-size:.85rem;
   transition:background .25s}
 .pager-btn:hover{background:#5e2d8e}
+
+/* ---------- Section Pager ---------- */
+#section-pager{position:fixed; bottom:2rem; right:2rem; z-index:9999; display:flex; gap:.5rem;}
+#section-pager button{
+  width:46px; height:46px; border-radius:50%; border:none; cursor:pointer;
+  background:rgba(116,52,172,.85); color:#fff; font-size:1.8rem; line-height:1;
+  box-shadow:0 4px 10px rgba(0,0,0,.2); transition:background .25s,transform .25s;
+}
+#section-pager button:hover{background:#eb0473; transform:scale(1.08);}
+#section-pager button:disabled{opacity:.25; cursor:default; transform:none;}
