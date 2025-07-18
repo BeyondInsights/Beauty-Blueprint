@@ -1,224 +1,1143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description"
-        content="Lose or loyalty? Beyond Insights' 90‑day Beauty Brand Blueprint™ pinpoints the segments, messages and levers that protect share and spark growth.">
-  <title>Beyond Insights – Transform Your Beauty Brand in 90 Days</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lose or loyalty? Beyond Insights' 90-day Beauty Brand Blueprint™ pinpoints the segments, messages and levers that protect share and spark growth.">
+    <title>Beyond Insights - Transform Your Beauty Brand in 90 Days</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-<!-- ✧ Floating particles background -->
-<div class="particles-container">
-  <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-  <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <!-- Floating particles background -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+<div class="page-nav">
+  <button id="prevPage">← Previous</button>
+  <button id="nextPage">Next →</button>
 </div>
 
-<!-- ✧ Sticky page‑pager -->
-<nav class="page-pager hidden" id="pager">
-  <button id="prevSec" class="pager-btn" aria-label="Previous section">← Previous</button>
-  <button id="nextSec" class="pager-btn" aria-label="Next section">Next →</button>
-</nav>
+<script>
+  const screens=[...document.querySelectorAll('.screen')];
+  let idx=0;
+  const scrollToIdx=i=>screens[i]?.scrollIntoView({behavior:'smooth'});
+  document.getElementById('nextPage').onclick=()=>{ idx=Math.min(idx+1,screens.length-1);scrollToIdx(idx); };
+  document.getElementById('prevPage').onclick=()=>{ idx=Math.max(idx-1,0);scrollToIdx(idx); };
+</script>
 
-<!-- ✧ Global nav -->
-<nav class="nav">
-  <div class="nav-content">
-    <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo">
-    <a href="#contact" class="book-briefing">Book My 15‑Min Strategy Call</a>
-  </div>
-</nav>
 
-<!-- ▸ HERO -------------------------------------------------------------- -->
-<section class="screen hero">
-  <div class="gradient-overlay"></div>
-  <div class="hero-bg-animation">
-    <div class="hero-shape-1"></div><div class="hero-shape-2"></div><div class="hero-shape-3"></div>
-  </div>
-
-  <div class="container">
-    <div class="hero-content">
-      <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo-hero">
-
-      <h1 class="hero-title">
-        <span class="title-line-1">Beauty loyalty flips overnight.</span>
-        <span class="title-line-2">Will you?</span>
-      </h1>
-
-      <p class="hero-sub">
-        Tariffs, TikTok trends and ingredient inflation are reshuffling the aisle.<br>
-        The <strong>90‑day Beauty Brand Blueprint™</strong> shows who will stay, stray or pay more.
-      </p>
-
-      <a href="#blueprint" class="hero-cta">
-        <span class="cta-text">Unlock My 90‑Day Plan</span><span class="cta-arrow">→</span>
-      </a>
-
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
-          <sup class="kpi-ref"><a href="#src-cac">1</a></sup>
-          <span class="stat-label">Higher CAC</span>
+	
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo">
+            <a href="#contact" class="book-briefing">Book My 15-Min Strategy Call</a>
         </div>
-        <div class="stat-item">
-          <span class="stat-number" data-value="3">0</span><span class="stat-symbol">X</span>
-          <sup class="kpi-ref"><a href="#src-switch">2</a></sup>
-          <span class="stat-label">Brand Switching</span>
+    </nav>
+
+    <!-- HERO Screen -->
+    <section class="screen hero">
+        <div class="gradient-overlay"></div>
+        <div class="hero-bg-animation">
+            <div class="hero-shape-1"></div>
+            <div class="hero-shape-2"></div>
+            <div class="hero-shape-3"></div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
-          <sup class="kpi-ref"><a href="#src-vulnerable">3</a></sup>
-          <span class="stat-label">Feel Vulnerable</span>
+        <div class="container">
+            <div class="hero-content">
+                <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo-hero">
+                <h1 class="hero-title">
+                    <span class="title-line-1">Beauty loyalty flips overnight.</span>
+                    <span class="title-line-2">Will you?</span>
+                </h1>
+                <p class="hero-sub">
+                    Tariffs, TikTok trends and ingredient inflation are reshuffling the aisle.<br>
+                    The <strong>90-day Beauty Brand Blueprint™</strong> shows who will stay, stray or pay more.
+                </p>
+                <a href="#blueprint" class="hero-cta">
+                    <span class="cta-text">Unlock My 90-Day Plan</span>
+                    <span class="cta-arrow">→</span>
+                </a>
+                <div class="hero-stats">
+                    <!-- HERO KPI CARDS -->
+<div class="stat-item">
+   <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
+   <sup class="kpi-ref"><a href="#src-cac">1</a></sup>
+   <span class="stat-label">Higher CAC</span>
+</div>
+<div class="stat-item">
+   <span class="stat-number" data-value="3">0</span><span class="stat-symbol">X</span>
+   <sup class="kpi-ref"><a href="#src-switch">2</a></sup>
+   <span class="stat-label">Brand Switching</span>
+</div>
+<div class="stat-item">
+   <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
+   <sup class="kpi-ref"><a href="#src-vulnerable">3</a></sup>
+   <span class="stat-label">Feel Vulnerable</span>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Beyond Section -->
+    <section class="screen why-beyond">
+        <div class="container fade-in">
+            <h2 class="section-title">
+                <span class="title-accent">Why</span> Leading Beauty Brands Choose <span class="gradient-text">BEYOND</span>
+            </h2>
+            <div class="beyond-grid">
+                <div class="beyond-card" data-aos="zoom-in">
+                    <div class="card-glow"></div>
+                    <div class="beyond-icon">
+                        <div class="icon-inner">Sr</div>
+                    </div>
+                    <h3>Client-Side Beauty Expertise</h3>
+                    <p>We've owned P&Ls, not just slides. Expect answers that survive Board rooms.</p>
+                </div>
+                <div class="beyond-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-glow"></div>
+                    <div class="beyond-icon">
+                        <div class="icon-inner">™</div>
+                    </div>
+                    <h3>Proprietary Methodologies</h3>
+                    <p>Brand Edge™, Infidelity Index™ & Loyalty Multiverse™ go deeper than trackers.</p>
+                </div>
+                <div class="beyond-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="beyond-icon">
+                        <div class="icon-inner">→</div>
+                    </div>
+                    <h3>Data to Action</h3>
+                    <p>We don't deliver "findings"; we deliver funded roadmaps.</p>
+                </div>
+                <div class="beyond-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <div class="beyond-icon">
+                        <div class="icon-inner">⚡</div>
+                    </div>
+                    <h3>Agile & Cost-Efficient</h3>
+                    <p>90-day sprints beat 6-month retainers—at less than one influencer campaign.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet Your Beauty Insights Leader -->
+    <section class="screen meet-elaine">
+        <div class="container fade-in">
+            <h2 class="section-title">Meet Your <span class="gradient-text">Beauty Insights Leader</span></h2>
+            <div class="elaine-showcase">
+                <div class="elaine-image-wrapper" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="elaine-sheng.jpg" alt="Elaine Sheng" class="elaine-photo">
+                    </div>
+                </div>
+                <div class="elaine-content" data-aos="fade-left">
+                    <h3 class="elaine-name">Elaine Sheng</h3>
+                    <p class="elaine-title">Global Beauty Strategist & Insights Executive</p>
+                    <div class="elaine-credentials">
+                        <div class="credential-item">
+                            <span class="credential-icon">
+                                <svg viewBox="0 0 40 40" width="40" height="40">
+                                    <circle cx="20" cy="20" r="18" fill="#7434ac" opacity="0.2"/>
+                                    <circle cx="20" cy="20" r="8" fill="none" stroke="#7434ac" stroke-width="2"/>
+                                    <circle cx="20" cy="20" r="2" fill="#e4a324"/>
+                                    <path d="M20 10 L20 30 M10 20 L30 20" stroke="#7434ac" stroke-width="1" opacity="0.5"/>
+                                </svg>
+                            </span>
+                            <p><strong>Led insights functions</strong> for leading global beauty brands including Estée Lauder, NARS, and emerging beauty disruptors</p>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-icon">
+                                <svg viewBox="0 0 40 40" width="40" height="40">
+                                    <rect x="8" y="12" width="24" height="16" fill="none" stroke="#7434ac" stroke-width="2" rx="2"/>
+                                    <path d="M12 16 L28 16 M12 20 L28 20 M12 24 L20 24" stroke="#e4a324" stroke-width="1.5"/>
+                                    <circle cx="26" cy="24" r="2" fill="#eb0473"/>
+                                </svg>
+                            </span>
+                            <p><strong>Supplier-side experience</strong> transforming data into actionable strategies that drive measurable growth</p>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-icon">
+                                <svg viewBox="0 0 40 40" width="40" height="40">
+                                    <circle cx="20" cy="20" r="15" fill="none" stroke="#7434ac" stroke-width="2"/>
+                                    <path d="M20 8 C15 8 12 12 12 16 L12 20 C12 24 20 32 20 32 C20 32 28 24 28 20 L28 16 C28 12 25 8 20 8" fill="#e4a324" opacity="0.3"/>
+                                    <circle cx="20" cy="18" r="4" fill="#7434ac"/>
+                                </svg>
+                            </span>
+                            <p><strong>Unique dual perspective</strong> from both brand and agency sides ensures strategies that actually get implemented</p>
+                        </div>
+                        <div class="credential-item">
+                            <span class="credential-icon">
+                                <svg viewBox="0 0 40 40" width="40" height="40">
+                                    <path d="M20 30 L10 25 L10 15 L20 10 L30 15 L30 25 Z" fill="none" stroke="#7434ac" stroke-width="2"/>
+                                    <path d="M20 20 L15 25 L15 30 L20 32 L25 30 L25 25 Z" fill="#e4a324" opacity="0.5"/>
+                                    <path d="M20 10 L20 20 M15 15 L20 20 L25 15" stroke="#eb0473" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <p><strong>Track record of success</strong> helping beauty brands navigate market disruptions and emerge stronger</p>
+                        </div>
+                    </div>
+                    <p class="elaine-quote">"In beauty, data without context is just noise. I bring the industry expertise to turn your insights into winning strategies."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM Screen -->
+    <section id="brutal" class="screen brutal">
+        <div class="container fade-in">
+            <h2 class="section-title">The <span class="text-red">Brutal Economics</span> Beauty Faces Now</h2>
+            <div class="brutal-visual">
+                <div class="crisis-meter">
+                    <div class="meter-fill"></div>
+                    <span class="meter-label">CRISIS LEVEL</span>
+                </div>
+            </div>
+            <div class="brutal-grid">
+                <div class="brutal-stat" data-aos="fade-up">
+                    <div class="stat-visual">
+                        <div class="stat-ring"></div>
+                        <span class="brutal-number">47%</span>
+                    </div>
+                    <div class="brutal-label">Higher CAC</div>
+                    <div class="brutal-detail">Customer acquisition costs skyrocketing as loyalty wavers</div>
+                </div>
+                <div class="brutal-stat" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-visual">
+                        <div class="stat-ring"></div>
+                        <span class="brutal-number">3X</span>
+                    </div>
+                    <div class="brutal-label">Brand Switching</div>
+                    <div class="brutal-detail">Price sensitivity driving unprecedented defection rates</div>
+                </div>
+                <div class="brutal-stat" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-visual">
+                        <div class="stat-ring"></div>
+                        <span class="brutal-number">30%</span>
+                    </div>
+                    <div class="brutal-label">Margin Pressure</div>
+                    <div class="brutal-detail">Tariffs and supply chain chaos eroding profitability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAP Section -->
+    <section class="screen gap">
+        <div class="container fade-in">
+            <h2 class="section-title">Why Traditional Research <span class="text-strike">Won't Save You</span></h2>
+            <div class="gap-visual-intro">
+                <p class="gap-subtitle">From flat facts to <span class="gradient-text">full-spectrum insight</span></p>
+            </div>
+            <div class="gap-comparison">
+                <div class="gap-column old-playbook" data-aos="slide-right">
+                    <h3><span class="strike-through">Old Playbook</span></h3>
+                    <div class="gap-items">
+                        <div class="gap-item">❌ Passive Data Collection</div>
+                        <div class="gap-item">❌ Product-First Focus</div>
+                        <div class="gap-item">❌ Lagging Indicators</div>
+                        <div class="gap-item">❌ Generic Trackers</div>
+                        <div class="gap-item">❌ Category-Centric Segments</div>
+                        <div class="gap-item">❌ KPI Tunnel Vision</div>
+                        <div class="gap-item">❌ Data on the Shelf</div>
+                        <div class="gap-item">❌ Research as Validation</div>
+                    </div>
+                </div>
+                <div class="gap-divider">
+                    <div class="divider-pulse"></div>
+                </div>
+                <div class="gap-column new-blueprint" data-aos="slide-left">
+                    <h3><span class="gradient-text">Beauty Brand Blueprint</span></h3>
+                    <div class="gap-items">
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Active Intelligence</span>
+                                <span class="item-desc">Real-time insights that predict tomorrow's trends</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Human-First Insights</span>
+                                <span class="item-desc">Emotional drivers that create unbreakable bonds</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Leading Signals</span>
+                                <span class="item-desc">Spot shifts before they show in sales data</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Purpose-Built Tools</span>
+                                <span class="item-desc">Custom methodologies for beauty's unique dynamics</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">3D Personas</span>
+                                <span class="item-desc">Living profiles that evolve with culture</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Human Insight Expansion</span>
+                                <span class="item-desc">Beyond demographics to desires and dreams</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Strategic Change</span>
+                                <span class="item-desc">Insights that transform organizations</span>
+                            </div>
+                        </div>
+                        <div class="gap-item">
+                            <span class="item-icon">✓</span>
+                            <div class="item-content">
+                                <span class="item-title">Research as Innovation</span>
+                                <span class="item-desc">Discovery that sparks breakthrough thinking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTION Section -->
+    <section class="screen solution">
+        <div class="solution-bg">
+            <div class="solution-gradient-1"></div>
+            <div class="solution-gradient-2"></div>
+        </div>
+        <div class="container fade-in">
+            <h2 class="section-title text-white">The Beauty Brand Blueprint™</h2>
+            <p class="section-subtitle">Purpose-built methodologies that transform data into strategic advantage</p>
+            
+            <div class="modules">
+                <!-- Module 1: Consumer Segmentation -->
+                <div class="module" data-aos="flip-left">
+                    <div class="module-glow"></div>
+                    <div class="module-number">01</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <circle cx="30" cy="30" r="15" fill="currentColor" opacity="0.3"/>
+                            <circle cx="70" cy="30" r="15" fill="currentColor" opacity="0.3"/>
+                            <circle cx="50" cy="60" r="15" fill="currentColor" opacity="0.3"/>
+                            <path d="M30 45 L50 45 M50 45 L70 45" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="30" cy="30" r="5" fill="currentColor"/>
+                            <circle cx="70" cy="30" r="5" fill="currentColor"/>
+                            <circle cx="50" cy="60" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Consumer Segmentation</h3>
+                    <p>Personas built from functional, emotional and category-specific drivers.</p>
+                    <div class="module-result">
+                        <span class="result-label">You get:</span> CRM-ready typing tool & 360° profiles<br>
+                        <span class="result-label">It means:</span> Campaigns that speak to why people buy
+                    </div>
+                </div>
+
+                <!-- Module 2: Brand Momentum -->
+                <div class="module" data-aos="flip-left" data-aos-delay="50">
+                    <div class="module-glow"></div>
+                    <div class="module-number">02</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <path d="M20 80 Q20 20 50 20 Q80 20 80 80" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="8" fill="currentColor"/>
+                            <path d="M50 20 L45 30 L55 30 Z" fill="currentColor"/>
+                            <circle cx="50" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Momentum</h3>
+                    <p>Maps passion × engagement: Fire Icon, Igniter, Steady Flame or Slow Burner.</p>
+                    <div class="module-result">
+                        <span class="result-label">You get:</span> Quadrant scorecard & growth levers<br>
+                        <span class="result-label">It means:</span> Clarity on where to fuel or fix the funnel
+                    </div>
+                </div>
+
+                <!-- Module 3: Perceptual Landscape -->
+                <div class="module" data-aos="flip-left" data-aos-delay="100">
+                    <div class="module-glow"></div>
+                    <div class="module-number">03</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <polygon points="50,20 70,35 70,65 50,80 30,65 30,35" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                            <line x1="30" y1="35" x2="70" y2="65" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                            <line x1="70" y1="35" x2="30" y2="65" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Perceptual Landscape</h3>
+                    <p>Visual map of attributes that truly differentiate brands.</p>
+                    <div class="module-result">
+                        <span class="result-label">You get:</span> Landscape-map report + shareable charts<br>
+                        <span class="result-label">It means:</span> Creative briefs grounded in differentiation
+                    </div>
+                </div>
+
+                <!-- Module 4: Brand Edge -->
+                <div class="module" data-aos="flip-left" data-aos-delay="150">
+                    <div class="module-glow"></div>
+                    <div class="module-number">04</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <path d="M50 10 L80 30 L80 70 L50 90 L20 70 L20 30 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M50 30 L65 45 L50 60 L35 45 Z" fill="currentColor" opacity="0.3"/>
+                            <path d="M50 30 L50 60" stroke="currentColor" stroke-width="3"/>
+                            <circle cx="50" cy="45" r="8" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Brand Edge™</h3>
+                    <p>Separates authentic strengths from "paid-for" advantages.</p>
+                    <div class="module-result">
+                        <span class="result-label">You get:</span> KPI gap analysis & reallocation roadmap<br>
+                        <span class="result-label">It means:</span> Budget moves to highest-return levers
+                    </div>
+                </div>
+
+                <!-- Module 5: Infidelity Index -->
+                <div class="module" data-aos="flip-left" data-aos-delay="200">
+                    <div class="module-glow"></div>
+                    <div class="module-number">05</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <path d="M50 25 C35 10 10 20 10 40 C10 60 50 85 50 85 C50 85 90 60 90 40 C90 20 65 10 50 25" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M35 40 L45 50 L65 30" stroke="currentColor" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Infidelity Index™</h3>
+                    <p>Quantifies every relationship stage from Unaware to Brand Faithful.</p>
+                    <div class="module-result">
+                        <span class="result-label">You get:</span> Migration matrix & save/steal playbook<br>
+                        <span class="result-label">It means:</span> Precision rescue and conquest strategies
+                    </div>
+                </div>
+
+                <!-- Module 6: Loyalty Multiverse -->
+                <div class="module" data-aos="flip-left" data-aos-delay="250">
+                    <div class="module-glow"></div>
+                    <div class="module-number">06</div>
+                    <div class="module-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="30" r="8" fill="currentColor" opacity="0.8"/>
+                            <circle cx="70" cy="50" r="8" fill="currentColor" opacity="0.6"/>
+                            <circle cx="50" cy="70" r="8" fill="currentColor" opacity="0.4"/>
+                            <circle cx="30" cy="50" r="8" fill="currentColor" opacity="0.7"/>
+                            <path d="M50 30 L70 50 L50 70 L30 50 Z" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <h3>Loyalty Multiverse™</h3>
+                    <p>Model shows which functional + emotional tweaks lift loyalty fastest.</p>
+                    <div class="module-result">
+                        <span class="result-label">You get:</span> Driver elasticities ranked by ROI<br>
+                        <span class="result-label">It means:</span> Spend only on attributes that convert
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY : LANEIGE -->
+<section class="screen case-study" id="laneige">
+  <div class="container fade-in">
+
+    <h2 class="section-title center">
+      From Viral <span class="text-red">Igniter</span> to Multi‑SKU <span class="gradient-text">Fire Icon</span>
+      <small class="subtitle">How BEYOND Insights <em>would</em> apply the Beauty Brand Blueprint™ to Laneige*</small>
+    </h2>
+
+    <!-- 3‑column grid collapses to 1‑col -->
+    <div class="cs-grid">
+      <!-- Challenge -->
+      <div class="cs-box">
+        <h3 class="cs-head">The Challenge</h3>
+        <ul class="cs-body">
+          <li><b>Hero‑SKU dependency</b> (Lip Sleeping Mask) drives outsized buzz yet anchors <b>63 % of sales*</b>.</li>
+          <li>Repeat purchase curve stalls after 2–3 uses.</li>
+          <li>Awareness is strong in <b>Gen Z</b> but conversion isn’t.</li>
+        </ul>
+      </div>
+
+      <!-- What the Blueprint would uncover -->
+      <div class="cs-box">
+        <h3 class="cs-head">What the Blueprint Would Uncover</h3>
+        <ul class="cs-body">
+          <li><b>46 % of category “aware ➜ curious”* non‑buyers</b> are emotionally drawn to Korean innovation but stalled at <i>“product life cycle”</i> &amp; <i>“ingredient comprehension”</i>.</li>
+          <li>Purchase blockers cluster around <i>“product life cost”</i> and <i>“ingredient complexity”</i>, not price.</li>
+          <li>High‑value segments—<em>Purpose‑Driven Changemakers, Designer Trendsetters, Cultural Visionaries</em>—align strongly with Laneige’s authentic equity.</li>
+        </ul>
+      </div>
+
+      <!-- Recommended actions -->
+      <div class="cs-box">
+        <h3 class="cs-head">Recommended Strategic Actions</h3>
+        <ul class="cs-body">
+          <li><b>Portfolio Laddering :</b> recast hero mask as gateway into serum + sun care routine (Instagram carousel).</li>
+          <li><b>Gen Z series :</b> 7‑video TikTok micro‑series featuring <u>use‑case clusters</u> vs. individual SKUs.</li>
+          <li><b>Data‑guided conquest :</b> use typing tool to target “Curious” &amp; “Reconcilable” audiences with ingredient‑literacy content.</li>
+        </ul>
+      </div>
+
+      <!-- Modeled impact panel spans full width -->
+      <div class="cs-impact">
+        <h4 class="impact-title">Modeled <i>Potential</i> Impact*</h4>
+        <div class="impact-grid">
+          <div class="impact-card"><span class="metric">+50–70 %</span><small>Incremental portfolio buyers (12 mo.)</small></div>
+          <div class="impact-card"><span class="metric">2–4 ×</span><small>Lift in repeat + basket size</small></div>
+          <div class="impact-card"><span class="metric">‑25 %</span><small>CAC vs. paid‑social average</small></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ▸ WHY BEYOND -------------------------------------------------------- -->
-<!-- (unchanged markup) -->
-<section class="screen why-beyond"> … </section>
-
-<!-- ▸ MEET ELAINE ------------------------------------------------------- -->
-<section class="screen meet-elaine"> … </section>
-
-<!-- ▸ BRUTAL ECONOMICS -------------------------------------------------- -->
-<section id="brutal" class="screen brutal"> … </section>
-
-<!-- ▸ GAP / SOLUTION sections (unchanged) ------------------------------- -->
-<section class="screen gap"> … </section>
-<section class="screen solution"> … </section>
-
-<!-- ▸ CASE STUDY : LANEIGE --------------------------------------------- -->
-<section class="screen case-study" id="laneige">
-  <div class="container fade-in">
-    <h2 class="section-title center">
-      From Viral <span class="text-red">Igniter</span> to Multi‑SKU <span class="gradient-text">Fire Icon</span>
-      <small class="subtitle">
-        How BEYOND Insights <em>would</em> apply the Beauty Brand Blueprint™ to Laneige*
-      </small>
-    </h2>
-
-    <div class="cs-grid">
-      <!-- Challenge -->
-      <article class="cs-box">
-        <h3 class="cs-head">The Challenge</h3>
-        <ul class="cs-body">
-          <li><b>Hero‑SKU dependency</b> – Lip Sleeping Mask = 63 % of sales*</li>
-          <li>Repeat purchases flatten after 2‑3 uses</li>
-          <li>High Gen Z awareness, low conversion</li>
-        </ul>
-      </article>
-
-      <!-- Blueprint insight -->
-      <article class="cs-box">
-        <h3 class="cs-head">What the Blueprint Would Uncover</h3>
-        <ul class="cs-body">
-          <li><b>46 % “Curious” non‑buyers</b> attracted to Korean innovation but blocked by product‑use learning curve</li>
-          <li>Barriers = <i>product life cost</i> &amp; <i>ingredient complexity</i>, not price</li>
-          <li>High‑value segments (Purpose‑Driven Changemakers, Designer Trendsetters, Cultural Visionaries) align with Laneige equity</li>
-        </ul>
-      </article>
-
-      <!-- Actions -->
-      <article class="cs-box">
-        <h3 class="cs-head">Recommended Strategic Actions</h3>
-        <ul class="cs-body">
-          <li><b>Portfolio laddering :</b> recast hero mask as gateway into serum/sun routine</li>
-          <li><b>Gen Z TikTok series :</b> routines > single SKUs</li>
-          <li><b>Data‑guided conquest :</b> target “Curious” &amp; “Reconcilable” with ingredient‑literacy content</li>
-        </ul>
-      </article>
-
-      <!-- Impact -->
-      <aside class="cs-impact">
-        <h4 class="impact-title">Modeled <i>Potential</i> Impact*</h4>
-        <div class="impact-grid">
-          <div class="impact-card"><span class="metric">+50 – 70 %</span><small>Incremental portfolio buyers</small></div>
-          <div class="impact-card"><span class="metric">2 – 4 ×</span><small>Lift in repeat &amp; basket size</small></div>
-          <div class="impact-card"><span class="metric">‑25 %</span><small>CAC vs. paid‑social avg.</small></div>
-        </div>
-      </aside>
-    </div>
 
     <p class="footnote">
-      *Illustrative metrics using category norms + BEYOND Insights Blueprint simulations.
+      *Illustrative metrics modeled on category benchmarks &amp; proprietary BEYOND Insights Blueprint simulations.
     </p>
   </div>
 </section>
 
-<!-- ▸ PROCESS / DECISION / LEADERSHIP / CTA / FOOTER -------------------- -->
-<section class="screen process"> … </section>
-<section class="screen decision"> … </section>
-<section class="screen leadership"> … </section>
-<section id="contact" class="screen cta"> … </section>
-<footer class="footer"> … </footer>
+<!-- ----------  END CASE STUDY  ---------- -->
 
-<!-- ▸ KPI source notes -->
-<section id="sources" class="kpi-sources">
-  <h4>Source Notes</h4>
+
+    <!-- PROCESS Section -->
+    <section class="screen process">
+        <div class="process-bg">
+            <div class="process-wave"></div>
+        </div>
+        <div class="container fade-in">
+            <h2 class="section-title">Your <span class="gradient-text">90-Day Transformation</span></h2>
+            
+            <div class="timeline-visual">
+                <div class="timeline-path">
+                    <svg viewBox="0 0 1200 200" class="path-svg">
+                        <path d="M 100 100 Q 400 50 600 100 T 1100 100" stroke="url(#gradient)" stroke-width="3" fill="none"/>
+                        <defs>
+                            <linearGradient id="gradient">
+                                <stop offset="0%" stop-color="#e4a324"/>
+                                <stop offset="50%" stop-color="#7434ac"/>
+                                <stop offset="100%" stop-color="#eb0473"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                
+                <div class="timeline-phases">
+                    <div class="phase" data-aos="fade-up">
+                        <div class="phase-circle">
+                            <span class="phase-number">1</span>
+                            <div class="phase-pulse"></div>
+                        </div>
+                        <div class="phase-content">
+                            <h3>Discover</h3>
+                            <p class="phase-duration">Days 1-30</p>
+                            <p class="phase-details">Define strategic targets & white space opportunities</p>
+                        </div>
+                    </div>
+
+                    <div class="phase" data-aos="fade-up" data-aos-delay="100">
+                        <div class="phase-circle">
+                            <span class="phase-number">2</span>
+                            <div class="phase-pulse"></div>
+                        </div>
+                        <div class="phase-content">
+                            <h3>Design</h3>
+                            <p class="phase-duration">Days 31-60</p>
+                            <p class="phase-details">Validate concepts & build actionable rollout plan</p>
+                        </div>
+                    </div>
+
+                    <div class="phase" data-aos="fade-up" data-aos-delay="200">
+                        <div class="phase-circle">
+                            <span class="phase-number">3</span>
+                            <div class="phase-pulse"></div>
+                        </div>
+                        <div class="phase-content">
+                            <h3>Deploy</h3>
+                            <p class="phase-duration">Days 61-90</p>
+                            <p class="phase-details">Launch pilot & scale what works</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="process-details">
+                <div class="detail-card" data-aos="fade-up">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 100 100" class="detail-svg">
+                            <defs>
+                                <linearGradient id="strat-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#7434ac"/>
+                                    <stop offset="50%" style="stop-color:#e4a324"/>
+                                    <stop offset="100%" style="stop-color:#eb0473"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Compass rose -->
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="url(#strat-gradient)" stroke-width="3"/>
+                            <circle cx="50" cy="50" r="30" fill="none" stroke="url(#strat-gradient)" stroke-width="2" opacity="0.5"/>
+                            <!-- North pointer -->
+                            <path d="M50 20 L55 40 L50 35 L45 40 Z" fill="#7434ac"/>
+                            <path d="M50 80 L45 60 L50 65 L55 60 Z" fill="#e4a324" opacity="0.5"/>
+                            <!-- East/West -->
+                            <path d="M80 50 L60 45 L65 50 L60 55 Z" fill="#eb0473" opacity="0.5"/>
+                            <path d="M20 50 L40 55 L35 50 L40 45 Z" fill="#9454b0" opacity="0.5"/>
+                            <!-- Center target -->
+                            <circle cx="50" cy="50" r="8" fill="url(#strat-gradient)"/>
+                            <circle cx="50" cy="50" r="4" fill="#fff"/>
+                        </svg>
+                    </div>
+    
+	            <h4>Strategic Development</h4>
+                    <ul>
+			<li><span class="method-name">Brand Edge™:</span> Uncover authentic advantages & whitespace opportunities</li>
+                        <li><span class="method-name">Consumer Segmentation:</span> Map functional + emotional drivers that convert</li>
+                        <li><span class="method-name">Brand Momentum:</span> Diagnose current perception & market energy</li>
+                        <li>Strategic opportunity map & priority targets delivered</li>
+                    </ul>
+                </div>
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 100 100" class="detail-svg">
+                            <defs>
+                                <radialGradient id="play-gradient">
+                                    <stop offset="0%" style="stop-color:#eb0473"/>
+                                    <stop offset="50%" style="stop-color:#9454b0"/>
+                                    <stop offset="100%" style="stop-color:#7434ac"/>
+                                </radialGradient>
+                            </defs>
+                            <!-- Book pages -->
+                            <path d="M20 25 Q20 20 25 20 L45 20 L45 75 Q45 80 40 80 L25 80 Q20 80 20 75 Z" 
+                                  fill="url(#play-gradient)" opacity="0.3"/>
+                            <path d="M80 25 Q80 20 75 20 L55 20 L55 75 Q55 80 60 80 L75 80 Q80 80 80 75 Z" 
+                                  fill="url(#play-gradient)" opacity="0.3"/>
+                            <!-- Center spine -->
+                            <rect x="45" y="20" width="10" height="60" fill="url(#play-gradient)" opacity="0.6"/>
+                            <!-- Play button -->
+                            <circle cx="50" cy="50" r="20" fill="#fff" stroke="url(#play-gradient)" stroke-width="3"/>
+                            <path d="M45 40 L45 60 L60 50 Z" fill="url(#play-gradient)"/>
+                        </svg>
+                    </div>
+
+                    <h4>New Playbook</h4>
+                    <ul>
+                        <li><span class="method-name">Strategy Development:</span> Translate insights into funded roadmap</li>
+                        <li><span class="method-name">Infidelity Index™:</span> Identify & prioritize at-risk or conquest targets</li>
+                        <li><span class="method-name">Loyalty Multiverse™:</span> Rank emotional + functional levers by ROI</li>
+                        <li>Validated concepts & rollout timeline delivered</li>
+                    </ul>
+                </div>
+                <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 100 100" class="detail-svg">
+                            <defs>
+                                <linearGradient id="dep-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#e4a324"/>
+                                    <stop offset="50%" style="stop-color:#eb0473"/>
+                                    <stop offset="100%" style="stop-color:#7434ac"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Network nodes -->
+                            <circle cx="50" cy="20" r="8" fill="#7434ac"/>
+                            <circle cx="20" cy="50" r="8" fill="#e4a324"/>
+                            <circle cx="80" cy="50" r="8" fill="#eb0473"/>
+                            <circle cx="35" cy="75" r="8" fill="#9454b0"/>
+                            <circle cx="65" cy="75" r="8" fill="#e4a324"/>
+                            <!-- Connections -->
+                            <path d="M50 20 L20 50 L35 75 L65 75 L80 50 L50 20" 
+                                  fill="none" stroke="url(#dep-gradient)" stroke-width="2" opacity="0.5"/>
+                            <!-- Center hub -->
+                            <circle cx="50" cy="50" r="15" fill="url(#dep-gradient)" opacity="0.8"/>
+                            <path d="M45 45 L48 50 L58 40" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <h4>Engage & Deploy</h4>
+                    <ul>
+                        <li><span class="method-name">Impact Plan:</span> Short & long-term action grid with KPIs</li>
+                        <li><span class="method-name">Stakeholder Workshops:</span> Align teams, budgets, and priorities</li>
+                        <li><span class="method-name">Pilot Execution:</span> Launch & measure market blueprint results</li>
+                        <li>Active campaigns & change management delivered</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Decision Section -->
+    <section class="screen decision">
+        <div class="container fade-in">
+            <h2 class="section-title">The Decision: <span class="gradient-text">Strategic Clarity</span> vs. Continued Uncertainty</h2>
+            
+            <div class="cost-comparison">
+                <div class="comparison-visual">
+                    <div class="cost-item traditional">
+                        <span class="cost-label" style="color: #2a2a2a;">One Influencer Campaign</span>
+                        <span class="cost-amount">$$$$$</span>
+                        <span class="cost-result" style="color: #2a2a2a;">3-week buzz</span>
+                    </div>
+                    <div class="vs-divider">VS</div>
+                    <div class="cost-item blueprint">
+                        <span class="cost-label" style="color: #2a2a2a;">Beauty Brand Blueprint</span>
+                        <span class="cost-amount">$$$</span>
+                        <span class="cost-result">90-day transformation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="value-props">
+                <div class="value-card" data-aos="fade-up">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 120 120" class="icon-svg">
+                            <defs>
+                                <linearGradient id="tariff-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e4a324"/>
+                                    <stop offset="50%" style="stop-color:#7434ac"/>
+                                    <stop offset="100%" style="stop-color:#eb0473"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Segmented shield -->
+                            <path d="M60 20 C40 20 30 25 30 35 L30 65 C30 85 60 100 60 100 C60 100 90 85 90 65 L90 35 C90 25 80 20 60 20" 
+                                  fill="none" stroke="url(#tariff-shield)" stroke-width="4"/>
+                            <!-- Shield segments -->
+                            <path d="M60 30 L60 90" stroke="url(#tariff-shield)" stroke-width="2"/>
+                            <path d="M40 50 L80 50" stroke="url(#tariff-shield)" stroke-width="2"/>
+                            <!-- Quadrant fills -->
+                            <path d="M60 30 C50 30 40 33 40 40 L40 50 L60 50 Z" fill="#7434ac" opacity="0.3"/>
+                            <path d="M60 50 L80 50 L80 40 C80 33 70 30 60 30 Z" fill="#e4a324" opacity="0.3"/>
+                            <path d="M40 50 L40 60 C40 70 50 80 60 85 L60 50 Z" fill="#eb0473" opacity="0.3"/>
+                            <path d="M60 50 L60 85 C70 80 80 70 80 60 L80 50 Z" fill="#9454b0" opacity="0.3"/>
+                            <!-- Center gem -->
+                            <circle cx="60" cy="50" r="10" fill="#fff" stroke="url(#tariff-shield)" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Tariff-Resistant Segmentation</h3>
+                    <p>Identify which segments stay loyal through price pressures and economic volatility</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 120 120" class="icon-svg">
+                            <defs>
+                                <radialGradient id="emotion-heart">
+                                    <stop offset="0%" style="stop-color:#eb0473"/>
+                                    <stop offset="50%" style="stop-color:#9454b0"/>
+                                    <stop offset="100%" style="stop-color:#7434ac"/>
+                                </radialGradient>
+                            </defs>
+                            <!-- DNA helix connecting hearts -->
+                            <path d="M40 30 Q30 40 30 50 Q30 60 40 70 Q50 80 60 90 Q70 80 80 70 Q90 60 90 50 Q90 40 80 30" 
+                                  fill="none" stroke="url(#emotion-heart)" stroke-width="3"/>
+                            <!-- Heart connections -->
+                            <circle cx="40" cy="40" r="15" fill="url(#emotion-heart)" opacity="0.3"/>
+                            <circle cx="80" cy="40" r="15" fill="url(#emotion-heart)" opacity="0.3"/>
+                            <!-- DNA strands -->
+                            <path d="M40 40 Q60 50 80 40" stroke="#eb0473" stroke-width="2" fill="none"/>
+                            <path d="M45 50 Q60 60 75 50" stroke="#9454b0" stroke-width="2" fill="none"/>
+                            <path d="M50 60 Q60 70 70 60" stroke="#7434ac" stroke-width="2" fill="none"/>
+                            <!-- Center heart -->
+                            <path d="M60 50 C55 45 50 47 50 52 C50 57 60 65 60 65 C60 65 70 57 70 52 C70 47 65 45 60 50" 
+                                  fill="url(#emotion-heart)"/>
+                        </svg>
+                    </div>
+                    <h3>Emotional Leverage Mapping</h3>
+                    <p>Bridge from product features to lasting brand relationships that transcend price</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 120 120" class="icon-svg">
+                            <defs>
+                                <linearGradient id="blind-radar" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f10b25"/>
+                                    <stop offset="50%" style="stop-color:#e4a324"/>
+                                    <stop offset="100%" style="stop-color:#7434ac"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Radar grid -->
+                            <circle cx="60" cy="60" r="45" fill="none" stroke="url(#blind-radar)" stroke-width="2" opacity="0.3"/>
+                            <circle cx="60" cy="60" r="30" fill="none" stroke="url(#blind-radar)" stroke-width="2" opacity="0.5"/>
+                            <circle cx="60" cy="60" r="15" fill="none" stroke="url(#blind-radar)" stroke-width="2" opacity="0.7"/>
+                            <!-- Grid lines -->
+                            <path d="M60 15 L60 105 M15 60 L105 60" stroke="url(#blind-radar)" stroke-width="1" opacity="0.3"/>
+                            <path d="M30 30 L90 90 M90 30 L30 90" stroke="url(#blind-radar)" stroke-width="1" opacity="0.2"/>
+                            <!-- Blind spot areas -->
+                            <path d="M60 60 L60 15 A45 45 0 0 1 85 35 Z" fill="#f10b25" opacity="0.4"/>
+                            <path d="M60 60 L35 85 A45 45 0 0 1 15 60 Z" fill="#e4a324" opacity="0.4"/>
+                            <!-- Sweep line -->
+                            <line x1="60" y1="60" x2="60" y2="20" stroke="url(#blind-radar)" stroke-width="3">
+                                <animateTransform attributeName="transform" type="rotate" 
+                                    from="0 60 60" to="360 60 60" dur="4s" repeatCount="indefinite"/>
+                            </line>
+                            <!-- Center eye -->
+                            <circle cx="60" cy="60" r="8" fill="url(#blind-radar)"/>
+                            <circle cx="60" cy="60" r="4" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <h3>Competitive Blind Spots</h3>
+                    <p>Exploit hidden weaknesses while competitors focus on supply chain challenges</p>
+                </div>
+            </div>
+
+            <div class="urgency-message">
+                <p class="urgency-text">
+                    <span class="highlight">Act Before the Market Fully Recalibrates</span><br>
+                    While enterprise brands struggle with bureaucracy, you can pivot rapidly – but only with precise intelligence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Window Section -->
+    <section class="screen closing">
+        <div class="closing-bg">
+            <div class="warning-pulse"></div>
+        </div>
+        <div class="container fade-in">
+            <h2 class="section-title text-white">The Strategic Window is <span class="text-red">Closing</span></h2>
+            <p class="closing-subtitle">Every day without strategic clarity costs you:</p>
+            
+            <div class="cost-grid">
+                <div class="cost-card" data-aos="flip-up">
+                    <div class="cost-icon rising">
+                        <svg viewBox="0 0 100 100" class="cost-svg">
+                            <path d="M50 80 L50 20" stroke="#f10b25" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M30 40 L50 20 L70 40" stroke="#f10b25" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <circle cx="50" cy="80" r="15" fill="none" stroke="#eb0473" stroke-width="2" opacity="0.5"/>
+                            <circle cx="50" cy="80" r="25" fill="none" stroke="#eb0473" stroke-width="1" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <p class="cost-label">Acquisition costs rising monthly</p>
+                </div>
+                <div class="cost-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="cost-icon falling">
+                        <svg viewBox="0 0 100 100" class="cost-svg">
+                            <path d="M20 30 Q50 40 80 30" stroke="#f10b25" stroke-width="3" fill="none" stroke-linecap="round"/>
+                            <path d="M20 50 Q50 70 80 50" stroke="#eb0473" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+                            <path d="M20 70 Q50 90 80 70" stroke="#e4a324" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+                        </svg>
+                    </div>
+                    <p class="cost-label">Repeat rates dropping daily</p>
+                </div>
+                <div class="cost-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="cost-icon warning">
+                        <svg viewBox="0 0 100 100" class="cost-svg">
+                            <polygon points="50,20 80,80 20,80" fill="none" stroke="#f10b25" stroke-width="3"/>
+                            <line x1="50" y1="40" x2="50" y2="60" stroke="#f10b25" stroke-width="4" stroke-linecap="round"/>
+                            <circle cx="50" cy="70" r="3" fill="#f10b25"/>
+                        </svg>
+                    </div>
+                    <p class="cost-label">Market share bleeding to competitors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="screen leadership">
+        <div class="container fade-in">
+            <h2 class="section-title">The <span class="gradient-text">Visionaries</span> Behind Your Transformation</h2>
+            <p class="leadership-subtitle">Beauty industry veterans with the battle scars to prove it</p>
+            
+            <div class="leadership-grid">
+                <div class="leader-card" data-aos="fade-up">
+                    <div class="leader-gradient"></div>
+                    <h4 class="leader-name">Elaine Sheng</h4>
+                    <p class="leader-title">Global Beauty Strategist</p>
+                    <p class="leader-bio">Led brand transformations at Estée Lauder, NARS, and emerging beauty disruptors</p>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="leader-gradient"></div>
+                    <h4 class="leader-name">Andy Borinstein</h4>
+                    <p class="leader-title">Strategic Research Specialist</p>
+                    <p class="leader-bio">Turns complex data into board-ready strategies that get funded</p>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="leader-gradient"></div>
+                    <h4 class="leader-name">Brian Brett</h4>
+                    <p class="leader-title">Transformative Insights Leader</p>
+                    <p class="leader-bio">Pioneer in beauty consumer psychology and purchase behavior</p>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="leader-gradient"></div>
+                    <h4 class="leader-name">Vidur Bhandari</h4>
+                    <p class="leader-title">Strategy Visionary</p>
+                    <p class="leader-bio">Crafts transformative strategies by cutting through data overload</p>
+                </div>
+                <div class="leader-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="leader-gradient"></div>
+                    <h4 class="leader-name">John Bekier</h4>
+                    <p class="leader-title">Analytical Strategy Leader</p>
+                    <p class="leader-bio">Leverages advanced analytics to uncover deep insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="screen cta">
+        <div class="cta-bg">
+            <div class="cta-gradient-1"></div>
+            <div class="cta-gradient-2"></div>
+            <div class="cta-particles">
+                <div class="cta-particle"></div>
+                <div class="cta-particle"></div>
+                <div class="cta-particle"></div>
+            </div>
+        </div>
+        <div class="cta-content fade-in">
+            <h2 class="cta-title">
+                <span class="word-animate">15</span> 
+                <span class="word-animate">minutes</span> 
+                <span class="word-animate">to</span> 
+                <span class="word-animate">see</span> 
+                <span class="word-animate">your</span> 
+                <span class="word-animate">hidden</span> 
+                <span class="word-animate">growth.</span>
+            </h2>
+            <p class="cta-subtitle">
+                Let me show you what we can do to strenghten your beauty brand's loyalty before your competitors figure it out first?
+            </p>
+            <a href="mailto:Elaine.Sheng@BeyondInsights.com" class="cta-button">
+                <span class="button-bg"></span>
+                <span class="button-text">Book My 15-Min Strategy Call</span>
+                <span class="button-arrow">→</span>
+            </a>
+            <p class="cta-contact">
+                <a href="mailto:Elaine.Sheng@BeyondInsights.com" class="email-link">Elaine.Sheng@BeyondInsights.com</a><br>
+                <a href="https://www.beyondinsights.com" class="website-link">www.beyondinsights.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="footer-logo">
+            <p class="footer-tagline">Inspire Change</p>
+            <div class="social-proof">
+                <p>Our collective experience includes:</p>
+                <div class="brand-logos">
+                    <span>Vogue</span>
+                    <span>•</span>
+                    <span>Estée Lauder</span>
+                    <span>•</span>
+                    <span>NARS</span>
+                    <span>•</span>
+                    <span>Shiseido</span>
+                    <span>•</span>
+                    <span>Maybelline</span>
+                    <span>•</span>
+		    <span>InStyle</span>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 BEYOND Insights. All rights reserved.</p>
+        </div>
+	    <section id="sources" class="kpi-sources">
+  <h4>Source Notes</h4>
   <ol>
-    <li id="src-cac">1. 2024 McKinsey Beauty CPM &amp; CAC Tracker (<em>US DTC Index</em>)</li>
-    <li id="src-switch">2. Beyond Insights Loyalty Multiverse™ database, 12‑country rolling study (Q1‑25)</li>
-    <li id="src-vulnerable">3. PowerReviews “Beauty Consumer Confidence Pulse” wave 6 (Feb‑25)</li>
+    <li id="src-cac">¹ 2024 McKinsey Beauty CPM &amp; CAC Tracker (<em>US Direct‑to‑Consumer Index</em>).</li>
+    <li id="src-switch">² Beyond Insights Loyalty Multiverse™ database, 12‑country rolling study, Q1‑2025.</li>
+    <li id="src-vulnerable">³ PowerReviews “Beauty Consumer Confidence Pulse” wave 6, Feb 2025.</li>
   </ol>
 </section>
+<section id="sources" class="kpi-sources">
+ 
+    </footer>
 
-<!-- ✧ Core scripts -->
-<script>
-/* ---------- smooth anchor scroll ---------- */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
-  });
-});
+    <!-- Sticky CTA -->
+    <a href="#contact" class="sticky-cta">
+        <span class="sticky-text">Book Strategy Call</span>
+        <span class="sticky-arrow">→</span>
+    </a>
 
-/* ---------- stat counter ---------- */
-function animateStats(){
-  document.querySelectorAll('.stat-number').forEach(n=>{
-    const target=+n.dataset.value, inc=target/50;
-    let cur=0; const t=setInterval(()=>{cur+=inc;n.textContent=Math.floor(cur);
-      if(cur>=target){n.textContent=target;clearInterval(t);} },30);
-  });
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Number animation
+        function animateNumbers() {
+            const numbers = document.querySelectorAll('.stat-number');
+            numbers.forEach(num => {
+                const target = parseInt(num.getAttribute('data-value'));
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    num.textContent = Math.floor(current);
+                }, 30);
+            });
+        }
+
+        // Intersection Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('hero-stats')) {
+                        animateNumbers();
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Hero stats observer
+        const heroStats = document.querySelector('.hero-stats');
+        if (heroStats) {
+            observer.observe(heroStats);
+        }
+
+        // Sticky CTA
+        const stickyCTA = document.querySelector('.sticky-cta');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > window.innerHeight * 2) {
+                stickyCTA.classList.add('visible');
+            }
+        });
+
+        // Parallax effects
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.hero-shape-1, .hero-shape-2, .hero-shape-3');
+            
+            parallaxElements.forEach((el, index) => {
+                const speed = 0.5 + (index * 0.2);
+                el.style.transform = translateY(${scrolled * speed}px);
+            });
+        });
+
+        // Navigation shrink on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Stepper accordion behavior
+        document.querySelectorAll('.blueprint-stepper details').forEach((detail) => {
+            detail.addEventListener('toggle', (e) => {
+                if (detail.open) {
+                    document.querySelectorAll('.blueprint-stepper details').forEach((otherDetail) => {
+                        if (otherDetail !== detail) {
+                            otherDetail.removeAttribute('open');
+                        }
+                    });
+                }
+            });
+        });
+
+        // AOS-like animations
+        const aosElements = document.querySelectorAll('[data-aos]');
+        const aosObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.closest('.fade-in, .screen').classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        aosElements.forEach(el => {
+            aosObserver.observe(el);
+        });
+	    /* --- section pager --- */
+const screens = Array.from(document.querySelectorAll('.screen'));
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+const pager   = document.getElementById('pager');
+
+function visibleIndex(){
+  const offset = window.innerHeight*0.4;
+  return screens.findIndex(scr =>
+      scr.getBoundingClientRect().top < offset &&
+      scr.getBoundingClientRect().bottom > offset);
 }
+function scrollTo(idx){
+  if(idx<0||idx>=screens.length) return;
+  screens[idx].scrollIntoView({behavior:'smooth'});
+}
+function updatePager(){
+  const i = visibleIndex();
+  pager.classList.toggle('hidden', i===-1);
+  prevBtn.disabled = (i<=0);
+  nextBtn.disabled = (i>=screens.length-1);
+}
+nextBtn.onclick = ()=>scrollTo(visibleIndex()+1);
+prevBtn.onclick = ()=>scrollTo(visibleIndex()-1);
+window.addEventListener('scroll',()=>requestAnimationFrame(updatePager));
+updatePager();
 
-/* ---------- fade‑in observer ---------- */
-const fadeObs=new IntersectionObserver(ents=>{
-  ents.forEach(ent=>{
-    if(ent.isIntersecting){
-      ent.target.classList.add('visible');
-      if(ent.target.classList.contains('hero-stats')) animateStats();
+    </script>
+	<script>
+/* -------- Full‑screen pager -------- */
+const screens = Array.from(document.querySelectorAll('.screen'));
+let currentIdx = 0;
+
+function updatePager(){
+  prevSec.disabled = currentIdx === 0;
+  nextSec.disabled = currentIdx === screens.length-1;
+}
+function goto(idx){
+  if(idx<0||idx>=screens.length) return;
+  currentIdx = idx;
+  screens[idx].scrollIntoView({behavior:'smooth'});
+  updatePager();
+}
+document.getElementById('prevSec').onclick = ()=> goto(currentIdx-1);
+document.getElementById('nextSec').onclick = ()=> goto(currentIdx+1);
+
+/* keep pager state in sync when user scrolls manually */
+const secObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      currentIdx = screens.indexOf(e.target);
+      updatePager();
     }
   });
-},{threshold:.1,rootMargin:'0px 0px -100px 0px'});
-document.querySelectorAll('.fade-in,.hero-stats').forEach(el=>fadeObs.observe(el));
-
-/* ---------- sticky CTA ---------- */
-const sticky=document.querySelector('.sticky-cta');
-window.addEventListener('scroll',()=>{sticky.classList.toggle('visible',scrollY>innerHeight*2);});
-
-/* ---------- section pager ---------- */
-const screens=[...document.querySelectorAll('.screen')];
-let cur=0;
-const pager=document.getElementById('pager'),
-      prev=document.getElementById('prevSec'),
-      next=document.getElementById('nextSec');
-function goto(i){
-  if(i<0||i>=screens.length) return;
-  cur=i; screens[i].scrollIntoView({behavior:'smooth'});
-  prev.disabled=cur===0; next.disabled=cur===screens.length-1;
-}
-prev.onclick=()=>goto(cur-1); next.onclick=()=>goto(cur+1);
-const secObs=new IntersectionObserver(ents=>{
-  ents.forEach(e=>{if(e.isIntersecting){
-    cur=screens.indexOf(e.target);
-    prev.disabled=cur===0; next.disabled=cur===screens.length-1;
-    pager.classList.remove('hidden');
-  }});
 },{threshold:.6});
-screens.forEach(s=>secObs.observe(s));
+screens.forEach(s=>secObserver.observe(s));
+updatePager();
 </script>
+
 </body>
 </html>
