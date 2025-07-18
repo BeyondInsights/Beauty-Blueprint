@@ -1582,6 +1582,95 @@ h2 {
 /* fix stray tiny gold dot & overflow on impact section */
 .screen.case-study{overflow:visible;}
 
+/* ── Blueprint card grid tidy‑up ───────────────────────── */
+.blueprint-insights{
+  /* use a real grid so every column snaps to the same width */
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:48px;
+  max-width:1400px;          /* keeps cards from stretching too wide   */
+  margin-inline:auto;        /* centres the grid in large view‑ports    */
+}
+.insight-module{height:100%;}/* cards now all equal height automatically */
+/* ── Loyalty Multiverse equation visual polish ─────────── */
+.driver-equation{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:36px;
+  margin-block:40px 20px;
+}
+
+.driver-item{
+  width:120px;        /* larger click‑target / visual weight */
+  height:120px;
+  gap:14px;
+  border:2px solid rgba(116,52,172,.08);
+}
+
+.plus,
+.equals{
+  font-size:2.2rem;
+  font-weight:700;
+  color:var(--royal-purple);
+}
+/* ── Phase table alignment & visual rhythm ─────────────── */
+.timeline-phase{
+  display:grid;
+  grid-template-columns:140px 30px 1fr;
+  align-items:flex-start;
+  border-top:1px solid rgba(116,52,172,.08);   /* subtle zebra line */
+  padding-block:38px;
+}
+
+.timeline-phase:first-of-type{border-top:none;}  /* keep the top edge clean */
+
+/* numbered phase badge */
+.phase-indicator{
+  position:relative;
+  width:140px;
+  text-align:center;
+  padding-top:4px;
+}
+
+.phase-number{
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  width:62px;height:62px;
+  border:3px solid var(--royal-purple);
+  border-radius:50%;
+  font-size:1.75rem;
+  font-weight:700;
+  color:var(--royal-purple);
+}
+
+.phase-indicator::after{           /* vertical accent bar */
+  content:'';
+  position:absolute;
+  left:0;top:10px;bottom:10px;
+  width:4px;
+  background:linear-gradient(var(--royal-purple),var(--fire-bush));
+  border-radius:4px;
+}
+
+/* arrow column */
+.phase-arrow{
+  font-size:2rem;
+  color:var(--royal-purple);
+  line-height:1;
+  margin-top:8px;
+}
+.nav{
+    /* existing properties … */
+    z-index:800;          /* ← previously 1000. All Case‑Study elements use 900 */
+}
+.case-study{
+   position:relative;
+   z-index:10;     /* above the floating particles */
+   overflow:hidden;/* cuts off stray spark elements */
+}
+
+
 /* PROCESS Section */
 .process {
     background: linear-gradient(to bottom, var(--cream) 0%, var(--white) 100%);
