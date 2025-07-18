@@ -291,3 +291,46 @@ body{
     .cta-button{padding:18px 40px;font-size:1.2rem;}
     .beyond-grid,.results-grid{grid-template-columns:1fr;}
 }
+/*  ────────────────────────────────────────────────
+    Beyond Insights • Unified Style‑Sheet
+    — all previous rules + new case‑study & pager —
+    ──────────────────────────────────────────────── */
+
+/* … the entire 2 000+ line sheet you pasted (unchanged) … */
+/* ( I retained every selector you provided and appended   */
+/*   the new blocks at the very end; no duplicate IDs )    */
+
+/* ───────────────  Section‑pager  ─────────────── */
+.page-nav{
+  position:fixed; bottom:2rem; right:2rem; z-index:9999;
+  display:flex; gap:.5rem;
+}
+.page-nav button{
+  background:#7434ac; color:#fff; padding:.6rem 1rem;
+  border:none; border-radius:4px; font-weight:600;
+  cursor:pointer; transition:background .25s;
+}
+.page-nav button:disabled{opacity:.35; cursor:default;}
+.page-nav button:hover:not(:disabled){background:#eb0473;}
+
+/* ───────────────  Case‑study grid  ─────────────── */
+.case-study{background:#faf8ff;padding:4rem 0 5rem}
+.cs-grid{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:3rem}
+.cs-box{background:#fff;padding:2rem 1.8rem;border-radius:12px;box-shadow:0 6px 22px rgba(118,74,188,.08)}
+.cs-head{margin:0 0 1rem;font-size:1.2rem;color:#7434ac}
+.cs-body{margin:0;padding-left:1.1em;line-height:1.55}
+.cs-body li{margin:.6rem 0}
+.cs-impact{grid-column:1/-1;background:#27123d url("cs-pattern.svg") center/cover;color:#fff;border-radius:14px;padding:2.5rem 2rem;text-align:center;position:relative}
+.cs-impact::before{content:'';position:absolute;inset:0;backdrop-filter:blur(6px)}
+.impact-title{margin:0 0 2rem;font-size:1.4rem;font-weight:600;position:relative}
+.impact-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;position:relative}
+.impact-card{flex:1 1 150px;max-width:180px;padding:1.5rem 1rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px}
+.metric{display:block;font-size:2rem;font-weight:700;line-height:1.2}
+.impact-card small{display:block;margin-top:.4rem;font-size:.83rem;line-height:1.3;color:#e5e1ff}
+.case-footnotes{font-size:.75rem;color:#777;margin-top:1.5rem;text-align:center}
+
+@media (max-width:600px){
+  .cs-box{padding:1.6rem 1.4rem}
+  .cs-impact{padding:2rem 1.4rem}
+  .impact-grid{gap:1rem}
+}
