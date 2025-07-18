@@ -3,222 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="description"
-        content="Lose or loyalty? Beyond Insights' 90‑day Beauty Brand Blueprint™ pinpoints the segments, messages and levers that protect share and spark growth.">
-  <title>Beyond Insights – Transform Your Beauty Brand in 90 Days</title>
+  <meta name="description" content="Lose or loyalty? Beyond Insights' 90‑day Beauty Brand Blueprint™ pinpoints the segments, messages and levers that protect share and spark growth.">
+  <title>Beyond Insights – Transform Your Beauty Brand in 90 Days</title>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<!-- ✧ Floating particles background -->
-<div class="particles-container">
-  <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-  <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-</div>
-
-<!-- ✧ Sticky page‑pager -->
-<nav class="page-pager hidden" id="pager">
-  <button id="prevSec" class="pager-btn" aria-label="Previous section">← Previous</button>
-  <button id="nextSec" class="pager-btn" aria-label="Next section">Next →</button>
-</nav>
-
-<!-- ✧ Global nav -->
-<nav class="nav">
-  <div class="nav-content">
-    <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo">
-    <a href="#contact" class="book-briefing">Book My 15‑Min Strategy Call</a>
-  </div>
-</nav>
-
-<!-- ▸ HERO -------------------------------------------------------------- -->
-<section class="screen hero">
-  <div class="gradient-overlay"></div>
-  <div class="hero-bg-animation">
-    <div class="hero-shape-1"></div><div class="hero-shape-2"></div><div class="hero-shape-3"></div>
+  <!-- ✦ floating background specks -->
+  <div class="particles-container">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
   </div>
 
-  <div class="container">
-    <div class="hero-content">
-      <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo-hero">
+  <!-- ✦ section‑pager buttons (fixed, bottom‑right) -->
+  <div class="page-nav">
+    <button id="prevPage" aria-label="Previous section">← Prev</button>
+    <button id="nextPage" aria-label="Next section">Next →</button>
+  </div>
 
-      <h1 class="hero-title">
-        <span class="title-line-1">Beauty loyalty flips overnight.</span>
-        <span class="title-line-2">Will you?</span>
-      </h1>
+  <!-- ✦ top navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <img src="beyond-insights-logo.png" class="logo" alt="BEYOND Insights">
+      <a href="#contact" class="book-briefing">Book My 15‑Min Strategy Call</a>
+    </div>
+  </nav>
 
-      <p class="hero-sub">
-        Tariffs, TikTok trends and ingredient inflation are reshuffling the aisle.<br>
-        The <strong>90‑day Beauty Brand Blueprint™</strong> shows who will stay, stray or pay more.
-      </p>
+  <!-- ─────────────────  HERO  ───────────────── -->
+  <section class="screen hero" id="hero">
+    <div class="gradient-overlay"></div>
+    <div class="hero-bg-animation">
+      <div class="hero-shape-1"></div><div class="hero-shape-2"></div><div class="hero-shape-3"></div>
+    </div>
 
-      <a href="#blueprint" class="hero-cta">
-        <span class="cta-text">Unlock My 90‑Day Plan</span><span class="cta-arrow">→</span>
-      </a>
+    <div class="container">
+      <div class="hero-content">
+        <img src="beyond-insights-logo.png" class="logo-hero" alt="BEYOND Insights">
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
-          <sup class="kpi-ref"><a href="#src-cac">1</a></sup>
-          <span class="stat-label">Higher CAC</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-value="3">0</span><span class="stat-symbol">X</span>
-          <sup class="kpi-ref"><a href="#src-switch">2</a></sup>
-          <span class="stat-label">Brand Switching</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
-          <sup class="kpi-ref"><a href="#src-vulnerable">3</a></sup>
-          <span class="stat-label">Feel Vulnerable</span>
+        <h1 class="hero-title">
+          <span class="title-line-1">Beauty loyalty flips overnight.</span>
+          <span class="title-line-2">Will you?</span>
+        </h1>
+
+        <p class="hero-sub">
+          Tariffs, TikTok trends and ingredient inflation are reshuffling the aisle.<br>
+          The <strong>90‑day Beauty Brand Blueprint™</strong> shows who will stay, stray or pay more.
+        </p>
+
+        <a href="#blueprint" class="hero-cta">
+          <span class="cta-text">Unlock My 90‑Day Plan</span><span class="cta-arrow">→</span>
+        </a>
+
+        <!-- KPI counters with source footnotes -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
+            <sup class="kpi-ref"><a href="#src-cac">1</a></sup>
+            <span class="stat-label">Higher CAC</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-value="3">0</span><span class="stat-symbol">X</span>
+            <sup class="kpi-ref"><a href="#src-switch">2</a></sup>
+            <span class="stat-label">Brand Switching</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
+            <sup class="kpi-ref"><a href="#src-vulnerable">3</a></sup>
+            <span class="stat-label">Feel Vulnerable</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ▸ WHY BEYOND -------------------------------------------------------- -->
-<!-- (unchanged markup) -->
-<section class="screen why-beyond"> … </section>
+  <!-- ─────────────────  WHY BEYOND  ───────────────── -->
+  <section class="screen why-beyond" id="why">
+    <div class="container fade-in">
+      <h2 class="section-title"><span class="title-accent">Why </span>Leading Beauty Brands Choose <span class="gradient-text">BEYOND</span></h2>
 
-<!-- ▸ MEET ELAINE ------------------------------------------------------- -->
-<section class="screen meet-elaine"> … </section>
-
-<!-- ▸ BRUTAL ECONOMICS -------------------------------------------------- -->
-<section id="brutal" class="screen brutal"> … </section>
-
-<!-- ▸ GAP / SOLUTION sections (unchanged) ------------------------------- -->
-<section class="screen gap"> … </section>
-<section class="screen solution"> … </section>
-
-<!-- ▸ CASE STUDY : LANEIGE --------------------------------------------- -->
-<section class="screen case-study" id="laneige">
-  <div class="container fade-in">
-    <h2 class="section-title center">
-      From Viral <span class="text-red">Igniter</span> to Multi‑SKU <span class="gradient-text">Fire Icon</span>
-      <small class="subtitle">
-        How BEYOND Insights <em>would</em> apply the Beauty Brand Blueprint™ to Laneige*
-      </small>
-    </h2>
-
-    <div class="cs-grid">
-      <!-- Challenge -->
-      <article class="cs-box">
-        <h3 class="cs-head">The Challenge</h3>
-        <ul class="cs-body">
-          <li><b>Hero‑SKU dependency</b> – Lip Sleeping Mask = 63 % of sales*</li>
-          <li>Repeat purchases flatten after 2‑3 uses</li>
-          <li>High Gen Z awareness, low conversion</li>
-        </ul>
-      </article>
-
-      <!-- Blueprint insight -->
-      <article class="cs-box">
-        <h3 class="cs-head">What the Blueprint Would Uncover</h3>
-        <ul class="cs-body">
-          <li><b>46 % “Curious” non‑buyers</b> attracted to Korean innovation but blocked by product‑use learning curve</li>
-          <li>Barriers = <i>product life cost</i> &amp; <i>ingredient complexity</i>, not price</li>
-          <li>High‑value segments (Purpose‑Driven Changemakers, Designer Trendsetters, Cultural Visionaries) align with Laneige equity</li>
-        </ul>
-      </article>
-
-      <!-- Actions -->
-      <article class="cs-box">
-        <h3 class="cs-head">Recommended Strategic Actions</h3>
-        <ul class="cs-body">
-          <li><b>Portfolio laddering :</b> recast hero mask as gateway into serum/sun routine</li>
-          <li><b>Gen Z TikTok series :</b> routines > single SKUs</li>
-          <li><b>Data‑guided conquest :</b> target “Curious” &amp; “Reconcilable” with ingredient‑literacy content</li>
-        </ul>
-      </article>
-
-      <!-- Impact -->
-      <aside class="cs-impact">
-        <h4 class="impact-title">Modeled <i>Potential</i> Impact*</h4>
-        <div class="impact-grid">
-          <div class="impact-card"><span class="metric">+50 – 70 %</span><small>Incremental portfolio buyers</small></div>
-          <div class="impact-card"><span class="metric">2 – 4 ×</span><small>Lift in repeat &amp; basket size</small></div>
-          <div class="impact-card"><span class="metric">‑25 %</span><small>CAC vs. paid‑social avg.</small></div>
+      <div class="beyond-grid">
+        <div class="beyond-card" data-aos="zoom-in">
+          <div class="card-glow"></div>
+          <div class="beyond-icon"><div class="icon-inner">Sr</div></div>
+          <h3>Client‑Side Beauty Expertise</h3>
+          <p>We’ve owned P&amp;Ls, not just slides. Expect answers that survive board‑rooms.</p>
         </div>
-      </aside>
+
+        <div class="beyond-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card-glow"></div>
+          <div class="beyond-icon"><div class="icon-inner">™</div></div>
+          <h3>Proprietary Methodologies</h3>
+          <p>Brand Edge™, Infidelity Index™ &amp; Loyalty Multiverse™ go deeper than trackers.</p>
+        </div>
+
+        <div class="beyond-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card-glow"></div>
+          <div class="beyond-icon"><div class="icon-inner">→</div></div>
+          <h3>Data → Action</h3>
+          <p>We don’t deliver “findings”; we deliver funded road‑maps.</p>
+        </div>
+
+        <div class="beyond-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card-glow"></div>
+          <div class="beyond-icon"><div class="icon-inner">⚡</div></div>
+          <h3>Agile & Cost‑Efficient</h3>
+          <p>90‑day sprints beat 6‑month retainers—at less than one influencer campaign.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <p class="footnote">
-      *Illustrative metrics using category norms + BEYOND Insights Blueprint simulations.
-    </p>
-  </div>
-</section>
+  <!-- ─────────────────  MEET ELAINE  ───────────────── -->
+  <section class="screen meet-elaine" id="elaine">
+    <div class="container fade-in">
+      <h2 class="section-title">Meet Your <span class="gradient-text">Beauty Insights Leader</span></h2>
 
-<!-- ▸ PROCESS / DECISION / LEADERSHIP / CTA / FOOTER -------------------- -->
-<section class="screen process"> … </section>
-<section class="screen decision"> … </section>
-<section class="screen leadership"> … </section>
-<section id="contact" class="screen cta"> … </section>
-<footer class="footer"> … </footer>
+      <div class="elaine-showcase">
+        <div class="elaine-image-wrapper" data-aos="fade-right">
+          <div class="image-frame"><img src="elaine-sheng.jpg" alt="Elaine Sheng" class="elaine-photo"></div>
+        </div>
 
-<!-- ▸ KPI source notes -->
-<section id="sources" class="kpi-sources">
-  <h4>Source Notes</h4>
-  <ol>
-    <li id="src-cac">1. 2024 McKinsey Beauty CPM &amp; CAC Tracker (<em>US DTC Index</em>)</li>
-    <li id="src-switch">2. Beyond Insights Loyalty Multiverse™ database, 12‑country rolling study (Q1‑25)</li>
-    <li id="src-vulnerable">3. PowerReviews “Beauty Consumer Confidence Pulse” wave 6 (Feb‑25)</li>
-  </ol>
-</section>
+        <div class="elaine-content" data-aos="fade-left">
+          <h3 class="elaine-name">Elaine Sheng</h3>
+          <p class="elaine-title">Global Beauty Strategist &amp; Insights Executive</p>
 
-<!-- ✧ Core scripts -->
-<script>
-/* ---------- smooth anchor scroll ---------- */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
-  });
-});
+          <div class="elaine-credentials">
+            <!-- credential bullets (unchanged) -->
+            <div class="credential-item">
+              <span class="credential-icon">…</span>
+              <p><strong>Led insights functions</strong> for Estée Lauder, NARS and emerging disruptors</p>
+            </div>
+            <div class="credential-item"><span class="credential-icon">…</span><p><strong>Supplier‑side experience</strong> turning data into growth</p></div>
+            <div class="credential-item"><span class="credential-icon">…</span><p><strong>Dual perspective</strong> ensures strategies that actually get implemented</p></div>
+            <div class="credential-item"><span class="credential-icon">…</span><p><strong>Battle‑tested</strong> helping beauty brands navigate disruption</p></div>
+          </div>
 
-/* ---------- stat counter ---------- */
-function animateStats(){
-  document.querySelectorAll('.stat-number').forEach(n=>{
-    const target=+n.dataset.value, inc=target/50;
-    let cur=0; const t=setInterval(()=>{cur+=inc;n.textContent=Math.floor(cur);
-      if(cur>=target){n.textContent=target;clearInterval(t);} },30);
-  });
-}
+          <p class="elaine-quote">“In beauty, data without context is just noise. I bring the know‑how to turn insights into winning strategies.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* ---------- fade‑in observer ---------- */
-const fadeObs=new IntersectionObserver(ents=>{
-  ents.forEach(ent=>{
-    if(ent.isIntersecting){
-      ent.target.classList.add('visible');
-      if(ent.target.classList.contains('hero-stats')) animateStats();
+  <!-- ─────────────────  BRUTAL ECONOMICS  ───────────────── -->
+  <section class="screen brutal" id="brutal">
+    <div class="container fade-in">
+      <h2 class="section-title">The <span class="text-red">Brutal Economics</span> Beauty Faces Now</h2>
+
+      <div class="brutal-visual">
+        <div class="crisis-meter"><div class="meter-fill"></div><span class="meter-label">CRISIS LEVEL</span></div>
+      </div>
+
+      <div class="brutal-grid">
+        <div class="brutal-stat" data-aos="fade-up">
+          <div class="stat-visual"><div class="stat-ring"></div><span class="brutal-number">47%</span></div>
+          <div class="brutal-label">Higher CAC</div>
+          <div class="brutal-detail">Customer‑acquisition costs skyrocketing as loyalty wavers</div>
+        </div>
+        <div class="brutal-stat" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-visual"><div class="stat-ring"></div><span class="brutal-number">3×</span></div>
+          <div class="brutal-label">Brand Switching</div>
+          <div class="brutal-detail">Price sensitivity driving unprecedented defection rates</div>
+        </div>
+        <div class="brutal-stat" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-visual"><div class="stat-ring"></div><span class="brutal-number">30%</span></div>
+          <div class="brutal-label">Margin Pressure</div>
+          <div class="brutal-detail">Tariffs &amp; supply‑chain chaos eroding profitability</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────  GAP, SOLUTION (unchanged)  ───────────────── -->
+  <!--   … keep your existing <section class="screen gap"> and <section class="screen solution">   -->
+
+  <!-- ─────────────────  CASE STUDY – LANEIGE  ───────────────── -->
+  <section class="screen case-study" id="laneige">
+    <div class="container fade-in">
+      <h2 class="section-title center">
+        From Viral <span class="text-red">Igniter</span> to Multi‑SKU <span class="gradient-text">Fire Icon</span>
+        <small class="subtitle">How BEYOND Insights <wbr>would apply the Beauty Brand Blueprint™ to Laneige*</small>
+      </h2>
+
+      <div class="cs-grid">
+        <!-- Challenge -->
+        <div class="cs-box">
+          <h3 class="cs-head">The Challenge</h3>
+          <ul class="cs-body">
+            <li><b>Hero‑SKU dependency</b>—Lip Sleeping Mask represents 63 % of revenue*</li>
+            <li>Repeat purchase curve stalls after 2‑3 uses</li>
+            <li>Strong awareness in Gen Z but low conversion</li>
+          </ul>
+        </div>
+
+        <!-- What we’d uncover -->
+        <div class="cs-box">
+          <h3 class="cs-head">What the Blueprint Would Uncover</h3>
+          <ul class="cs-body">
+            <li><b>46 % “aware → curious” non‑buyers</b> drawn to K‑innovation but stuck on <i>ingredient complexity</i></li>
+            <li>Purchase blockers = <i>product life cost</i> &amp; <i>routine fit</i>, not price</li>
+            <li>High‑value segments (<em>Purpose‑Driven Changemakers</em>, <em>Designer Trendsetters</em>, <em>Cultural Visionaries</em>) align with Laneige equity</li>
+          </ul>
+        </div>
+
+        <!-- Recommended actions -->
+        <div class="cs-box">
+          <h3 class="cs-head">Recommended Strategic Actions</h3>
+          <ul class="cs-body">
+            <li><b>Portfolio laddering :</b> recast mask as entry to serum + sun‑care ritual</li>
+            <li><b>Gen Z TikTok series :</b> “routine reels” instead of SKU posts</li>
+            <li><b>Data‑guided conquest :</b> media‑append typing‑tool to “Curious” &amp; “Reconcilable” clusters</li>
+          </ul>
+        </div>
+
+        <!-- Impact -->
+        <div class="cs-impact">
+          <h4 class="impact-title">Modeled <em>Potential</em> Impact*</h4>
+          <div class="impact-grid">
+            <div class="impact-card"><span class="metric">+50‑70 %</span><small>Incremental portfolio buyers<br>(12 mo.)</small></div>
+            <div class="impact-card"><span class="metric">2‑4 ×</span><small>Lift in repeat &amp; new users</small></div>
+            <div class="impact-card"><span class="metric">‑25 %</span><small>CAC vs. paid‑social avg.</small></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="case-footnotes">*Illustrative—bench‑marked on category norms &amp; proprietary Blueprint simulations.</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────  PROCESS, DECISION, CLOSING, LEADERSHIP, CTA, FOOTER  ───────────────── -->
+  <!--   … keep your existing sections exactly as they were (unchanged markup)   -->
+
+  <!-- KPI / source notes (single instance) -->
+  <footer id="sources" class="kpi-sources">
+    <h4>Source Notes</h4>
+    <ol>
+      <li id="src-cac">McKinsey Beauty CPM &amp; CAC Tracker 2024 (US DTC Index)</li>
+      <li id="src-switch">BEYOND Insights Loyalty Multiverse™ rolling study Q1‑2025</li>
+      <li id="src-vulnerable">PowerReviews “Beauty Consumer Confidence Pulse” Wave 6 (Feb 2025)</li>
+    </ol>
+  </footer>
+
+
+  <!-- ───────────────────  JS  ─────────────────── -->
+  <script>
+    /* smooth‑scroll for internal anchors */
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const tgt=document.querySelector(a.getAttribute('href'));
+        if(tgt){ e.preventDefault(); tgt.scrollIntoView({behavior:"smooth"}); }
+      });
+    });
+
+    /* hero KPI counter‑up */
+    function animateNumbers(){
+      document.querySelectorAll('.stat-number').forEach(el=>{
+        const target=+el.dataset.value; let cur=0;
+        const inc = target/60;
+        const int=setInterval(()=>{
+          cur+=inc; if(cur>=target){cur=target; clearInterval(int);}
+          el.textContent=Math.floor(cur);
+        },30);
+      });
     }
-  });
-},{threshold:.1,rootMargin:'0px 0px -100px 0px'});
-document.querySelectorAll('.fade-in,.hero-stats').forEach(el=>fadeObs.observe(el));
 
-/* ---------- sticky CTA ---------- */
-const sticky=document.querySelector('.sticky-cta');
-window.addEventListener('scroll',()=>{sticky.classList.toggle('visible',scrollY>innerHeight*2);});
+    /* intersection observers (fade‑ins + KPI start) */
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting){
+          ent.target.classList.add('visible');
+          if(ent.target.classList.contains('hero-stats')) animateNumbers();
+        }
+      });
+    },{threshold:.25});
 
-/* ---------- section pager ---------- */
-const screens=[...document.querySelectorAll('.screen')];
-let cur=0;
-const pager=document.getElementById('pager'),
-      prev=document.getElementById('prevSec'),
-      next=document.getElementById('nextSec');
-function goto(i){
-  if(i<0||i>=screens.length) return;
-  cur=i; screens[i].scrollIntoView({behavior:'smooth'});
-  prev.disabled=cur===0; next.disabled=cur===screens.length-1;
-}
-prev.onclick=()=>goto(cur-1); next.onclick=()=>goto(cur+1);
-const secObs=new IntersectionObserver(ents=>{
-  ents.forEach(e=>{if(e.isIntersecting){
-    cur=screens.indexOf(e.target);
-    prev.disabled=cur===0; next.disabled=cur===screens.length-1;
-    pager.classList.remove('hidden');
-  }});
-},{threshold:.6});
-screens.forEach(s=>secObs.observe(s));
-</script>
+    document.querySelectorAll('.fade-in,.hero-stats,[data-aos]').forEach(el=>io.observe(el));
+
+    /* nav shrink */
+    const nav=document.querySelector('.nav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>100));
+
+    /* section‑pager buttons bottom‑right */
+    const sections=[...document.querySelectorAll('.screen')];
+    let curIdx=0;
+    const prevBtn=document.getElementById('prevPage');
+    const nextBtn=document.getElementById('nextPage');
+    const updateButtons=()=>{ prevBtn.disabled=curIdx===0; nextBtn.disabled=curIdx===sections.length-1; };
+
+    const goto=i=>{
+      if(i<0||i>=sections.length) return;
+      curIdx=i; sections[i].scrollIntoView({behavior:'smooth'});
+    };
+    prevBtn.onclick=()=>goto(curIdx-1);
+    nextBtn.onclick=()=>goto(curIdx+1);
+
+    const secObs=new IntersectionObserver(ents=>{
+      ents.forEach(e=>{
+        if(e.isIntersecting){
+          curIdx=sections.indexOf(e.target);
+          updateButtons();
+        }
+      });
+    },{threshold:.6});
+    sections.forEach(s=>secObs.observe(s));
+    updateButtons();
+  </script>
 </body>
 </html>
