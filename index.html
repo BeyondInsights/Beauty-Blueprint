@@ -578,81 +578,97 @@
         </div>
       </div>
 
-      <!-- three value props -->
+            <!-- three value props -->
       <div class="value-props">
+        <!-- ░░ 1. Tariff‑Resistant Segmentation ░░ -->
         <div class="value-card" data-aos="fade-up">
           <div class="value-icon">
-            <!-- NEW shield svg -->
-            <svg viewBox="0 0 120 120" class="icon-svg" aria-hidden="true">
-              <!-- Shield outline -->
+            <!-- Shield – segmented four‑way -->
+            <svg viewBox="0 0 120 120" class="icon-svg" aria-label="Shield icon">
               <defs>
-                <linearGradient id="grad-shield" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="grad‑shield" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%"  stop-color="#e4a324"/>
-                  <stop offset="50%" stop-color="#9454b0"/>
-                  <stop offset="100%" stop-color="#7434ac"/>
+                  <stop offset="50%" stop-color="#7434ac"/>
+                  <stop offset="100%" stop-color="#eb0473"/>
                 </linearGradient>
               </defs>
-              <path d="M60 18C42 18 30 24 30 34v38c0 18 30 30 30 30s30-12 30-30V34c0-10-12-16-30-16z"
-                    fill="none" stroke="url(#grad-shield)" stroke-width="4"/>
-              <!-- Segmentation grid -->
-              <path d="M60 40v40M40 60h40" stroke="url(#grad-shield)" stroke-width="2"/>
-              <!-- Centre highlight -->
-              <circle cx="60" cy="60" r="8" fill="#fff" stroke="url(#grad-shield)" stroke-width="2"/>
+
+              <!-- outer shield -->
+              <path d="M60 18c-19 0-30 5-30 15v32c0 21 30 37 30 37s30-16 30-37V33c0-10-11-15-30-15Z"
+                    fill="none" stroke="url(#grad‑shield)" stroke-width="4"/>
+
+              <!-- segment lines -->
+              <path d="M60 30v70M42 52h36" stroke="url(#grad‑shield)" stroke-width="2"/>
+
+              <!-- glow -->
+              <circle cx="60" cy="50" r="35" fill="url(#grad‑shield)" opacity=".06"/>
             </svg>
           </div>
           <h3>Tariff‑Resistant Segmentation</h3>
           <p>Identify which segments stay loyal through price‑shocks.</p>
         </div>
 
+        <!-- ░░ 2. Emotional Leverage Mapping ░░ -->
         <div class="value-card" data-aos="fade-up" data-aos-delay="100">
           <div class="value-icon">
-            <!-- NEW heart DNA svg -->
-            <svg viewBox="0 0 120 120" class="icon-svg" aria-hidden="true">
+            <!-- Heart‑DNA hybrid -->
+            <svg viewBox="0 0 120 120" class="icon-svg" aria-label="Heart / DNA icon">
               <defs>
-                <radialGradient id="grad-heart" cx="50%" cy="50%" r="60%">
+                <radialGradient id="grad‑heart">
                   <stop offset="0%"  stop-color="#eb0473"/>
                   <stop offset="50%" stop-color="#9454b0"/>
                   <stop offset="100%" stop-color="#7434ac"/>
                 </radialGradient>
               </defs>
-              <!-- Location pin / heart combo -->
-              <path d="M60 20a22 22 0 0 0-22 22c0 18 22 46 22 46s22-28 22-46A22 22 0 0 0 60 20z"
-                    fill="none" stroke="url(#grad-heart)" stroke-width="4"/>
-              <path d="M60 34c-4-6-15-3-15 5 0 10 15 17 15 17s15-7 15-17c0-8-11-11-15-5z"
-                    fill="url(#grad-heart)"/>
-              <circle cx="60" cy="60" r="6" fill="#fff"/>
+
+              <!-- double helix curve -->
+              <path d="M40 30q-10 10-10 20t10 20 20 20 20-20 10-20-10-20"
+                    fill="none" stroke="url(#grad‑heart)" stroke-width="3"/>
+
+              <!-- rungs -->
+              <path d="M45 40q15 10 30 0M45 50q15 10 30 0M45 60q15 10 30 0"
+                    stroke="#eb0473" stroke-width="2" fill="none" opacity=".6"/>
+
+              <!-- heart -->
+              <path d="M60 46c-4-4-11-2-11 4 0 8 11 14 11 14s11-6 11-14c0-6-7-8-11-4Z"
+                    fill="url(#grad‑heart)"/>
             </svg>
           </div>
           <h3>Emotional Leverage Mapping</h3>
           <p>Bridge from features to relationships that transcend price.</p>
         </div>
 
+        <!-- ░░ 3. Competitive Blind Spots ░░ -->
         <div class="value-card" data-aos="fade-up" data-aos-delay="200">
           <div class="value-icon">
-            <!-- NEW radar svg -->
-            <svg viewBox="0 0 120 120" class="icon-svg" aria-hidden="true">
+            <!-- Radar sweep with blind wedges -->
+            <svg viewBox="0 0 120 120" class="icon-svg" aria-label="Radar icon">
               <defs>
-                <linearGradient id="grad-radar" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="grad‑radar" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%"  stop-color="#f10b25"/>
-                  <stop offset="60%" stop-color="#e4a324"/>
+                  <stop offset="50%" stop-color="#e4a324"/>
                   <stop offset="100%" stop-color="#7434ac"/>
                 </linearGradient>
               </defs>
-              <!-- concentric radar rings -->
-              <circle cx="60" cy="60" r="42" fill="none" stroke="url(#grad-radar)" stroke-width="2" opacity=".3"/>
-              <circle cx="60" cy="60" r="28" fill="none" stroke="url(#grad-radar)" stroke-width="2" opacity=".5"/>
-              <circle cx="60" cy="60" r="14" fill="none" stroke="url(#grad-radar)" stroke-width="2" opacity=".7"/>
-              <!-- sweeping arm -->
-              <line x1="60" y1="60" x2="60" y2="18" stroke="url(#grad-radar)" stroke-width="4">
+
+              <!-- concentric circles -->
+              <circle cx="60" cy="60" r="45" fill="none" stroke="url(#grad‑radar)" stroke-width="2" opacity=".25"/>
+              <circle cx="60" cy="60" r="30" fill="none" stroke="url(#grad‑radar)" stroke-width="2" opacity=".45"/>
+              <circle cx="60" cy="60" r="15" fill="none" stroke="url(#grad‑radar)" stroke-width="2" opacity=".7"/>
+
+              <!-- blind‑spot sectors -->
+              <path d="M60 60L60 15A45 45 0 0 1 85 35Z" fill="#f10b25" opacity=".35"/>
+              <path d="M60 60L35 85A45 45 0 0 1 15 60Z" fill="#e4a324" opacity=".35"/>
+
+              <!-- sweeping line -->
+              <line x1="60" y1="60" x2="60" y2="18" stroke="url(#grad‑radar)" stroke-width="3">
                 <animateTransform attributeName="transform" type="rotate"
-                                  from="0 60 60" to="360 60 60" dur="4s" repeatCount="indefinite"/>
+                                  from="0 60 60" to="360 60 60"
+                                  dur="4s" repeatCount="indefinite"/>
               </line>
-              <!-- alert blip -->
-              <circle cx="88" cy="36" r="5" fill="#f10b25">
-                <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
-              </circle>
-              <!-- centre -->
-              <circle cx="60" cy="60" r="6" fill="#fff" stroke="url(#grad-radar)" stroke-width="2"/>
+
+              <!-- center blip -->
+              <circle cx="60" cy="60" r="6" fill="url(#grad‑radar)"/>
             </svg>
           </div>
           <h3>Competitive Blind Spots</h3>
@@ -661,10 +677,14 @@
       </div>
 
       <div class="urgency-message">
-        <p class="urgency-text"><span class="highlight">Act before the market fully recalibrates.</span><br>While enterprise brands crawl through bureaucracy, you can pivot—if you have precise intelligence.</p>
+        <p class="urgency-text">
+          <span class="highlight">Act before the market fully recalibrates.</span><br>
+          While enterprise brands crawl through bureaucracy, you can pivot—<em>if</em> you have precise intelligence.
+        </p>
       </div>
     </div>
   </section>
+
 
   <!-- ░░░ CLOSING WINDOW ░░░ -->
   <section class="screen closing">
