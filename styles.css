@@ -2827,3 +2827,7 @@ h2 {
   transition:background .25s;
 }
 .page-nav button:hover{ background:#5d2d96; }
+
+.sticky-cta {
+  display: none !important;
+}
