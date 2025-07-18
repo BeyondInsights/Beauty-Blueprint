@@ -2897,3 +2897,61 @@ h2 {
     opacity: 1;
     color: var(--fire-bush);
 }
+/* ─── Loyalty Multiverse layout tweaks ───────────────────────────────*/
+.driver-equation{
+  display:flex; align-items:center; justify-content:center;
+  gap:40px; flex-wrap:wrap; margin:50px 0 35px;
+}
+.driver-item, .driver-result{
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.driver-item{
+  background:#f9f6ff; border:1px solid rgba(116,52,172,.08);
+  border-radius:14px; padding:38px 34px; width:180px;
+  box-shadow:0 6px 24px rgba(116,52,172,.06);
+}
+.driver-svg{ width:48px; height:48px; margin-bottom:20px; }
+.op{ font-size:38px; font-weight:300; color:#7434ac; }
+.driver-result{
+  background:linear-gradient(135deg,var(--fire-bush),var(--rose));
+  color:#fff; width:180px; padding:40px 0; border-radius:18px;
+  box-shadow:0 20px 60px rgba(228,163,36,.25);
+}
+.result-value{ font-size:36px; font-weight:700; line-height:1; }
+.result-text { font-size:14px; opacity:.9; }
+
+/* ─── Strategy timeline refresh ─────────────────────────────────────*/
+.track-tabs{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px 0 40px;}
+.track-label{
+  padding:7px 22px;border:2px solid #7434ac;border-radius:30px;font-size:12px;
+  font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#7434ac;
+}
+.track-label.active{background:#7434ac;color:#fff;}
+.track-connector{
+  width:160px;height:2px;background:#7434ac;border-radius:2px;
+}
+.action-timeline{display:grid;gap:60px;max-width:1080px;margin:0 auto;}
+.action-phase{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:40px;
+  background:#fff;border:1px solid rgba(116,52,172,.12);border-radius:16px;
+  box-shadow:0 12px 40px rgba(0,0,0,.06);padding:50px 40px;position:relative;
+}
+.phase-left ul,.phase-right ul{margin:18px 0 0 18px;}
+.phase-marker{
+  display:inline-block;background:#fff;color:#7434ac;
+  border:2px solid #7434ac;border-radius:50%;width:70px;height:70px;
+  text-align:center;line-height:66px;font-size:22px;font-weight:700;
+  box-shadow:0 0 0 6px rgba(116,52,172,.12);margin-bottom:18px;
+}
+.phase-arrow{
+  font-size:42px;color:#7434ac;font-weight:100;align-self:center;
+}
+.phase-result{margin-top:16px;font-size:14px;color:#7434ac;}
+
+/* responsive */
+@media(max-width:900px){
+  .driver-equation{gap:28px;}
+  .action-phase{grid-template-columns:1fr;border-left:6px solid var(--fire-bush);}
+  .phase-arrow{display:none;}
+  .phase-marker{margin-bottom:12px;}
+}
