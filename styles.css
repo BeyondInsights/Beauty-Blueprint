@@ -5926,3 +5926,288 @@ h2 {
     height: 80px;
   }
 }
+/* ============= FINAL CLEAN STRATEGY DESIGN ============= */
+
+.strategic-actions {
+  margin: 100px auto;
+  padding: 80px 40px;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.08);
+}
+
+.strategic-actions .section-subtitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  font-weight: 300;
+  color: #2a2a2a;
+}
+
+/* Simple Horizontal Timeline */
+.strategy-wrapper {
+  position: relative;
+}
+
+/* Track Headers - Clean and Simple */
+.track-headers {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.track-badge {
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.track-badge.research {
+  background: #7434ac;
+}
+
+.track-badge.marketing {
+  background: linear-gradient(135deg, #e4a324, #eb0473);
+}
+
+/* Phases Container */
+.phases-container {
+  position: relative;
+}
+
+/* Horizontal Progress Bar */
+.progress-bar {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #7434ac, #e4a324, #eb0473);
+  border-radius: 2px;
+}
+
+/* Phase Steps */
+.phase-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.step-circle {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border: 4px solid #7434ac;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #7434ac;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.step-marker:nth-child(2) .step-circle {
+  border-color: #e4a324;
+  color: #e4a324;
+}
+
+.step-marker:nth-child(3) .step-circle {
+  border-color: #eb0473;
+  color: #eb0473;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b6b6b;
+  font-weight: 600;
+}
+
+/* Phase Content */
+.phase-content {
+  margin-top: 40px;
+}
+
+.phase-block {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.phase-block.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.phase-tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.track-card {
+  background: #f9f7ff;
+  border-radius: 25px;
+  padding: 45px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.track-card.research {
+  border-color: rgba(116, 52, 172, 0.2);
+}
+
+.track-card.marketing {
+  border-color: rgba(228, 163, 36, 0.2);
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.track-card.research:hover {
+  border-color: #7434ac;
+  background: linear-gradient(135deg, rgba(116, 52, 172, 0.05), #f9f7ff);
+}
+
+.track-card.marketing:hover {
+  border-color: #e4a324;
+  background: linear-gradient(135deg, rgba(228, 163, 36, 0.05), #fff9f5);
+}
+
+.track-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.track-card.research h4 {
+  color: #7434ac;
+}
+
+.track-card.marketing h4 {
+  color: #e4a324;
+}
+
+.track-card ul {
+  margin: 0 0 30px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.track-card li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2a2a2a;
+}
+
+.track-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #7434ac;
+  font-size: 1.2rem;
+}
+
+.track-card.marketing li::before {
+  color: #e4a324;
+}
+
+.track-output {
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+}
+
+.track-output strong {
+  color: #2a2a2a;
+  font-weight: 700;
+}
+
+/* Alternative: Show All Phases */
+.phases-all {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.phase-section {
+  padding: 60px;
+  background: #f9f7ff;
+  border-radius: 30px;
+  position: relative;
+}
+
+.phase-section::before {
+  content: attr(data-phase);
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 3px solid #7434ac;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #7434ac;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .track-headers {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .phase-tracks {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .phase-steps {
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+}
