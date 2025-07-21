@@ -22,6 +22,92 @@
     --shadow-purple: rgba(116, 52, 172, 0.3);
     --shadow-fire: rgba(228, 163, 36, 0.3);
 }
+/* ─────────  LANEIGE CASE STUDY  ───────── */
+.case-study{background:linear-gradient(to bottom,var(--white)0%,#f8f5ff 100%);
+  padding:120px 20px;position:relative;overflow:hidden}
+.case-study .case-header{text-align:center;margin-bottom:80px}
+.case-study .case-label{display:inline-block;background:linear-gradient(135deg,var(--royal-purple),var(--wisteria));
+  color:var(--white);padding:10px 30px;border-radius:28px;font:700 .8rem/1 'Segoe UI',sans-serif;letter-spacing:2px}
+.case-study .case-subtitle{font-size:1.4rem;max-width:800px;margin:25px auto 0;color:var(--heathered-gray)}
+
+.case-challenge{background:linear-gradient(135deg,rgba(241,11,37,.03)0%,rgba(116,52,172,.03)100%);
+  border:2px solid rgba(241,11,37,.1);border-radius:28px;padding:60px;margin-bottom:90px}
+.challenge-title{text-align:center;font-size:2.2rem;font-weight:300;margin-bottom:50px}
+.challenge-body{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.metric-value{display:block;font-size:3.2rem;font-weight:700;color:var(--red-ribbon)}
+.challenge-arrow{font-size:3rem;color:var(--red-ribbon);opacity:.5}
+.challenge-risk ul{margin:8px 0 0;padding:0 0 0 18px}
+.case-challenge .challenge-copy{font-size:1.2rem;max-width:900px;margin:0 auto;text-align:center;margin-top:25px}
+
+.blueprint-reveal .blueprint-grid{display:grid;gap:45px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.insight-card{background:var(--white);border-radius:22px;padding:45px 40px;box-shadow:0 16px 50px rgba(0,0,0,.08)}
+.tool-badge{display:inline-block;background:linear-gradient(135deg,var(--royal-purple),var(--wisteria));
+  color:#fff;font:700 .75rem/1 'Segoe UI',sans-serif;padding:6px 20px;border-radius:18px;margin-bottom:18px}
+.insight-card h4{font-size:1.4rem;margin:0 0 18px;color:var(--dark-text)}
+.insight-card .intro{font-size:1.05rem;margin-bottom:20px}
+.edge-columns{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin:25px 0 30px}
+.edge-columns ul{list-style:none;padding:0}
+.edge-columns .title{font-weight:600;margin-bottom:6px;color:var(--royal-purple)}
+.edge-conclusion{font-size:1rem;background:rgba(116,52,172,.05);padding:18px;border-radius:12px}
+
+.migration-stats{display:flex;gap:30px;margin:25px 0}
+.stat{flex:1 1 120px;border:2px solid currentColor;border-radius:18px;padding:25px;text-align:center}
+.stat.curious{color:var(--fire-bush)}
+.stat.recon{color:var(--royal-purple)}
+.stat .percent{display:block;font-size:2.6rem;font-weight:700}
+.critical{margin:20px 0;font-weight:500}
+.triggers{padding-left:18px;font-size:.95rem;margin:0}
+.triggers li{margin-bottom:6px}
+
+.driver-equation{display:flex;align-items:center;justify-content:space-between;
+  gap:18px;margin:25px 0 30px;flex-wrap:wrap}
+.driver{flex:0 1 140px;background:#faf7ff;border:1px solid rgba(116,52,172,.2);border-radius:14px;
+  padding:20px;text-align:center;font-size:.9rem;font-weight:500}
+.plus,.equals{font-size:1.6rem;color:var(--royal-purple);font-weight:700}
+.result{flex:0 1 100px;background:linear-gradient(135deg,var(--fire-bush),var(--rose));color:#fff;
+  text-align:center;border-radius:18px;padding:18px 12px;font-weight:700}
+.why{font-size:.95rem;padding-left:18px;margin:0}
+.why li{margin-bottom:6px}
+
+.strategic-actions{margin-top:100px}
+.strategy-tracks .tracks-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:20px}
+.strategy-tracks .tracks-head span{text-align:center;font:600 .8rem/1 'Segoe UI',sans-serif;
+  padding:10px 0;border:2px solid var(--royal-purple);border-radius:22px;text-transform:uppercase}
+.phase{display:grid;grid-template-columns:110px 1fr 1fr;gap:40px;background:var(--white);
+  border-radius:22px;padding:45px 40px;box-shadow:0 12px 40px rgba(0,0,0,.05);margin-bottom:40px}
+.phase-tag{width:90px;height:90px;border-radius:50%;border:6px solid var(--royal-purple);
+  display:flex;align-items:center;justify-content:center;font-weight:700}
+.phase-col h4{font-size:1.2rem;margin:0 0 10px;color:var(--dark-text)}
+.phase-col ul{padding-left:18px;margin:0 0 8px;font-size:.95rem}
+.phase .deliverable{font-size:.85rem;font-style:italic;margin:4px 0 0}
+
+.summary-90{margin-top:120px;text-align:center}
+.summary-title{font-size:2rem;margin-bottom:50px;font-weight:300}
+.summary-steps{display:flex;justify-content:center;gap:120px;list-style:none;margin:0 0 70px;padding:0;
+  position:relative}
+.summary-steps li{position:relative}
+.summary-steps li::before{content:'';position:absolute;left:50%;bottom:-28px;width:2px;height:28px;
+  background:var(--royal-purple);transform:translateX(-50%)}
+.summary-steps span{display:block;width:72px;height:72px;border:6px solid var(--royal-purple);
+  border-radius:50%;line-height:60px;font-size:1.4rem;font-weight:700;margin:0 auto 15px}
+.summary-cards{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.summary-cards article{background:#fff;border-radius:22px;padding:35px 28px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.summary-cards h4{font-size:1.1rem;margin:0 0 15px;color:var(--royal-purple)}
+.summary-cards ul{padding-left:16px;font-size:.95rem;margin:0}
+.summary-cards li{margin-bottom:6px}
+
+/* Responsive tweaks */
+@media(max-width:1024px){
+  .challenge-body{flex-direction:column}
+  .strategy-tracks .tracks-head{grid-template-columns:1fr}
+  .phase{grid-template-columns:90px 1fr}
+}
+@media(max-width:768px){
+  .case-study{padding:80px 18px}
+  .phase{grid-template-columns:1fr}
+  .phase-tag{margin:0 auto 20px}
+  .summary-steps{gap:70px}
+}
 
 /* Base Styles */
 body {
