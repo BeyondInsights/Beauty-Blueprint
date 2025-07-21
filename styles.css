@@ -3312,3 +3312,148 @@ h2 {
 /* ═══════════════════════════════════ */
 
 /* END of case‑study polish */
+/* ─── CASE STUDY LAYOUT FIXES 2025‑07‑21 ───────────────────────────── */
+
+/* stack the three insight modules on narrow screens & center them */
+.column-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* full‑width cards look cramped at >1300 px; switch to row layout then */
+@media (min-width: 1300px){
+  .column-stack{
+    flex-direction: row;
+  }
+}
+
+/* Transformation grid: two tracks in perfect vertical alignment */
+.transformation-grid{
+  display: grid;
+  gap: 50px;
+}
+
+.tracks-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.track-title{
+  display:block;
+  padding:8px 22px;
+  font-size:.8rem;
+  font-weight:700;
+  border:2px solid var(--royal-purple);
+  border-radius:30px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.phase-card{
+  background:#fff;
+  border-radius:24px;
+  padding:40px 50px;
+  box-shadow:0 12px 35px rgba(0,0,0,.06);
+  border:1px solid rgba(116,52,172,.12);
+}
+
+.phase-badge{
+  width:60px;height:60px;line-height:60px;
+  text-align:center;
+  font-weight:700;
+  color:var(--royal-purple);
+  border:3px solid var(--royal-purple);
+  border-radius:50%;
+  margin-bottom:25px;
+}
+
+.phase-body{
+  display:grid;
+  grid-template-columns:1fr 40px 1fr;
+  gap:25px;
+}
+
+.phase-body::before{
+  content:'→';
+  grid-column:2;
+  align-self:center;
+  justify-self:center;
+  font-size:1.6rem;
+  color:var(--royal-purple);
+}
+
+.track-block h4{
+  font-size:1.15rem;
+  margin:0 0 10px;
+  color:var(--royal-purple);
+  font-weight:600;
+}
+
+.track-outcome{
+  margin-top:12px;
+  font-size:.9rem;
+  color:var(--fire-bush);
+  font-weight:600;
+}
+
+/* remove old Week 2 / Week 6 timeline */
+.transformation-results,
+.timeline-visual,
+.results-disclaimer {display:none!important;}
+
+/* 90‑Day arc visuals */
+.ninety-title{
+  text-align:center;
+  font-size:2.2rem;
+  font-weight:300;
+  margin:100px 0 40px;
+}
+
+.ninety-arc{
+  width:100%;
+  max-width:900px;
+  height:180px;
+  display:block;
+  margin:0 auto;
+}
+
+.ninety-steps{
+  display:flex;
+  justify-content:space-between;
+  max-width:900px;
+  margin:-120px auto 0;         /* pull up under the arc */
+  padding:0 15px;
+}
+
+.ninety-steps .step{
+  text-align:center;
+}
+
+.ninety-steps .circle{
+  width:100px;height:100px;
+  border:4px solid var(--royal-purple);
+  border-radius:50%;
+  line-height:100px;
+  font-size:2rem;
+  font-weight:700;
+  color:var(--royal-purple);
+  box-shadow:0 8px 25px rgba(116,52,172,.12);
+  background:rgba(255,255,255,.9);
+  margin:0 auto 15px;
+}
+
+.ninety-steps h4{margin:0;font-size:1.25rem;color:var(--royal-purple);font-weight:600}
+
+/* footer: single gray bar; remove duplicate white slab */
+.footer-sources,
+.source-notes{
+  background:transparent!important;
+  border:none!important;
+  color:rgba(255,255,255,.8);
+  font-size:.8rem;
+  text-align:center;
+  margin-top:30px;
+}
