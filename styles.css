@@ -6211,3 +6211,282 @@ h2 {
     padding-bottom: 20px;
   }
 }
+/* ============= INTEGRATED STRATEGY DESIGN ============= */
+
+.strategic-actions {
+  margin: 100px auto;
+  padding: 80px 40px;
+  max-width: 1200px;
+}
+
+.strategic-actions .section-subtitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 80px;
+  font-weight: 300;
+  color: #2a2a2a;
+}
+
+/* Strategy Container */
+.strategy-container {
+  background: #f9f7ff;
+  border-radius: 40px;
+  padding: 60px;
+  box-shadow: 0 20px 60px rgba(116, 52, 172, 0.08);
+}
+
+/* Integrated Header */
+.strategy-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.track-column {
+  text-align: center;
+}
+
+.track-title {
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.track-title.research {
+  background: #7434ac;
+}
+
+.track-title.marketing {
+  background: linear-gradient(135deg, #e4a324, #eb0473);
+}
+
+/* Phase Row */
+.phase-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.phase-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Phase Indicator - Centered Between Columns */
+.phase-indicator {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.phase-label {
+  background: #fff;
+  border: 3px solid #7434ac;
+  border-radius: 50px;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 25px rgba(116, 52, 172, 0.15);
+}
+
+.phase-number {
+  width: 30px;
+  height: 30px;
+  background: #7434ac;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.phase-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7434ac;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Phase Cards */
+.phase-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 50px 35px 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column Indicator */
+.phase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 25px 25px 0 0;
+}
+
+.phase-card.research::before {
+  background: #7434ac;
+}
+
+.phase-card.marketing::before {
+  background: linear-gradient(90deg, #e4a324, #eb0473);
+}
+
+.phase-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.phase-card ul {
+  margin: 0 0 auto 0;
+  padding: 0;
+  list-style: none;
+  flex: 1;
+}
+
+.phase-card li {
+  padding: 10px 0 10px 28px;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2a2a2a;
+}
+
+.phase-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.phase-card.research li::before {
+  color: #7434ac;
+}
+
+.phase-card.marketing li::before {
+  color: #e4a324;
+}
+
+/* Deliverable */
+.phase-deliverable {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.95rem;
+  color: #6b6b6b;
+}
+
+.phase-deliverable strong {
+  color: #2a2a2a;
+  font-weight: 700;
+}
+
+/* Visual Connection Line */
+.phase-row:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(180deg, #7434ac, #e4a324);
+  transform: translateX(-50%);
+  opacity: 0.3;
+}
+
+/* Hover Effects */
+.phase-card {
+  transition: all 0.3s ease;
+}
+
+.phase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Alternative Inline Headers */
+.inline-phase-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.phase-header-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 40px 35px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.phase-header-badge {
+  background: #7434ac;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.phase-header-badge.marketing {
+  background: linear-gradient(135deg, #e4a324, #eb0473);
+}
+
+.phase-header-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .strategy-container {
+    padding: 40px 20px;
+  }
+  
+  .strategy-header,
+  .phase-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .phase-indicator {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .phase-row:not(:last-child)::after {
+    display: none;
+  }
+}
