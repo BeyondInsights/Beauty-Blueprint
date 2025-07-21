@@ -4106,3 +4106,288 @@ h2 {
   .spacer                { display:none; }
   .track-block.marketing { grid-column: 2 / -1; }
 }
+/* ============= CASE STUDY SPECIFIC FIXES ============= */
+
+/* 1. Remove duplicate header (second image issue) */
+.case-study .case-label:nth-of-type(2),
+.case-study .case-title,
+.case-study .case-subtitle:nth-of-type(2) {
+  display: none !important;
+}
+
+/* 2. Enhanced Case Study Visual Improvements */
+.case-study {
+  padding: 120px 20px;
+  background: linear-gradient(to bottom, var(--white) 0%, #f8f5ff 100%);
+}
+
+.case-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.case-header .case-label {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--royal-purple), var(--wisteria));
+  color: var(--white);
+  padding: 12px 40px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(116, 52, 172, 0.3);
+}
+
+/* 3. Challenge Block Enhancements */
+.challenge-block {
+  background: linear-gradient(135deg, rgba(241, 11, 37, 0.03) 0%, rgba(116, 52, 172, 0.03) 100%);
+  border: 2px solid rgba(241, 11, 37, 0.1);
+  border-radius: 30px;
+  padding: 60px;
+  margin-bottom: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.challenge-block::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(241, 11, 37, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* 4. CS Block Cards Enhancement */
+.cs-block {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 50px;
+  margin-bottom: 60px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(116, 52, 172, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cs-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--fire-bush), var(--royal-purple), var(--rose));
+}
+
+.cs-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 25px;
+}
+
+.cs-badge.purple {
+  background: linear-gradient(135deg, var(--royal-purple), var(--wisteria));
+}
+
+.cs-badge.gold {
+  background: linear-gradient(135deg, var(--fire-bush), #ff8c42);
+}
+
+.cs-badge.magenta {
+  background: linear-gradient(135deg, var(--rose), var(--purple));
+}
+
+/* 5. Enhanced Driver Equation */
+.driver-equation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.driver-item {
+  background: rgba(116, 52, 172, 0.05);
+  border: 2px solid rgba(116, 52, 172, 0.15);
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  min-width: 160px;
+  transition: all 0.3s ease;
+}
+
+.driver-item:hover {
+  background: rgba(116, 52, 172, 0.1);
+  transform: translateY(-5px);
+}
+
+.operator {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--royal-purple);
+}
+
+.driver-result {
+  background: linear-gradient(135deg, var(--fire-bush), var(--rose));
+  color: var(--white);
+  padding: 30px 35px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(228, 163, 36, 0.35);
+  transform: scale(1.1);
+}
+
+.result-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+/* 6. Better Stats Display */
+.cs-stats.duo {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.cs-stats .stat {
+  flex: 1;
+  max-width: 200px;
+  text-align: center;
+  padding: 35px 30px;
+  border: 3px solid;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.stat.curious {
+  border-color: var(--fire-bush);
+  background: rgba(228, 163, 36, 0.05);
+}
+
+.stat.recon {
+  border-color: var(--royal-purple);
+  background: rgba(116, 52, 172, 0.05);
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat .number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.stat.curious .number {
+  color: var(--fire-bush);
+}
+
+.stat.recon .number {
+  color: var(--royal-purple);
+}
+
+/* 7. 90-Day Timeline Enhancement */
+.timeline90 {
+  text-align: center;
+  margin: 80px auto 0;
+  padding: 60px 40px;
+  background: rgba(116, 52, 172, 0.03);
+  border-radius: 30px;
+}
+
+.timeline90 h3 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.arc {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.arc::before {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--fire-bush), var(--royal-purple), var(--rose));
+  z-index: 0;
+}
+
+.arc li {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.arc .circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 4px solid var(--royal-purple);
+  border-radius: 50%;
+  background: var(--white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 25px rgba(116, 52, 172, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .challenge-block {
+    padding: 40px 30px;
+  }
+  
+  .cs-block {
+    padding: 35px 25px;
+  }
+  
+  .driver-equation {
+    flex-direction: column;
+  }
+  
+  .operator {
+    transform: rotate(90deg);
+  }
+  
+  .arc {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .arc::before {
+    display: none;
+  }
+}
