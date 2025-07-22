@@ -7431,3 +7431,56 @@ h2 {
   .spacer                { display:none; }
   .track-block.marketing { grid-column: 2 / -1; }
 }
+/* ░░░ QUICK POLISH – TRANSFORMATION STRATEGY ░░░ */
+
+/* 1 ░ Equal-height phase cards ────────────────────────────────────────── */
+.strategy-grid .phase-card,
+.strategy-grid .phase-card > * {            /* keeps inner flex column full‑height */
+    min-height: 360px;                     /* ▲ raise/lower to taste */
+    display: flex;
+    flex-direction: column;
+}
+
+/* extra breathing room below the final row so badges don’t crowd the footer */
+.strategy-grid { padding-bottom: 80px; }    /* ▲ */
+
+/* 2 ░ Refined phase badge (circle) ────────────────────────────────────── */
+.phase-badge {
+    width: 84px;                           /* ▲ */
+    height: 84px;                          /* ▲ */
+    border: 2px solid var(--royal-purple);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--primary-font);
+    color: var(--royal-purple);
+    font-weight: 700;
+    line-height: 1;
+    background: var(--white);
+    box-shadow: 0 4px 14px rgba(116,52,172,.15);
+}
+
+/* Number */
+.phase-badge .phase-num {
+    font-size: 1.75rem;                    /* ▲ */
+    margin-bottom: 2px;
+}
+
+/* Word “PHASE” */
+.phase-badge .phase-label {
+    font-size: .65rem;
+    letter-spacing: 1px;
+}
+
+/* Decorative horizontal connector */
+.phase-badge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 48px;                           /* ▲ length of line */
+    height: 2px;
+    background: linear-gradient(90deg,var(--fire-bush),var(--rose));
+}
