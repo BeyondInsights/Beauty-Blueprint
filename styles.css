@@ -7839,3 +7839,124 @@ h2 {
     margin-top:10px;
   }
 }
+/* === Transformation Strategy NEW === */
+.strategy{
+  padding:80px 6vw 40px;
+  max-width:1300px;
+  margin:0 auto;
+  position:relative;
+}
+.strategy .section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.track‑header{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+  margin-bottom:30px;
+}
+.track{
+  text-align:center;
+  font-size:.9rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  padding:.65rem 1rem;
+  border:2px solid var(--royal-purple);
+  border-radius:9999px;
+}
+.track--marketing{
+  background:var(--royal-purple);
+  color:#fff;
+  border-color:var(--royal-purple);
+}
+
+.phase-row{
+  display:grid;
+  grid-template-columns:140px 1fr 1fr;
+  gap:3rem;
+  align-items:start;
+  margin-bottom:60px;
+  position:relative;
+}
+.phase-tag{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:90px;
+  height:90px;
+  color:var(--royal-purple);
+  border:2px solid var(--royal-purple);
+  border-radius:18px 18px 32px 32px;
+  font-size:.75rem;
+  font-weight:600;
+  line-height:1;
+  text-transform:uppercase;
+  position:relative;
+}
+.phase-tag::after{ /* decorative arrow */
+  content:"";
+  position:absolute;
+  top:50%;
+  right:-36px;
+  width:30px;
+  height:2px;
+  background:var(--fire-bush);
+}
+.phase-tag span{margin-bottom:4px;letter-spacing:.5px}
+.phase-tag strong{font-size:1.25rem;line-height:1}
+
+.phase-card{
+  background:#fff;
+  border:2px solid var(--royal-purple);
+  border-radius:8px;
+  padding:28px 34px 32px;
+  box-shadow:0 4px 15px -6px rgba(0,0,0,.08);
+}
+.phase-card.marketing{
+  border-color:var(--fire-bush);
+}
+.phase-card h3{
+  font-size:1.1rem;
+  margin:0 0 12px;
+}
+.phase-card ul{
+  list-style:disc;
+  margin:0 0 18px 1.1rem;
+  padding:0;
+}
+.phase-card li{margin:6px 0;font-size:.95rem}
+.phase-card .deliverable,
+.phase-card .output{
+  font-size:.81rem;
+  font-weight:600;
+  color:var(--royal-purple);
+}
+.phase-card.marketing .output{color:var(--fire-bush)}
+
+@media(max-width:980px){
+  .phase-row{
+    grid-template-columns:100px 1fr;
+    gap:2rem 1.5rem;
+  }
+  .phase-card{grid-column:2/span 1}
+}
+
+@media(max-width:640px){
+  .track‑header{
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+  }
+  .phase-row{
+    grid-template-columns:1fr;
+  }
+  .phase-tag{
+    margin:0 auto 1rem;
+  }
+}
+
+/* === End Transformation Strategy === */
