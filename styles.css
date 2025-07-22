@@ -7832,3 +7832,127 @@ h2 {
   .phase-badge::after{width:28px;}
   .strategy-head{font-size:2rem;margin-bottom:40px;}
 }
+/* --- Transformation Strategy (refined) ---------------------------------- */
+.transformation-strategy {
+  padding: 100px 0 60px;
+}
+
+.strategy-headings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 840px;
+  margin: 40px auto 60px;
+}
+
+.track {
+  text-align: center;
+  padding: 14px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid var(--royal-purple);
+  border-radius: 40px;
+  letter-spacing: 1px;
+}
+
+.marketing-track {
+  background: var(--royal-purple);
+  color: #fff;
+  border-color: var(--royal-purple);
+}
+
+.strategy-grid {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 40px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.phase-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  min-width: 68px;
+  height: 68px;
+  border: 2px solid var(--royal-purple);
+  border-radius: 22px;
+  position: relative;
+}
+
+.phase-badge::after {
+  content: '';
+  position: absolute;
+  right: -30px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--royal-purple), var(--fire-bush));
+}
+
+.phase-badge span {
+  font-size: 0.55rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.phase-badge strong {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.card {
+  border: 2px solid var(--royal-purple);
+  border-radius: 6px;
+  padding: 40px 45px 35px;
+  background: #fff;
+}
+
+.card.marketing {  /* right‑hand column gets gold accent */
+  border-color: var(--fire-bush);
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.card ul {
+  margin: 0 0 22px 0;
+  padding-left: 18px;
+}
+
+.card ul li {
+  margin: 6px 0;
+}
+
+.deliverable,
+.output {
+  font-size: 0.82rem;
+}
+
+.deliverable em,
+.output em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.strategy-grid > *:nth-child(9),
+.strategy-grid > *:nth-child(10),
+.strategy-grid > *:nth-child(11) {
+  /* leave bottom padding area */
+  margin-bottom: 0;
+}
+
+/* responsive */
+@media (max-width: 960px) {
+  .strategy-headings { display:none; }
+
+  .strategy-grid {
+    grid-template-columns: auto 1fr;
+  }
+  .card.marketing { border-color: var(--royal-purple); }
+}
