@@ -7484,3 +7484,119 @@ h2 {
     height: 2px;
     background: linear-gradient(90deg,var(--fire-bush),var(--rose));
 }
+/* ───────── STRATEGIC ACTIONS ───────── */
+.strategic-actions {
+    margin-bottom: 120px;
+}
+
+.strategy-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;   /* badge | left | right  */
+    gap: 50px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.phase-badge {
+    place-self: start center;
+    width: 90px;
+    height: 90px;
+    border: 3px solid var(--royal-purple);
+    border-radius: 50%;
+    font: 700 1.8rem/1.1 "Montserrat", sans-serif;
+    color: var(--royal-purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.phase-badge small {
+    font-size: .55rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.phase-badge::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 90%;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg,var(--fire-bush),var(--rose));
+}
+
+.strategy-card {
+    background: var(--white);
+    border: 1px solid rgba(116,52,172,.12);
+    border-radius: 14px;
+    padding: 35px 40px 45px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* stretches card bottoms equal */
+    min-height: 360px;              /* keeps Phase 3 cards equal */
+}
+
+.strategy-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+}
+
+.strategy-card ul {
+    margin: 0 0 25px 0;
+    padding-left: 18px;
+}
+
+.strategy-card li {
+    margin: 8px 0;
+}
+
+.strategy-card .deliverable {
+    font-size: .88rem;
+    font-weight: 600;
+    color: var(--royal-purple);
+}
+
+/* golden accent for right‑hand cards */
+.strategy-card.alt {border-color: rgba(228,163,36,.15);}
+.strategy-card.alt .deliverable {color: var(--fire-bush);}
+
+/* Track header bars */
+.track-headers{
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    align-items: end;
+}
+.track-label{
+    display:block;
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:.05rem;
+    text-transform:uppercase;
+    padding:10px 0;
+    border-radius:50px;
+    text-align:center;
+    color:#fff;
+}
+.research-track-label{
+    grid-column:2/3;
+    background:linear-gradient(90deg,var(--wisteria),var(--royal-purple));
+}
+.marketing-track-label{
+    grid-column:3/4;
+    background:linear-gradient(90deg,var(--rose),var(--fire-bush));
+}
+
+/* ── responsive ─────────────────────────────────*/
+@media(max-width: 992px){
+   .strategy-grid{
+        grid-template-columns:80px 1fr;
+   }
+   .track-headers{grid-template-columns:80px 1fr;}
+   .track-label{grid-column:2/3;}
+   .strategy-grid article.alt{margin-top:-20px;} /* small stagger */
+}
