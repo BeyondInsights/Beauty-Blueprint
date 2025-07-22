@@ -7695,3 +7695,140 @@ h2 {
 @media(max-width:768px){
   .strategy-grid{grid-template-columns:1fr;}
 }
+/* ——— Transformation Strategy block ——— */
+.strategy-block{
+  --gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.strategy-head{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:2.4rem;
+  font-weight:300;
+}
+
+.track-labels{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:var(--gap);
+  max-width:900px;
+  margin:0 auto 50px;
+}
+
+.track{
+  display:block;
+  padding:10px 24px;
+  border:2px solid var(--royal-purple);
+  border-radius:32px;
+  font-size:.78rem;
+  font-weight:600;
+  letter-spacing:.5px;
+  text-align:center;
+  text-transform:uppercase;
+  background:#fff;
+}
+
+.phase-row{
+  display:grid;
+  grid-template-columns:90px 1fr 1fr;
+  gap:var(--gap);
+  align-items:start;
+  margin-bottom:70px;
+}
+
+.phase-badge{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  position:relative;
+}
+
+.phase-badge::after{          /* coloured connector line */
+  content:"";
+  position:absolute;
+  left:100%;
+  top:34px;
+  width:45px;
+  height:2px;
+  background:var(--fire-bush);
+}
+
+.phase-label{
+  font-size:.62rem;
+  font-weight:600;
+  border:2px solid var(--royal-purple);
+  border-radius:14px 14px 0 0;
+  padding:4px 14px 3px;
+  background:#fff;
+  line-height:1;
+}
+
+.phase-num{
+  font-size:1.05rem;
+  font-weight:700;
+  border:2px solid var(--royal-purple);
+  border-top:0;
+  border-radius:0 0 14px 14px;
+  padding:5px 14px 6px;
+  background:#fff;
+  line-height:1;
+}
+
+.card{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.07);
+  box-shadow:0 18px 40px rgba(0,0,0,.06);
+  border-radius:14px;
+  padding:40px 50px;
+}
+
+.card h3{
+  font-size:1.15rem;
+  margin:0 0 15px;
+}
+
+.card ul{
+  margin:0 0 25px 0;
+  padding-left:18px;
+}
+
+.card ul li{
+  margin-bottom:8px;
+  font-size:.95rem;
+}
+
+.card .foot{
+  font-size:.8rem;
+  color:var(--royal-purple);
+  font-weight:600;
+}
+
+.card.research{border-top:4px solid var(--royal-purple);}
+.card.marketing{border-top:4px solid var(--fire-bush);}
+
+/* ——— responsive ——— */
+@media(max-width:992px){
+  .phase-row{
+    grid-template-columns:70px 1fr;
+  }
+  .card{
+    padding:30px 35px;
+  }
+  .card.research,
+  .card.marketing{
+    margin-bottom:30px;
+  }
+}
+
+@media(max-width:600px){
+  .track-labels{display:none;}
+  .phase-row{
+    grid-template-columns:60px 1fr;
+    gap:28px;
+  }
+  .phase-badge::after{width:28px;}
+  .strategy-head{font-size:2rem;margin-bottom:40px;}
+}
