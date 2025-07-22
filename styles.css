@@ -8277,3 +8277,132 @@ h2 {
 @media(max-width:700px){
    .cta-left,.cta-right{flex:1 1 100%;padding:60px 30px}
 }
+/* ─────────────────────────────────────────────
+   SAFE‑AREA WRAPPER (adds horizontal breathing‑room)
+   ───────────────────────────────────────────── */
+.screen .container{
+  max-width:1280px;            /* full desktop width   */
+  margin:0 auto;
+  padding:0 32px;              /* edge‑to‑edge gutter  */
+}
+
+/* ─────────────────────────────────────────────
+   “WHY BEYOND” – 4 benefit cards
+   ───────────────────────────────────────────── */
+.benefit-cards{                /* wrapper */
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+}
+.benefit-card{                 /* each card */
+  background:#fff;
+  border-radius:28px;
+  padding:60px 40px 50px;
+  box-shadow:0 25px 60px rgba(0,0,0,.05);
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;
+}
+.benefit-icon{
+  width:110px;height:110px;
+  margin-bottom:38px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#6c34c7,#b54bd8 55%,#f1047f);
+}
+.benefit-icon svg{width:44px;height:44px;fill:#fff}
+
+/* ─────────────────────────────────────────────
+   BEAUTY BRAND BLUEPRINT (6‑card grid)
+   ───────────────────────────────────────────── */
+.blueprint-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:50px 40px;
+}
+.blueprint-card{
+  position:relative;
+  padding:54px 40px 64px;
+  border-radius:20px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.12);
+}
+.blueprint-card .num{
+  position:absolute;top:30px;right:30px;
+  font:700 1.3rem var(--title-font);
+  opacity:.25;
+}
+
+/* ─────────────────────────────────────────────
+   TRANSFORMATION STRATEGY TIMELINE
+   ───────────────────────────────────────────── */
+.strategy-wrapper{margin-top:120px}
+
+/* header + track pills */
+.strategy-header{text-align:center;margin-bottom:65px}
+.track-labels{
+  display:flex;justify-content:center;gap:50px;margin-bottom:35px
+}
+.track-labels .label{
+  padding:10px 38px;border:2px solid var(--royal-purple);
+  border-radius:100px;font:600 .8rem var(--body-font);
+  text-transform:uppercase;letter-spacing:.5px
+}
+.track-labels .label.dev{background:var(--royal-purple);color:#fff;border-color:transparent}
+
+/* rows */
+.phase-row{
+  display:grid;
+  grid-template-columns:140px 1fr 1fr;
+  gap:42px;align-items:start;
+  margin-bottom:85px
+}
+/* phase badge */
+.phase-badge{
+  position:relative;width:90px;height:90px;
+  border:3px solid var(--royal-purple);border-radius:18px;
+  display:flex;flex-direction:column;justify-content:center;align-items:center
+}
+.phase-badge .num{font:700 1rem var(--title-font)}
+.phase-badge span{font-size:.72rem;font-weight:600;margin-top:2px}
+.phase-badge::after{           /* coloured connector */
+  content:"";position:absolute;top:50%;right:-25px;
+  width:52px;height:3px;
+  background:linear-gradient(90deg,var(--royal-purple),var(--fire-bush))
+}
+
+/* cards inside each row                    */
+.detail-card{
+  padding:45px 40px 50px;
+  background:#fff;border:3px solid var(--royal-purple);
+  border-radius:18px
+}
+.detail-card.dev{border-color:var(--fire-bush)}
+
+/* ─────────────────────────────────────────────
+   90‑Day Transformation (3 tall cards)
+   ───────────────────────────────────────────── */
+.day90-deck{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:45px
+}
+.day90-deck .card{
+  padding:50px 42px 64px;border:3px solid var(--royal-purple);
+  border-radius:26px
+}
+.day90-deck .card:nth-child(2){border-color:var(--fire-bush)}
+.day90-deck .card:nth-child(3){border-color:#eb0473}
+
+/* ─────────────────────────────────────────────
+   Fixed top CTA bar (Calendly)
+   ───────────────────────────────────────────── */
+.fixed-cta{
+  position:fixed;top:0;left:0;right:0;z-index:5000;
+  background:#120b25;padding:14px
+}
+body.has-cta-space{padding-top:70px}
+.cta-btn{
+  background:linear-gradient(135deg,#ff9c00,#ff0066);
+  padding:14px 34px;border-radius:30px;
+  color:#fff;font-weight:700;white-space:nowrap
+}
