@@ -8180,21 +8180,81 @@ h2 {
   .card{grid-column:2}
 }
 
-/* ────────────────────────────────────────────────
-   90‑Day Transformation cards
-──────────────────────────────────────────────── */
-.day90-cards{
-    display:flex;gap:40px;flex-wrap:wrap;justify-content:center;
-    max-width:1200px;margin:80px auto 60px
+/* ─── 90‑Day Transformation – detail deck ─────────────────────────────── */
+.process-details.deck{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
+  margin-top:60px;
 }
-.big-card{
-    flex:1 1 280px;max-width:340px;padding:50px 40px;
-    border:2px solid var(--royal-purple);border-radius:26px
+
+.detail-card{
+  background:#fff;
+  border-radius:26px;
+  padding:50px 40px 45px;
+  box-shadow:0 18px 60px rgba(0,0,0,.07);
+  border:1px solid rgba(116,52,172,.12);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  transition:.3s all ease;
 }
-.big-card h3{font:600 1.35rem/1.4 var(--font-heading);margin-bottom:24px}
-.big-card ul{padding-left:20px;margin:0}
-.big-card li{margin:10px 0;font-size:0.98rem}
-@media(max-width:600px){.day90-cards{flex-direction:column;gap:30px}}
+.detail-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 70px rgba(0,0,0,.10);
+}
+
+.detail-card h4{
+  font-size:1.45rem;
+  font-weight:700;
+  color:var(--royal-purple);
+  margin:30px 0 25px;
+}
+
+.detail-card ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  font-size:1.02rem;
+  line-height:1.55;
+}
+
+.detail-card ul li{
+  position:relative;
+  padding-left:18px;
+}
+
+.detail-card ul li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:var(--fire-bush);
+  font-weight:600;
+}
+
+.detail-icon{
+  width:90px;
+  height:90px;
+  background:linear-gradient(135deg,rgba(116,52,172,.05),rgba(235,4,115,.05));
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 15px rgba(0,0,0,.05) inset;
+}
+
+.detail-svg{ width:60px;height:60px; }
+
+@media(max-width:768px){
+  .process-details.deck{ gap:25px; }
+  .detail-card{ padding:35px 25px 40px; }
+  .detail-card h4{ font-size:1.25rem;margin:25px 0 20px; }
+}
+/* ────────────────────────────────────────────────────────────────────── */
 
  /* ────────────────────────────────────────────────
     CTA / Footer
