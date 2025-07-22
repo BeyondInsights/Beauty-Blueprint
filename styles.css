@@ -8406,3 +8406,89 @@ body.has-cta-space{padding-top:70px}
   padding:14px 34px;border-radius:30px;
   color:#fff;font-weight:700;white-space:nowrap
 }
+/* ─────────────────────────────
+   UNIVERSAL RESETS / UTILITIES
+   ───────────────────────────── */
+:root{
+  --royal: #7434ac; --wisteria:#9454b0; --fire:#e4a324; --rose:#eb0473;
+  --grad-main:linear-gradient(135deg,var(--royal),var(--rose));
+}
+
+/* Give every section enough horizontal room on XL screens */
+.container, .screen .container{
+  max-width: 1380px;
+}
+
+/* ---------- ❶ “WHY LEADING BRANDS …”  ---------------- */
+.why-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px}
+.why-card .icon-disc{
+  width:120px;height:120px;margin:0 auto 32px;
+  background:var(--grad-main);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 30px rgba(116,52,172,.25);
+}
+.why-card .icon-disc svg{width:50%;height:50%;fill:#fff}
+
+/* ---------- ❷ BEAUTY‑BLUEPRINT CARDS ------------------ */
+.blueprint-grid{
+  display:grid;gap:60px 48px;
+  grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); /* wider */
+}
+.blueprint-card{min-height:560px;padding:48px 36px}
+
+/* ---------- ❸ TRANSFORMATION STRATEGY TABLE ---------- */
+.strategy-wrap{margin-top:40px}
+.phase-track-header{
+  display:flex;gap:36px;justify-content:center;margin-bottom:36px
+}
+.phase-track-header .track{
+  padding:10px 32px;border:2px solid var(--royal);border-radius:50px;
+  font-weight:700;letter-spacing:.5px;font-size:.9rem;
+}
+.phase-track-header .marketing{border-color:var(--grad-main);background:var(--grad-main);color:#fff}
+
+/* grid for the six boxes */
+.phase-grid{
+  display:grid;grid-template-columns:minmax(110px,140px) 1fr 1fr;row-gap:72px
+}
+.phase-badge{
+  display:inline-flex;flex-direction:column;align-items:center;
+  font-size:.8rem;font-weight:700;border:2px solid var(--royal);
+  border-radius:12px;padding:6px 12px;position:relative;top:2px
+}
+.phase-badge .num{font-size:1.25rem;line-height:1}
+.strategy-box{
+  border:3px solid var(--royal);border-radius:10px;padding:36px 28px;
+  box-shadow:0 4px 25px rgba(0,0,0,.06);text-align:left;
+}
+.strategy-box.marketing{border-color:var(--fire)}
+.strategy-box h4{margin-top:0;margin-bottom:18px;font-size:1.35rem}
+.strategy-box ul{margin:0;padding-left:22px}
+.strategy-box li{margin-bottom:8px}
+
+/* vertical connector */
+.phase-grid::before{
+  content:"";grid-column:1/4;grid-row:2/6;
+  width:2px;margin:0 auto;background:var(--fire);opacity:.5
+}
+
+/* ---------- ❹ 90‑DAY DETAIL CARDS -------------------- */
+.process-details{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:48px
+}
+.detail-card{text-align:left}
+
+/* ---------- ❺ “DECISION / STRATEGIC CLARITY” -------- */
+.decision-wrapper{max-width:1140px;margin:0 auto}
+.decision-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px}
+
+/* ---------- ❻ FOOTER / CTA --------------------------- */
+.footer-cta{
+  text-align:center;padding:40px 20px;background:#10082a;
+}
+.footer-cta a{
+  background:var(--grad-main);color:#fff;padding:18px 38px;
+  border-radius:50px;font-weight:700;display:inline-block
+}
+/* fix the sticky black ribbon */
+#sticky-ribbon{display:none}
