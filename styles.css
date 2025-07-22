@@ -7600,3 +7600,98 @@ h2 {
    .track-label{grid-column:2/3;}
    .strategy-grid article.alt{margin-top:-20px;} /* small stagger */
 }
+/* ──────────────────────────────────────────────────────────
+   1. “PHASE” BADGE – put the number beneath the word
+   ────────────────────────────────────────────────────────── */
+.phase-badge{
+  display:flex;                /* stack label + number */
+  flex-direction:column;       /* “PHASE” on top, number below   */
+  align-items:center;
+  justify-content:center;
+  height:70px;                 /* same height you already use   */
+  width:70px;
+  border:2px solid var(--royal-purple);
+  border-radius:50%;
+  position:relative;
+  font-family:inherit;
+  text-transform:uppercase;
+  line-height:1.1;
+}
+
+.phase-badge span{
+  display:block;
+  white-space:nowrap;
+}
+
+.phase-badge .phase-label{       /* word “PHASE”                 */
+  font-size:.55rem;
+  letter-spacing:2px;
+  font-weight:600;
+}
+
+.phase-badge .phase-num{         /* number                        */
+  font-size:1.25rem;
+  font-weight:700;
+  margin-top:2px;
+}
+
+/* keeps the horizontal accent line aligned with the badge */
+.phase-badge::after{
+  content:"";
+  height:2px;
+  width:45px;                   /* adjust length as you like     */
+  background:var(--fire-bush);
+  position:absolute;
+  top:50%;
+  left:100%;
+  transform:translateY(-50%);
+}
+
+
+/* ──────────────────────────────────────────────────────────
+   2.  TRACK‑HEADERS – push them down & centre perfectly
+   ────────────────────────────────────────────────────────── */
+.track-header{                  /* wrapper that holds BOTH pills */
+  display:flex;
+  justify-content:space-between;
+  gap:4%;
+  margin: 40px auto 30px;       /* pushes down under the H2       */
+  max-width:92%;
+}
+
+.track-pill{
+  flex:1 1 48%;
+  text-align:center;
+  padding:.45rem 1rem;
+  border:2px solid var(--royal-purple);
+  border-radius:9999px;
+  background:rgba(116,52,172,.08);   /* faint lilac fill           */
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.6px;
+  white-space:nowrap;
+}
+
+/* keep pills centred on mobiles */
+@media(max-width:768px){
+  .track-header{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+  }
+  .track-pill{max-width:280px;}
+}
+
+/* ──────────────────────────────────────────────────────────
+   3.  CARD GRID – let the bottom row breathe a little
+   ────────────────────────────────────────────────────────── */
+.strategy-grid{
+  display:grid;
+  grid-template-columns:minmax(260px,1fr) minmax(260px,1fr);
+  gap:55px 9%;                  /* row gap first / col gap 2nd   */
+}
+
+@media(max-width:768px){
+  .strategy-grid{grid-template-columns:1fr;}
+}
