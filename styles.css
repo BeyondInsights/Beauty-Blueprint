@@ -7960,3 +7960,86 @@ h2 {
 }
 
 /* === End Transformation Strategy === */
+/* === GLOBAL LAYOUT TWEAKS ===================================== */
+.container {
+    /* old: max-width: 880px; */
+    max-width: 1180px;          /* ⇦ room for three 360‑400 px cards + gutters   */
+    margin-inline: auto;
+    padding-inline: 24px;       /* keep side gutters on very large screens      */
+}
+/* === TRANSFORMATION‑STRATEGY SECTION  ========================= */
+.strategy-grid {                    /* parent of the whole section                */
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr;  /* badge | research card | mktg card      */
+    gap: 48px 60px;                 /* row / column                               */
+    align-items: start;
+}
+
+/* column headers ( sit directly above column 2 & 3 ) */
+.strategy-grid .track-header {
+    grid-column: span 3;            /* full‑width row                             */
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr;  /* same as body                          */
+    margin-bottom: 32px;
+}
+
+.strategy-grid .track-header span {
+    display: flex;
+    justify-content: center;
+    padding: 6px 18px;
+    border: 2px solid var(--royal-purple);
+    border-radius: 30px;
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.strategy-grid .track-header span:last-child {
+    border-color: var(--wisteria);
+    background: var(--wisteria);
+    color: #fff;
+}
+
+/* phase badge (single element, reused three times) */
+.phase-badge {
+    width: 72px;
+    height: 72px;
+    border: 3px solid var(--royal-purple);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+    font-weight: 700;
+    line-height: 1.15;
+    position: relative;
+}
+.phase-badge::after {               /* horizontal connector line                  */
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -38px;                   /* points to the cards                        */
+    width: 32px;
+    height: 2px;
+    background: var(--fire-bush);
+    transform: translateY(-50%);
+}
+.phase-badge .num {                 /* the large numeral                          */
+    font-size: 1.1rem;
+    margin-top: 2px;
+}
+/* === END‑SCREENS ============================================== */
+.screen.full-height {              /* only for closing + footer                   */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+<section id="closing" class="screen full-height">
+    …  <!-- centred content -->
+</section>
+
+<section id="footer" class="screen full-height dark">
+    …  <!-- centred dark footer -->
+</section>
