@@ -8573,4 +8573,92 @@ body.has-cta-space{padding-top:70px}
 }
 /* fix the sticky black ribbon */
 #sticky-ribbon{display:none}
+/* =========== GLOBAL WIDTH TWEAKS =========== */
+.container,
+.section-wrapper,
+.screen {
+    max-width: 1240px;     /* was 1080‒1120px – fixes “cut‑off” text */
+}
+
+/* =========== “WHY BEYOND” CARDS =========== */
+.benefit-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:2.25rem;
+    margin-top:3rem;
+}
+.benefit-card{
+    background:#fff;
+    border-radius:1.25rem;
+    box-shadow:0 12px 36px rgba(0,0,0,.05);
+    padding:2.5rem 1.75rem 2.75rem;
+    text-align:center;
+    transition:.3s all;
+}
+.benefit-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 44px rgba(0,0,0,.08);
+}
+.benefit-icon{
+    width:82px;height:82px;
+    margin:0 auto 1.75rem;
+    border-radius:50%;
+    background:linear-gradient(145deg,#7434ac 0%,#eb0473 100%);
+    display:grid;place-items:center;
+}
+.benefit-icon svg{width:40px;height:40px;fill:#fff}
+
+/* =========== “STRATEGY RECOMMENDATION” =========== */
+.strategy-wrapper{padding-top:4rem}
+.track-label{
+    display:inline-block;
+    padding:.35rem 1.25rem;
+    border:2px solid #6c34d5;
+    border-radius:2rem;
+    font-size:.775rem;font-weight:600;letter-spacing:.5px;
+}
+.track-label--active{
+    background:#6c34d5;color:#fff;border-color:#6c34d5;
+}
+.phase-badge{
+    width:64px;height:64px;
+    display:grid;place-items:center;
+    border:2px solid #6c34d5;border-radius:.5rem;
+    font:700 1rem/1 'Inter',sans-serif;
+    margin-right:1.25rem;
+}
+.phase-grid{
+    display:grid;
+    grid-template-columns:80px 1fr 1fr;
+    column-gap:3rem;row-gap:3rem
+}
+/* list readability */
+.phase-card ul{margin:.75rem 0 0;padding-left:1.1rem}
+.phase-card li{margin:.45rem 0;}
+
+/* =========== 90‑DAY TRANSFORMATION STACK =========== */
+.process-details{
+    --col:clamp(260px,30vw,330px);
+    display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;
+}
+.detail-card{
+    flex:1 1 var(--col);
+    background:#fff;border-radius:1.25rem;
+    box-shadow:0 10px 32px rgba(0,0,0,.05);
+    padding:2.75rem 2rem 3rem;
+    transition:.3s box-shadow,.3s transform;
+}
+.detail-card:hover{transform:translateY(-5px);box-shadow:0 18px 46px rgba(0,0,0,.08);}
+.detail-card h4{font-size:1.45rem;margin:.5rem 0 1.25rem}
+
+/* =========== WIDER “BEAUTY BRAND BLUEPRINT™” CARDS =========== */
+.blueprint-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:2.25rem;
+}
+
+/* =========== CTA HANDLING =========== */
+/* Remove accidental duplicates ‑‑ hide every CTA that sits inside .screen > .cta-dup */
+.screen .cta-dup{display:none;}
 
