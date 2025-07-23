@@ -8755,3 +8755,86 @@ body.has-cta-space{padding-top:70px}
     transition:transform .15s ease;
 }
 .cta:hover {transform:translateY(-3px);}
+/* —— GLOBAL LAYOUT ————————————————————— */
+.screen          { display:flex; justify-content:center; }
+.screen > .container{ max-width:1200px; margin:0 auto; }
+
+/* —— SECTION: WHY BEYOND (benefit cards) ——————————— */
+.why-beyond .benefit-cards{
+  display:flex; flex-wrap:wrap; gap:3rem; padding-top:2.5rem; justify-content:center;
+}
+.benefit-card{
+  flex:1 1 250px; text-align:center; padding:2.5rem 1.75rem;
+  background:#fff; border-radius:1.75rem; box-shadow:0 8px 40px rgba(0,0,0,.06);
+}
+.benefit-card h4{ font-size:1.35rem; margin:1.5rem 0 .75rem; }
+.benefit-icon{ width:84px;height:84px; margin:0 auto; border-radius:50%;
+  background:linear-gradient(135deg,#7440e8 0%,#de2693 100%);
+  display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem;
+}
+
+/* —— SECTION: BEAUTY BRAND BLUEPRINT (6 modules) ———— */
+.modules{ display:flex; flex-wrap:wrap; gap:2.25rem; justify-content:center; }
+.module{
+  flex:1 1 300px; position:relative; padding:3.5rem 2rem 2.75rem;
+  border-radius:1.5rem; background:rgba(255,255,255,.04);
+  backdrop-filter:blur(4px); border:1px solid rgba(255,255,255,.06);
+  transition:transform .35s ease,box-shadow .35s ease;
+}
+.module:hover{ transform:translateY(-6px); box-shadow:0 12px 32px rgba(0,0,0,.35); }
+.module-number{
+  position:absolute; top:1.25rem; right:1.75rem; font:800 2rem/1 var(--font-display);
+  color:rgba(255,255,255,.16);
+}
+.module-icon{ width:60px; height:60px; margin-bottom:1.75rem; color:#ffc84c; }
+.module h4{ font-size:1.45rem; margin-bottom:1rem; background:
+  linear-gradient(90deg,#ff8520 0%,#e2057b 100%);
+  -webkit-background-clip:text; color:transparent; }
+.module p{ font-size:1rem; line-height:1.55 }
+
+/* —— SECTION: TRANSFORMATION STRATEGY (3×2 grid) ———— */
+.strategy-wrap{ width:100%; max-width:1200px; margin:0 auto; }
+.track-labels{ display:flex; justify-content:center; gap:1.5rem; margin:2.5rem 0 3rem; }
+.track-labels .pill{
+  padding:.55rem 1.65rem; border:2px solid var(--purple); border-radius:40px;
+  font:600 .82rem/1.1 var(--font-display); text-transform:uppercase;
+}
+.track-labels .pill.active{
+  background:var(--purple); color:#fff; border-color:var(--purple);
+}
+.phase-row{
+  display:grid; grid-template-columns:80px 1fr 1fr; align-items:start;
+  column-gap:3rem; margin-bottom:4rem; }
+.phase-label{
+  justify-self:end; display:flex; flex-direction:column; align-items:center;
+}
+.phase-badge{
+  width:56px;height:56px; border:2px solid var(--purple); border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  font:800 1.25rem/1 var(--font-display); margin-bottom:.4rem; color:var(--purple);
+}
+.phase-row .card{
+  background:#fff; border:2px solid var(--purple); border-radius:1.25rem;
+  padding:2rem 2.25rem; box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+.phase-row .card.alt{ border-color:#f0b03a; }
+.phase-row h3{ font-size:1.35rem; margin-bottom:1rem; }
+.phase-row ul{ margin:0; padding-left:1rem; }
+.phase-row li{ margin:.4rem 0; list-style-type:disc; }
+
+/* —— SECTION: 90‑DAY TRANSFORMATION (3 cards) —————— */
+.day90-cards{ display:flex; flex-wrap:wrap; gap:2.5rem; justify-content:center; }
+.day90-card{ flex:1 1 330px; padding:2.5rem 2rem 2rem;
+  border-radius:20px; border:3px solid var(--purple); background:#fff; }
+.day90-card:nth-child(2){ border-color:#f0b03a }
+.day90-card:nth-child(3){ border-color:#e2057b }
+.day90-card h4{ font-size:1.5rem; margin-bottom:1.1rem; }
+.day90-card li{ list-style-type:disc; margin:.35rem 0 .35rem 1rem }
+
+/* —— SECTION: “DECISION” CARDS ———————————————— */
+.decision-cards{ display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; }
+.decision-card{ flex:1 1 300px; }
+@media (max-width:640px){
+  .phase-row{ grid-template-columns:60px 1fr; row-gap:2rem }
+  .phase-row .card{ grid-column:span 2 }
+}
