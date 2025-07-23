@@ -8662,3 +8662,96 @@ body.has-cta-space{padding-top:70px}
 /* Remove accidental duplicates ‑‑ hide every CTA that sits inside .screen > .cta-dup */
 .screen .cta-dup{display:none;}
 
+/* ---------- GLOBAL WRAPPER ---------- */
+.section-inner,
+.container,
+.benefit-cards,
+.strategy-board,
+.ninety-day,
+.decision-deck,
+.visionary-grid,
+.footer-wrap {
+    max-width: 1200px;        /* keeps every section centered */
+    margin: 0 auto;           /* <- THE fix for “everything left‑justified” */
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
+
+/* ---------- TRANSFORMATION STRATEGY BOARD ---------- */
+.strategy-board {            /* parent of all three phases */
+    display: grid;
+    grid-template-columns: min-content 1fr;      /* phase label | two cards */
+    row-gap: 4rem;
+    column-gap: 3rem;
+}
+
+.phase-badge {               /* 1 PHASE / 2 PHASE / 3 PHASE pill */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font: 600 0.7rem/1.2 "Poppins", sans-serif;
+    width: 54px; height: 54px;
+    border: 2px solid #7840ff;
+    border-radius: 8px;
+    margin-top: calc(1.5rem + 8px);              /* vertically aligns with card top‑rule */
+}
+
+/* two side‑by‑side cards per phase */
+.strategy-row {              /* wrapper for the two cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    gap: 2rem;
+}
+
+.strategy-card {             /* each purple / gold card */
+    border: 2px solid var(--card-accent, #7840ff);
+    border-radius: 10px;
+    padding: 2rem 1.75rem 2.25rem;
+}
+.strategy-card[data-accent="gold"] { --card-accent:#e4a324; }
+
+/* ---------- BULLET LISTS INSIDE CARDS ---------- */
+.strategy-card ul { padding-left: 1.05rem; }
+.strategy-card li {margin-bottom:.55rem}
+
+/* ---------- 90‑DAY TRANSFORMATION THREE‑UP ---------- */
+.ninety-day-cards {          /* parent flex so cards never crowd */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.25rem;
+}
+.ninety-card {
+    flex: 1 1 310px;         /* 310 min‑width prevents clipping */
+    max-width: 340px;
+    border: 3px solid var(--card-edge,#7840ff);
+    border-radius: 14px;
+    padding: 2.25rem 2rem 2.5rem;
+}
+.ninety-card[data-edge="gold"] { --card-edge:#e4a324;}
+.ninety-card[data-edge="magenta"]{--card-edge:#d50663;}
+
+/* ---------- 6‑CARD “BLUEPRINT” DECK ---------- */
+.blueprint-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 2rem;
+}
+.blueprint-card {flex:1 1 auto;}
+
+/* prevent headline clipping on the blueprint cards */
+.blueprint-card h4 {word-break: break-word;}
+
+/* ---------- CTA (single source of truth) ---------- */
+.cta {
+    display:inline-block;
+    background: linear-gradient(90deg,#e89420 0%,#ff006e 100%);
+    color:#fff;
+    font:600 1rem/1 "Poppins",sans-serif;
+    padding:.9rem 2.5rem;
+    border-radius:40px;
+    text-decoration:none;
+    transition:transform .15s ease;
+}
+.cta:hover {transform:translateY(-3px);}
