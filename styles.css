@@ -4880,3 +4880,73 @@ h2 {
   border-radius:16px;padding:28px;font-size:.95rem}
 .col ul{margin-left:1rem;line-height:1.55}
 .deliver{margin-top:14px;font-size:.82rem;color:rgba(255,255,255,.75)}
+/* == GLOBAL WIDTH ALIGNMENT == */
+.fire-wrapper{max-width:1380px;margin:0 auto;font-size:1.1rem;line-height:1.6}
+
+/* ---------- HERO band ---------- */
+.fire-hero{text-align:center;padding:90px 0 70px}
+.case-pill{font-size:.8rem;letter-spacing:.05em;background:var(--violet);padding:4px 14px;border-radius:18px;color:#fff}
+.fire-hero h2{font-size:2.6rem;margin:20px 0;
+  background:linear-gradient(90deg,var(--rose),var(--fire-bush));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:1rem;color:var(--heathered-gray)}
+.vulnerability-card{max-width:980px;margin:60px auto 0;background:linear-gradient(135deg,#fff8f8,#f9f0fe);
+  border-radius:22px;padding:48px 50px}
+.vul-body{display:flex;justify-content:space-between;gap:30px;margin:30px 0}
+.big-word{font-size:2.3rem;font-weight:700;color:#d62027;display:block;margin-bottom:4px}
+.vulnerability-card ul{margin-left:1rem}
+.mission{text-align:center;font-size:.95rem;margin-top:24px}
+
+/* ---------- midnight insight band ---------- */
+.insight-band{background:linear-gradient(135deg,#120a31,#1e114a);padding:100px 0;color:#fff}
+.insight-grid{display:grid;gap:40px;max-width:1100px;margin:0 auto 90px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);
+  border-radius:22px;padding:34px 32px;display:flex;flex-direction:column}
+.badge{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;padding:4px 10px;
+  border-radius:20px;font-weight:600;margin-bottom:14px}
+.brand{background:var(--wisteria)}.infidelity{background:var(--violet)}.multiverse{background:var(--rose)}
+.card h4{font-size:1.25rem;margin-bottom:12px}
+.fight-table{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:16px;font-size:.94rem}
+.fight-table h5{font-size:.8rem;margin-bottom:6px;color:var(--fire-bush)}
+.segment-note,.heritage-note{font-size:.88rem;margin-top:8px}
+.duo{display:flex;gap:12px;margin:16px 0}
+.stat{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.18);
+  border-radius:14px;padding:14px 10px;text-align:center}
+.stat strong{font-size:1.9rem;display:block}
+.stat.gold{border-color:var(--fire-bush)}.stat.violet{border-color:var(--violet)}
+.trilogy{margin:14px 0 16px 1rem;font-size:.96rem}
+.exec{font-size:.9rem;font-style:italic}
+
+/* KPI tiles */
+.kpi-panel{max-width:1100px;margin:0 auto 0;text-align:center}
+.kpi-panel h3{font-size:1.6rem;margin-bottom:50px}
+.kpi-panel h3 span{color:var(--rose)}
+.kpi-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:36px}
+.kpi-grid div{flex:1 1 200px;border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:28px 14px}
+.kpi-grid strong{font-size:2.4rem;font-weight:700;background:linear-gradient(90deg,var(--fire-bush),var(--rose));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block;margin-bottom:6px}
+.kpi-grid span{font-size:.85rem;color:rgba(255,255,255,.9)}
+.cta-grad{display:inline-block;margin-top:46px;padding:18px 48px;font-weight:700;border-radius:38px;
+  background:linear-gradient(90deg,var(--rose),var(--fire-bush));color:#fff;text-decoration:none}
+
+/* ---------- light roadmap band ---------- */
+.roadmap-band{background:#faf9ff;padding:120px 0;color:#333}
+.road-head{text-align:center;font-size:1.8rem;margin-bottom:50px;
+  background:linear-gradient(90deg,var(--violet),var(--fire-bush));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.track-labels{display:grid;grid-template-columns:1fr 1fr;max-width:800px;margin:0 auto 24px;font-size:.78rem;
+  letter-spacing:.05em;text-transform:uppercase}
+.track-labels span{text-align:center;padding:10px 0;border:1px solid var(--violet);border-radius:18px}
+.track-labels span:nth-child(2){background:var(--violet);color:#fff}
+.phase-card{max-width:1100px;margin:0 auto 46px;background:#fff;border-radius:22px;
+  box-shadow:0 8px 26px rgba(0,0,0,.06);padding:38px 32px;display:grid;gap:24px}
+@media(min-width:960px){.phase-card{grid-template-columns:240px 1fr 1fr}}
+.phase-card aside{display:flex;align-items:center;gap:16px}
+.ring{display:inline-block;width:64px;height:64px;line-height:60px;border:3px solid var(--rose);
+  border-radius:50%;text-align:center;font-weight:700;color:var(--rose)}
+.phase-card h4{font-size:1.2rem}
+.phase-card h4 small{font-size:.9rem;font-weight:400;color:#777}
+.col{background:#fafbff;border:1px solid #eceefe;border-radius:16px;padding:28px;font-size:.95rem}
+.col ul{margin-left:1rem;line-height:1.55}
+.deliver{margin-top:14px;font-size:.82rem;color:#555}
