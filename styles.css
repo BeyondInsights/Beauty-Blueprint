@@ -4143,3 +4143,12 @@ h2 {
 .cs-card.impact{
   border-color:#ff6bd6;
 }
+/* ==== SOURCE FOOTNOTES ==== */
+.kpi-sources{
+  font-size:.7rem;
+  opacity:.7;
+  background:transparent;
+  text-align:left;
+  padding:1rem 0 2rem;
+}
+.kpi-sources h4{font-size:.8rem;margin-bottom:.25rem;}
