@@ -4614,3 +4614,28 @@ h2 {
             border-radius:50%;text-align:center;font-weight:600;font-size:.9rem;color:var(--violet);margin-right:.6rem;}
 .phase-card h4{font-size:1rem;margin-bottom:1rem;} .phase-card ul{margin-left:1.1rem;font-size:.9rem;line-height:1.45;}
 .deliver{margin-top:1.2rem;font-size:.83rem;}
+/* ── Laneige Overrides (match existing design language) ── */
+.igniter-metric{
+  text-align:center;
+  margin-left:auto;margin-right:auto;
+}
+.igniter-number{
+  font-size:4rem;font-weight:700;
+  background:linear-gradient(135deg,var(--royal-purple),var(--fire-bush));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  display:block;margin-top:10px;
+}
+.result-panel{margin:90px auto 110px;text-align:center;max-width:860px}
+.result-h3{font-size:2rem;font-weight:300;margin-bottom:40px}
+.kpi-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin-bottom:50px;padding:0}
+.kpi-grid li{list-style:none;font:600 1.1rem/1.3 'Segoe UI',sans-serif;color:var(--royal-purple)}
+.kpi-number{display:block;font-size:2.4rem;font-weight:700;color:var(--red-ribbon)}
+.cta-primary{
+  display:inline-block;padding:18px 38px;border-radius:32px;
+  background:linear-gradient(135deg,var(--rose),var(--fire-bush));
+  color:#fff;font-weight:700;font-size:1rem;text-decoration:none;
+  box-shadow:0 8px 18px rgba(0,0,0,.12);transition:box-shadow .25s,transform .25s
+}
+.cta-primary:hover{box-shadow:0 12px 26px rgba(0,0,0,.18);transform:translateY(-2px)}
+/* tighten blueprint grid on large screens */
+@media(min-width:1200px){.blueprint-grid{grid-template-columns:repeat(3,1fr);}}
