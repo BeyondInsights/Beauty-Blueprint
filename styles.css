@@ -4106,3 +4106,40 @@ h2 {
   .spacer                { display:none; }
   .track-block.marketing { grid-column: 2 / -1; }
 }
+/* ==== HERO STAT LABELS ==== */
+.hero-stats .stat-label{
+  display:block;          /* put each label under its number */
+  font-size:clamp(.75rem,1.2vw,.9rem);
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  margin-top:.25rem;
+  color:#ffb8ff;          /* soft lilac that stands out on the purple gradient */
+}
+/* ==== CASE STUDY CARDS ==== */
+.blueprint-summary{
+  display:grid;
+  gap:2rem 3rem;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  margin-top:3rem;
+}
+
+.cs-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  padding:1.75rem 2rem;
+  border-radius:12px;
+  backdrop-filter:blur(6px);
+}
+
+.cs-card.span‑2{grid-column:span 2;}
+
+.cs-title{
+  font-size:1.25rem;
+  margin-bottom:.75rem;
+  background:linear-gradient(90deg,#ff6bd6,#ffb86c);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.cs-card.impact{
+  border-color:#ff6bd6;
+}
