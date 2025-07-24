@@ -4409,3 +4409,43 @@ h2 {
 @media(max-width:600px){
   .roadmap{flex-direction:column;}
 }
+/* === Laneige Case Study width tweaks === */
+.beauty-case{max-width:1150px;}          /* give section room to expand */
+
+.beauty-grid{
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));   /* wider cards */
+}
+/* === Blueprint Analysis alignment === */
+.panel-grid{
+  display:grid;
+  gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  margin-top:2.5rem;
+}
+.panel-grid article{
+  background:rgba(255,255,255,.06);
+  border-radius:16px;
+  padding:2rem 2.25rem;
+  backdrop-filter:blur(8px);
+}
+/* === Strategy Recommendation grid === */
+.strategy-wrapper .phase-cards{
+  display:grid;
+  gap:2.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  justify-content:center;   /* center last row */
+}
+.strategy-wrapper .phase-card{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  padding:2.25rem 2.5rem;
+}
+/* === Sticky CTA bar === */
+.sticky-cta{
+  position:fixed;
+  bottom:0;            /* keep at viewport bottom */
+  top:auto;
+  left:0; right:0;
+  z-index:9999;
+}
