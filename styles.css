@@ -4639,3 +4639,48 @@ h2 {
 .cta-primary:hover{box-shadow:0 12px 26px rgba(0,0,0,.18);transform:translateY(-2px)}
 /* tighten blueprint grid on large screens */
 @media(min-width:1200px){.blueprint-grid{grid-template-columns:repeat(3,1fr);}}
+/* === Laneige Case‑Study Layout (hooks into existing palette & typography) === */
+.case-header.center{text-align:center;margin:60px 0 40px}
+.case-label{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--rose)}
+.headline-lg{font-size:2rem;background:linear-gradient(90deg,var(--rose),var(--fire-bush));
+            -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:14px 0}
+.case-subtitle{font-size:.95rem;color:var(--wisteria)}
+
+.case-challenge{display:flex;align-items:center;justify-content:space-between;
+               gap:40px;margin-bottom:60px}
+.challenge-col{flex:1 1 500px}
+.challenge-metric{text-align:center}
+.big-num{font-size:4rem;font-weight:700}
+.challenge-metric figcaption{font-size:.8rem;color:var(--heathered-gray)}
+
+.blueprint-grid{display:grid;gap:30px;margin-bottom:70px;
+               grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.insight-card{background:var(--white);border-radius:22px;padding:26px 28px;
+             box-shadow:0 10px 24px rgba(0,0,0,.05)}
+.tool-badge{display:inline-block;font-size:.7rem;letter-spacing:.04em;padding:4px 8px;
+           border-radius:20px;background:var(--royal-purple);color:#fff;margin-bottom:14px}
+.tool-badge.violet{background:var(--violet)} .tool-badge.rose{background:var(--rose)}
+.insight-card h4{font-size:1.1rem;margin-bottom:10px;color:var(--royal-purple)}
+.insight-card p{font-size:.9rem;line-height:1.45}
+
+.result-panel{padding:60px 40px;border-radius:28px;margin-bottom:80px}
+.kpi-row{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;margin:40px 0 50px;padding:0}
+.kpi-row li{list-style:none;font-size:.95rem;color:var(--white);text-align:center}
+.kpi-num{display:block;font-size:2rem;font-weight:700;color:var(--fire-bush)}
+
+.btn-primary{display:inline-block;padding:18px 38px;border-radius:32px;font-weight:700;
+            background:linear-gradient(90deg,var(--rose),var(--fire-bush));color:#fff;
+            text-decoration:none;box-shadow:0 8px 18px rgba(0,0,0,.13);transition:.25s}
+.btn-primary:hover{box-shadow:0 12px 26px rgba(0,0,0,.18);transform:translateY(-2px)}
+
+.phase-stack{display:grid;gap:32px;margin-bottom:120px}
+@media(min-width:900px){.phase-stack{grid-template-columns:1fr 1fr 1fr}}
+.phase-card{background:var(--white);border-radius:22px;padding:34px 38px;
+           box-shadow:0 10px 24px rgba(0,0,0,.05);display:flex;flex-direction:column;gap:18px}
+.phase-ring{display:inline-block;width:54px;height:54px;line-height:52px;border:3px solid var(--royal-purple);
+           border-radius:50%;text-align:center;font-weight:700;font-size:.9rem;color:var(--royal-purple);
+           margin-right:12px}
+.phase-card header{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.phase-card h4{font-size:1.05rem}
+.phase-card ul{margin-left:1rem;font-size:.9rem;line-height:1.5}
+.phase-card footer{font-size:.8rem;color:var(--heathered-gray);margin-top:auto}
