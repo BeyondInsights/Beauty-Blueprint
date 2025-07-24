@@ -4152,3 +4152,45 @@ h2 {
   padding:1rem 0 2rem;
 }
 .kpi-sources h4{font-size:.8rem;margin-bottom:.25rem;}
+/* ==== CASE STUDY WRAPPER ==== */
+.case-wrapper{
+  max-width:1200px;
+  margin:4rem auto;
+  padding:0 1rem;
+}
+.section-head{
+  text-align:center;
+  font-size:1.75rem;
+  margin-bottom:2.5rem;
+  background:linear-gradient(90deg,#ff6bd6,#ffb86c);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ==== GRID ==== */
+.case-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:2rem;
+}
+
+/* ==== CARDS ==== */
+.cs-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  padding:1.75rem 2rem;
+  border-radius:14px;
+  backdrop-filter:blur(6px);
+}
+.cs-card h4{
+  color:#ff6bd6;
+  font-size:1.15rem;
+  margin-bottom:.75rem;
+}
+.cs-card ul,
+.cs-card ol{
+  margin-left:1.25rem;
+}
+.cs-card.impact{
+  border-color:#ff6bd6;
+}
