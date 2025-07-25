@@ -5124,10 +5124,15 @@ body * {
     align-items: start;
   }
   
+  .elaine-image {
+    text-align: center;
+  }
+  
   .elaine-image img {
-    width: 100%;
-    max-width: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   }
   
