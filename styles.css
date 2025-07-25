@@ -5052,3 +5052,22 @@ strong:contains("It means:") {
 .casestudy strong {
     color: #e4a324 !important;
 }
+/* Add this to the END of your styles.css file */
+
+/* Fix for "You get:" and "It means:" labels */
+.result-label {
+    color: #e4a324 !important;
+    font-weight: 600 !important;
+}
+
+/* More specific if needed */
+.module-result .result-label {
+    color: #e4a324 !important;
+    font-weight: 600 !important;
+}
+
+/* Even more specific with the case study ID */
+#beyond-insights-casestudy .result-label {
+    color: #e4a324 !important;
+    font-weight: 600 !important;
+}
