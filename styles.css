@@ -5208,27 +5208,39 @@ body * {
       margin: 0 auto 50px;
     }
   }
-* Add this to your styles.css file */
+/* Add this to your styles.css file */
 
-/* Fix for Elaine's circular image */
 .meet-elaine .elaine-image {
     text-align: center !important;
-}
-
-.meet-elaine .elaine-image img {
-    width: 300px !important;
-    height: 300px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1) !important;
-    display: block !important;
     margin: 0 auto !important;
 }
 
-/* Alternative more specific selector */
-#meet-elaine .elaine-image img {
-    width: 300px !important;
-    height: 300px !important;
+.meet-elaine .elaine-image img {
+    width: 350px !important;
+    height: 350px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
+    object-position: center 20% !important; /* Adjust this to position the image better */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+    display: block !important;
+    margin: 0 auto !important;
+    background: #2a2a3e !important; /* Dark background to match the photo */
+}
+
+/* If the white is still showing, try this container approach */
+.meet-elaine .elaine-image {
+    width: 350px !important;
+    height: 350px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+    background: #2a2a3e !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15) !important;
+}
+
+.meet-elaine .elaine-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 20% !important;
 }
