@@ -5101,3 +5101,97 @@ body * {
     opacity: 1 !important;
     animation: none !important;
 }
+<!-- CSS STYLES FOR MEET ELAINE -->
+<style>
+  .meet-elaine {
+    padding: 100px 20px;
+    background: #fff;
+  }
+  
+  .elaine-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  
+  .elaine-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+  }
+  
+  .elaine-name {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #1a0033;
+    margin: 0 0 10px;
+  }
+  
+  .elaine-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7434ac;
+    margin: 0 0 40px;
+  }
+  
+  .elaine-intro {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+  }
+  
+  .elaine-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px;
+  }
+  
+  .elaine-highlights li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .elaine-highlights li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #e4a324;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  
+  .elaine-quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #7434ac;
+    line-height: 1.6;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(116, 52, 172, 0.05) 0%, rgba(228, 163, 36, 0.05) 100%);
+    border-left: 4px solid #7434ac;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .elaine-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    
+    .elaine-image {
+      margin: 0 auto;
+    }
+    
+    .elaine-highlights {
+      text-align: left;
+      max-width: 500px;
+      margin: 0 auto 50px;
+    }
+  }
