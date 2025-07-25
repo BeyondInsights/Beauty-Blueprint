@@ -15,14 +15,7 @@
     --shadow-purple: rgba(116, 52, 172, 0.3);
     --shadow-fire: rgba(228, 163, 36, 0.3);
 }
-body {
-    background-color: red !important;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* ─────────  LANEIGE CASE STUDY  ───────── */
 .case-study{background:linear-gradient(to bottom,var(--white)0%,#f8f5ff 100%);
