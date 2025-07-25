@@ -5208,3 +5208,27 @@ body * {
       margin: 0 auto 50px;
     }
   }
+* Add this to your styles.css file */
+
+/* Fix for Elaine's circular image */
+.meet-elaine .elaine-image {
+    text-align: center !important;
+}
+
+.meet-elaine .elaine-image img {
+    width: 300px !important;
+    height: 300px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1) !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Alternative more specific selector */
+#meet-elaine .elaine-image img {
+    width: 300px !important;
+    height: 300px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
