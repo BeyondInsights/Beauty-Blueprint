@@ -380,134 +380,912 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
     </div>
   </section>
 
-<!-- BEGIN LANEIGE BLOCK ================================================= -->
-<section id="fire-icon" class="fire-wrapper">
+<!-- REPLACE YOUR ENTIRE CASE STUDY SECTION WITH THIS -->
+<section class="casestudy" id="beyond-insights-casestudy">
 
-  <!-- ▌ SET‑UP HERO (light) -->
-  <header class="fire-hero">
-     <span class="case-pill">CASE STUDY</span>
-     <h2>From Viral Igniter&nbsp;to&nbsp;Fire Icon</h2>
-     <p class="hero-sub">How the Beauty Brand Blueprint™ transformed a one‑hit wonder into a portfolio powerhouse.</p>
+  <style>
+    /* ISOLATED CASE STUDY STYLES - Won't conflict with other CSS */
+    #beyond-insights-casestudy * {
+        box-sizing: border-box;
+    }
 
-     <div class="vulnerability-card">
-        <h3>When Viral Success Creates Hidden Vulnerability</h3>
-        <div class="vul-body">
-            <div class="left">
-               <span class="big-word">Significant</span>
-               <p>Revenue concentration<br>in one hero product</p>
-            </div>
-            <div class="right">
-               <h4>The Igniter Trap:</h4>
-               <ul>
-                  <li>Viral momentum eventually slows</li>
-                  <li>Portfolio remains undiscovered</li>
-                  <li>Growth limited to single SKU</li>
-               </ul>
-            </div>
+    #beyond-insights-casestudy {
+        font-family: 'Inter', -apple-system, sans-serif !important;
+        line-height: 1.6 !important;
+        color: #333 !important;
+    }
+
+    /* Hero Section */
+    #beyond-insights-casestudy .casestudy-hero {
+        background: linear-gradient(135deg, #1a0033 0%, #663399 100%) !important;
+        color: white !important;
+        padding: 100px 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .hero-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+
+    #beyond-insights-casestudy .hero-content h1 {
+        font-size: 3rem !important;
+        margin-bottom: 20px !important;
+        color: white !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .hero-content .subtitle {
+        font-size: 3.5rem !important;
+        font-weight: 900 !important;
+        background: linear-gradient(45deg, #e4a324, #f10b25) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+        margin-bottom: 20px !important;
+        display: block !important;
+    }
+
+    #beyond-insights-casestudy .hero-content .tagline {
+        font-size: 1.5rem !important;
+        font-weight: 300 !important;
+        opacity: 0.9 !important;
+        color: white !important;
+    }
+
+    /* Challenge Section */
+    #beyond-insights-casestudy .casestudy-challenge {
+        background: white !important;
+        padding: 100px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .challenge-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+
+    #beyond-insights-casestudy .challenge-header h2 {
+        font-size: 3rem !important;
+        color: #1a0033 !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .challenge-intro {
+        font-size: 1.2rem !important;
+        line-height: 1.8 !important;
+        color: #666 !important;
+        text-align: center !important;
+        max-width: 900px !important;
+        margin: 0 auto 40px !important;
+        padding-bottom: 40px !important;
+        border-bottom: 2px solid #f0f0f0 !important;
+    }
+
+    #beyond-insights-casestudy .challenge-intro .highlight {
+        color: #e4a324 !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .key-obstacles-title {
+        font-size: 1.8rem !important;
+        color: #663399 !important;
+        text-align: center !important;
+        margin: 40px 0 !important;
+        font-weight: 600 !important;
+    }
+
+    #beyond-insights-casestudy .challenge-metrics {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+        gap: 40px !important;
+        margin-top: 60px !important;
+    }
+
+    #beyond-insights-casestudy .metric-card {
+        background: #f8f8f8 !important;
+        padding: 50px !important;
+        border-radius: 20px !important;
+        text-align: center !important;
+        transition: transform 0.3s ease !important;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08) !important;
+        border: none !important;
+    }
+
+    #beyond-insights-casestudy .metric-card:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
+    }
+
+    #beyond-insights-casestudy .metric-card.dependency {
+        border-top: 5px solid #e4a324 !important;
+    }
+
+    #beyond-insights-casestudy .metric-card.pattern {
+        border-top: 5px solid #f10b25 !important;
+    }
+
+    #beyond-insights-casestudy .metric-card.interest {
+        border-top: 5px solid #663399 !important;
+    }
+
+    #beyond-insights-casestudy .metric-card svg {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto 20px !important;
+        display: block !important;
+    }
+
+    #beyond-insights-casestudy .metric-title {
+        font-size: 1.6rem !important;
+        color: #1a0033 !important;
+        margin: 30px 0 20px !important;
+        font-weight: 600 !important;
+    }
+
+    #beyond-insights-casestudy .metric-description {
+        font-size: 1.1rem !important;
+        color: #666 !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Blueprint Section */
+    #beyond-insights-casestudy .casestudy-blueprint {
+        background: #f0e6ff !important;
+        padding: 100px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .blueprint-container {
+        max-width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+
+    #beyond-insights-casestudy .blueprint-header h2 {
+        font-size: 3rem !important;
+        color: #1a0033 !important;
+        text-align: center !important;
+        margin-bottom: 60px !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .blueprint-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px !important;
+    }
+
+    #beyond-insights-casestudy .insight-card {
+        background: white !important;
+        padding: 50px !important;
+        border-radius: 20px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+        min-height: 350px !important;
+        border: none !important;
+    }
+
+    #beyond-insights-casestudy .insight-badge {
+        display: inline-block !important;
+        padding: 10px 25px !important;
+        border-radius: 25px !important;
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 25px !important;
+    }
+
+    #beyond-insights-casestudy .badge-edge {
+        background: #E6F3FF !important;
+        color: #0066CC !important;
+    }
+
+    #beyond-insights-casestudy .badge-segment {
+        background: #FFE6F0 !important;
+        color: #CC0066 !important;
+    }
+
+    #beyond-insights-casestudy .badge-index {
+        background: #E6FFE6 !important;
+        color: #006600 !important;
+    }
+
+    #beyond-insights-casestudy .badge-loyalty {
+        background: #FFECE6 !important;
+        color: #CC3300 !important;
+    }
+
+    #beyond-insights-casestudy .insight-title {
+        font-size: 1.8rem !important;
+        color: #1a0033 !important;
+        margin-bottom: 20px !important;
+        font-weight: 600 !important;
+    }
+
+    #beyond-insights-casestudy .insight-description {
+        font-size: 1.1rem !important;
+        color: #666 !important;
+        line-height: 1.7 !important;
+    }
+
+    /* Transformation Strategy */
+    #beyond-insights-casestudy .casestudy-strategy {
+        background: white !important;
+        padding: 100px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .strategy-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+        text-align: center !important;
+    }
+
+    #beyond-insights-casestudy .strategy-header h2 {
+        font-size: 3rem !important;
+        color: #1a0033 !important;
+        margin-bottom: 30px !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .strategy-context {
+        font-size: 1.3rem !important;
+        color: #666 !important;
+        max-width: 900px !important;
+        margin: 0 auto 80px !important;
+        line-height: 1.8 !important;
+    }
+
+    #beyond-insights-casestudy .transformation-visual {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 80px !important;
+        margin: 80px 0 !important;
+        flex-wrap: wrap !important;
+    }
+
+    #beyond-insights-casestudy .transform-state {
+        text-align: center !important;
+    }
+
+    #beyond-insights-casestudy .state-icon {
+        width: 200px !important;
+        height: 200px !important;
+        margin: 0 auto 30px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 30px !important;
+        font-size: 2rem !important;
+        font-weight: 800 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .igniter-icon {
+        background: linear-gradient(135deg, #666 0%, #999 100%) !important;
+    }
+
+    #beyond-insights-casestudy .fire-icon {
+        background: linear-gradient(135deg, #e4a324 0%, #f10b25 100%) !important;
+    }
+
+    #beyond-insights-casestudy .state-label {
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        color: #1a0033 !important;
+        margin-bottom: 10px !important;
+        display: block !important;
+    }
+
+    #beyond-insights-casestudy .state-description {
+        color: #666 !important;
+        font-size: 1.1rem !important;
+    }
+
+    #beyond-insights-casestudy .transform-arrow {
+        font-size: 3rem !important;
+        color: #663399 !important;
+    }
+
+    /* Formula Section */
+    #beyond-insights-casestudy .casestudy-formula {
+        background: linear-gradient(135deg, #663399 0%, #98069d 100%) !important;
+        color: white !important;
+        padding: 100px 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .formula-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+
+    #beyond-insights-casestudy .formula-header h2 {
+        font-size: 3rem !important;
+        margin-bottom: 40px !important;
+        color: white !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .formula-visual {
+        background: rgba(255,255,255,0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 30px !important;
+        padding: 60px 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 40px !important;
+        flex-wrap: wrap !important;
+        margin-bottom: 40px !important;
+    }
+
+    #beyond-insights-casestudy .formula-component {
+        text-align: center !important;
+    }
+
+    #beyond-insights-casestudy .component-icon {
+        width: 100px !important;
+        height: 100px !important;
+        background: rgba(255,255,255,0.2) !important;
+        border-radius: 50% !important;
+        margin: 0 auto 20px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 2.5rem !important;
+    }
+
+    #beyond-insights-casestudy .component-label {
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .formula-operator {
+        font-size: 2.5rem !important;
+        opacity: 0.8 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .conversion-result {
+        font-size: 4rem !important;
+        font-weight: 900 !important;
+        color: #e4a324 !important;
+        margin: 40px 0 20px !important;
+    }
+
+    #beyond-insights-casestudy .conversion-description {
+        font-size: 1.1rem !important;
+        opacity: 0.9 !important;
+        max-width: 700px !important;
+        margin: 0 auto !important;
+        color: white !important;
+    }
+
+    /* Results Section */
+    #beyond-insights-casestudy .casestudy-results {
+        background: white !important;
+        padding: 100px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .results-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+        text-align: center !important;
+    }
+
+    #beyond-insights-casestudy .results-header h2 {
+        font-size: 3rem !important;
+        color: #1a0033 !important;
+        margin-bottom: 60px !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .results-grid {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 40px !important;
+    }
+
+    #beyond-insights-casestudy .result-card {
+        background: #f8f8f8 !important;
+        padding: 50px 30px !important;
+        border-radius: 20px !important;
+        transition: all 0.3s ease !important;
+        border: none !important;
+    }
+
+    #beyond-insights-casestudy .result-card:hover {
+        transform: translateY(-10px) !important;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+
+    #beyond-insights-casestudy .result-metric {
+        font-size: 4rem !important;
+        font-weight: 900 !important;
+        color: #663399 !important;
+        margin-bottom: 15px !important;
+    }
+
+    #beyond-insights-casestudy .result-label {
+        font-size: 1.2rem !important;
+        color: #333 !important;
+        font-weight: 600 !important;
+    }
+
+    /* Roadmap Section */
+    #beyond-insights-casestudy .casestudy-roadmap {
+        background: #1a0033 !important;
+        color: white !important;
+        padding: 100px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .roadmap-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+
+    #beyond-insights-casestudy .roadmap-header {
+        text-align: center !important;
+        margin-bottom: 80px !important;
+    }
+
+    #beyond-insights-casestudy .roadmap-header h2 {
+        font-size: 3rem !important;
+        margin-bottom: 20px !important;
+        color: white !important;
+        font-weight: 700 !important;
+    }
+
+    #beyond-insights-casestudy .phases {
+        display: grid !important;
+        gap: 50px !important;
+    }
+
+    #beyond-insights-casestudy .phase-container {
+        background: rgba(255,255,255,0.05) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 20px !important;
+        padding: 50px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+    }
+
+    #beyond-insights-casestudy .phase-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
+    }
+
+    #beyond-insights-casestudy .phase-number {
+        font-size: 4rem !important;
+        font-weight: 900 !important;
+        color: #e4a324 !important;
+    }
+
+    #beyond-insights-casestudy .phase-info {
+        flex: 1 !important;
+    }
+
+    #beyond-insights-casestudy .phase-title {
+        font-size: 2rem !important;
+        margin-bottom: 10px !important;
+        color: white !important;
+        font-weight: 600 !important;
+    }
+
+    #beyond-insights-casestudy .phase-timing {
+        font-size: 1.1rem !important;
+        color: #e4a324 !important;
+    }
+
+    #beyond-insights-casestudy .phase-tracks {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 40px !important;
+    }
+
+    #beyond-insights-casestudy .track {
+        background: rgba(255,255,255,0.05) !important;
+        border-radius: 15px !important;
+        padding: 30px !important;
+    }
+
+    #beyond-insights-casestudy .track-label {
+        display: inline-block !important;
+        padding: 8px 20px !important;
+        border-radius: 20px !important;
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 20px !important;
+    }
+
+    #beyond-insights-casestudy .research-track {
+        background: #663399 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .marketing-track {
+        background: #e4a324 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .track ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .track li {
+        padding: 10px 0 !important;
+        font-size: 1rem !important;
+        opacity: 0.9 !important;
+        position: relative !important;
+        padding-left: 25px !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .track li::before {
+        content: '→' !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: #e4a324 !important;
+    }
+
+    #beyond-insights-casestudy .cta-section {
+        text-align: center !important;
+        margin-top: 80px !important;
+    }
+
+    #beyond-insights-casestudy .cta-button {
+        display: inline-block !important;
+        padding: 20px 50px !important;
+        background: linear-gradient(45deg, #e4a324, #f10b25) !important;
+        color: white !important;
+        text-decoration: none !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        font-size: 1.2rem !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #beyond-insights-casestudy .cta-button:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 15px 30px rgba(228,163,36,0.4) !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        #beyond-insights-casestudy .blueprint-grid,
+        #beyond-insights-casestudy .challenge-metrics,
+        #beyond-insights-casestudy .results-grid {
+            grid-template-columns: 1fr !important;
+        }
+        
+        #beyond-insights-casestudy .phase-tracks {
+            grid-template-columns: 1fr !important;
+        }
+        
+        #beyond-insights-casestudy .transformation-visual {
+            flex-direction: column !important;
+            gap: 40px !important;
+        }
+    }
+  </style>
+
+  <!-- Hero Section -->
+  <div class="casestudy-hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>CASE STUDY</h1>
+        <div class="subtitle">From Viral Moments to Brand Momentum</div>
+        <p class="tagline">Transforming IGNITER* to FIRE ICON*</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Challenge Section -->
+  <div class="casestudy-challenge">
+    <div class="challenge-container">
+      <div class="challenge-header">
+        <h2>THE CHALLENGE</h2>
+        <p class="challenge-intro">
+          Laneige attracts significant levels of passion among purchasers and consumers familiar with it, but needs to grow penetration. Despite viral success with Lip Sleeping Mask, the K-beauty brand faces Igniter* challenges: <span class="highlight">strong emotional pull among existing users but limited mainstream adoption</span>.
+        </p>
+        <h3 class="key-obstacles-title">Key Obstacles Include:</h3>
+      </div>
+      
+      <div class="challenge-metrics">
+        <div class="metric-card dependency">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <rect x="15" y="15" width="50" height="50" rx="10" stroke="#e4a324" stroke-width="3"/>
+            <circle cx="40" cy="40" r="12" fill="#e4a324"/>
+          </svg>
+          <h3 class="metric-title">Hero Product Dependency</h3>
+          <p class="metric-description">Revenue concentrated in a few viral products vs. portfolio breadth</p>
         </div>
-        <p class="mission">Our mission – turn fleeting curiosity into sustainable portfolio loyalty.</p>
-     </div>
-  </header>
-
-  <!-- ▌ INSIGHT DECK (midnight) -->
-  <section class="insight-band">
-
-     <div class="insight-grid">
-
-       <!-- Brand Edge -->
-       <article class="card">
-          <span class="badge brand">Brand Edge™</span>
-          <h4>Authentic Differentiation</h4>
-          <div class="fight-table">
-              <div><h5>Competitors Fight On</h5><ul><li>Clinical efficacy</li><li>Ingredient %</li><li>Before / after</li></ul></div>
-              <div><h5>Laneige Can Own</h5><ul><li><strong>Bedtime ritual romance</strong></li><li>Daily luxury × science</li><li>K‑Beauty mystique</li></ul></div>
-          </div>
-          <p class="segment-note">68 % of hero buyers = Purpose‑Driven Changemakers, Designer Trendsetters, Cultural Visionaries.</p>
-          <p class="heritage-note">Heritage conquest: Clinique / Estée users seek sensorial ritual.</p>
-       </article>
-
-       <!-- Infidelity -->
-       <article class="card">
-          <span class="badge infidelity">Infidelity Index™</span>
-          <h4>Where Buyers Stand</h4>
-          <div class="duo">
-              <div class="stat gold"><strong>46 %</strong><span>Curious</span></div>
-              <div class="stat violet"><strong>40 %</strong><span>Reconcilable</span></div>
-          </div>
-          <p>They weren’t defecting—just unaware the full routine existed.</p>
-       </article>
-
-       <!-- Multiverse -->
-       <article class="card">
-          <span class="badge multiverse">Loyalty Multiverse™</span>
-          <h4>Conversion Formula</h4>
-          <p>47 functional + emotional tests revealed the trilogy that drives <strong>3.7 × lift</strong>:</p>
-          <ol class="trilogy"><li>K‑Beauty science story‑telling</li><li>Bedtime ritual positioning</li><li>Value‑bundle messaging</li></ol>
-          <p class="exec">Roll‑out hierarchy: <em>“Clinically proven glow” → “Indulgent ritual” → “Save 28 % set.”</em></p>
-       </article>
-
-     </div><!-- /insight-grid -->
-
-     <!-- KPI tiles -->
-     <section class="kpi-panel">
-        <h3>The Portfolio <span>Fire Icon</span> Transformation</h3>
-        <div class="kpi-grid">
-           <div><strong>‑37 %</strong><span>Hero SKU dependency</span></div>
-           <div><strong>2.8 ×</strong><span>Average basket size</span></div>
-           <div><strong>52 %</strong><span>Multi‑product buyers</span></div>
-           <div><strong>$4.7 M</strong><span>Incremental revenue</span></div>
+        
+        <div class="metric-card pattern">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <path d="M20 60 L40 30 L60 60" stroke="#f10b25" stroke-width="3" fill="none"/>
+            <circle cx="40" cy="30" r="8" fill="#f10b25"/>
+          </svg>
+          <h3 class="metric-title">Single-Purchase Pattern</h3>
+          <p class="metric-description">High trial but low repeat purchasing beyond hero items</p>
         </div>
-        <a class="cta-grad" href="https://calendly.com/elaine-sheng-beyondinsights">Book My 15‑Min Strategy Call →</a>
-     </section>
-  </section>
+        
+        <div class="metric-card interest">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <path d="M15 40 Q30 25 40 40 T65 40" stroke="#663399" stroke-width="3" fill="none"/>
+            <circle cx="40" cy="40" r="20" stroke="#663399" stroke-width="3" fill="none"/>
+          </svg>
+          <h3 class="metric-title">Gen Z K-Beauty Interest</h3>
+          <p class="metric-description">Untapped younger demographic curious about Korean innovation</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- ▌ DUAL‑TRACK ROADMAP (light) -->
-  <section class="roadmap-band">
-      <h3 class="road-head">90‑Day Transformation Roadmap</h3>
-      <div class="track-labels"><span>RESEARCH & INSIGHTS</span><span>MARKETING DEVELOPMENT</span></div>
+  <!-- Blueprint Section -->
+  <div class="casestudy-blueprint">
+    <div class="blueprint-container">
+      <div class="blueprint-header">
+        <h2>THE BEYOND INSIGHTS BLUEPRINT APPROACH</h2>
+      </div>
+      
+      <div class="blueprint-grid">
+        <div class="insight-card">
+          <span class="insight-badge badge-edge">Brand Edge Assessment</span>
+          <h3 class="insight-title">Authentic Strengths Discovery</h3>
+          <p class="insight-description">Revealed Laneige's authentic strengths, isolating genuine brand equity from media spend effects and size vs competitors. Analysis showed unexpected strength in relatability, but hidden weaknesses in empowering messages.</p>
+        </div>
+        
+        <div class="insight-card">
+          <span class="insight-badge badge-segment">Consumer Segmentation</span>
+          <h3 class="insight-title">Strategic Target Identification</h3>
+          <p class="insight-description">Revealed that current hero product buyers are overly represented by "Purpose-Driven Changemakers" Designer Trendsetters* and Cultural Visionaries*" totaling 68% of sales, an advantage over key competitors - presenting targeting advantage, including among Gen Z.</p>
+        </div>
+        
+        <div class="insight-card">
+          <span class="insight-badge badge-index">Infidelity Index</span>
+          <h3 class="insight-title">Consumer Relationship Mapping</h3>
+          <p class="insight-description">Mapped consumer relationship stages, discovering 46% of familiar never purchased are "Curious*" while 40% of lapsed "Reconcilable*"—identifying how their perception of brands results in their purchase choices vs Laneige – and where Laneige can assert authority.</p>
+        </div>
+        
+        <div class="insight-card">
+          <span class="insight-badge badge-loyalty">Loyalty Multiverse</span>
+          <h3 class="insight-title">Emotional Pathway Uncovering</h3>
+          <p class="insight-description">Uncovered emotional pathways to drive growth of the "Curious*" and "Reconcilable*" to increase purchase consideration by reconciling messaging tensions and prioritizing marketing initiatives.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <!-- PHASE 1 -->
-      <article class="phase-card">
-          <aside><span class="ring">01</span><h4>Foundation Setting <small>(30 Days)</small></h4></aside>
-          <div class="col research">
-              <ul><li>Deploy Brand Edge™ + Infidelity Index™</li><li>Loyalty map</li><li>Whitespace sizing</li><li>Value segmentation</li></ul>
-              <p class="deliver">Strategic opportunity map</p>
-          </div>
-          <div class="col marketing">
-              <ul><li>Audit positioning & creative</li><li>Media review</li><li>Stakeholder alignment</li></ul>
-              <p class="deliver">Implementation readiness plan</p>
-          </div>
-      </article>
+  <!-- Transformation Strategy -->
+  <div class="casestudy-strategy">
+    <div class="strategy-container">
+      <div class="strategy-header">
+        <h2>TRANSFORMATION STRATEGY</h2>
+        <p class="strategy-context">
+          Our comprehensive Blueprint analysis revealed the precise pathway to transform Laneige from a viral product phenomenon into a lasting brand powerhouse. By understanding the emotional drivers and purchase barriers of key segments, we identified how to convert viral moments into sustainable momentum.
+        </p>
+      </div>
+      
+      <div class="transformation-visual">
+        <div class="transform-state">
+          <div class="state-icon igniter-icon">IGNITER*</div>
+          <p class="state-description">Viral product moments</p>
+        </div>
+        
+        <div class="transform-arrow">→</div>
+        
+        <div class="transform-state">
+          <div class="state-icon fire-icon">FIRE ICON*</div>
+          <p class="state-description">Sustained brand momentum</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      <!-- PHASE 2 -->
-      <article class="phase-card">
-          <aside><span class="ring">02</span><h4>Testing & Validation <small>(45 Days)</small></h4></aside>
-          <div class="col research">
-              <ul><li>Loyalty Multiverse™ testing</li><li>Conversion‑driver modeling</li><li>Response segmentation</li></ul>
-              <p class="deliver">Validated playbook</p>
-          </div>
-          <div class="col marketing">
-              <ul><li>Hero repositioning creative</li><li>Education content</li><li>Value‑bundle campaigns</li></ul>
-              <p class="deliver">Campaign assets ready</p>
-          </div>
-      </article>
+  <!-- Formula Section -->
+  <div class="casestudy-formula">
+    <div class="formula-container">
+      <div class="formula-header">
+        <h2>The K-Beauty Science + Storytelling Formula</h2>
+      </div>
+      
+      <div class="formula-visual">
+        <div class="formula-component">
+          <div class="component-icon">💡</div>
+          <p class="component-label">K-Beauty<br>Innovation</p>
+        </div>
+        
+        <span class="formula-operator">+</span>
+        
+        <div class="formula-component">
+          <div class="component-icon">🔬</div>
+          <p class="component-label">Scientific<br>Authority</p>
+        </div>
+        
+        <span class="formula-operator">+</span>
+        
+        <div class="formula-component">
+          <div class="component-icon">❤️</div>
+          <p class="component-label">Emotional<br>Storytelling</p>
+        </div>
+        
+        <span class="formula-operator">=</span>
+        
+        <div class="formula-component">
+          <div class="component-icon">🚀</div>
+          <p class="component-label">Sustainable<br>Growth</p>
+        </div>
+      </div>
+      
+      <div class="conversion-result">46%</div>
+      <p class="conversion-description">
+        Of "Curious" consumers ready to convert when exposed to the optimized messaging framework
+      </p>
+    </div>
+  </div>
 
-      <!-- PHASE 3 -->
-      <article class="phase-card">
-          <aside><span class="ring">03</span><h4>Optimize & Scale <small>(15 Days)</small></h4></aside>
-          <div class="col research">
-              <ul><li>Early‑signal monitors</li><li>Target model refine</li><li>Best‑practice doc</li></ul>
-              <p class="deliver">Growth roadmap</p>
+  <!-- Results Section -->
+  <div class="casestudy-results">
+    <div class="results-container">
+      <div class="results-header">
+        <h2>PORTFOLIO FIRE ICON* TRANSFORMATION</h2>
+      </div>
+      
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-metric">86%</div>
+          <p class="result-label">Multicategory Purchasers</p>
+        </div>
+        
+        <div class="result-card">
+          <div class="result-metric">3.4x</div>
+          <p class="result-label">Purchase Frequency</p>
+        </div>
+        
+        <div class="result-card">
+          <div class="result-metric">92%</div>
+          <p class="result-label">Brand Advocacy</p>
+        </div>
+        
+        <div class="result-card">
+          <div class="result-metric">$847</div>
+          <p class="result-label">Average Order Value</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Roadmap Section -->
+  <div class="casestudy-roadmap">
+    <div class="roadmap-container">
+      <div class="roadmap-header">
+        <h2>90-DAY TRANSFORMATION ROADMAP</h2>
+      </div>
+      
+      <div class="phases">
+        <!-- Phase 1 -->
+        <div class="phase-container">
+          <div class="phase-header">
+            <div class="phase-number">01</div>
+            <div class="phase-info">
+              <h3 class="phase-title">Discovery & Analysis</h3>
+              <p class="phase-timing">Days 1-30</p>
+            </div>
           </div>
-          <div class="col marketing">
-              <ul><li>AB‑tested launch campaigns</li><li>Media‑mix optimization</li><li>Scale winning tactics</li></ul>
-              <p class="deliver">Proven growth engine</p>
+          
+          <div class="phase-tracks">
+            <div class="track">
+              <span class="track-label research-track">Research Track</span>
+              <ul>
+                <li>Deploy Brand Edge Assessment</li>
+                <li>Conduct segmentation analysis</li>
+                <li>Map consumer journey stages</li>
+              </ul>
+            </div>
+            <div class="track">
+              <span class="track-label marketing-track">Marketing Track</span>
+              <ul>
+                <li>Audit current positioning</li>
+                <li>Review competitive landscape</li>
+                <li>Identify quick wins</li>
+              </ul>
+            </div>
           </div>
-      </article>
-  </section>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-container">
+          <div class="phase-header">
+            <div class="phase-number">02</div>
+            <div class="phase-info">
+              <h3 class="phase-title">Strategy Development</h3>
+              <p class="phase-timing">Days 31-60</p>
+            </div>
+          </div>
+          
+          <div class="phase-tracks">
+            <div class="track">
+              <span class="track-label research-track">Research Track</span>
+              <ul>
+                <li>Define target segments</li>
+                <li>Develop messaging framework</li>
+                <li>Create testing protocols</li>
+              </ul>
+            </div>
+            <div class="track">
+              <span class="track-label marketing-track">Marketing Track</span>
+              <ul>
+                <li>Create segment-specific messaging</li>
+                <li>Design conversion campaigns</li>
+                <li>Build targeting profiles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-container">
+          <div class="phase-header">
+            <div class="phase-number">03</div>
+            <div class="phase-info">
+              <h3 class="phase-title">Testing & Validation</h3>
+              <p class="phase-timing">Days 61-90</p>
+            </div>
+          </div>
+          
+          <div class="phase-tracks">
+            <div class="track">
+              <span class="track-label research-track">Research Track</span>
+              <ul>
+                <li>Monitor performance metrics</li>
+                <li>Analyze conversion data</li>
+                <li>Optimize based on results</li>
+              </ul>
+            </div>
+            <div class="track">
+              <span class="track-label marketing-track">Marketing Track</span>
+              <ul>
+                <li>Launch pilot campaigns</li>
+                <li>Monitor segment response</li>
+                <li>Scale winning strategies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <a href="#contact" class="cta-button">Get My Beauty Brand Blueprint</a>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- END LANEIGE BLOCK =================================================== -->
-
+  
   <!-- ░░░ PROCESS ░░░ -->
   <section class="screen process">
     <div class="process-bg"><div class="process-wave"></div></div>
