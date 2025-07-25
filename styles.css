@@ -5009,3 +5009,6 @@ footer::before {
     color: #e4a324 !important; /* Gold color */
     font-weight: 600 !important;
 }
+.blueprint-card strong {
+    color: #e4a324 !important;
+}
