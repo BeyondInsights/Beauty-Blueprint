@@ -798,11 +798,14 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
         font-weight: 700 !important;
     }
 
-    #beyond-insights-casestudy .results-grid {
-        display: grid !important;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-        gap: 40px !important;
-    }
+    /* Update this CSS */
+#beyond-insights-casestudy .results-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 40px !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
 
     #beyond-insights-casestudy .result-card {
         background: #f8f8f8 !important;
@@ -850,12 +853,12 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
         margin-bottom: 80px !important;
     }
 
-    #beyond-insights-casestudy .roadmap-header h2 {
-        font-size: 3rem !important;
-        margin-bottom: 20px !important;
-        color: white !important;
-        font-weight: 700 !important;
-    }
+  #beyond-insights-casestudy .roadmap-header h2 {
+    font-size: 3rem !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: none !important; /* Remove all caps */
+}
 
     #beyond-insights-casestudy .phases {
         display: grid !important;
@@ -878,21 +881,20 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
     }
 
     #beyond-insights-casestudy .phase-number {
-        font-size: 4rem !important;
-        font-weight: 900 !important;
-        color: #e4a324 !important;
-    }
+    font-size: 3rem !important; /* Reduced from 4rem */
+    font-weight: 700 !important;
+    color: #e4a324 !important;
+}
 
     #beyond-insights-casestudy .phase-info {
         flex: 1 !important;
     }
 
     #beyond-insights-casestudy .phase-title {
-        font-size: 2rem !important;
-        margin-bottom: 10px !important;
-        color: white !important;
-        font-weight: 600 !important;
-    }
+    font-size: 1.8rem !important; /* Reduced from 2rem */
+    text-transform: none !important; /* Remove all caps */
+    font-family: 'Inter', -apple-system, sans-serif !important;
+}
 
     #beyond-insights-casestudy .phase-timing {
         font-size: 1.1rem !important;
@@ -912,13 +914,10 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
     }
 
     #beyond-insights-casestudy .track-label {
-        display: inline-block !important;
-        padding: 8px 20px !important;
-        border-radius: 20px !important;
-        font-size: 0.9rem !important;
-        font-weight: 600 !important;
-        margin-bottom: 20px !important;
-    }
+    text-transform: uppercase !important; /* Keep these uppercase */
+    font-size: 0.8rem !important; /* Smaller for labels */
+    letter-spacing: 0.1em !important;
+}
 
     #beyond-insights-casestudy .research-track {
         background: #663399 !important;
@@ -1107,47 +1106,71 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
     </div>
   </div>
 
-  <!-- Formula Section -->
-  <div class="casestudy-formula">
-    <div class="formula-container">
-      <div class="formula-header">
-        <h2>The K-Beauty Science + Storytelling Formula</h2>
-      </div>
-      
-      <div class="formula-visual">
-        <div class="formula-component">
-          <div class="component-icon">💡</div>
-          <p class="component-label">K-Beauty<br>Innovation</p>
-        </div>
-        
-        <span class="formula-operator">+</span>
-        
-        <div class="formula-component">
-          <div class="component-icon">🔬</div>
-          <p class="component-label">Scientific<br>Authority</p>
-        </div>
-        
-        <span class="formula-operator">+</span>
-        
-        <div class="formula-component">
-          <div class="component-icon">❤️</div>
-          <p class="component-label">Emotional<br>Storytelling</p>
-        </div>
-        
-        <span class="formula-operator">=</span>
-        
-        <div class="formula-component">
-          <div class="component-icon">🚀</div>
-          <p class="component-label">Sustainable<br>Growth</p>
-        </div>
-      </div>
-      
-      <div class="conversion-result">46%</div>
-      <p class="conversion-description">
-        Of "Curious" consumers ready to convert when exposed to the optimized messaging framework
-      </p>
+ <!-- Replace the formula visual section with this -->
+<div class="formula-visual">
+  <div class="formula-component">
+    <div class="component-icon">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+        <!-- K-Beauty Innovation - Abstract molecular structure -->
+        <circle cx="30" cy="30" r="8" fill="white" opacity="0.8"/>
+        <circle cx="15" cy="20" r="5" fill="white" opacity="0.6"/>
+        <circle cx="45" cy="20" r="5" fill="white" opacity="0.6"/>
+        <circle cx="15" cy="40" r="5" fill="white" opacity="0.6"/>
+        <circle cx="45" cy="40" r="5" fill="white" opacity="0.6"/>
+        <line x1="30" y1="30" x2="15" y2="20" stroke="white" stroke-width="2" opacity="0.5"/>
+        <line x1="30" y1="30" x2="45" y2="20" stroke="white" stroke-width="2" opacity="0.5"/>
+        <line x1="30" y1="30" x2="15" y2="40" stroke="white" stroke-width="2" opacity="0.5"/>
+        <line x1="30" y1="30" x2="45" y2="40" stroke="white" stroke-width="2" opacity="0.5"/>
+      </svg>
     </div>
+    <p class="component-label">K-Beauty<br>Innovation</p>
   </div>
+  
+  <span class="formula-operator">+</span>
+  
+  <div class="formula-component">
+    <div class="component-icon">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+        <!-- Scientific Authority - Data visualization -->
+        <rect x="10" y="35" width="8" height="15" fill="white" opacity="0.7"/>
+        <rect x="20" y="25" width="8" height="25" fill="white" opacity="0.8"/>
+        <rect x="30" y="15" width="8" height="35" fill="white" opacity="0.9"/>
+        <rect x="40" y="20" width="8" height="30" fill="white" opacity="0.8"/>
+        <path d="M10 10 Q20 15 30 10 T50 10" stroke="white" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <p class="component-label">Scientific<br>Authority</p>
+  </div>
+  
+  <span class="formula-operator">+</span>
+  
+  <div class="formula-component">
+    <div class="component-icon">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+        <!-- Emotional Storytelling - Abstract wave pattern -->
+        <path d="M10 30 Q20 20 30 30 T50 30" stroke="white" stroke-width="3" fill="none" opacity="0.9"/>
+        <path d="M10 35 Q20 25 30 35 T50 35" stroke="white" stroke-width="2" fill="none" opacity="0.7"/>
+        <path d="M10 40 Q20 30 30 40 T50 40" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+        <circle cx="30" cy="30" r="3" fill="white"/>
+      </svg>
+    </div>
+    <p class="component-label">Emotional<br>Storytelling</p>
+  </div>
+  
+  <span class="formula-operator">=</span>
+  
+  <div class="formula-component">
+    <div class="component-icon">
+      <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+        <!-- Sustainable Growth - Upward trend -->
+        <path d="M10 45 L20 35 L30 40 L40 25 L50 15" stroke="white" stroke-width="3" fill="none"/>
+        <circle cx="50" cy="15" r="4" fill="white"/>
+        <path d="M45 15 L50 15 L50 20" stroke="white" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <p class="component-label">Sustainable<br>Growth</p>
+  </div>
+</div>
 
   <!-- Results Section -->
   <div class="casestudy-results">
