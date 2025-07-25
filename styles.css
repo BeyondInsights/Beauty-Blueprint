@@ -4950,3 +4950,31 @@ h2 {
 .col{background:#fafbff;border:1px solid #eceefe;border-radius:16px;padding:28px;font-size:.95rem}
 .col ul{margin-left:1rem;line-height:1.55}
 .deliver{margin-top:14px;font-size:.82rem;color:#555}
+
+/* Add to your CSS */
+.tariffs-text,
+.tiktok-text,
+.small-text {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+}
+/* Add to your CSS */
+.blueprint-card .you-get,
+.blueprint-card .it-means {
+    color: #e4a324 !important; /* Gold color */
+    font-weight: 600 !important;
+}
+/* Remove the white line from footer */
+footer {
+    border-bottom: none !important;
+}
+
+/* Or if it's a separate element */
+footer::after {
+    display: none !important;
+}
+
+/* Or if it's the last element in the footer */
+footer > *:last-child {
+    border-bottom: none !important;
+}
