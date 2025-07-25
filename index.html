@@ -1249,42 +1249,147 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
       </div>
     </div>
   </div>
-/* Roadmap Specific Styles */
-  #beyond-insights-casestudy .casestudy-roadmap {
-      background: #1a0033 !important;
-      color: white !important;
-      padding: 100px 0 !important;
-  }
+ /* Roadmap Section */
+  <style>
+    #beyond-insights-casestudy .casestudy-roadmap {
+        background: #1a0033 !important;
+        color: white !important;
+        padding: 100px 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .roadmap-container {
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+
+    #beyond-insights-casestudy .roadmap-header {
+        text-align: center !important;
+        margin-bottom: 80px !important;
+    }
 
   #beyond-insights-casestudy .roadmap-header h2 {
-      font-size: 3rem !important;
-      font-family: 'Inter', -apple-system, sans-serif !important;
-      font-weight: 600 !important;
-      text-transform: none !important;
-  }
+    font-size: 3rem !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-weight: 600 !important;
+    text-transform: none !important; /* Remove all caps */
+}
 
-  #beyond-insights-casestudy .phase-container {
-      background: rgba(255,255,255,0.05) !important;
-      backdrop-filter: blur(10px) !important;
-      border-radius: 20px !important;
-      padding: 50px !important;
-      border: 1px solid rgba(255,255,255,0.1) !important;
-  }
+    #beyond-insights-casestudy .phases {
+        display: grid !important;
+        gap: 50px !important;
+    }
 
-  #beyond-insights-casestudy .phase-header {
-      display: flex !important;
-      align-items: center !important;
-      gap: 30px !important;
-      margin-bottom: 40px !important;
-  }
+    #beyond-insights-casestudy .phase-container {
+        background: rgba(255,255,255,0.05) !important;
+        backdrop-filter: blur(10px) !important;
+        border-radius: 20px !important;
+        padding: 50px !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
+    }
 
-  #beyond-insights-casestudy .phase-number {
-      font-size: 3rem !important;
-      font-weight: 700 !important;
-      color: #e4a324 !important;
-  }
+    #beyond-insights-casestudy .phase-header {
+        display: flex !important;
+        align-items: center !important;
+        gap: 30px !important;
+        margin-bottom: 40px !important;
+    }
 
-  /* Add all the other roadmap CSS here */
+    #beyond-insights-casestudy .phase-number {
+    font-size: 3rem !important; /* Reduced from 4rem */
+    font-weight: 700 !important;
+    color: #e4a324 !important;
+}
+
+    #beyond-insights-casestudy .phase-info {
+        flex: 1 !important;
+    }
+
+    #beyond-insights-casestudy .phase-title {
+    font-size: 1.8rem !important; /* Reduced from 2rem */
+    text-transform: none !important; /* Remove all caps */
+    font-family: 'Inter', -apple-system, sans-serif !important;
+}
+
+    #beyond-insights-casestudy .phase-timing {
+        font-size: 1.1rem !important;
+        color: #e4a324 !important;
+    }
+
+    #beyond-insights-casestudy .phase-tracks {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 40px !important;
+    }
+
+    #beyond-insights-casestudy .track {
+        background: rgba(255,255,255,0.05) !important;
+        border-radius: 15px !important;
+        padding: 30px !important;
+    }
+
+    #beyond-insights-casestudy .track-label {
+    text-transform: uppercase !important; /* Keep these uppercase */
+    font-size: 0.8rem !important; /* Smaller for labels */
+    letter-spacing: 0.1em !important;
+}
+
+    #beyond-insights-casestudy .research-track {
+        background: #663399 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .marketing-track {
+        background: #e4a324 !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .track ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    #beyond-insights-casestudy .track li {
+        padding: 10px 0 !important;
+        font-size: 1rem !important;
+        opacity: 0.9 !important;
+        position: relative !important;
+        padding-left: 25px !important;
+        color: white !important;
+    }
+
+    #beyond-insights-casestudy .track li::before {
+        content: '→' !important;
+        position: absolute !important;
+        left: 0 !important;
+        color: #e4a324 !important;
+    }
+
+    #beyond-insights-casestudy .cta-section {
+        text-align: center !important;
+        margin-top: 80px !important;
+    }
+
+    #beyond-insights-casestudy .cta-button {
+        display: inline-block !important;
+        padding: 20px 50px !important;
+        background: linear-gradient(45deg, #e4a324, #f10b25) !important;
+        color: white !important;
+        text-decoration: none !important;
+        border-radius: 50px !important;
+        font-weight: 600 !important;
+        font-size: 1.2rem !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #beyond-insights-casestudy .cta-button:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 15px 30px rgba(228,163,36,0.4) !important;
+    }
+
 </style>
  <div class="casestudy-roadmap">
   <div class="roadmap-container">
