@@ -5012,3 +5012,43 @@ footer::before {
 .blueprint-card strong {
     color: #e4a324 !important;
 }
+/* Add these to the END of your styles.css file */
+
+/* Fix 1: Remove white line from footer - based on your HTML structure */
+.footer {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* Also check if it's the body tag causing the line */
+body {
+    border-bottom: none !important;
+}
+
+/* If it's a horizontal rule or divider */
+hr, .divider, .line {
+    display: none !important;
+}
+
+/* Fix 2: For the blueprint "You get" and "It means" text */
+/* Since you're using inline styles, you need to update the HTML directly */
+/* Find this in your HTML: */
+/* <strong>You get:</strong> */
+/* And change it to: */
+/* <strong style="color: #e4a324;">You get:</strong> */
+
+/* Or add this CSS with very specific targeting */
+#beyond-insights-casestudy .blueprint-card strong {
+    color: #e4a324 !important;
+}
+
+/* Alternative: Target by content (modern browsers) */
+strong:contains("You get:"),
+strong:contains("It means:") {
+    color: #e4a324 !important;
+}
+
+/* If the above doesn't work, try this more aggressive approach */
+.casestudy strong {
+    color: #e4a324 !important;
+}
