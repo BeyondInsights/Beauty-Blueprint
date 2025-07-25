@@ -4949,8 +4949,8 @@ h2 {
 /* Add to your CSS */
 /* Fix the small tariffs/tiktok text */
 .hero-sub {
-    font-size: 1.1rem !important;
-    line-height: 1.6 !important;
+    font-size: 1.3rem !important;
+    line-height: 1.9 !important;
 }
 /* Add to your CSS */
 .blueprint-card .you-get,
@@ -4964,6 +4964,10 @@ h2 {
 }
 /* Or if it's the last element in the footer */
 footer > *:last-child {
+    border-bottom: none !important;
+}
+/* If there's still a white line, try */
+section:last-child {
     border-bottom: none !important;
 }
 /* For the navigation items if they're too small */
