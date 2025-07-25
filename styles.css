@@ -5089,3 +5089,15 @@ body * {
 #beyond-insights-casestudy .particle {
     animation: casestudy-float 20s infinite linear;
 }
+.cta .cta-title {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.cta .word-animate {
+    display: inline !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    animation: none !important;
+}
