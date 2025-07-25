@@ -136,34 +136,366 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
   </section>
 
   <!-- ░░░ MEET ELAINE ░░░ -->
+<!-- VISUALLY STUNNING MEET ELAINE SECTION -->
 <section id="meet-elaine" class="screen meet-elaine">
-  <div class="container">
-    <h2 class="section-title">Meet Your <span style="color: #e4a324;">Beauty Insights</span> <span style="color: #7434ac;">Leader</span></h2>
+  <style>
+    .meet-elaine {
+      background: linear-gradient(135deg, #f8f5ff 0%, #fff 50%, #faf8ff 100%);
+      padding: 120px 20px;
+      position: relative;
+      overflow: hidden;
+    }
     
-    <div class="elaine-content">
-      <div class="elaine-image">
-        <img src="elaine-sheng.jpg" alt="Elaine Sheng">
+    .meet-elaine::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(228, 163, 36, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .meet-elaine::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(116, 52, 172, 0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .section-title {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-weight: 300;
+      text-align: center;
+      margin: 0 0 100px;
+      color: #1a0033;
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .elaine-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 100px;
+      max-width: 1300px;
+      margin: 0 auto;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .elaine-visual {
+      position: relative;
+    }
+    
+    .image-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    
+    .image-glow {
+      position: absolute;
+      inset: -30px;
+      background: linear-gradient(135deg, rgba(116, 52, 172, 0.3) 0%, rgba(228, 163, 36, 0.3) 100%);
+      border-radius: 50%;
+      filter: blur(40px);
+      animation: glow-pulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes glow-pulse {
+      0%, 100% { opacity: 0.6; transform: scale(0.95); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    
+    .elaine-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(116, 52, 172, 0.3);
+    }
+    
+    .elaine-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+    
+    .floating-badge {
+      position: absolute;
+      background: white;
+      border-radius: 30px;
+      padding: 15px 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      font-weight: 600;
+      font-size: 0.9rem;
+      animation: float-badge 3s ease-in-out infinite;
+    }
+    
+    @keyframes float-badge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .badge-1 {
+      top: 20px;
+      right: -40px;
+      color: #7434ac;
+      animation-delay: 0s;
+    }
+    
+    .badge-2 {
+      bottom: 40px;
+      left: -40px;
+      color: #e4a324;
+      animation-delay: 1s;
+    }
+    
+    .badge-3 {
+      bottom: 80px;
+      right: -60px;
+      color: #ff6b6b;
+      animation-delay: 2s;
+    }
+    
+    .elaine-story {
+      position: relative;
+    }
+    
+    .name-lockup {
+      margin-bottom: 50px;
+    }
+    
+    .elaine-name {
+      font-size: 4rem;
+      font-weight: 300;
+      color: #1a0033;
+      margin: 0 0 15px;
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    
+    .title-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .elaine-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #7434ac 0%, #9454b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+    
+    .elaine-company {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #e4a324;
+      margin: 0;
+    }
+    
+    .elaine-intro {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 50px;
+    }
+    
+    .brand-logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 50px;
+    }
+    
+    .brand-tag {
+      background: linear-gradient(135deg, rgba(116, 52, 172, 0.08) 0%, rgba(228, 163, 36, 0.08) 100%);
+      border: 1px solid rgba(116, 52, 172, 0.2);
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      color: #7434ac;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .brand-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(116, 52, 172, 0.2);
+    }
+    
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+    
+    .expertise-item {
+      display: flex;
+      align-items: start;
+      gap: 15px;
+    }
+    
+    .expertise-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #7434ac 0%, #e4a324 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    
+    .expertise-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+    
+    .expertise-text {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #666;
+    }
+    
+    .elaine-quote {
+      position: relative;
+      padding: 40px;
+      background: linear-gradient(135deg, #7434ac 0%, #9454b0 100%);
+      border-radius: 30px;
+      color: white;
+      overflow: hidden;
+    }
+    
+    .elaine-quote::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-size: 120px;
+      opacity: 0.1;
+      font-family: Georgia, serif;
+    }
+    
+    .elaine-quote p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+    
+    @media (max-width: 1024px) {
+      .elaine-showcase {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 80px;
+      }
+      
+      .floating-badge {
+        display: none;
+      }
+      
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  
+  <h2 class="section-title">
+    Meet Your <span style="color: #e4a324;">Beauty Insights</span> <span style="color: #7434ac;">Leader</span>
+  </h2>
+  
+  <div class="elaine-showcase">
+    <div class="elaine-visual">
+      <div class="image-container">
+        <div class="image-glow"></div>
+        <div class="elaine-image">
+          <img src="elaine-sheng.jpg" alt="Elaine Sheng">
+        </div>
+        <div class="floating-badge badge-1">20+ Years</div>
+        <div class="floating-badge badge-2">Global Beauty</div>
+        <div class="floating-badge badge-3">Brand Growth</div>
+      </div>
+    </div>
+    
+    <div class="elaine-story">
+      <div class="name-lockup">
+        <h3 class="elaine-name">Elaine Sheng</h3>
+        <div class="title-stack">
+          <h4 class="elaine-title">Strategic Consumer Insights & Brand Growth Leader</h4>
+          <h5 class="elaine-company">Partner, BEYOND Insights</h5>
+        </div>
       </div>
       
-      <div class="elaine-text">
-        <h3 class="elaine-name">Elaine Sheng</h3>
-        <h4 class="elaine-title">Strategic Consumer Insights & Brand Growth Leader</h4>
-        <h5 class="elaine-company">Partner, BEYOND Insights</h5>
+      <p class="elaine-intro">
+        Elaine Sheng brings deep expertise in consumer insights and strategic brand development within the global beauty industry. With a proven track record across mass and prestige brands, she transforms market intelligence into growth strategies and drives brand and portfolio reinvention at scale.
+      </p>
+      
+      <div class="brand-logos">
+        <span class="brand-tag">NARS</span>
+        <span class="brand-tag">Shiseido</span>
+        <span class="brand-tag">Laura Mercier</span>
+        <span class="brand-tag">Tory Burch</span>
+        <span class="brand-tag">Maybelline</span>
+        <span class="brand-tag">Revlon</span>
+      </div>
+      
+      <div class="expertise-grid">
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 20 20" fill="white">
+              <path d="M10 2L12 7L17 7L13 10L15 15L10 12L5 15L7 10L3 7L8 7Z"/>
+            </svg>
+          </div>
+          <div class="expertise-text">Crafts insight-led strategy aligned with consumer and business priorities</div>
+        </div>
         
-        <p class="elaine-intro">
-          Elaine Sheng brings deep expertise in consumer insights and strategic brand development within the global beauty industry. With a proven track record across mass and prestige brands—including NARS, Shiseido, Laura Mercier, Tory Burch, Maybelline, Revlon—she transforms market intelligence into growth strategies and drives brand and portfolio reinvention at scale.
-        </p>
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 20 20" fill="white">
+              <path d="M10 2C5.5 2 2 5.5 2 10s3.5 8 8 8 8-3.5 8-8-3.5-8-8-8zm0 14l-4-4 1.5-1.5L10 13l4.5-4.5L16 10l-6 6z"/>
+            </svg>
+          </div>
+          <div class="expertise-text">Advises global beauty leaders on innovation, repositioning, and growth</div>
+        </div>
         
-        <ul class="elaine-highlights">
-          <li>Crafts insight-led strategy aligned with consumer and business priorities.</li>
-          <li>Advises global beauty leaders on innovation, repositioning, and growth.</li>
-          <li>Operationalizes research to influence brand and portfolio decisions.</li>
-          <li>Identifies whitespace and drives competitive advantage through data.</li>
-        </ul>
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 20 20" fill="white">
+              <path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h10v2H3v-2z"/>
+            </svg>
+          </div>
+          <div class="expertise-text">Operationalizes research to influence brand and portfolio decisions</div>
+        </div>
         
-        <p class="elaine-quote">
-          "Let's uncover the insights you didn't know existed—and turn them into your unfair advantage."
-        </p>
+        <div class="expertise-item">
+          <div class="expertise-icon">
+            <svg viewBox="0 0 20 20" fill="white">
+              <path d="M10 3L2 9v9h6v-6h4v6h6V9l-8-6z"/>
+            </svg>
+          </div>
+          <div class="expertise-text">Identifies whitespace and drives competitive advantage through data</div>
+        </div>
+      </div>
+      
+      <div class="elaine-quote">
+        <p>Let's uncover the insights you didn't know existed—and turn them into your unfair advantage.</p>
       </div>
     </div>
   </div>
