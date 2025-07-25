@@ -1,5 +1,7 @@
 /* Beyond Insights - Visually Stunning Beauty Brand Styles */
-
+body {
+    background-color: red !important;
+}
 * {
     margin: 0;
     padding: 0;
