@@ -4996,3 +4996,16 @@ section:last-of-type {
 footer.footer-content {
     border-top: none !important;
 }
+footer {
+    border-bottom: none !important;
+}
+
+footer::after,
+footer::before {
+    display: none !important;
+}
+.blueprint-card .you-get,
+.blueprint-card .it-means {
+    color: #e4a324 !important; /* Gold color */
+    font-weight: 600 !important;
+}
