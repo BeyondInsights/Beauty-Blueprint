@@ -5071,3 +5071,21 @@ strong:contains("It means:") {
     color: #e4a324 !important;
     font-weight: 600 !important;
 }
+/* FIX FOR FLOATING LOGO AND ICONS */
+
+/* Stop the logo from floating */
+.logo {
+    animation: none !important;
+    position: relative !important;
+    transform: none !important;
+}
+
+/* Stop all unintended floating animations */
+body * {
+    animation-name: none !important;
+}
+
+/* Re-enable ONLY the animations we want in the case study */
+#beyond-insights-casestudy .particle {
+    animation: casestudy-float 20s infinite linear;
+}
