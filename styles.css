@@ -4974,3 +4974,25 @@ section:last-child {
 .nav a {
     font-size: 1rem !important;
 }
+/* Remove white line from footer */
+footer.footer {
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Also try this in case there's a ::before or ::after element */
+footer.footer::before,
+footer.footer::after {
+    display: none !important;
+}
+
+/* If it's still there, it might be on the section above */
+section:last-of-type {
+    border-bottom: none !important;
+}
+
+/* Or on the footer's parent container */
+footer.footer-content {
+    border-top: none !important;
+}
