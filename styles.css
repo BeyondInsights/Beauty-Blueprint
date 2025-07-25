@@ -4947,9 +4947,8 @@ h2 {
 .deliver{margin-top:14px;font-size:.82rem;color:#555}
 
 /* Add to your CSS */
-.tariffs-text,
-.tiktok-text,
-.small-text {
+/* Fix the small tariffs/tiktok text */
+.hero-sub {
     font-size: 1.1rem !important;
     line-height: 1.6 !important;
 }
@@ -4959,17 +4958,15 @@ h2 {
     color: #e4a324 !important; /* Gold color */
     font-weight: 600 !important;
 }
-/* Remove the white line from footer */
-footer {
+/* For the white line at bottom of page, based on the HTML structure */
+.hero-content {
     border-bottom: none !important;
 }
-
-/* Or if it's a separate element */
-footer::after {
-    display: none !important;
-}
-
 /* Or if it's the last element in the footer */
 footer > *:last-child {
     border-bottom: none !important;
+}
+/* For the navigation items if they're too small */
+.nav a {
+    font-size: 1rem !important;
 }
