@@ -5267,3 +5267,14 @@ body * {
     padding-bottom: 150px !important;
     margin-bottom: 80px !important;
 }
+/* Extend the dark purple background section further */
+.screen.solution {
+    padding-bottom: 250px !important;  /* Increased from 150px */
+    margin-bottom: 120px !important;    /* Increased from 80px */
+}
+
+/* Also ensure the background covers the full height */
+#blueprint {
+    min-height: 100vh !important;
+    padding-bottom: 300px !important;
+}
