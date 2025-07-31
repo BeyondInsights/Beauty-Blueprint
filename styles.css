@@ -5326,3 +5326,25 @@ body * {
 .stepper {
     margin-top: 100px !important;
 }
+/* Add space between button and title within the same section */
+.screen h2.section-title {
+    margin-top: 120px !important;  /* Adds space above the title */
+}
+
+/* Or target more specifically */
+.screen.solution h2,
+#blueprint h2 {
+    margin-top: 120px !important;
+}
+
+/* If the button has a wrapper, add bottom margin */
+.cta-wrapper, .button-wrapper {
+    margin-bottom: 100px !important;
+}
+
+/* Alternative - if button is absolutely positioned */
+.screen a[href*="90-day"],
+.screen a:contains("GET YOUR") {
+    margin-bottom: 100px !important;
+    display: block !important;
+}
