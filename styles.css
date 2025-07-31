@@ -5374,3 +5374,25 @@ body * {
 .screen.solution {
     margin-top: 50px !important;
 }
+/* Remove excessive white space after case study */
+#beyond-insights-casestudy {
+    margin-bottom: 0 !important;
+    padding-bottom: 40px !important;
+}
+
+/* Ensure the Decision section follows closely */
+.screen.decision {
+    margin-top: 0 !important;
+    padding-top: 60px !important;
+}
+
+/* Or if there's an iframe causing the issue */
+#beyond-insights-casestudy iframe {
+    margin-bottom: 0 !important;
+}
+
+/* Remove any min-height that might be causing the gap */
+section#beyond-insights-casestudy {
+    min-height: auto !important;
+    height: auto !important;
+}
