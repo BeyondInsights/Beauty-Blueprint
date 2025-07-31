@@ -5262,3 +5262,8 @@ body * {
     object-fit: cover !important;
     object-position: center 20% !important;
 }
+/* Fix blueprint section spacing */
+.screen.solution {
+    padding-bottom: 150px !important;
+    margin-bottom: 80px !important;
+}
