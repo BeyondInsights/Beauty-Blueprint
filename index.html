@@ -1292,25 +1292,6 @@ window.addEventListener('load', function() {
   </div>
 </section>
 
-<script>
-// Add this right before your closing </body> tag
-fetch('prestige-beauty-case-study.html')
-  .then(response => response.text())
-  .then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    
-    // Get the styles from the head
-    const styles = doc.head.innerHTML;
-    
-    // Get the body content
-    const content = doc.body.innerHTML;
-    
-    // Inject both styles and content
-    document.getElementById('case-study-content').innerHTML = styles + content;
-  });
-</script>
-
   <!-- ░░░ DECISION ░░░ -->
   <section class="screen decision">
    <div class="container fade-in">
@@ -1886,6 +1867,24 @@ const caseStudyIframe = document.querySelector('#beyond-insights-casestudy ifram
 if (caseStudyIframe) {
   caseStudyIframe.addEventListener('load', resizeCaseStudyIframe);
 }
+</script>
+<script>
+// Add this right before your closing </body> tag
+fetch('prestige-beauty-case-study.html')
+  .then(response => response.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    
+    // Get the styles from the head
+    const styles = doc.head.innerHTML;
+    
+    // Get the body content
+    const content = doc.body.innerHTML;
+    
+    // Inject both styles and content
+    document.getElementById('case-study-content').innerHTML = styles + content;
+  });
 </script>
  </body>
 </html>
