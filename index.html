@@ -1286,26 +1286,15 @@ window.addEventListener('load', function() {
 
 
 <!-- CASE STUDY CONTENT -->
-<section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 20px !important;">
+<<section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 0 !important; margin: 0 !important;">
   <div style="height: 1px; opacity: 0;"></div>
   <iframe 
-    id="case-iframe"
     src="prestige-beauty-case-study.html" 
-    style="width: 100% !important; height: 8500px !important; border: none !important; display: block !important;"
+    style="width: 100% !important; height: 7200px !important; border: none !important; display: block !important; margin-bottom: -200px !important;"
     title="Laneige Case Study"
     scrolling="no">
   </iframe>
 </section>
-
-<script>
-// Add this right after the section
-setTimeout(function() {
-  var iframe = document.getElementById('case-iframe');
-  var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-  var actualHeight = iframeDoc.body.scrollHeight;
-  iframe.style.height = actualHeight + 'px';
-}, 1000);
-</script>
 
   <!-- ░░░ DECISION ░░░ -->
   <section class="screen decision">
