@@ -5279,11 +5279,12 @@ body * {
     padding-bottom: 300px !important;
 }
 /* Add more dark purple space after the blueprint modules */
+/* Reduce the dark purple space after modules */
 .modules {
-    margin-bottom: 150px !important;  /* Adds space after the 6 cards */
+    margin-bottom: 80px !important;  /* Reduced from 150px */
 }
 
-/* Or if that doesn't work, try this */
+/* Or adjust this instead */
 .screen.solution .container {
-    padding-bottom: 200px !important;
+    padding-bottom: 100px !important;  /* Reduced from 200px */
 }
