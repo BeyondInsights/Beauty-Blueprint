@@ -5348,3 +5348,12 @@ body * {
     margin-bottom: 100px !important;
     display: block !important;
 }
+/* Add space after the gap section */
+.screen.gap {
+    padding-bottom: 150px !important;
+}
+
+/* Or add space before the blueprint section */
+#blueprint {
+    padding-top: 150px !important;
+}
