@@ -1,0 +1,369 @@
+/* BEAUTY ENHANCED CSS - COMPLETE FIX */
+/* This completely replaces beauty-enhanced.css */
+
+/* ========================================
+   CASE STUDY SECTION FIXES
+   ======================================== */
+
+/* Fix Challenge Section Text Size */
+#beyond-insights-casestudy .challenge-statement {
+    max-width: 1000px !important;
+    margin: 0 auto 60px !important;
+    font-size: 1.8rem !important;
+    line-height: 1.7 !important;
+    text-align: center !important;
+}
+
+/* Fix the metrics boxes */
+#beyond-insights-casestudy .challenge-metrics {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 50px !important;
+    margin: 60px auto !important;
+    max-width: 1000px !important;
+}
+
+#beyond-insights-casestudy .metric-box {
+    background: white !important;
+    padding: 40px 50px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08) !important;
+    text-align: center !important;
+    flex: 0 1 280px !important;
+}
+
+#beyond-insights-casestudy .metric-value {
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+    color: #f10b25 !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+}
+
+#beyond-insights-casestudy .metric-label {
+    font-size: 1.4rem !important;
+    color: #666 !important;
+}
+
+/* Remove the arrow between metrics */
+#beyond-insights-casestudy .challenge-arrow {
+    display: none !important;
+}
+
+/* Fix segment cards */
+#beyond-insights-casestudy .segment-breakdown {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+    max-width: 1200px !important;
+    margin: 60px auto !important;
+    background: transparent !important;
+}
+
+#beyond-insights-casestudy .segment-card {
+    background: white !important;
+    padding: 50px 40px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08) !important;
+    text-align: center !important;
+    border: 1px solid rgba(116, 52, 172, 0.1) !important;
+}
+
+/* Make percentage numbers HUGE */
+#beyond-insights-casestudy .segment-card > span:first-of-type,
+#beyond-insights-casestudy .segment-percent {
+    font-size: 7rem !important;
+    font-weight: 700 !important;
+    color: #7434ac !important;
+    display: block !important;
+    line-height: 1 !important;
+    margin: 30px 0 !important;
+}
+
+#beyond-insights-casestudy .segment-card h5 {
+    font-size: 1.8rem !important;
+    margin-bottom: 20px !important;
+    color: #2a2a2a !important;
+}
+
+#beyond-insights-casestudy .segment-card p {
+    font-size: 1.3rem !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+}
+
+/* ========================================
+   90-DAY TRANSFORMATION - PROPER LAYOUT
+   ======================================== */
+
+/* Headers for Research/Marketing tracks */
+#beyond-insights-casestudy .tracks-header {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 300px !important;
+    margin: 60px auto 40px !important;
+}
+
+#beyond-insights-casestudy .track-badge {
+    background: white !important;
+    border: 2px solid #7434ac !important;
+    color: #7434ac !important;
+    padding: 10px 30px !important;
+    border-radius: 30px !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+#beyond-insights-casestudy .track-badge.track-right {
+    background: #7434ac !important;
+    color: white !important;
+}
+
+/* Phase Table Structure */
+#beyond-insights-casestudy .phase-table {
+    display: block !important;
+    max-width: 1300px !important;
+    margin: 0 auto 80px !important;
+}
+
+#beyond-insights-casestudy .phase-row {
+    display: grid !important;
+    grid-template-columns: 200px 1fr 1fr !important;
+    background: white !important;
+    border: 1px solid #e8e8e8 !important;
+    margin-bottom: -1px !important;
+    min-height: 180px !important;
+}
+
+/* Phase Circle with Phase Labels */
+#beyond-insights-casestudy .phase-circle {
+    background: #1a0033 !important;
+    color: white !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 30px 20px !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    border-right: 1px solid #e8e8e8 !important;
+    position: relative !important;
+}
+
+/* Add Phase labels */
+#beyond-insights-casestudy .phase-row:nth-child(1) .phase-circle::before {
+    content: "Phase 1:" !important;
+    display: block !important;
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
+    opacity: 0.9 !important;
+}
+
+#beyond-insights-casestudy .phase-row:nth-child(1) .phase-circle::after {
+    content: "Discover" !important;
+    display: block !important;
+    font-size: 1rem !important;
+    margin-top: 10px !important;
+    opacity: 0.9 !important;
+}
+
+#beyond-insights-casestudy .phase-row:nth-child(2) .phase-circle::before {
+    content: "Phase 2:" !important;
+    display: block !important;
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
+    opacity: 0.9 !important;
+}
+
+#beyond-insights-casestudy .phase-row:nth-child(2) .phase-circle::after {
+    content: "Design" !important;
+    display: block !important;
+    font-size: 1rem !important;
+    margin-top: 10px !important;
+    opacity: 0.9 !important;
+}
+
+#beyond-insights-casestudy .phase-row:nth-child(3) .phase-circle::before {
+    content: "Phase 3:" !important;
+    display: block !important;
+    font-size: 1rem !important;
+    margin-bottom: 5px !important;
+    opacity: 0.9 !important;
+}
+
+#beyond-insights-casestudy .phase-row:nth-child(3) .phase-circle::after {
+    content: "Deploy" !important;
+    display: block !important;
+    font-size: 1rem !important;
+    margin-top: 10px !important;
+    opacity: 0.9 !important;
+}
+
+/* Phase content columns */
+#beyond-insights-casestudy .phase-left,
+#beyond-insights-casestudy .phase-right {
+    padding: 40px 50px !important;
+    background: white !important;
+}
+
+#beyond-insights-casestudy .phase-left {
+    border-right: 1px solid #e8e8e8 !important;
+}
+
+#beyond-insights-casestudy .phase-left h5,
+#beyond-insights-casestudy .phase-right h5 {
+    font-size: 1.6rem !important;
+    margin-bottom: 20px !important;
+    color: #2a2a2a !important;
+    font-weight: 600 !important;
+}
+
+#beyond-insights-casestudy .phase-left ul,
+#beyond-insights-casestudy .phase-right ul {
+    margin: 0 0 20px 0 !important;
+    padding-left: 20px !important;
+}
+
+#beyond-insights-casestudy .phase-left li,
+#beyond-insights-casestudy .phase-right li {
+    font-size: 1.3rem !important;
+    margin-bottom: 10px !important;
+    line-height: 1.6 !important;
+}
+
+#beyond-insights-casestudy .deliver {
+    font-size: 1.1rem !important;
+    color: #f10b25 !important;
+    font-weight: 600 !important;
+    font-style: italic !important;
+}
+
+/* ========================================
+   GENERAL IMPROVEMENTS
+   ======================================== */
+
+/* Section spacing */
+#beyond-insights-casestudy .case-challenge,
+#beyond-insights-casestudy .insight-module,
+#beyond-insights-casestudy .transformation-strategy {
+    padding: 80px 40px !important;
+    margin-bottom: 60px !important;
+}
+
+/* Headers */
+#beyond-insights-casestudy h2 {
+    font-size: 3rem !important;
+    font-weight: 600 !important;
+    color: #2a2a2a !important;
+    margin-bottom: 40px !important;
+    text-align: center !important;
+}
+
+#beyond-insights-casestudy h4 {
+    font-size: 2.2rem !important;
+    font-weight: 400 !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+}
+
+/* All paragraphs */
+#beyond-insights-casestudy p {
+    font-size: 1.5rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Lists */
+#beyond-insights-casestudy ul li {
+    font-size: 1.4rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Module content */
+#beyond-insights-casestudy .module-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Remove any conflicting resets */
+#beyond-insights-casestudy * {
+    all: revert !important;
+}
+
+/* Reapply font family */
+#beyond-insights-casestudy {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif !important;
+}
+
+/* ========================================
+   TRANSFORMATION IMPACT (if you keep it)
+   ======================================== */
+
+#beyond-insights-casestudy .transformation-impact {
+    background: linear-gradient(135deg, #2a1548, #1a0033) !important;
+    padding: 80px 40px !important;
+    border-radius: 30px !important;
+    margin: 80px auto !important;
+    max-width: 1200px !important;
+}
+
+#beyond-insights-casestudy .impact-metrics {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 40px !important;
+    margin-top: 50px !important;
+}
+
+#beyond-insights-casestudy .impact-metric {
+    text-align: center !important;
+    color: white !important;
+}
+
+#beyond-insights-casestudy .impact-number {
+    font-size: 4.5rem !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #ff9500, #ff0066) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    display: block !important;
+    margin-bottom: 10px !important;
+}
+
+#beyond-insights-casestudy .impact-label {
+    font-size: 1.3rem !important;
+    opacity: 0.9 !important;
+}
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 968px) {
+    #beyond-insights-casestudy .segment-breakdown {
+        grid-template-columns: 1fr !important;
+    }
+    
+    #beyond-insights-casestudy .challenge-metrics {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    #beyond-insights-casestudy .tracks-header {
+        gap: 50px !important;
+    }
+    
+    #beyond-insights-casestudy .phase-row {
+        grid-template-columns: 80px 1fr !important;
+    }
+    
+    #beyond-insights-casestudy .phase-right {
+        display: none !important;
+    }
+    
+    #beyond-insights-casestudy .impact-metrics {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

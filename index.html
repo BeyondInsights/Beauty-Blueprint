@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
+ <style>
   /* Add these to your existing style tag in the HTML */
   .tariffs-text,
   .tiktok-text,
@@ -12,133 +12,416 @@
   footer {
       border-bottom: none !important;
   }
-</style>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="Lose or loyalty? Beyond Insights' 90‑day Beauty Brand Blueprint™ pinpoints the segments, messages and levers that protect share and spark growth.">
-  <title>Beyond Insights – Transform Your Beauty Brand in 90 Days</title>
-  <link rel="stylesheet" href="styles.css?v=2">
-  <link rel="stylesheet" href="case‑study‑overrides.css">  <!-- ← new, small -->
-</head>
 
-<body>
+</style>
+
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Lose or loyalty? Beyond Insights' 90‑day Beauty Brand Blueprint™ pinpoints the segments, messages and levers that protect share and spark growth." name="description"/>
+  <title>
+   Beyond Insights – Transform Your Beauty Brand in 90 Days
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="beauty-enhanced.css" rel="stylesheet"/>
+
+ </head>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the gap section
+    const gapSection = document.querySelector('.screen.gap');
+    if (gapSection) {
+        // COMPLETE REDESIGN
+        gapSection.innerHTML = `
+            <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+                <!-- Header -->
+                <div style="text-align: center; margin-bottom: 5rem;">
+                    <h2 style="font-size: 4.5rem; font-weight: 300; color: white; line-height: 1.2;">
+                        Why Traditional Research<br>
+                        <span style="font-weight: 900; font-size: 5rem; background: linear-gradient(90deg, #ff4444 0%, #ff6666 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Won't Save You</span>
+                    </h2>
+                    <p style="font-size: 1.6rem; color: rgba(255,255,255,0.7); margin-top: 2rem;">
+                        From flat facts to <span style="color: #e4a324; font-weight: 600;">full-spectrum insight</span>
+                    </p>
+                </div>
+
+                <!-- Visual Comparison -->
+                <div style="display: grid; grid-template-columns: 5fr 1fr 5fr; gap: 2rem; align-items: start; margin-bottom: 5rem;">
+                    
+                    <!-- Old Playbook - Left Side -->
+                    <div style="text-align: right;">
+                        <h3 style="font-size: 2rem; color: #666; margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 0.1em;">Old Playbook</h3>
+                        
+                        <div style="space-y: 2rem;">
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Passive Data Collection</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Product-First Focus</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Lagging Indicators</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Generic Trackers</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Category-Centric Segments</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">KPI Tunnel Vision</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Data on the Shelf</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 2rem;">
+                                <span style="color: rgba(255,255,255,0.4); font-size: 1.3rem; margin-right: 1rem;">Research as Validation</span>
+                                <span style="color: #ff4444; font-size: 2rem;">✕</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VS Divider - Center -->
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                        <div style="width: 2px; height: 600px; background: linear-gradient(to bottom, transparent, #e4a324, transparent); position: relative;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000; padding: 1rem; border: 3px solid #e4a324; border-radius: 50%; font-size: 2rem; font-weight: 900; color: #e4a324;">VS</div>
+                        </div>
+                    </div>
+
+                    <!-- Beauty Brand Blueprint - Right Side -->
+                    <div style="text-align: left;">
+                        <h3 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem; background: linear-gradient(90deg, #7434ac 0%, #e4a324 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Beauty Brand Blueprint</h3>
+                        
+                        <div style="space-y: 2rem;">
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Active Intelligence</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Real-time signals that predict trends</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Human-First Insights</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Emotional drivers that create bonds</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Leading Signals</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">See shifts before sales data moves</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Purpose-Built Tools</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Custom to beauty's unique dynamics</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">3D Personas</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Living profiles that evolve with culture</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Insight Expansion</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Beyond demos to desires & dreams</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Strategic Change</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Insights that transform orgs</p>
+                            </div>
+                            
+                            <div style="margin-bottom: 2.5rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
+                                    <span style="color: #e4a324; font-size: 2rem; margin-right: 1rem;">✓</span>
+                                    <span style="color: white; font-size: 1.3rem; font-weight: 500;">Research as Innovation</span>
+                                </div>
+                                <p style="color: rgba(255,255,255,0.6); font-size: 1rem; margin-left: 3rem;">Discovery that sparks breakthroughs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Impact Statement -->
+                <div style="text-align: center; margin-top: 5rem; padding: 3rem; background: linear-gradient(135deg, rgba(116,52,172,0.1) 0%, rgba(228,163,36,0.1) 100%); border-radius: 20px;">
+                    <p style="font-size: 2rem; color: white; margin-bottom: 2rem; font-weight: 300;">
+                        The difference between <span style="color: #ff4444;">losing customers</span> and <span style="color: #e4a324;">leading the market</span>
+                    </p>
+                    <a href="#contact" style="display: inline-block; background: linear-gradient(135deg, #7434ac, #e4a324); color: white; padding: 1.5rem 4rem; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 50px; text-decoration: none; transition: all 0.3s ease;"
+                       onmouseover="this.style.transform='scale(1.05)'"
+                       onmouseout="this.style.transform='scale(1)'">
+                        Get Your 90-Day Blueprint
+                    </a>
+                </div>
+            </div>
+        `;
+        
+        // Add black background to section
+        gapSection.style.background = '#000000';
+        gapSection.style.color = 'white';
+        gapSection.style.padding = '6rem 0';
+    }
+});
+</script>
+<script>
+// Auto-resize iframe to content
+window.addEventListener('load', function() {
+    const iframe = document.querySelector('#case-study-wrapper iframe');
+    if (iframe) {
+        iframe.onload = function() {
+            // Adjust height to content
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        };
+    }
+});
+</script>
+ <body>
   <!-- Floating particles (background) -->
   <div class="particles-container">
-    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
-    <div class="particle"></div><div class="particle"></div><div class="particle"></div><div class="particle"></div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
+   <div class="particle">
+   </div>
   </div>
-
   <!-- Section‑pager buttons -->
   <div class="page-nav">
-    <button id="prevPage" aria-label="Previous section">← Previous</button>
-    <button id="nextPage" aria-label="Next section">Next →</button>
+   <button aria-label="Previous section" id="prevPage">
+    ← Previous
+   </button>
+   <button aria-label="Next section" id="nextPage">
+    Next →
+   </button>
   </div>
-
- <!-- Navigation  -->
-<nav class="nav">
-  <div class="nav-content">
-    <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo">
-    <a href="https://calendly.com/elaine-sheng-beyondinsights" class="book-briefing" target="_blank" rel="noopener noreferrer">Book My 15‑Min Strategy Call</a>
-  </div>
-</nav>
-
-
-a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" target="_blank" rel="noopener noreferrer">
-      <span class="button-bg"></span><span class="button-text">Book My 15‑Min Strategy Call</span><span class="button-arrow">→</span>
+  <!-- Navigation  -->
+  <nav class="nav">
+   <div class="nav-content">
+    <img alt="BEYOND Insights" class="logo" src="beyond-insights-logo.png"/>
+    <a class="book-briefing" href="https://calendly.com/elaine-sheng-beyondinsights" rel="noopener noreferrer" target="_blank">
+     Book My 15‑Min Strategy Call
     </a>
-
-  
+   </div>
+  </nav>
+  a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" target="_blank" rel="noopener noreferrer"&gt;
+  <span class="button-bg">
+  </span>
+  <span class="button-text">
+   Book My 15‑Min Strategy Call
+  </span>
+  <span class="button-arrow">
+   →
+  </span>
   <!-- ░░░ HERO ░░░ -->
   <section class="screen hero">
-    <div class="gradient-overlay"></div>
-    <div class="hero-bg-animation">
-      <div class="hero-shape-1"></div><div class="hero-shape-2"></div><div class="hero-shape-3"></div>
+   <div class="gradient-overlay">
+   </div>
+   <div class="hero-bg-animation">
+    <div class="hero-shape-1">
     </div>
-
-    <div class="container">
-      <div class="hero-content">
-        <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="logo-hero">
-
-        <h1 class="hero-title">
-          <span class="title-line-1">Beauty loyalty flips overnight.</span>
-          <span class="title-line-2">Will you?</span>
-        </h1>
-
-       <p class="hero-sub">
-  Tariffs, TikTok trends and ingredient inflation are reshuffling the aisle.<br>
-  The <strong>90‑day Beauty Brand Blueprint™</strong> shows who will stay, stray or pay more.
-</p>
-
-
-        <a href="#blueprint" class="hero-cta">
-          <span class="cta-text">Unlock My 90‑Day Plan</span><span class="cta-arrow">→</span>
+    <div class="hero-shape-2">
+    </div>
+    <div class="hero-shape-3">
+    </div>
+   </div>
+   <div class="container">
+    <div class="hero-content">
+     <img alt="BEYOND Insights" class="logo-hero" src="beyond-insights-logo.png"/>
+     <h1 class="hero-title">
+      <span class="title-line-1">
+       Beauty loyalty flips overnight.
+      </span>
+      <span class="title-line-2">
+       Will you?
+      </span>
+     </h1>
+     <p class="hero-sub">
+      Tariffs, TikTok trends and ingredient inflation are reshuffling the aisle.
+      <br/>
+      The
+      <strong>
+       90‑day Beauty Brand Blueprint™
+      </strong>
+      shows who will stay, stray or pay more.
+     </p>
+     <a class="hero-cta" href="#blueprint">
+      <span class="cta-text">
+       Unlock My 90‑Day Plan
+      </span>
+      <span class="cta-arrow">
+       →
+      </span>
+     </a>
+     <!-- KPI flash cards -->
+     <div class="hero-stats">
+      <div class="stat-item">
+       <span class="stat-number" data-value="47">
+        0
+       </span>
+       <span class="stat-symbol">
+        %
+       </span>
+       <sup>
+        <a class="kpi-ref" href="#src-cac">
+         1
         </a>
-
-        <!-- KPI flash cards -->
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-number" data-value="47">0</span><span class="stat-symbol">%</span>
-            <sup><a href="#src-cac" class="kpi-ref">1</a></sup>
-            <span class="stat-label">Higher CAC</span>
-          </div>
-
-          <div class="stat-item">
-            <span class="stat-number" data-value="3">0</span><span class="stat-symbol">×</span>
-            <sup><a href="#src-switch" class="kpi-ref">2</a></sup>
-            <span class="stat-label">Brand Switching</span>
-          </div>
-
-          <div class="stat-item">
-            <span class="stat-number" data-value="86">0</span><span class="stat-symbol">%</span>
-            <sup><a href="#src-vulnerable" class="kpi-ref">3</a></sup>
-            <span class="stat-label">Feel Vulnerable</span>
-          </div>
-        </div>
+       </sup>
+       <span class="stat-label">
+        Higher CAC
+       </span>
       </div>
+      <div class="stat-item">
+       <span class="stat-number" data-value="3">
+        0
+       </span>
+       <span class="stat-symbol">
+        ×
+       </span>
+       <sup>
+        <a class="kpi-ref" href="#src-switch">
+         2
+        </a>
+       </sup>
+       <span class="stat-label">
+        Brand Switching
+       </span>
+      </div>
+      <div class="stat-item">
+       <span class="stat-number" data-value="86">
+        0
+       </span>
+       <span class="stat-symbol">
+        %
+       </span>
+       <sup>
+        <a class="kpi-ref" href="#src-vulnerable">
+         3
+        </a>
+       </sup>
+       <span class="stat-label">
+        Feel Vulnerable
+       </span>
+      </div>
+     </div>
     </div>
+   </div>
   </section>
-
-  <!-- ░░░ WHY BEYOND INSIGHTS ░░░ -->
+  <!-- ░░░ WHY BEYOND INSIGHTS ░░░ -->
   <section class="screen why-beyond">
-    <div class="container fade-in">
-      <h2 class="section-title">
-        <span class="title-accent">Why</span> Leading Beauty Brands Choose <span class="gradient-text">BEYOND</span>
-      </h2>
-
-      <div class="beyond-grid">
-        <div class="beyond-card" data-aos="zoom-in">
-          <div class="card-glow"></div><div class="beyond-icon"><div class="icon-inner">Sr</div></div>
-          <h3>Client‑Side Beauty Expertise</h3>
-          <p>We've owned P&amp;Ls, not just slides. Expect answers that survive Board rooms.</p>
-        </div>
-
-        <div class="beyond-card" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card-glow"></div><div class="beyond-icon"><div class="icon-inner">™</div></div>
-          <h3>Proprietary Methodologies</h3>
-          <p>Brand Edge™, Infidelity Index™ &amp; Loyalty Multiverse™ go deeper than trackers.</p>
-        </div>
-
-        <div class="beyond-card" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card-glow"></div><div class="beyond-icon"><div class="icon-inner">→</div></div>
-          <h3>Data to Action</h3>
-          <p>We don't deliver “findings”; we deliver funded roadmaps.</p>
-        </div>
-
-        <div class="beyond-card" data-aos="zoom-in" data-aos-delay="300">
-          <div class="card-glow"></div><div class="beyond-icon"><div class="icon-inner">⚡</div></div>
-          <h3>Agile & Cost‑Efficient</h3>
-          <p>90‑day sprints beat 6‑month retainers—at less than one influencer campaign.</p>
-        </div>
+   <div class="container fade-in">
+    <h2 class="section-title">
+     <span class="title-accent">
+      Why
+     </span>
+     Leading Beauty Brands Choose
+     <span class="gradient-text">
+      BEYOND
+     </span>
+    </h2>
+    <div class="beyond-grid">
+     <div class="beyond-card" data-aos="zoom-in">
+      <div class="card-glow">
       </div>
+      <div class="beyond-icon">
+       <div class="icon-inner">
+        Sr
+       </div>
+      </div>
+      <h3>
+       Client‑Side Beauty Expertise
+      </h3>
+      <p>
+       We've owned P&amp;Ls, not just slides. Expect answers that survive Board rooms.
+      </p>
+     </div>
+     <div class="beyond-card" data-aos="zoom-in" data-aos-delay="100">
+      <div class="card-glow">
+      </div>
+      <div class="beyond-icon">
+       <div class="icon-inner">
+        ™
+       </div>
+      </div>
+      <h3>
+       Proprietary Methodologies
+      </h3>
+      <p>
+       Brand Edge™, Infidelity Index™ &amp; Loyalty Multiverse™ go deeper than trackers.
+      </p>
+     </div>
+     <div class="beyond-card" data-aos="zoom-in" data-aos-delay="200">
+      <div class="card-glow">
+      </div>
+      <div class="beyond-icon">
+       <div class="icon-inner">
+        →
+       </div>
+      </div>
+      <h3>
+       Data to Action
+      </h3>
+      <p>
+       We don't deliver “findings”; we deliver funded roadmaps.
+      </p>
+     </div>
+     <div class="beyond-card" data-aos="zoom-in" data-aos-delay="300">
+      <div class="card-glow">
+      </div>
+      <div class="beyond-icon">
+       <div class="icon-inner">
+        ⚡
+       </div>
+      </div>
+      <h3>
+       Agile &amp; Cost‑Efficient
+      </h3>
+      <p>
+       90‑day sprints beat 6‑month retainers—at less than one influencer campaign.
+      </p>
+     </div>
     </div>
+   </div>
   </section>
-
-  <!-- ░░░ MEET ELAINE ░░░ -->
-<!-- VISUALLY STUNNING MEET ELAINE SECTION -->
-<section id="meet-elaine" class="screen meet-elaine">
-  <style>
+  <!-- ░░░ MEET ELAINE ░░░ -->
+  <!-- VISUALLY STUNNING MEET ELAINE SECTION -->
+  <section class="screen meet-elaine" id="meet-elaine">
+   <style>
     .meet-elaine {
       background: linear-gradient(135deg, #f8f5ff 0%, #fff 50%, #faf8ff 100%);
       padding: 120px 20px;
@@ -408,2284 +691,1073 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
         grid-template-columns: 1fr;
       }
     }
-  </style>
-  
-  <h2 class="section-title">
-    Meet Your <span style="color: #e4a324;">Beauty Insights</span> <span style="color: #7434ac;">Leader</span>
-  </h2>
-  
-  <div class="elaine-showcase">
+   </style>
+   <h2 class="section-title">
+    Meet Your
+    <span style="color: #e4a324;">
+     Beauty Insights
+    </span>
+    <span style="color: #7434ac;">
+     Leader
+    </span>
+   </h2>
+   <div class="elaine-showcase">
     <div class="elaine-visual">
-      <div class="image-container">
-        <div class="image-glow"></div>
-        <div class="elaine-image">
-          <img src="elaine-sheng.jpg" alt="Elaine Sheng">
-        </div>
+     <div class="image-container">
+      <div class="image-glow">
       </div>
+      <div class="elaine-image">
+       <img alt="Elaine Sheng" src="elaine-sheng.jpg"/>
+      </div>
+     </div>
     </div>
-    
     <div class="elaine-story">
-      <div class="name-lockup">
-        <h3 class="elaine-name">Elaine Sheng</h3>
-        <div class="title-stack">
-          <h4 class="elaine-title">Strategic Consumer Insights & Brand Growth Leader</h4>
-          <h5 class="elaine-company">Partner, BEYOND Insights</h5>
-        </div>
+     <div class="name-lockup">
+      <h3 class="elaine-name">
+       Elaine Sheng
+      </h3>
+      <div class="title-stack">
+       <h4 class="elaine-title">
+        Strategic Consumer Insights &amp; Brand Growth Leader
+       </h4>
+       <h5 class="elaine-company">
+        Partner, BEYOND Insights
+       </h5>
       </div>
-      
-      <p class="elaine-intro">
-        Elaine Sheng brings deep expertise in consumer insights and strategic brand development within the global beauty industry. With a proven track record across mass and prestige brands—including NARS, Shiseido, Laura Mercier, Tory Burch, Maybelline, Revlon—she transforms market intelligence into growth strategies and drives brand and portfolio reinvention at scale.
+     </div>
+     <p class="elaine-intro">
+      Elaine Sheng brings deep expertise in consumer insights and strategic brand development within the global beauty industry. With a proven track record across mass and prestige brands—including NARS, Shiseido, Laura Mercier, Tory Burch, Maybelline, Revlon—she transforms market intelligence into growth strategies and drives brand and portfolio reinvention at scale.
+     </p>
+     <div class="expertise-grid">
+      <div class="expertise-item">
+       <div class="expertise-icon">
+        <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12 2L10 9L3 9L8 13L6 20L12 16L18 20L16 13L21 9L14 9L12 2Z" stroke="white" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </div>
+       <div class="expertise-text">
+        Crafts insight-led strategy aligned with consumer and business priorities
+       </div>
+      </div>
+      <div class="expertise-item">
+       <div class="expertise-icon">
+        <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M13 2L3 14L12 14L11 22L21 10L12 10L13 2Z" stroke="white" stroke-linejoin="round" stroke-width="2">
+         </path>
+        </svg>
+       </div>
+       <div class="expertise-text">
+        Advises global beauty leaders on innovation, repositioning, and growth
+       </div>
+      </div>
+      <div class="expertise-item">
+       <div class="expertise-icon">
+        <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2">
+         </circle>
+         <path d="M12 2V8M12 16V22M4.93 4.93L8.17 8.17M15.83 15.83L19.07 19.07M2 12H8M16 12H22M4.93 19.07L8.17 15.83M15.83 8.17L19.07 4.93" stroke="white" stroke-linecap="round" stroke-width="2">
+         </path>
+        </svg>
+       </div>
+       <div class="expertise-text">
+        Operationalizes research to influence brand and portfolio decisions
+       </div>
+      </div>
+      <div class="expertise-item">
+       <div class="expertise-icon">
+        <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9 20H6C4.89543 20 4 19.1046 4 18V15M9 20V15M9 20H15M15 20H18C19.1046 20 20 19.1046 20 18V15M15 20V15M4 15V9M4 15H9M20 15V9M20 15H15M15 15H9M4 9V6C4 4.89543 4.89543 4 6 4H9M4 9H9M20 9V6C20 4.89543 19.1046 4 18 4H15M20 9H15M15 4V9M15 4H9M9 4V9M9 9H15" stroke="white" stroke-width="2">
+         </path>
+        </svg>
+       </div>
+       <div class="expertise-text">
+        Identifies whitespace and drives competitive advantage through data
+       </div>
+      </div>
+     </div>
+     <div class="elaine-quote">
+      <p>
+       Let's uncover the insights you didn't know existed—and turn them into your unfair advantage.
       </p>
-      
-      <div class="expertise-grid">
-        <div class="expertise-item">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L10 9L3 9L8 13L6 20L12 16L18 20L16 13L21 9L14 9L12 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="expertise-text">Crafts insight-led strategy aligned with consumer and business priorities</div>
-        </div>
-        
-        <div class="expertise-item">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M13 2L3 14L12 14L11 22L21 10L12 10L13 2Z" stroke="white" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="expertise-text">Advises global beauty leaders on innovation, repositioning, and growth</div>
-        </div>
-        
-        <div class="expertise-item">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2"/>
-              <path d="M12 2V8M12 16V22M4.93 4.93L8.17 8.17M15.83 15.83L19.07 19.07M2 12H8M16 12H22M4.93 19.07L8.17 15.83M15.83 8.17L19.07 4.93" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="expertise-text">Operationalizes research to influence brand and portfolio decisions</div>
-        </div>
-        
-        <div class="expertise-item">
-          <div class="expertise-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 20H6C4.89543 20 4 19.1046 4 18V15M9 20V15M9 20H15M15 20H18C19.1046 20 20 19.1046 20 18V15M15 20V15M4 15V9M4 15H9M20 15V9M20 15H15M15 15H9M4 9V6C4 4.89543 4.89543 4 6 4H9M4 9H9M20 9V6C20 4.89543 19.1046 4 18 4H15M20 9H15M15 4V9M15 4H9M9 4V9M9 9H15" stroke="white" stroke-width="2"/>
-            </svg>
-          </div>
-          <div class="expertise-text">Identifies whitespace and drives competitive advantage through data</div>
-        </div>
-      </div>
-      
-      <div class="elaine-quote">
-        <p>Let's uncover the insights you didn't know existed—and turn them into your unfair advantage.</p>
-      </div>
+     </div>
     </div>
-  </div>
-</section>
-  
-  <!-- ░░░ BRUTAL ECONOMICS ░░░ -->
-  <section id="brutal" class="screen brutal">
-    <div class="container fade-in">
-      <h2 class="section-title">The <span class="text-red">Brutal Economics</span> Beauty Faces Now</h2>
-
-      <div class="brutal-visual">
-        <div class="crisis-meter"><div class="meter-fill"></div><span class="meter-label">CRISIS LEVEL</span></div>
-      </div>
-
-      <div class="brutal-grid">
-        <div class="brutal-stat" data-aos="fade-up">
-          <div class="stat-visual"><div class="stat-ring"></div><span class="brutal-number">47%</span></div>
-          <div class="brutal-label">Higher CAC</div>
-          <div class="brutal-detail">Customer‑acquisition costs skyrocketing as loyalty wavers</div>
-        </div>
-
-        <div class="brutal-stat" data-aos="fade-up" data-aos-delay="100">
-          <div class="stat-visual"><div class="stat-ring"></div><span class="brutal-number">3×</span></div>
-          <div class="brutal-label">Brand Switching</div>
-          <div class="brutal-detail">Price‑sensitivity driving unprecedented defection rates</div>
-        </div>
-
-        <div class="brutal-stat" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-visual"><div class="stat-ring"></div><span class="brutal-number">30%</span></div>
-          <div class="brutal-label">Margin Pressure</div>
-          <div class="brutal-detail">Tariffs &amp; supply‑chain chaos eroding profitability</div>
-        </div>
-      </div>
-    </div>
+   </div>
   </section>
-
-  <!-- ░░░ GAP  (Old vs Blueprint) ░░░ -->
+  <!-- ░░░ BRUTAL ECONOMICS ░░░ -->
+  <section class="screen brutal" id="brutal">
+   <div class="container fade-in">
+    <h2 class="section-title">
+     The
+     <span class="text-red">
+      Brutal Economics
+     </span>
+     Beauty Faces Now
+    </h2>
+    <div class="brutal-visual">
+     <div class="crisis-meter">
+      <div class="meter-fill">
+      </div>
+      <span class="meter-label">
+       CRISIS LEVEL
+      </span>
+     </div>
+    </div>
+    <div class="brutal-grid">
+     <div class="brutal-stat" data-aos="fade-up">
+      <div class="stat-visual">
+       <div class="stat-ring">
+       </div>
+       <span class="brutal-number">
+        47%
+       </span>
+      </div>
+      <div class="brutal-label">
+       Higher CAC
+      </div>
+      <div class="brutal-detail">
+       Customer‑acquisition costs skyrocketing as loyalty wavers
+      </div>
+     </div>
+     <div class="brutal-stat" data-aos="fade-up" data-aos-delay="100">
+      <div class="stat-visual">
+       <div class="stat-ring">
+       </div>
+       <span class="brutal-number">
+        3×
+       </span>
+      </div>
+      <div class="brutal-label">
+       Brand Switching
+      </div>
+      <div class="brutal-detail">
+       Price‑sensitivity driving unprecedented defection rates
+      </div>
+     </div>
+     <div class="brutal-stat" data-aos="fade-up" data-aos-delay="200">
+      <div class="stat-visual">
+       <div class="stat-ring">
+       </div>
+       <span class="brutal-number">
+        30%
+       </span>
+      </div>
+      <div class="brutal-label">
+       Margin Pressure
+      </div>
+      <div class="brutal-detail">
+       Tariffs &amp; supply‑chain chaos eroding profitability
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- ░░░ GAP  (Old vs Blueprint) ░░░ -->
   <section class="screen gap">
-    <div class="container fade-in">
-      <h2 class="section-title">Why Traditional Research <span class="text-strike">Won’t Save You</span></h2>
-      <div class="gap-visual-intro">
-        <p class="gap-subtitle">From flat facts to <span class="gradient-text">full‑spectrum insight</span></p>
-      </div>
-
-      <div class="gap-comparison">
-        <!-- Old‑playbook -->
-        <div class="gap-column old-playbook" data-aos="slide-right">
-          <h3><span class="strike-through">Old Playbook</span></h3>
-          <div class="gap-items">
-            <div class="gap-item">❌ Passive Data Collection</div>
-            <div class="gap-item">❌ Product‑First Focus</div>
-            <div class="gap-item">❌ Lagging Indicators</div>
-            <div class="gap-item">❌ Generic Trackers</div>
-            <div class="gap-item">❌ Category‑Centric Segments</div>
-            <div class="gap-item">❌ KPI Tunnel Vision</div>
-            <div class="gap-item">❌ Data on the Shelf</div>
-            <div class="gap-item">❌ Research as Validation</div>
-          </div>
-        </div>
-
-        <!-- Divider bar -->
-        <div class="gap-divider"><div class="divider-pulse"></div></div>
-
-        <!-- Blueprint -->
-        <div class="gap-column new-blueprint" data-aos="slide-left">
-          <h3><span class="gradient-text">Beauty Brand Blueprint</span></h3>
-          <div class="gap-items">
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Active Intelligence</span><span class="item-desc">Real‑time signals that predict trends</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Human‑First Insights</span><span class="item-desc">Emotional drivers that create bonds</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Leading Signals</span><span class="item-desc">See shifts before sales data moves</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Purpose‑Built Tools</span><span class="item-desc">Custom to beauty’s unique dynamics</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">3D Personas</span><span class="item-desc">Living profiles that evolve with culture</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Insight Expansion</span><span class="item-desc">Beyond demos to desires &amp; dreams</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Strategic Change</span><span class="item-desc">Insights that transform orgs</span></div></div>
-            <div class="gap-item"><span class="item-icon">✓</span><div class="item-content"><span class="item-title">Research as Innovation</span><span class="item-desc">Discovery that sparks breakthroughs</span></div></div>
-          </div>
-        </div>
-      </div>
+   <div class="container fade-in">
+    <h2 class="section-title">
+     Why Traditional Research
+     <span class="text-strike">
+      Won’t Save You
+     </span>
+    </h2>
+    <div class="gap-visual-intro">
+     <p class="gap-subtitle">
+      From flat facts to
+      <span class="gradient-text">
+       full‑spectrum insight
+      </span>
+     </p>
     </div>
+    <div class="gap-comparison">
+     <!-- Old‑playbook -->
+     <div class="gap-column old-playbook" data-aos="slide-right">
+      <h3>
+       <span class="strike-through">
+        Old Playbook
+       </span>
+      </h3>
+      <div class="gap-items">
+       <div class="gap-item">
+        ❌ Passive Data Collection
+       </div>
+       <div class="gap-item">
+        ❌ Product‑First Focus
+       </div>
+       <div class="gap-item">
+        ❌ Lagging Indicators
+       </div>
+       <div class="gap-item">
+        ❌ Generic Trackers
+       </div>
+       <div class="gap-item">
+        ❌ Category‑Centric Segments
+       </div>
+       <div class="gap-item">
+        ❌ KPI Tunnel Vision
+       </div>
+       <div class="gap-item">
+        ❌ Data on the Shelf
+       </div>
+       <div class="gap-item">
+        ❌ Research as Validation
+       </div>
+      </div>
+     </div>
+     <!-- Divider bar -->
+     <div class="gap-divider">
+      <div class="divider-pulse">
+      </div>
+     </div>
+     <!-- Blueprint -->
+     <div class="gap-column new-blueprint" data-aos="slide-left">
+      <h3>
+       <span class="gradient-text">
+        Beauty Brand Blueprint
+       </span>
+      </h3>
+      <div class="gap-items">
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Active Intelligence
+         </span>
+         <span class="item-desc">
+          Real‑time signals that predict trends
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Human‑First Insights
+         </span>
+         <span class="item-desc">
+          Emotional drivers that create bonds
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Leading Signals
+         </span>
+         <span class="item-desc">
+          See shifts before sales data moves
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Purpose‑Built Tools
+         </span>
+         <span class="item-desc">
+          Custom to beauty’s unique dynamics
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          3D Personas
+         </span>
+         <span class="item-desc">
+          Living profiles that evolve with culture
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Insight Expansion
+         </span>
+         <span class="item-desc">
+          Beyond demos to desires &amp; dreams
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Strategic Change
+         </span>
+         <span class="item-desc">
+          Insights that transform orgs
+         </span>
+        </div>
+       </div>
+       <div class="gap-item">
+        <span class="item-icon">
+         ✓
+        </span>
+        <div class="item-content">
+         <span class="item-title">
+          Research as Innovation
+         </span>
+         <span class="item-desc">
+          Discovery that sparks breakthroughs
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
   </section>
-
-  <!-- ░░░ SOLUTION  (6 Modules) ░░░ -->
-  <section id="blueprint" class="screen solution">
-    <div class="solution-bg"><div class="solution-gradient-1"></div><div class="solution-gradient-2"></div></div>
-
-    <div class="container fade-in">
-      <h2 class="section-title text-white">The Beauty Brand Blueprint™</h2>
-      <p class="section-subtitle">Purpose‑built methodologies that transform data into strategic advantage</p>
-
-      <div class="modules">
-        <!-- Module 1 -->
-        <div class="module" data-aos="flip-left">
-          <div class="module-glow"></div><div class="module-number">01</div>
-          <div class="module-icon">
-            <svg viewBox="0 0 100 100" class="icon-svg">
-              <circle cx="30" cy="30" r="15" opacity=".3" fill="currentColor"/>
-              <circle cx="70" cy="30" r="15" opacity=".3" fill="currentColor"/>
-              <circle cx="50" cy="60" r="15" opacity=".3" fill="currentColor"/>
-              <path d="M30 45H70" stroke="currentColor" stroke-width="2"/>
-              <circle cx="30" cy="30" r="5" fill="currentColor"/>
-              <circle cx="70" cy="30" r="5" fill="currentColor"/>
-              <circle cx="50" cy="60" r="5" fill="currentColor"/>
-            </svg>
-          </div>
-          <h3>Consumer<br>Segmentation</h3>
-          <p>Personas from functional, emotional &amp; category drivers.</p>
-          <div class="module-result"><span class="result-label">You get:</span> CRM‑ready typing tool & 360° profiles<br><span class="result-label">It means:</span> Campaigns that speak to <em>why</em> people buy</div>
-        </div>
-
-        <!-- Module 2 -->
-        <div class="module" data-aos="flip-left" data-aos-delay="50">
-          <div class="module-glow"></div><div class="module-number">02</div>
-          <div class="module-icon">
-            <svg viewBox="0 0 100 100" class="icon-svg">
-              <path d="M20 80Q20 20 50 20T80 80" fill="none" stroke="currentColor" stroke-width="3"/>
-              <circle cx="50" cy="50" r="8" fill="currentColor"/>
-              <path d="M50 20l-5 10h10Z" fill="currentColor"/>
-              <circle cx="50" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="2" opacity=".3"/>
-            </svg>
-          </div>
-          <h3>Brand Momentum</h3>
-          <p>Maps passion × engagement: Icon, Igniter, Steady Flame or Slow Burner.</p>
-          <div class="module-result"><span class="result-label">You get:</span> Quadrant scorecard &amp; growth levers<br><span class="result-label">It means:</span> Know where to fuel or fix the funnel</div>
-        </div>
-
-        <!-- Module 3 -->
-        <div class="module" data-aos="flip-left" data-aos-delay="100">
-          <div class="module-glow"></div><div class="module-number">03</div>
-          <div class="module-icon">
-            <svg viewBox="0 0 100 100" class="icon-svg">
-              <polygon points="50,20 70,35 70,65 50,80 30,65 30,35" fill="none" stroke="currentColor" stroke-width="2"/>
-              <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" opacity=".5"/>
-              <line x1="30" y1="35" x2="70" y2="65" stroke="currentColor" opacity=".5"/>
-              <line x1="70" y1="35" x2="30" y2="65" stroke="currentColor" opacity=".5"/>
-              <circle cx="50" cy="50" r="5" fill="currentColor"/>
-            </svg>
-          </div>
-          <h3>Perceptual Landscape</h3>
-          <p>Visual map of attributes that truly differentiate brands.</p>
-          <div class="module-result"><span class="result-label">You get:</span> Landscape report + charts<br><span class="result-label">It means:</span> Creative briefs grounded in differentiation</div>
-        </div>
-
-        <!-- Module 4 -->
-        <div class="module" data-aos="flip-left" data-aos-delay="150">
-          <div class="module-glow"></div><div class="module-number">04</div>
-          <div class="module-icon">
-            <svg viewBox="0 0 100 100" class="icon-svg">
-              <path d="M50 10 80 30v40L50 90 20 70V30Z" fill="none" stroke="currentColor" stroke-width="2"/>
-              <path d="M50 30 65 45 50 60 35 45Z" opacity=".3" fill="currentColor"/>
-              <path d="M50 30v30" stroke="currentColor" stroke-width="3"/>
-              <circle cx="50" cy="45" r="8" fill="currentColor"/>
-            </svg>
-          </div>
-          <h3>Brand Edge™</h3>
-          <p>Separates authentic strengths from “paid‑for” advantages.</p>
-          <div class="module-result"><span class="result-label">You get:</span> KPI‑gap analysis &amp; re‑allocation roadmap<br><span class="result-label">It means:</span> Budget moves to highest‑return levers</div>
-        </div>
-
-        <!-- Module 5 -->
-        <div class="module" data-aos="flip-left" data-aos-delay="200">
-          <div class="module-glow"></div><div class="module-number">05</div>
-          <div class="module-icon">
-            <svg viewBox="0 0 100 100" class="icon-svg">
-              <path d="M50 25C35 10 10 20 10 40c0 20 40 45 40 45s40-25 40-45C90 20 65 10 50 25Z"
-                    fill="none" stroke="currentColor" stroke-width="2"/>
-              <path d="M35 40l10 10 20-20" stroke="currentColor" stroke-width="3" fill="none"/>
-            </svg>
-          </div>
-          <h3>Infidelity Index™</h3>
-          <p>Quantifies every relationship stage from Unaware → Brand Faithful.</p>
-          <div class="module-result"><span class="result-label">You get:</span> Migration matrix &amp; save/steal playbook<br><span class="result-label">It means:</span> Precision rescue &amp; conquest strategies</div>
-        </div>
-
-        <!-- Module 6 -->
-        <div class="module" data-aos="flip-left" data-aos-delay="250">
-          <div class="module-glow"></div><div class="module-number">06</div>
-          <div class="module-icon">
-            <svg viewBox="0 0 100 100" class="icon-svg">
-              <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="2"/>
-              <circle cx="50" cy="30" r="8" opacity=".8" fill="currentColor"/>
-              <circle cx="70" cy="50" r="8" opacity=".6" fill="currentColor"/>
-              <circle cx="50" cy="70" r="8" opacity=".4" fill="currentColor"/>
-              <circle cx="30" cy="50" r="8" opacity=".7" fill="currentColor"/>
-              <path d="M50 30 70 50 50 70 30 50Z" fill="none" stroke="currentColor" opacity=".5"/>
-            </svg>
-          </div>
-          <h3>Loyalty Multiverse™</h3>
-          <p>Shows which functional + emotional tweaks lift loyalty fastest.</p>
-          <div class="module-result"><span class="result-label">You get:</span> Driver elasticities ranked by ROI<br><span class="result-label">It means:</span> Spend only on attributes that convert</div>
-        </div>
+  <!-- ░░░ SOLUTION  (6 Modules) ░░░ -->
+  <section class="screen solution" id="blueprint">
+   <div class="solution-bg">
+    <div class="solution-gradient-1">
+    </div>
+    <div class="solution-gradient-2">
+    </div>
+   </div>
+   <div class="container fade-in">
+    <h2 class="section-title text-white">
+     The Beauty Brand Blueprint™
+    </h2>
+    <p class="section-subtitle">
+     Purpose‑built methodologies that transform data into strategic advantage
+    </p>
+    <div class="modules">
+     <!-- Module 1 -->
+     <div class="module" data-aos="flip-left">
+      <div class="module-glow">
       </div>
-    </div>
-  </section>
-
-<!-- REPLACE YOUR ENTIRE CASE STUDY SECTION WITH THIS -->
-<section class="casestudy" id="beyond-insights-casestudy">
-
-  <style>
-    /* ISOLATED CASE STUDY STYLES - Won't conflict with other CSS */
-    #beyond-insights-casestudy * {
-        box-sizing: border-box;
-    }
-
-    #beyond-insights-casestudy {
-        font-family: 'Inter', -apple-system, sans-serif !important;
-        line-height: 1.6 !important;
-        color: #333 !important;
-    }
-
-    /* Hero Section */
-    #beyond-insights-casestudy .casestudy-hero {
-        background: linear-gradient(135deg, #1a0033 0%, #663399 100%) !important;
-        color: white !important;
-        padding: 100px 0 !important;
-        text-align: center !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .hero-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-    }
-
-    #beyond-insights-casestudy .hero-content h1 {
-        font-size: 3rem !important;
-        margin-bottom: 20px !important;
-        color: white !important;
-        font-weight: 700 !important;
-    }
-
-    #beyond-insights-casestudy .hero-content .subtitle {
-        font-size: 3.5rem !important;
-        font-weight: 900 !important;
-        background: linear-gradient(45deg, #e4a324, #f10b25) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
-        margin-bottom: 20px !important;
-        display: block !important;
-    }
-
-    #beyond-insights-casestudy .hero-content .tagline {
-        font-size: 1.5rem !important;
-        font-weight: 300 !important;
-        opacity: 0.9 !important;
-        color: white !important;
-    }
-
-    /* Challenge Section */
-    #beyond-insights-casestudy .casestudy-challenge {
-        background: white !important;
-        padding: 100px 0 !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .challenge-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-    }
-
-    #beyond-insights-casestudy .challenge-header h2 {
-        font-size: 3rem !important;
-        color: #1a0033 !important;
-        text-align: center !important;
-        margin-bottom: 30px !important;
-        font-weight: 700 !important;
-    }
-
-    #beyond-insights-casestudy .challenge-intro {
-        font-size: 1.2rem !important;
-        line-height: 1.8 !important;
-        color: #666 !important;
-        text-align: center !important;
-        max-width: 900px !important;
-        margin: 0 auto 40px !important;
-        padding-bottom: 40px !important;
-        border-bottom: 2px solid #f0f0f0 !important;
-    }
-
-    #beyond-insights-casestudy .challenge-intro .highlight {
-        color: #e4a324 !important;
-        font-weight: 700 !important;
-    }
-
-    #beyond-insights-casestudy .key-obstacles-title {
-        font-size: 1.8rem !important;
-        color: #663399 !important;
-        text-align: center !important;
-        margin: 40px 0 !important;
-        font-weight: 600 !important;
-    }
-
-    #beyond-insights-casestudy .challenge-metrics {
-        display: grid !important;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
-        gap: 40px !important;
-        margin-top: 60px !important;
-    }
-
-    #beyond-insights-casestudy .metric-card {
-        background: #f8f8f8 !important;
-        padding: 50px !important;
-        border-radius: 20px !important;
-        text-align: center !important;
-        transition: transform 0.3s ease !important;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08) !important;
-        border: none !important;
-    }
-
-    #beyond-insights-casestudy .metric-card:hover {
-        transform: translateY(-10px) !important;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.15) !important;
-    }
-
-    #beyond-insights-casestudy .metric-card.dependency {
-        border-top: 5px solid #e4a324 !important;
-    }
-
-    #beyond-insights-casestudy .metric-card.pattern {
-        border-top: 5px solid #f10b25 !important;
-    }
-
-    #beyond-insights-casestudy .metric-card.interest {
-        border-top: 5px solid #663399 !important;
-    }
-
-    #beyond-insights-casestudy .metric-card svg {
-        width: 80px !important;
-        height: 80px !important;
-        margin: 0 auto 20px !important;
-        display: block !important;
-    }
-
-    #beyond-insights-casestudy .metric-title {
-        font-size: 1.6rem !important;
-        color: #1a0033 !important;
-        margin: 30px 0 20px !important;
-        font-weight: 600 !important;
-    }
-
-    #beyond-insights-casestudy .metric-description {
-        font-size: 1.1rem !important;
-        color: #666 !important;
-        line-height: 1.6 !important;
-    }
-
-    /* Blueprint Section */
-    #beyond-insights-casestudy .casestudy-blueprint {
-        background: #f0e6ff !important;
-        padding: 100px 0 !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .blueprint-container {
-        max-width: 1400px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-    }
-
-    #beyond-insights-casestudy .blueprint-header h2 {
-        font-size: 3rem !important;
-        color: #1a0033 !important;
-        text-align: center !important;
-        margin-bottom: 60px !important;
-        font-weight: 700 !important;
-    }
-
-    #beyond-insights-casestudy .blueprint-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 40px !important;
-    }
-
-    #beyond-insights-casestudy .insight-card {
-        background: white !important;
-        padding: 50px !important;
-        border-radius: 20px !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-        min-height: 350px !important;
-        border: none !important;
-    }
-
-    #beyond-insights-casestudy .insight-badge {
-        display: inline-block !important;
-        padding: 10px 25px !important;
-        border-radius: 25px !important;
-        font-size: 0.9rem !important;
-        font-weight: 600 !important;
-        margin-bottom: 25px !important;
-    }
-
-    #beyond-insights-casestudy .badge-edge {
-        background: #E6F3FF !important;
-        color: #0066CC !important;
-    }
-
-    #beyond-insights-casestudy .badge-segment {
-        background: #FFE6F0 !important;
-        color: #CC0066 !important;
-    }
-
-    #beyond-insights-casestudy .badge-index {
-        background: #E6FFE6 !important;
-        color: #006600 !important;
-    }
-
-    #beyond-insights-casestudy .badge-loyalty {
-        background: #FFECE6 !important;
-        color: #CC3300 !important;
-    }
-
-    #beyond-insights-casestudy .insight-title {
-        font-size: 1.8rem !important;
-        color: #1a0033 !important;
-        margin-bottom: 20px !important;
-        font-weight: 600 !important;
-    }
-
-    #beyond-insights-casestudy .insight-description {
-        font-size: 1.1rem !important;
-        color: #666 !important;
-        line-height: 1.7 !important;
-    }
-
-    /* Transformation Strategy */
-    #beyond-insights-casestudy .casestudy-strategy {
-        background: white !important;
-        padding: 100px 0 !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .strategy-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-        text-align: center !important;
-    }
-
-    #beyond-insights-casestudy .strategy-header h2 {
-        font-size: 3rem !important;
-        color: #1a0033 !important;
-        margin-bottom: 30px !important;
-        font-weight: 700 !important;
-    }
-
-    #beyond-insights-casestudy .strategy-context {
-        font-size: 1.3rem !important;
-        color: #666 !important;
-        max-width: 900px !important;
-        margin: 0 auto 80px !important;
-        line-height: 1.8 !important;
-    }
-
-    #beyond-insights-casestudy .transformation-visual {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 80px !important;
-        margin: 80px 0 !important;
-        flex-wrap: wrap !important;
-    }
-
-    #beyond-insights-casestudy .transform-state {
-        text-align: center !important;
-    }
-
-    #beyond-insights-casestudy .state-icon {
-        width: 200px !important;
-        height: 200px !important;
-        margin: 0 auto 30px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        border-radius: 30px !important;
-        font-size: 2rem !important;
-        font-weight: 800 !important;
-        color: white !important;
-    }
-
-    #beyond-insights-casestudy .igniter-icon {
-        background: linear-gradient(135deg, #666 0%, #999 100%) !important;
-    }
-
-    #beyond-insights-casestudy .fire-icon {
-        background: linear-gradient(135deg, #e4a324 0%, #f10b25 100%) !important;
-    }
-
-    #beyond-insights-casestudy .state-label {
-        font-size: 1.8rem !important;
-        font-weight: 700 !important;
-        color: #1a0033 !important;
-        margin-bottom: 10px !important;
-        display: block !important;
-    }
-
-    #beyond-insights-casestudy .state-description {
-        color: #666 !important;
-        font-size: 1.1rem !important;
-    }
-
-    #beyond-insights-casestudy .transform-arrow {
-        font-size: 3rem !important;
-        color: #663399 !important;
-    }
-
-    /* Formula Section */
-    #beyond-insights-casestudy .casestudy-formula {
-        background: linear-gradient(135deg, #663399 0%, #98069d 100%) !important;
-        color: white !important;
-        padding: 100px 0 !important;
-        text-align: center !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .formula-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-    }
-
-    #beyond-insights-casestudy .formula-header h2 {
-        font-size: 3rem !important;
-        margin-bottom: 40px !important;
-        color: white !important;
-        font-weight: 700 !important;
-    }
-
-    #beyond-insights-casestudy .formula-visual {
-        background: rgba(255,255,255,0.1) !important;
-        backdrop-filter: blur(10px) !important;
-        border-radius: 30px !important;
-        padding: 60px 40px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 40px !important;
-        flex-wrap: wrap !important;
-        margin-bottom: 40px !important;
-    }
-
-    #beyond-insights-casestudy .formula-component {
-        text-align: center !important;
-    }
-
-    #beyond-insights-casestudy .component-icon {
-        width: 100px !important;
-        height: 100px !important;
-        background: rgba(255,255,255,0.2) !important;
-        border-radius: 50% !important;
-        margin: 0 auto 20px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-size: 2.5rem !important;
-    }
-
-    #beyond-insights-casestudy .component-label {
-        font-size: 1.2rem !important;
-        font-weight: 600 !important;
-        color: white !important;
-    }
-
-    #beyond-insights-casestudy .formula-operator {
-        font-size: 2.5rem !important;
-        opacity: 0.8 !important;
-        color: white !important;
-    }
-
-    #beyond-insights-casestudy .conversion-result {
-        font-size: 4rem !important;
-        font-weight: 900 !important;
-        color: #e4a324 !important;
-        margin: 40px 0 20px !important;
-    }
-
-    #beyond-insights-casestudy .conversion-description {
-        font-size: 1.1rem !important;
-        opacity: 0.9 !important;
-        max-width: 700px !important;
-        margin: 0 auto !important;
-        color: white !important;
-    }
-
-    /* Results Section */
-    #beyond-insights-casestudy .casestudy-results {
-        background: white !important;
-        padding: 100px 0 !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .results-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-        text-align: center !important;
-    }
-
-    #beyond-insights-casestudy .results-header h2 {
-        font-size: 3rem !important;
-        color: #1a0033 !important;
-        margin-bottom: 60px !important;
-        font-weight: 700 !important;
-    }
-
-    /* Update this CSS */
-#beyond-insights-casestudy .results-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 40px !important;
-    max-width: 800px !important;
-    margin: 0 auto !important;
-}
-
-    #beyond-insights-casestudy .result-card {
-        background: #f8f8f8 !important;
-        padding: 50px 30px !important;
-        border-radius: 20px !important;
-        transition: all 0.3s ease !important;
-        border: none !important;
-    }
-
-    #beyond-insights-casestudy .result-card:hover {
-        transform: translateY(-10px) !important;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
-    }
-
-    #beyond-insights-casestudy .result-metric {
-        font-size: 4rem !important;
-        font-weight: 900 !important;
-        color: #663399 !important;
-        margin-bottom: 15px !important;
-    }
-
-    #beyond-insights-casestudy .result-label {
-        font-size: 1.2rem !important;
-        color: #333 !important;
-        font-weight: 600 !important;
-    }
-
-    /* Roadmap Section */
-    #beyond-insights-casestudy .casestudy-roadmap {
-        background: #1a0033 !important;
-        color: white !important;
-        padding: 100px 0 !important;
-        width: 100% !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .roadmap-container {
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-        padding: 0 40px !important;
-    }
-
-    #beyond-insights-casestudy .roadmap-header {
-        text-align: center !important;
-        margin-bottom: 80px !important;
-    }
-
-  #beyond-insights-casestudy .roadmap-header h2 {
-    font-size: 3rem !important;
-    font-family: 'Inter', -apple-system, sans-serif !important;
-    font-weight: 600 !important;
-    text-transform: none !important; /* Remove all caps */
-}
-
-    #beyond-insights-casestudy .phases {
-        display: grid !important;
-        gap: 50px !important;
-    }
-
-    #beyond-insights-casestudy .phase-container {
-        background: rgba(255,255,255,0.05) !important;
-        backdrop-filter: blur(10px) !important;
-        border-radius: 20px !important;
-        padding: 50px !important;
-        border: 1px solid rgba(255,255,255,0.1) !important;
-    }
-
-    #beyond-insights-casestudy .phase-header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 30px !important;
-        margin-bottom: 40px !important;
-    }
-
-   #beyond-insights-casestudy .phase-number {
-    font-size: 3rem !important;
-    font-weight: 700 !important;
-    color: #e4a324 !important;
-    /* Add these lines for the circle */
-    background: rgba(255,255,255,0.1) !important;
-    width: 80px !important;
-    height: 80px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-    #beyond-insights-casestudy .phase-info {
-        flex: 1 !important;
-    }
-
-    #beyond-insights-casestudy .phase-title {
-    font-size: 1.8rem !important; /* Reduced from 2rem */
-    text-transform: none !important; /* Remove all caps */
-    font-family: 'Inter', -apple-system, sans-serif !important;
-}
-
-    #beyond-insights-casestudy .phase-timing {
-        font-size: 1.1rem !important;
-        color: #e4a324 !important;
-    }
-
-    #beyond-insights-casestudy .phase-tracks {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 40px !important;
-    }
-
-    #beyond-insights-casestudy .track {
-        background: rgba(255,255,255,0.05) !important;
-        border-radius: 15px !important;
-        padding: 30px !important;
-    }
-
-    #beyond-insights-casestudy .track-label {
-    text-transform: uppercase !important; /* Keep these uppercase */
-    font-size: 0.8rem !important; /* Smaller for labels */
-    letter-spacing: 0.1em !important;
-}
-
-    #beyond-insights-casestudy .research-track {
-        background: #663399 !important;
-        color: white !important;
-    }
-
-    #beyond-insights-casestudy .marketing-track {
-        background: #e4a324 !important;
-        color: white !important;
-    }
-
-    #beyond-insights-casestudy .track ul {
-        list-style: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    #beyond-insights-casestudy .track li {
-        padding: 10px 0 !important;
-        font-size: 1rem !important;
-        opacity: 0.9 !important;
-        position: relative !important;
-        padding-left: 25px !important;
-        color: white !important;
-    }
-
-    #beyond-insights-casestudy .track li::before {
-        content: '→' !important;
-        position: absolute !important;
-        left: 0 !important;
-        color: #e4a324 !important;
-    }
-
-    #beyond-insights-casestudy .cta-section {
-        text-align: center !important;
-        margin-top: 80px !important;
-    }
-
-    #beyond-insights-casestudy .cta-button {
-        display: inline-block !important;
-        padding: 20px 50px !important;
-        background: linear-gradient(45deg, #e4a324, #f10b25) !important;
-        color: white !important;
-        text-decoration: none !important;
-        border-radius: 50px !important;
-        font-weight: 600 !important;
-        font-size: 1.2rem !important;
-        transition: all 0.3s ease !important;
-    }
-
-    #beyond-insights-casestudy .cta-button:hover {
-        transform: translateY(-3px) !important;
-        box-shadow: 0 15px 30px rgba(228,163,36,0.4) !important;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        #beyond-insights-casestudy .blueprint-grid,
-        #beyond-insights-casestudy .challenge-metrics,
-        #beyond-insights-casestudy .results-grid {
-            grid-template-columns: 1fr !important;
-        }
-        
-        #beyond-insights-casestudy .phase-tracks {
-            grid-template-columns: 1fr !important;
-        }
-        
-        #beyond-insights-casestudy .transformation-visual {
-            flex-direction: column !important;
-            gap: 40px !important;
-        }
-    }
-  </style>
-<!-- LANEIGE CASE STUDY - VISUALLY STUNNING VERSION -->
-<section class="casestudy" id="beyond-insights-casestudy">
-  <style>
-    /* Beauty Industry Aesthetic - Sophisticated & Visually Stunning */
-    #beyond-insights-casestudy * {
-        box-sizing: border-box;
-    }
-    
-    #beyond-insights-casestudy {
-        background: linear-gradient(180deg, #ffffff 0%, #faf8ff 50%, #f5f0ff 100%);
-        position: relative;
-        overflow: hidden;
-        font-family: 'Inter', -apple-system, sans-serif;
-    }
-
-    /* Hero Section */
-    #beyond-insights-casestudy .case-hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background: linear-gradient(135deg, #1a0033 0%, #2d1548 100%);
-        overflow: hidden;
-    }
-    
-    #beyond-insights-casestudy .hero-subtitle {
-        font-size: 1.3rem;
-        color: rgba(255, 255, 255, 0.8);
-        font-weight: 300;
-        margin-top: 40px;
-        line-height: 1.6;
-    }
-
-    #beyond-insights-casestudy .hero-particles {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .particle {
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background: rgba(228, 163, 36, 0.6);
-        border-radius: 50%;
-        animation: float 20s infinite linear;
-    }
-
-    @keyframes float {
-        from { transform: translateY(100vh) rotate(0deg); }
-        to { transform: translateY(-100vh) rotate(360deg); }
-    }
-
-    #beyond-insights-casestudy .hero-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        max-width: 900px;
-        padding: 0 40px;
-    }
-
-    #beyond-insights-casestudy .case-label {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: #e4a324;
-        padding: 12px 32px;
-        border-radius: 30px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-    }
-
-    #beyond-insights-casestudy .case-title {
-        font-size: clamp(3rem, 6vw, 5rem);
-        font-weight: 300;
-        line-height: 1.1;
-        margin: 0 0 30px;
-        color: #ffffff;
-        letter-spacing: -2px;
-    }
-
-    #beyond-insights-casestudy .case-title .gradient-text {
-        background: linear-gradient(90deg, #e4a324 0%, #ff6b6b 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 600;
-    }
-
-    #beyond-insights-casestudy .hook-question {
-        font-size: 1.6rem;
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 300;
-        margin: 0;
-        line-height: 1.4;
-    }
-
-    /* Act Sections */
-    #beyond-insights-casestudy .act-section {
-        padding: 120px 20px;
-        position: relative;
-    }
-
-    #beyond-insights-casestudy .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    #beyond-insights-casestudy .act-header {
-        text-align: center;
-        margin-bottom: 80px;
-    }
-
-    #beyond-insights-casestudy .act-number {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, #7434ac 0%, #e4a324 100%);
-        border-radius: 50%;
-        color: white;
-        font-weight: 700;
-        font-size: 1.2rem;
-        line-height: 60px;
-        margin-bottom: 20px;
-    }
-
-    #beyond-insights-casestudy .act-title {
-        font-size: 3rem;
-        font-weight: 300;
-        margin: 0 0 20px;
-        color: #1a0033;
-    }
-
-    #beyond-insights-casestudy .act-subtitle {
-        font-size: 1.3rem;
-        color: #666;
-        font-weight: 300;
-    }
-
-    /* Paradox Section */
-    #beyond-insights-casestudy .paradox-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 40px;
-        margin-bottom: 80px;
-    }
-
-    #beyond-insights-casestudy .paradox-card {
-        background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(116, 52, 172, 0.1);
-        border-radius: 30px;
-        padding: 50px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    #beyond-insights-casestudy .paradox-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 60px rgba(116, 52, 172, 0.2);
-        border-color: #7434ac;
-    }
-
-    #beyond-insights-casestudy .paradox-icon {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, #f10b25 0%, #e4a324 100%);
-        border-radius: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 30px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .paradox-icon svg {
-        width: 50px;
-        height: 50px;
-        z-index: 1;
-    }
-
-    #beyond-insights-casestudy .paradox-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 0 0 20px;
-        color: #1a0033;
-        line-height: 1.2;
-    }
-
-    #beyond-insights-casestudy .paradox-metric {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: #f10b25;
-        margin: 15px 0;
-        line-height: 1;
-    }
-
-    #beyond-insights-casestudy .paradox-text {
-        font-size: 1.1rem;
-        color: #666;
-        line-height: 1.7;
-        margin: 0;
-    }
-
-    /* Blueprint Discovery */
-    #beyond-insights-casestudy .discovery-section {
-        background: linear-gradient(180deg, #f8f5ff 0%, #fff 100%);
-    }
-
-    #beyond-insights-casestudy .discovery-tool {
-        margin-bottom: 120px;
-    }
-
-    #beyond-insights-casestudy .tool-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 50px;
-        gap: 30px;
-    }
-
-    #beyond-insights-casestudy .tool-number {
-        width: 80px;
-        height: 80px;
-        border: 3px solid #7434ac;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        font-weight: 700;
-        color: #7434ac;
-        flex-shrink: 0;
-        background: linear-gradient(135deg, rgba(116, 52, 172, 0.05) 0%, rgba(228, 163, 36, 0.05) 100%);
-    }
-
-    #beyond-insights-casestudy .tool-info h3 {
-        font-size: 2rem;
-        margin: 0 0 10px;
-        color: #1a0033;
-    }
-
-    #beyond-insights-casestudy .tool-subtitle {
-        font-size: 1.2rem;
-        color: #666;
-        font-weight: 400;
-    }
-
-    #beyond-insights-casestudy .discovery-content {
-        background: white;
-        border-radius: 30px;
-        padding: 60px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .discovery-content::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(228, 163, 36, 0.03) 0%, transparent 70%);
-        pointer-events: none;
-    }
-
-    #beyond-insights-casestudy .discovery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 40px;
-        margin-top: 40px;
-    }
-
-    #beyond-insights-casestudy .discovery-item {
-        text-align: center;
-        padding: 35px;
-        background: linear-gradient(135deg, rgba(116, 52, 172, 0.05) 0%, rgba(228, 163, 36, 0.05) 100%);
-        border-radius: 20px;
-        border: 1px solid rgba(116, 52, 172, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    #beyond-insights-casestudy .discovery-item:hover {
-        transform: translateY(-5px);
-        border-color: rgba(116, 52, 172, 0.3);
-        box-shadow: 0 15px 30px rgba(116, 52, 172, 0.1);
-    }
-
-    #beyond-insights-casestudy .discovery-item p {
-        font-size: 1.05rem;
-        line-height: 1.7;
-        color: #444;
-        margin: 0;
-    }
-
-    #beyond-insights-casestudy .discovery-item h5 {
-        color: #7434ac;
-        margin-bottom: 15px;
-        font-size: 1.2rem;
-        font-weight: 600;
-    }
-
-    #beyond-insights-casestudy .discovery-stat {
-        font-size: 3.5rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #7434ac 0%, #e4a324 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 20px 0 10px;
-        line-height: 1;
-    }
-
-    #beyond-insights-casestudy .insight-box {
-        background: linear-gradient(135deg, #7434ac 0%, #9454b0 100%);
-        color: white;
-        padding: 35px 40px;
-        border-radius: 20px;
-        margin-top: 50px;
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .insight-box::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-        animation: shimmer 3s infinite;
-    }
-
-    @keyframes shimmer {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    /* Transformation Strategy */
-    #beyond-insights-casestudy .transformation-section {
-        background: linear-gradient(180deg, #1a0033 0%, #2d1548 100%);
-        color: white;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .transformation-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></svg>');
-        opacity: 0.5;
-    }
-
-    #beyond-insights-casestudy .phase-timeline {
-        display: flex;
-        justify-content: space-between;
-        margin: 80px 0;
-        position: relative;
-    }
-
-    #beyond-insights-casestudy .phase-timeline::before {
-        content: '';
-        position: absolute;
-        top: 40px;
-        left: 10%;
-        right: 10%;
-        height: 3px;
-        background: linear-gradient(90deg, #e4a324 0%, #ff6b6b 100%);
-    }
-
-    #beyond-insights-casestudy .phase-item {
-        flex: 1;
-        text-align: center;
-        position: relative;
-        padding: 0 20px;
-    }
-
-    #beyond-insights-casestudy .phase-circle {
-        width: 80px;
-        height: 80px;
-        background: #1a0033;
-        border: 4px solid #e4a324;
-        border-radius: 50%;
-        margin: 0 auto 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #e4a324;
-        position: relative;
-        z-index: 2;
-        transition: all 0.3s ease;
-    }
-
-    #beyond-insights-casestudy .phase-item:hover .phase-circle {
-        transform: scale(1.1);
-        box-shadow: 0 0 30px rgba(228, 163, 36, 0.5);
-    }
-
-    #beyond-insights-casestudy .phase-title {
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin: 0 0 20px;
-        line-height: 1.3;
-    }
-
-    #beyond-insights-casestudy .phase-actions {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: left;
-        font-size: 1rem;
-        line-height: 1.9;
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    #beyond-insights-casestudy .phase-actions li {
-        padding: 12px 0;
-        padding-left: 35px;
-        text-indent: -30px;
-        margin-bottom: 8px;
-    }
-
-    #beyond-insights-casestudy .phase-actions li::before {
-        content: '→';
-        color: #e4a324;
-        font-weight: 700;
-        margin-right: 12px;
-        font-size: 1.2rem;
-        display: inline-block;
-        width: 30px;
-    }
-
-    /* Results Framework */
-    #beyond-insights-casestudy .results-section {
-        background: linear-gradient(180deg, #fff 0%, #f8f5ff 100%);
-        position: relative;
-    }
-
-    #beyond-insights-casestudy .results-intro {
-        text-align: center;
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 60px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.7;
-    }
-
-    #beyond-insights-casestudy .metrics-showcase {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 40px;
-        margin: 60px 0;
-    }
-
-    #beyond-insights-casestudy .metric-card {
-        background: white;
-        border: 2px solid transparent;
-        border-radius: 30px;
-        padding: 50px;
-        text-align: center;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .metric-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(116, 52, 172, 0.03) 0%, rgba(228, 163, 36, 0.03) 100%);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    #beyond-insights-casestudy .metric-card:hover::before {
-        opacity: 1;
-    }
-
-    #beyond-insights-casestudy .metric-card:hover {
-        border-color: #7434ac;
-        transform: translateY(-8px);
-        box-shadow: 0 25px 50px rgba(116, 52, 172, 0.15);
-    }
-
-    #beyond-insights-casestudy .metric-icon {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 30px;
-        background: linear-gradient(135deg, rgba(116, 52, 172, 0.1) 0%, rgba(228, 163, 36, 0.1) 100%);
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    #beyond-insights-casestudy .metric-icon svg {
-        width: 70px;
-        height: 70px;
-    }
-
-    #beyond-insights-casestudy .metric-name {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #1a0033;
-        margin: 0 0 15px;
-        line-height: 1.3;
-    }
-
-    #beyond-insights-casestudy .metric-description {
-        font-size: 1.05rem;
-        color: #666;
-        line-height: 1.8;
-        margin: 0;
-    }
-
-    #beyond-insights-casestudy .real-win-box {
-        background: linear-gradient(135deg, #7434ac 0%, #9454b0 100%);
-        padding: 80px;
-        border-radius: 30px;
-        margin: 80px 0;
-        text-align: center;
-        color: white;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .real-win-box h4 {
-        font-size: 2rem;
-        margin-bottom: 25px;
-        font-weight: 600;
-    }
-
-    #beyond-insights-casestudy .real-win-box p {
-        font-size: 1.3rem;
-        line-height: 1.8;
-        max-width: 800px;
-        margin: 0 auto;
-        opacity: 0.95;
-    }
-
-    /* Conclusion */
-    #beyond-insights-casestudy .conclusion-section {
-        background: linear-gradient(135deg, #f8f5ff 0%, #fff 100%);
-        text-align: center;
-        padding: 120px 20px;
-    }
-
-    #beyond-insights-casestudy .conclusion-content {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    #beyond-insights-casestudy .conclusion-title {
-        font-size: 2.5rem;
-        font-weight: 300;
-        margin: 0 0 40px;
-        color: #1a0033;
-    }
-
-    #beyond-insights-casestudy .conclusion-intro {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 60px;
-        line-height: 1.8;
-    }
-
-    #beyond-insights-casestudy .benefit-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin: 60px 0;
-    }
-
-    #beyond-insights-casestudy .benefit-item {
-        background: white;
-        padding: 45px;
-        border-radius: 25px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .benefit-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 50px rgba(116, 52, 172, 0.15);
-    }
-
-    #beyond-insights-casestudy .benefit-number {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, #7434ac 0%, #e4a324 100%);
-        border-radius: 50%;
-        color: white;
-        font-weight: 700;
-        line-height: 60px;
-        margin-bottom: 25px;
-        font-size: 1.3rem;
-    }
-
-    #beyond-insights-casestudy .benefit-text {
-        font-size: 1.1rem;
-        color: #666;
-        line-height: 1.8;
-        margin: 0;
-    }
-
-    #beyond-insights-casestudy .benefit-text strong {
-        color: #1a0033;
-        font-weight: 600;
-    }
-
-    #beyond-insights-casestudy .conclusion-result {
-        font-size: 1.3rem;
-        color: #666;
-        margin: 60px 0;
-        line-height: 1.8;
-    }
-
-    #beyond-insights-casestudy .cta-section {
-        margin-top: 80px;
-    }
-
-    #beyond-insights-casestudy .cta-text {
-        font-size: 1.3rem;
-        color: #444;
-        margin-bottom: 35px;
-        font-weight: 500;
-    }
-
-    #beyond-insights-casestudy .cta-button {
-        display: inline-block;
-        background: linear-gradient(135deg, #7434ac 0%, #9454b0 100%);
-        color: white;
-        padding: 22px 55px;
-        border-radius: 50px;
-        font-size: 1.15rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        box-shadow: 0 15px 35px rgba(116, 52, 172, 0.3);
-        position: relative;
-        overflow: hidden;
-    }
-
-    #beyond-insights-casestudy .cta-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-        transition: left 0.5s ease;
-    }
-
-    #beyond-insights-casestudy .cta-button:hover::before {
-        left: 100%;
-    }
-
-    #beyond-insights-casestudy .cta-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 20px 45px rgba(116, 52, 172, 0.4);
-    }
-
-    /* Question styling */
-    #beyond-insights-casestudy .real-question {
-        text-align: center;
-        margin-top: 100px;
-        padding: 60px;
-        background: linear-gradient(135deg, rgba(116, 52, 172, 0.05) 0%, rgba(228, 163, 36, 0.05) 100%);
-        border-radius: 30px;
-    }
-
-    #beyond-insights-casestudy .real-question h4 {
-        font-size: 1.8rem;
-        color: #7434ac;
-        font-weight: 600;
-        margin-bottom: 15px;
-    }
-
-    #beyond-insights-casestudy .real-question p {
-        font-size: 1.6rem;
-        color: #1a0033;
-        font-weight: 300;
-        margin: 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-        #beyond-insights-casestudy .phase-timeline {
-            flex-direction: column;
-            gap: 60px;
-        }
-        
-        #beyond-insights-casestudy .phase-timeline::before {
-            display: none;
-        }
-        
-        #beyond-insights-casestudy .discovery-content {
-            padding: 40px 30px;
-        }
-        
-        #beyond-insights-casestudy .tool-header {
-            flex-direction: column;
-            text-align: center;
-        }
-        
-        #beyond-insights-casestudy .real-win-box {
-            padding: 50px 30px;
-        }
-        
-        #beyond-insights-casestudy .paradox-card {
-            padding: 40px 30px;
-        }
-    }
-  </style>
-
-  <!-- Hero Section -->
-  <div class="case-hero">
-    <div class="hero-particles">
-      <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
-      <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
-      <div class="particle" style="left: 70%; animation-delay: 6s;"></div>
-      <div class="particle" style="left: 90%; animation-delay: 8s;"></div>
-    </div>
-    
-    <div class="hero-content">
-      <span class="case-label">Case Study</span>
-      <h2 class="case-title">
-        Beyond the Mask:<br>
-        <span class="gradient-text">Building Sustainable Beauty Brand Momentum</span>
-      </h2>
-      <p class="hook-question">
-        "When your hero product goes viral on TikTok, everyone celebrates.<br>
-        But what happens when the buzz fades?"
+      <div class="module-number">
+       01
+      </div>
+      <div class="module-icon">
+       <svg class="icon-svg" viewbox="0 0 100 100">
+        <circle cx="30" cy="30" fill="currentColor" opacity=".3" r="15">
+        </circle>
+        <circle cx="70" cy="30" fill="currentColor" opacity=".3" r="15">
+        </circle>
+        <circle cx="50" cy="60" fill="currentColor" opacity=".3" r="15">
+        </circle>
+        <path d="M30 45H70" stroke="currentColor" stroke-width="2">
+        </path>
+        <circle cx="30" cy="30" fill="currentColor" r="5">
+        </circle>
+        <circle cx="70" cy="30" fill="currentColor" r="5">
+        </circle>
+        <circle cx="50" cy="60" fill="currentColor" r="5">
+        </circle>
+       </svg>
+      </div>
+      <h3>
+       Consumer
+       <br/>
+       Segmentation
+      </h3>
+      <p>
+       Personas from functional, emotional &amp; category drivers.
       </p>
-      <p class="hero-subtitle" style="color: rgba(255, 255, 255, 0.9); font-size: 1.4rem;">
-        The Beauty Brand Blueprint™
+      <div class="module-result">
+       <span class="result-label">
+        You get:
+       </span>
+       CRM‑ready typing tool &amp; 360° profiles
+       <br/>
+       <span class="result-label">
+        It means:
+       </span>
+       Campaigns that speak to
+       <em>
+        why
+       </em>
+       people buy
+      </div>
+     </div>
+     <!-- Module 2 -->
+     <div class="module" data-aos="flip-left" data-aos-delay="50">
+      <div class="module-glow">
+      </div>
+      <div class="module-number">
+       02
+      </div>
+      <div class="module-icon">
+       <svg class="icon-svg" viewbox="0 0 100 100">
+        <path d="M20 80Q20 20 50 20T80 80" fill="none" stroke="currentColor" stroke-width="3">
+        </path>
+        <circle cx="50" cy="50" fill="currentColor" r="8">
+        </circle>
+        <path d="M50 20l-5 10h10Z" fill="currentColor">
+        </path>
+        <circle cx="50" cy="20" fill="none" opacity=".3" r="15" stroke="currentColor" stroke-width="2">
+        </circle>
+       </svg>
+      </div>
+      <h3>
+       Brand Momentum
+      </h3>
+      <p>
+       Maps passion × engagement: Icon, Igniter, Steady Flame or Slow Burner.
       </p>
-    </div>
-  </div>
-
-  <!-- Act 1: The Paradox -->
-  <section class="act-section">
-    <div class="container">
-      <div class="act-header">
-        <span class="act-number">1</span>
-        <h3 class="act-title">The Paradox of Viral Success</h3>
-        <p class="act-subtitle">Laneige's Lip Sleeping Mask became a global phenomenon, but success created an unexpected challenge</p>
+      <div class="module-result">
+       <span class="result-label">
+        You get:
+       </span>
+       Quadrant scorecard &amp; growth levers
+       <br/>
+       <span class="result-label">
+        It means:
+       </span>
+       Know where to fuel or fix the funnel
       </div>
-
-      <div class="paradox-grid">
-        <div class="paradox-card">
-          <div class="paradox-icon">
-            <svg viewBox="0 0 50 50" fill="white" xmlns="http://www.w3.org/2000/svg">
-              <!-- Custom lipstick icon -->
-              <rect x="20" y="15" width="10" height="25" rx="2" fill="white"/>
-              <path d="M20 15 Q25 8 30 15" fill="white"/>
-              <rect x="22" y="35" width="6" height="8" fill="white" opacity="0.7"/>
-              <circle cx="25" cy="25" r="20" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/>
-            </svg>
-          </div>
-          <h4 class="paradox-title">The Viral Trap</h4>
-          <div class="paradox-metric">60%+</div>
-          <p class="paradox-text">of revenue concentrated in one product category</p>
-        </div>
-
-        <div class="paradox-card">
-          <div class="paradox-icon">
-            <svg viewBox="0 0 50 50" fill="white" xmlns="http://www.w3.org/2000/svg">
-              <!-- Custom graph icon -->
-              <path d="M10 40 L10 10" stroke="white" stroke-width="2"/>
-              <path d="M10 40 L40 40" stroke="white" stroke-width="2"/>
-              <path d="M15 30 Q20 20 25 25 T35 35" fill="none" stroke="white" stroke-width="2.5"/>
-              <circle cx="35" cy="35" r="3" fill="white"/>
-              <path d="M35 35 L40 40" stroke="white" stroke-width="1.5" stroke-dasharray="2,2"/>
-            </svg>
-          </div>
-          <h4 class="paradox-title">The Trial-to-Loyalty Gap</h4>
-          <div class="paradox-metric">60% → 15%</div>
-          <p class="paradox-text">Drop from first-time buyers to those who become repeat customers within 6 months</p>
-        </div>
-
-        <div class="paradox-card">
-          <div class="paradox-icon">
-            <svg viewBox="0 0 50 50" fill="white" xmlns="http://www.w3.org/2000/svg">
-              <!-- Custom sparkle/Gen Z icon -->
-              <path d="M25 5 L27 20 L40 22 L27 25 L25 40 L23 25 L10 22 L23 20 Z" fill="white"/>
-              <circle cx="15" cy="15" r="2" fill="white" opacity="0.6"/>
-              <circle cx="35" cy="35" r="2" fill="white" opacity="0.6"/>
-              <circle cx="35" cy="15" r="1.5" fill="white" opacity="0.4"/>
-              <circle cx="15" cy="35" r="1.5" fill="white" opacity="0.4"/>
-            </svg>
-          </div>
-          <h4 class="paradox-title">The Gen Z Opportunity</h4>
-          <div class="paradox-metric">Untapped</div>
-          <p class="paradox-text">Strong awareness among younger consumers but low conversion to regular customers</p>
-        </div>
+     </div>
+     <!-- Module 3 -->
+     <div class="module" data-aos="flip-left" data-aos-delay="100">
+      <div class="module-glow">
       </div>
-
-      <div class="real-question">
-        <h4>The Real Question:</h4>
-        <p>How do you transform a moment of viral fame into lasting brand devotion?</p>
+      <div class="module-number">
+       03
       </div>
-    </div>
-  </section>
-
-  <!-- Act 2: Blueprint Discovery -->
-  <section class="act-section discovery-section">
-    <div class="container">
-      <div class="act-header">
-        <span class="act-number">2</span>
-        <h3 class="act-title">The Blueprint Discovery Process</h3>
+      <div class="module-icon">
+       <svg class="icon-svg" viewbox="0 0 100 100">
+        <polygon fill="none" points="50,20 70,35 70,65 50,80 30,65 30,35" stroke="currentColor" stroke-width="2">
+        </polygon>
+        <line opacity=".5" stroke="currentColor" x1="50" x2="50" y1="20" y2="80">
+        </line>
+        <line opacity=".5" stroke="currentColor" x1="30" x2="70" y1="35" y2="65">
+        </line>
+        <line opacity=".5" stroke="currentColor" x1="70" x2="30" y1="35" y2="65">
+        </line>
+        <circle cx="50" cy="50" fill="currentColor" r="5">
+        </circle>
+       </svg>
       </div>
-
-      <!-- Tool 1: Brand Edge -->
-      <div class="discovery-tool">
-        <div class="tool-header">
-          <div class="tool-number">1</div>
-          <div class="tool-info">
-            <h3>Brand Edge Assessment</h3>
-            <p class="tool-subtitle">Finding the Hidden Truth</p>
-          </div>
-        </div>
-        
-        <div class="discovery-content">
-          <h4 style="font-size: 1.4rem; margin-bottom: 30px; color: #1a0033;">What we discovered:</h4>
-          <div class="discovery-grid">
-            <div class="discovery-item">
-              <p><strong style="color: #7434ac;">Perceived strength in "innovation"</strong><br>was actually table stakes in K-beauty</p>
-            </div>
-            <div class="discovery-item">
-              <p><strong style="color: #7434ac;">The real differentiator?</strong><br>An unexpected authenticity in relatability that competitors overlooked</p>
-            </div>
-            <div class="discovery-item">
-              <p><strong style="color: #7434ac;">Missing piece:</strong><br>Empowerment isn't associated with Laneige despite attempts - perceived as a shortcoming</p>
-            </div>
-          </div>
-          <div class="insight-box">
-            The insight: Laneige was trying to be what they thought consumers wanted, not leveraging what made them genuinely different.
-          </div>
-        </div>
-      </div>
-
-      <!-- Tool 2: Segmentation -->
-      <div class="discovery-tool">
-        <div class="tool-header">
-          <div class="tool-number">2</div>
-          <div class="tool-info">
-            <h3>Consumer Segmentation</h3>
-            <p class="tool-subtitle">Beyond Demographics</p>
-          </div>
-        </div>
-        
-        <div class="discovery-content">
-          <h4 style="font-size: 1.4rem; margin-bottom: 30px; color: #1a0033;">The surprise finding:</h4>
-          <p style="font-size: 1.2rem; color: #666; margin-bottom: 60px; line-height: 1.8;">
-            The Beauty Brand Blueprint didn't just analyze Laneige - it revealed the hidden dynamics 
-            of consumer relationships that traditional research misses. By understanding the emotional 
-            and functional drivers unique to each segment, Laneige can now:
-          </p>
-          <div class="discovery-grid">
-            <div class="discovery-item">
-              <h5>Cultural Visionaries</h5>
-              <div class="discovery-stat">20%</div>
-              <p style="margin-top: 20px;">of Laneige spend. Want authentic cultural stories and heritage. They curate experiences that connect to deeper meanings.</p>
-            </div>
-            <div class="discovery-item">
-              <h5>Purpose-Driven Changemakers</h5>
-              <div class="discovery-stat">28%</div>
-              <p style="margin-top: 20px;">of Laneige spend. Seek brands that align with their values of sustainability and social impact. They curate a conscious lifestyle.</p>
-            </div>
-            <div class="discovery-item">
-              <h5>Designer Trendsetters</h5>
-              <div class="discovery-stat">20%</div>
-              <p style="margin-top: 20px;">of Laneige spend. Look for premium aesthetics and innovation. They curate for visual impact and staying ahead of trends.</p>
-            </div>
-          </div>
-          <div class="insight-box">
-            Laneige opportunity: Position as the K-beauty brand that enables each segment's unique lifestyle curation - from conscious beauty rituals to trendsetting routines to authentic cultural experiences.
-          </div>
-        </div>
-      </div>
-
-      <!-- Tool 3: Infidelity Index -->
-      <div class="discovery-tool">
-        <div class="tool-header">
-          <div class="tool-number">3</div>
-          <div class="tool-info">
-            <h3>Infidelity Index</h3>
-            <p class="tool-subtitle">The Relationship Status</p>
-          </div>
-        </div>
-        
-        <div class="discovery-content">
-          <h4 style="font-size: 1.4rem; margin-bottom: 30px; color: #1a0033;">The opportunity map:</h4>
-          <div class="discovery-grid" style="margin-bottom: 50px;">
-            <div class="discovery-item" style="background: linear-gradient(135deg, rgba(228, 163, 36, 0.08) 0%, rgba(228, 163, 36, 0.03) 100%); border-color: rgba(228, 163, 36, 0.3);">
-              <div class="discovery-stat" style="color: #e4a324;">46%</div>
-              <p>of aware non-buyers are <strong style="color: #e4a324;">"Curious"</strong> - they know you, they're interested, but something's holding them back</p>
-            </div>
-            <div class="discovery-item" style="background: linear-gradient(135deg, rgba(116, 52, 172, 0.08) 0%, rgba(116, 52, 172, 0.03) 100%); border-color: rgba(116, 52, 172, 0.3);">
-              <div class="discovery-stat" style="color: #7434ac;">40%</div>
-              <p>of lapsed buyers are <strong style="color: #7434ac;">"Reconcilable"</strong> - they tried you once but didn't return</p>
-            </div>
-          </div>
-          <h4 style="font-size: 1.3rem; margin-bottom: 25px; color: #1a0033;">What's blocking them:</h4>
-          <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 1.8; color: #666;">
-            <li style="padding: 10px 0;"><strong style="color: #e4a324;">Curious consumers:</strong> Don't see how Laneige fits their complete beauty routine beyond the hero mask</li>
-            <li style="padding: 10px 0;"><strong style="color: #7434ac;">Reconcilable buyers:</strong> Loved the product but don't know what to try next in the line</li>
-          </ul>
-          <div class="insight-box">
-            The revelation: These high-opportunity segments represent significant untapped potential for growth.</div>
-        </div>
-      </div>
-
-      <!-- Tool 4: Loyalty Multiverse -->
-      <div class="discovery-tool">
-        <div class="tool-header">
-          <div class="tool-number">4</div>
-          <div class="tool-info">
-            <h3>Loyalty Multiverse Mapping</h3>
-            <p class="tool-subtitle">The Emotional Journey</p>
-          </div>
-        </div>
-        
-        <div class="discovery-content">
-          <h4 style="font-size: 1.4rem; margin-bottom: 30px; color: #1a0033;">Key elements for messaging & campaigns:</h4>
-          
-          <div style="background: linear-gradient(135deg, rgba(228, 163, 36, 0.05) 0%, transparent 100%); padding: 30px; border-radius: 20px; margin-bottom: 25px;">
-            <h5 style="color: #e4a324; font-size: 1.2rem; margin-bottom: 15px;">For Curious Segments</h5>
-            <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 1.8; color: #666;">
-              <li style="padding: 8px 0;"><strong>Focus on:</strong> Complete K-beauty routines and rituals</li>
-              <li style="padding: 8px 0;"><strong>Highlight:</strong> How hero products fit into broader regimens</li>
-              <li style="padding: 8px 0;"><strong>Emphasize:</strong> Discovery and education about product range</li>
-            </ul>
-          </div>
-          
-          <div style="background: linear-gradient(135deg, rgba(116, 52, 172, 0.05) 0%, transparent 100%); padding: 30px; border-radius: 20px; margin-bottom: 25px;">
-            <h5 style="color: #7434ac; font-size: 1.2rem; margin-bottom: 15px;">For Reconcilable Segments</h5>
-            <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 1.8; color: #666;">
-              <li style="padding: 8px 0;"><strong>Focus on:</strong> Next-step product recommendations</li>
-              <li style="padding: 8px 0;"><strong>Highlight:</strong> Complementary benefits and layering</li>
-              <li style="padding: 8px 0;"><strong>Emphasize:</strong> Loyalty rewards and exclusive access</li>
-            </ul>
-          </div>
-          
-          <div style="background: linear-gradient(135deg, rgba(148, 84, 176, 0.05) 0%, transparent 100%); padding: 30px; border-radius: 20px; margin-bottom: 25px;">
-            <h5 style="color: #9454b0; font-size: 1.2rem; margin-bottom: 15px;">For Gen Z Opportunity</h5>
-            <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 1.8; color: #666;">
-              <li style="padding: 8px 0;"><strong>Focus on:</strong> K-beauty innovation and cultural authenticity</li>
-              <li style="padding: 8px 0;"><strong>Highlight:</strong> Trendsetting and self-expression</li>
-              <li style="padding: 8px 0;"><strong>Emphasize:</strong> Community and shared beauty experiences</li>
-            </ul>
-          </div>
-          
-          <div style="background: linear-gradient(135deg, rgba(241, 11, 37, 0.05) 0%, transparent 100%); padding: 30px; border-radius: 20px;">
-            <h5 style="color: #f10b25; font-size: 1.2rem; margin-bottom: 15px;">For Competitor Conquest</h5>
-            <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 1.8; color: #666;">
-              <li style="padding: 8px 0;"><strong>Focus on:</strong> Premium quality with K-beauty innovation</li>
-              <li style="padding: 8px 0;"><strong>Highlight:</strong> Superior formulations and ingredients</li>
-              <li style="padding: 8px 0;"><strong>Emphasize:</strong> Heritage meets modern beauty science</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Act 3: Transformation Strategy -->
-  <section class="act-section transformation-section">
-    <div class="container">
-      <div class="act-header">
-        <span class="act-number" style="background: white; color: #7434ac;">3</span>
-        <h3 class="act-title" style="color: white;">The Transformation Strategy</h3>
-        <p class="act-subtitle" style="color: rgba(255,255,255,0.8);">From Igniter to Fire Icon: A 3-Phase Approach</p>
-      </div>
-
-      <div class="phase-timeline">
-        <div class="phase-item">
-          <div class="phase-circle">1</div>
-          <h4 class="phase-title">Reframe the Narrative</h4>
-          <ul class="phase-actions">
-            <li>Stop selling products, start sharing a lifestyle</li>
-            <li>Lead with values that resonate with Changemakers and Visionaries</li>
-            <li>Use Brand Edge insights to emphasize authentic relatability</li>
-          </ul>
-        </div>
-
-        <div class="phase-item">
-          <div class="phase-circle">2</div>
-          <h4 class="phase-title">Build the Ecosystem</h4>
-          <ul class="phase-actions">
-            <li>Introduce complementary products through the lens of the hero product</li>
-            <li>Create content that shows the full Korean beauty routine</li>
-            <li>Target Curious and Reconcilable segments with specific barrier-addressing messages</li>
-          </ul>
-        </div>
-
-        <div class="phase-item">
-          <div class="phase-circle">3</div>
-          <h4 class="phase-title">Sustain the Momentum</h4>
-          <ul class="phase-actions">
-            <li>Launch loyalty program designed for lifestyle curators, not point collectors</li>
-            <li>Partner with purpose-driven initiatives that match segment values</li>
-            <li>Measure success through repeat purchase rate, not just acquisition</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Act 4: Results Framework -->
-  <section class="act-section results-section">
-    <div class="container">
-      <div class="act-header">
-        <span class="act-number">4</span>
-        <h3 class="act-title">The Results Framework</h3>
-        <p class="act-subtitle">Success Metrics That Matter</p>
-      </div>
-
-      <p class="results-intro">
-        Instead of claiming extreme conversion lifts, focus on sustainable growth:
+      <h3>
+       Perceptual Landscape
+      </h3>
+      <p>
+       Visual map of attributes that truly differentiate brands.
       </p>
-
-      <div class="metrics-showcase">
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Portfolio expansion icon -->
-              <circle cx="25" cy="25" r="18" stroke="#7434ac" stroke-width="2.5" fill="none"/>
-              <circle cx="45" cy="25" r="18" stroke="#e4a324" stroke-width="2.5" fill="none"/>
-              <circle cx="35" cy="40" r="18" stroke="#9454b0" stroke-width="2.5" fill="none"/>
-              <path d="M35 25 L35 40" stroke="#1a0033" stroke-width="2"/>
-            </svg>
-          </div>
-          <h5 class="metric-name">Portfolio Expansion</h5>
-          <p class="metric-description">Track hero product buyers who purchase from 2+ categories</p>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Velocity chart icon -->
-              <path d="M10 50 L10 20" stroke="#7434ac" stroke-width="2"/>
-              <path d="M10 50 L60 50" stroke="#7434ac" stroke-width="2"/>
-              <path d="M15 45 L25 35 L35 25 L45 20 L55 15" stroke="#e4a324" stroke-width="3" fill="none"/>
-              <circle cx="15" cy="45" r="4" fill="#7434ac"/>
-              <circle cx="55" cy="15" r="4" fill="#e4a324"/>
-              <path d="M25 35 L25 50" stroke="#9454b0" stroke-width="1.5" stroke-dasharray="2,2"/>
-              <path d="M45 20 L45 50" stroke="#9454b0" stroke-width="1.5" stroke-dasharray="2,2"/>
-            </svg>
-          </div>
-          <h5 class="metric-name">Loyalty Velocity</h5>
-          <p class="metric-description">Measure time from first to second purchase</p>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-icon">
-            <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Customer journey icon -->
-              <circle cx="15" cy="50" r="6" fill="#e4a324"/>
-              <circle cx="35" cy="35" r="6" fill="#9454b0"/>
-              <circle cx="55" cy="20" r="6" fill="#7434ac"/>
-              <path d="M15 50 Q25 40 35 35" stroke="#7434ac" stroke-width="2" fill="none"/>
-              <path d="M35 35 Q45 27 55 20" stroke="#7434ac" stroke-width="2" fill="none"/>
-              <path d="M10 55 L20 55" stroke="#666" stroke-width="1.5"/>
-              <path d="M30 40 L40 40" stroke="#666" stroke-width="1.5"/>
-              <path d="M50 25 L60 25" stroke="#666" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <h5 class="metric-name">Segment Migration</h5>
-          <p class="metric-description">Monitor movement from Curious → Customer → Advocate</p>
-        </div>
+      <div class="module-result">
+       <span class="result-label">
+        You get:
+       </span>
+       Landscape report + charts
+       <br/>
+       <span class="result-label">
+        It means:
+       </span>
+       Creative briefs grounded in differentiation
       </div>
-
-      <div class="real-win-box">
-        <h4>The Real Win</h4>
-        <p>
-          When you understand not just who buys, but why they buy and what stops them from buying again, 
-          you can build a brand that transcends viral moments.
-        </p>
+     </div>
+     <!-- Module 4 -->
+     <div class="module" data-aos="flip-left" data-aos-delay="150">
+      <div class="module-glow">
       </div>
-    </div>
-  </section>
-
-  <!-- Conclusion -->
-  <section class="conclusion-section">
-    <div class="conclusion-content">
-      <h3 class="conclusion-title">The Blueprint Advantage</h3>
-      
-      <p class="conclusion-intro">
-        The Beauty Brand Blueprint didn't just analyze Laneige - it revealed the hidden dynamics 
-        of consumer relationships that traditional research misses. By understanding the emotional 
-        and functional drivers unique to each segment, Laneige can now:
+      <div class="module-number">
+       04
+      </div>
+      <div class="module-icon">
+       <svg class="icon-svg" viewbox="0 0 100 100">
+        <path d="M50 10 80 30v40L50 90 20 70V30Z" fill="none" stroke="currentColor" stroke-width="2">
+        </path>
+        <path d="M50 30 65 45 50 60 35 45Z" fill="currentColor" opacity=".3">
+        </path>
+        <path d="M50 30v30" stroke="currentColor" stroke-width="3">
+        </path>
+        <circle cx="50" cy="45" fill="currentColor" r="8">
+        </circle>
+       </svg>
+      </div>
+      <h3>
+       Brand Edge™
+      </h3>
+      <p>
+       Separates authentic strengths from “paid‑for” advantages.
       </p>
-
-      <div class="benefit-list">
-        <div class="benefit-item">
-          <span class="benefit-number">1</span>
-          <p class="benefit-text"><strong>Focus resources</strong> on the 46% already curious about the brand</p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-number">2</span>
-          <p class="benefit-text"><strong>Re-engage</strong> the 40% who tried once but need a reason to return</p>
-        </div>
-        <div class="benefit-item">
-          <span class="benefit-number">3</span>
-          <p class="benefit-text"><strong>Build lasting relationships</strong> with values-driven consumers who become brand advocates</p>
-        </div>
+      <div class="module-result">
+       <span class="result-label">
+        You get:
+       </span>
+       KPI‑gap analysis &amp; re‑allocation roadmap
+       <br/>
+       <span class="result-label">
+        It means:
+       </span>
+       Budget moves to highest‑return levers
       </div>
-
-      <p class="conclusion-result">
-        The result? A strategy that transforms viral moments into sustainable brand momentum - 
-        without relying on unrealistic conversion claims or marketing hype.
+     </div>
+     <!-- Module 5 -->
+     <div class="module" data-aos="flip-left" data-aos-delay="200">
+      <div class="module-glow">
+      </div>
+      <div class="module-number">
+       05
+      </div>
+      <div class="module-icon">
+       <svg class="icon-svg" viewbox="0 0 100 100">
+        <path d="M50 25C35 10 10 20 10 40c0 20 40 45 40 45s40-25 40-45C90 20 65 10 50 25Z" fill="none" stroke="currentColor" stroke-width="2">
+        </path>
+        <path d="M35 40l10 10 20-20" fill="none" stroke="currentColor" stroke-width="3">
+        </path>
+       </svg>
+      </div>
+      <h3>
+       Infidelity Index™
+      </h3>
+      <p>
+       Quantifies every relationship stage from Unaware → Brand Faithful.
       </p>
-
-      <div class="cta-section">
-        <p class="cta-text">Ready to move beyond viral moments? Let's uncover what's really driving - or blocking - your brand's growth.</p>
-        <a href="#contact" class="cta-button">Get Your Beauty Brand Blueprint</a>
+      <div class="module-result">
+       <span class="result-label">
+        You get:
+       </span>
+       Migration matrix &amp; save/steal playbook
+       <br/>
+       <span class="result-label">
+        It means:
+       </span>
+       Precision rescue &amp; conquest strategies
       </div>
+     </div>
+     <!-- Module 6 -->
+     <div class="module" data-aos="flip-left" data-aos-delay="250">
+      <div class="module-glow">
+      </div>
+      <div class="module-number">
+       06
+      </div>
+      <div class="module-icon">
+       <svg class="icon-svg" viewbox="0 0 100 100">
+        <circle cx="50" cy="50" fill="none" r="30" stroke="currentColor" stroke-width="2">
+        </circle>
+        <circle cx="50" cy="30" fill="currentColor" opacity=".8" r="8">
+        </circle>
+        <circle cx="70" cy="50" fill="currentColor" opacity=".6" r="8">
+        </circle>
+        <circle cx="50" cy="70" fill="currentColor" opacity=".4" r="8">
+        </circle>
+        <circle cx="30" cy="50" fill="currentColor" opacity=".7" r="8">
+        </circle>
+        <path d="M50 30 70 50 50 70 30 50Z" fill="none" opacity=".5" stroke="currentColor">
+        </path>
+       </svg>
+      </div>
+      <h3>
+       Loyalty Multiverse™
+      </h3>
+      <p>
+       Shows which functional + emotional tweaks lift loyalty fastest.
+      </p>
+      <div class="module-result">
+       <span class="result-label">
+        You get:
+       </span>
+       Driver elasticities ranked by ROI
+       <br/>
+       <span class="result-label">
+        It means:
+       </span>
+       Spend only on attributes that convert
+      </div>
+     </div>
     </div>
+   </div>
   </section>
-</section> 
-  
-  
+</head>
+<body>
+
+
+<!-- CASE STUDY CONTENT -->
+<section id="beyond-insights-casestudy" class="screen">
+  <iframe 
+    src="prestige-beauty-case-study.html" 
+    style="width: 100%; height: 100vh; border: none; display: block;"
+    title="Laneige Case Study"
+    onload="this.style.height = this.contentWindow.document.body.scrollHeight + 'px';">
+  </iframe>
+</section>
+
   <!-- ░░░ DECISION ░░░ -->
   <section class="screen decision">
-    <div class="container fade-in">
-      <h2 class="section-title">The Decision: <span class="gradient-text">Strategic Clarity</span> vs. Continued Uncertainty</h2>
-
-      <div class="cost-comparison">
-        <div class="comparison-visual">
-          <div class="cost-item traditional">
-            <span class="cost-label">One Influencer Campaign</span>
-            <span class="cost-amount">$$$$$</span>
-            <span class="cost-result">3‑week buzz</span>
-          </div>
-          <div class="vs-divider">VS</div>
-          <div class="cost-item blueprint">
-            <span class="cost-label">Beauty Brand Blueprint</span>
-            <span class="cost-amount">$$$</span>
-            <span class="cost-result">90‑day transformation</span>
-          </div>
-        </div>
+   <div class="container fade-in">
+    <h2 class="section-title">
+     The Decision:
+     <span class="gradient-text">
+      Strategic Clarity
+     </span>
+     vs. Continued Uncertainty
+    </h2>
+    <div class="cost-comparison">
+     <div class="comparison-visual">
+      <div class="cost-item traditional">
+       <span class="cost-label">
+        One Influencer Campaign
+       </span>
+       <span class="cost-amount">
+        $$$$$
+       </span>
+       <span class="cost-result">
+        3‑week buzz
+       </span>
       </div>
-
-            <!-- three value props -->
-      <div class="value-props">
-        <!-- ░░ 1. Tariff‑Resistant Segmentation ░░ -->
-        <div class="value-card" data-aos="fade-up">
-          <div class="value-icon">
-            <!-- Shield – segmented four‑way -->
-            <svg viewBox="0 0 120 120" class="icon-svg" aria-label="Shield icon">
-              <defs>
-                <linearGradient id="grad‑shield" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%"  stop-color="#e4a324"/>
-                  <stop offset="50%" stop-color="#7434ac"/>
-                  <stop offset="100%" stop-color="#eb0473"/>
-                </linearGradient>
-              </defs>
-
-              <!-- outer shield -->
-              <path d="M60 18c-19 0-30 5-30 15v32c0 21 30 37 30 37s30-16 30-37V33c0-10-11-15-30-15Z"
-                    fill="none" stroke="url(#grad‑shield)" stroke-width="4"/>
-
-              <!-- segment lines -->
-              <path d="M60 30v70M42 52h36" stroke="url(#grad‑shield)" stroke-width="2"/>
-
-              <!-- glow -->
-              <circle cx="60" cy="50" r="35" fill="url(#grad‑shield)" opacity=".06"/>
-            </svg>
-          </div>
-          <h3>Tariff‑Resistant Segmentation</h3>
-          <p>Identify which segments stay loyal through price‑shocks.</p>
-        </div>
-
-        <!-- ░░ 2. Emotional Leverage Mapping ░░ -->
-        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="value-icon">
-            <!-- Heart‑DNA hybrid -->
-            <svg viewBox="0 0 120 120" class="icon-svg" aria-label="Heart / DNA icon">
-              <defs>
-                <radialGradient id="grad‑heart">
-                  <stop offset="0%"  stop-color="#eb0473"/>
-                  <stop offset="50%" stop-color="#9454b0"/>
-                  <stop offset="100%" stop-color="#7434ac"/>
-                </radialGradient>
-              </defs>
-
-              <!-- double helix curve -->
-              <path d="M40 30q-10 10-10 20t10 20 20 20 20-20 10-20-10-20"
-                    fill="none" stroke="url(#grad‑heart)" stroke-width="3"/>
-
-              <!-- rungs -->
-              <path d="M45 40q15 10 30 0M45 50q15 10 30 0M45 60q15 10 30 0"
-                    stroke="#eb0473" stroke-width="2" fill="none" opacity=".6"/>
-
-              <!-- heart -->
-              <path d="M60 46c-4-4-11-2-11 4 0 8 11 14 11 14s11-6 11-14c0-6-7-8-11-4Z"
-                    fill="url(#grad‑heart)"/>
-            </svg>
-          </div>
-          <h3>Emotional Leverage Mapping</h3>
-          <p>Bridge from features to relationships that transcend price.</p>
-        </div>
-
-        <!-- ░░ 3. Competitive Blind Spots ░░ -->
-        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="value-icon">
-            <!-- Radar sweep with blind wedges -->
-            <svg viewBox="0 0 120 120" class="icon-svg" aria-label="Radar icon">
-              <defs>
-                <linearGradient id="grad‑radar" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%"  stop-color="#f10b25"/>
-                  <stop offset="50%" stop-color="#e4a324"/>
-                  <stop offset="100%" stop-color="#7434ac"/>
-                </linearGradient>
-              </defs>
-
-              <!-- concentric circles -->
-              <circle cx="60" cy="60" r="45" fill="none" stroke="url(#grad‑radar)" stroke-width="2" opacity=".25"/>
-              <circle cx="60" cy="60" r="30" fill="none" stroke="url(#grad‑radar)" stroke-width="2" opacity=".45"/>
-              <circle cx="60" cy="60" r="15" fill="none" stroke="url(#grad‑radar)" stroke-width="2" opacity=".7"/>
-
-              <!-- blind‑spot sectors -->
-              <path d="M60 60L60 15A45 45 0 0 1 85 35Z" fill="#f10b25" opacity=".35"/>
-              <path d="M60 60L35 85A45 45 0 0 1 15 60Z" fill="#e4a324" opacity=".35"/>
-
-              <!-- sweeping line -->
-              <line x1="60" y1="60" x2="60" y2="18" stroke="url(#grad‑radar)" stroke-width="3">
-                <animateTransform attributeName="transform" type="rotate"
-                                  from="0 60 60" to="360 60 60"
-                                  dur="4s" repeatCount="indefinite"/>
-              </line>
-
-              <!-- center blip -->
-              <circle cx="60" cy="60" r="6" fill="url(#grad‑radar)"/>
-            </svg>
-          </div>
-          <h3>Competitive Blind Spots</h3>
-          <p>Exploit hidden weaknesses while competitors focus elsewhere.</p>
-        </div>
+      <div class="vs-divider">
+       VS
       </div>
-
-      <div class="urgency-message">
-        <p class="urgency-text">
-          <span class="highlight">Act before the market fully recalibrates.</span><br>
-          While enterprise brands crawl through bureaucracy, you can pivot—<em>if</em> you have precise intelligence.
-        </p>
+      <div class="cost-item blueprint">
+       <span class="cost-label">
+        Beauty Brand Blueprint
+       </span>
+       <span class="cost-amount">
+        $$$
+       </span>
+       <span class="cost-result">
+        90‑day transformation
+       </span>
       </div>
+     </div>
     </div>
+    <!-- three value props -->
+    <div class="value-props">
+     <!-- ░░ 1. Tariff‑Resistant Segmentation ░░ -->
+     <div class="value-card" data-aos="fade-up">
+      <div class="value-icon">
+       <!-- Shield – segmented four‑way -->
+       <svg aria-label="Shield icon" class="icon-svg" viewbox="0 0 120 120">
+        <defs>
+         <lineargradient id="grad‑shield" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#e4a324">
+          </stop>
+          <stop offset="50%" stop-color="#7434ac">
+          </stop>
+          <stop offset="100%" stop-color="#eb0473">
+          </stop>
+         </lineargradient>
+        </defs>
+        <!-- outer shield -->
+        <path d="M60 18c-19 0-30 5-30 15v32c0 21 30 37 30 37s30-16 30-37V33c0-10-11-15-30-15Z" fill="none" stroke="url(#grad‑shield)" stroke-width="4">
+        </path>
+        <!-- segment lines -->
+        <path d="M60 30v70M42 52h36" stroke="url(#grad‑shield)" stroke-width="2">
+        </path>
+        <!-- glow -->
+        <circle cx="60" cy="50" fill="url(#grad‑shield)" opacity=".06" r="35">
+        </circle>
+       </svg>
+      </div>
+      <h3>
+       Tariff‑Resistant Segmentation
+      </h3>
+      <p>
+       Identify which segments stay loyal through price‑shocks.
+      </p>
+     </div>
+     <!-- ░░ 2. Emotional Leverage Mapping ░░ -->
+     <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="value-icon">
+       <!-- Heart‑DNA hybrid -->
+       <svg aria-label="Heart / DNA icon" class="icon-svg" viewbox="0 0 120 120">
+        <defs>
+         <radialgradient id="grad‑heart">
+          <stop offset="0%" stop-color="#eb0473">
+          </stop>
+          <stop offset="50%" stop-color="#9454b0">
+          </stop>
+          <stop offset="100%" stop-color="#7434ac">
+          </stop>
+         </radialgradient>
+        </defs>
+        <!-- double helix curve -->
+        <path d="M40 30q-10 10-10 20t10 20 20 20 20-20 10-20-10-20" fill="none" stroke="url(#grad‑heart)" stroke-width="3">
+        </path>
+        <!-- rungs -->
+        <path d="M45 40q15 10 30 0M45 50q15 10 30 0M45 60q15 10 30 0" fill="none" opacity=".6" stroke="#eb0473" stroke-width="2">
+        </path>
+        <!-- heart -->
+        <path d="M60 46c-4-4-11-2-11 4 0 8 11 14 11 14s11-6 11-14c0-6-7-8-11-4Z" fill="url(#grad‑heart)">
+        </path>
+       </svg>
+      </div>
+      <h3>
+       Emotional Leverage Mapping
+      </h3>
+      <p>
+       Bridge from features to relationships that transcend price.
+      </p>
+     </div>
+     <!-- ░░ 3. Competitive Blind Spots ░░ -->
+     <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="value-icon">
+       <!-- Radar sweep with blind wedges -->
+       <svg aria-label="Radar icon" class="icon-svg" viewbox="0 0 120 120">
+        <defs>
+         <lineargradient id="grad‑radar" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#f10b25">
+          </stop>
+          <stop offset="50%" stop-color="#e4a324">
+          </stop>
+          <stop offset="100%" stop-color="#7434ac">
+          </stop>
+         </lineargradient>
+        </defs>
+        <!-- concentric circles -->
+        <circle cx="60" cy="60" fill="none" opacity=".25" r="45" stroke="url(#grad‑radar)" stroke-width="2">
+        </circle>
+        <circle cx="60" cy="60" fill="none" opacity=".45" r="30" stroke="url(#grad‑radar)" stroke-width="2">
+        </circle>
+        <circle cx="60" cy="60" fill="none" opacity=".7" r="15" stroke="url(#grad‑radar)" stroke-width="2">
+        </circle>
+        <!-- blind‑spot sectors -->
+        <path d="M60 60L60 15A45 45 0 0 1 85 35Z" fill="#f10b25" opacity=".35">
+        </path>
+        <path d="M60 60L35 85A45 45 0 0 1 15 60Z" fill="#e4a324" opacity=".35">
+        </path>
+        <!-- sweeping line -->
+        <line stroke="url(#grad‑radar)" stroke-width="3" x1="60" x2="60" y1="60" y2="18">
+         <animatetransform attributename="transform" dur="4s" from="0 60 60" repeatcount="indefinite" to="360 60 60" type="rotate">
+         </animatetransform>
+        </line>
+        <!-- center blip -->
+        <circle cx="60" cy="60" fill="url(#grad‑radar)" r="6">
+        </circle>
+       </svg>
+      </div>
+      <h3>
+       Competitive Blind Spots
+      </h3>
+      <p>
+       Exploit hidden weaknesses while competitors focus elsewhere.
+      </p>
+     </div>
+    </div>
+    <div class="urgency-message">
+     <p class="urgency-text">
+      <span class="highlight">
+       Act before the market fully recalibrates.
+      </span>
+      <br/>
+      While enterprise brands crawl through bureaucracy, you can pivot—
+      <em>
+       if
+      </em>
+      you have precise intelligence.
+     </p>
+    </div>
+   </div>
   </section>
-
-
   <!-- ░░░ CLOSING WINDOW ░░░ -->
   <section class="screen closing">
-    <div class="closing-bg"><div class="warning-pulse"></div></div>
-    <div class="container fade-in">
-      <h2 class="section-title text-white">The Strategic Window is <span class="text-red">Closing</span></h2>
-      <p class="closing-subtitle">Every day without strategic clarity costs you:</p>
-
-      <div class="cost-grid">
-        <div class="cost-card" data-aos="flip-up">
-          <div class="cost-icon rising">
-            <svg viewBox="0 0 100 100" class="cost-svg">
-              <path d="M50 80V20" stroke="#f10b25" stroke-width="4" stroke-linecap="round"/>
-              <path d="m30 40 20-20 20 20" stroke="#f10b25" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="50" cy="80" r="15" stroke="#eb0473" stroke-width="2" fill="none" opacity=".5"/>
-            </svg>
-          </div>
-          <p class="cost-label">Acquisition costs rising monthly</p>
-        </div>
-
-        <div class="cost-card" data-aos="flip-up" data-aos-delay="100">
-          <div class="cost-icon falling">
-            <svg viewBox="0 0 100 100" class="cost-svg">
-              <path d="M20 30q30 10 60 0" stroke="#f10b25" stroke-width="3" fill="none" stroke-linecap="round"/>
-              <path d="M20 50q30 20 60 0" stroke="#eb0473" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
-              <path d="M20 70q30 20 60 0" stroke="#e4a324" stroke-width="3" fill="none" stroke-linecap="round" opacity=".5"/>
-            </svg>
-          </div>
-          <p class="cost-label">Repeat rates dropping daily</p>
-        </div>
-
-        <div class="cost-card" data-aos="flip-up" data-aos-delay="200">
-          <div class="cost-icon warning">
-            <svg viewBox="0 0 100 100" class="cost-svg">
-              <polygon points="50,20 80,80 20,80" fill="none" stroke="#f10b25" stroke-width="3"/>
-              <line x1="50" y1="40" x2="50" y2="60" stroke="#f10b25" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="50" cy="70" r="3" fill="#f10b25"/>
-            </svg>
-          </div>
-          <p class="cost-label">Market share bleeding to competitors</p>
-        </div>
-      </div>
+   <div class="closing-bg">
+    <div class="warning-pulse">
     </div>
+   </div>
+   <div class="container fade-in">
+    <h2 class="section-title text-white">
+     The Strategic Window is
+     <span class="text-red">
+      Closing
+     </span>
+    </h2>
+    <p class="closing-subtitle">
+     Every day without strategic clarity costs you:
+    </p>
+    <div class="cost-grid">
+     <div class="cost-card" data-aos="flip-up">
+      <div class="cost-icon rising">
+       <svg class="cost-svg" viewbox="0 0 100 100">
+        <path d="M50 80V20" stroke="#f10b25" stroke-linecap="round" stroke-width="4">
+        </path>
+        <path d="m30 40 20-20 20 20" fill="none" stroke="#f10b25" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+        </path>
+        <circle cx="50" cy="80" fill="none" opacity=".5" r="15" stroke="#eb0473" stroke-width="2">
+        </circle>
+       </svg>
+      </div>
+      <p class="cost-label">
+       Acquisition costs rising monthly
+      </p>
+     </div>
+     <div class="cost-card" data-aos="flip-up" data-aos-delay="100">
+      <div class="cost-icon falling">
+       <svg class="cost-svg" viewbox="0 0 100 100">
+        <path d="M20 30q30 10 60 0" fill="none" stroke="#f10b25" stroke-linecap="round" stroke-width="3">
+        </path>
+        <path d="M20 50q30 20 60 0" fill="none" opacity=".7" stroke="#eb0473" stroke-linecap="round" stroke-width="3">
+        </path>
+        <path d="M20 70q30 20 60 0" fill="none" opacity=".5" stroke="#e4a324" stroke-linecap="round" stroke-width="3">
+        </path>
+       </svg>
+      </div>
+      <p class="cost-label">
+       Repeat rates dropping daily
+      </p>
+     </div>
+     <div class="cost-card" data-aos="flip-up" data-aos-delay="200">
+      <div class="cost-icon warning">
+       <svg class="cost-svg" viewbox="0 0 100 100">
+        <polygon fill="none" points="50,20 80,80 20,80" stroke="#f10b25" stroke-width="3">
+        </polygon>
+        <line stroke="#f10b25" stroke-linecap="round" stroke-width="4" x1="50" x2="50" y1="40" y2="60">
+        </line>
+        <circle cx="50" cy="70" fill="#f10b25" r="3">
+        </circle>
+       </svg>
+      </div>
+      <p class="cost-label">
+       Market share bleeding to competitors
+      </p>
+     </div>
+    </div>
+   </div>
   </section>
-
   <!-- ░░░ LEADERSHIP ░░░ -->
   <section class="screen leadership">
-    <div class="container fade-in">
-      <h2 class="section-title">The <span class="gradient-text">Visionaries</span> Behind Your Transformation</h2>
-      <p class="leadership-subtitle">Beauty industry veterans with the battle‑scars to prove it</p>
-
-      <div class="leadership-grid">
-        <div class="leader-card" data-aos="fade-up"><div class="leader-gradient"></div><h4 class="leader-name">Elaine Sheng</h4><p class="leader-title">Global Beauty Strategist</p><p class="leader-bio">Led brand transformations at Estée Lauder, NARS &amp; disruptors.</p></div>
-        <div class="leader-card" data-aos="fade-up" data-aos-delay="100"><div class="leader-gradient"></div><h4 class="leader-name">Andy Borinstein</h4><p class="leader-title">Strategic Research Specialist</p><p class="leader-bio">Turns complex data into board‑ready strategies.</p></div>
-        <div class="leader-card" data-aos="fade-up" data-aos-delay="200"><div class="leader-gradient"></div><h4 class="leader-name">Brian Brett</h4><p class="leader-title">Insights Leader</p><p class="leader-bio">Pioneer in beauty consumer psychology &amp; purchase behavior.</p></div>
-        <div class="leader-card" data-aos="fade-up" data-aos-delay="300"><div class="leader-gradient"></div><h4 class="leader-name">Vidur Bhandari</h4><p class="leader-title">Strategy Visionary</p><p class="leader-bio">Cuts through data overload to craft transformative strategy.</p></div>
-        <div class="leader-card" data-aos="fade-up" data-aos-delay="400"><div class="leader-gradient"></div><h4 class="leader-name">John Bekier</h4><p class="leader-title">Analytical Strategy Leader</p><p class="leader-bio">Leverages advanced analytics to uncover deep insights.</p></div>
-      </div>
-    </div>
-  </section>
-
-<!-- ░░░ CTA ░░░ -->
-<section id="contact" class="screen cta">
-  <div class="cta-bg">
-    <div class="cta-gradient-1"></div><div class="cta-gradient-2"></div>
-    <div class="cta-particles"><div class="cta-particle"></div><div class="cta-particle"></div><div class="cta-particle"></div></div>
-  </div>
-  <div class="cta-content fade-in">
-    <h2 class="cta-title">
-      <span class="word-animate">15</span> <span class="word-animate">minutes</span> <span class="word-animate">to</span> <span class="word-animate">see</span> <span class="word-animate">your</span> <span class="word-animate">hidden</span> <span class="word-animate">growth.</span>
+   <div class="container fade-in">
+    <h2 class="section-title">
+     The
+     <span class="gradient-text">
+      Visionaries
+     </span>
+     Behind Your Transformation
     </h2>
-    <p class="cta-subtitle">Let me show you how to strengthen your beauty brand's loyalty—before competitors figure it out.</p>
-    <a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" target="_blank" rel="noopener noreferrer">
-      <span class="button-bg"></span><span class="button-text">Book My 15‑Min Strategy Call</span><span class="button-arrow">→</span>
+    <p class="leadership-subtitle">
+     Beauty industry veterans with the battle‑scars to prove it
+    </p>
+    <div class="leadership-grid">
+     <div class="leader-card" data-aos="fade-up">
+      <div class="leader-gradient">
+      </div>
+      <h4 class="leader-name">
+       Elaine Sheng
+      </h4>
+      <p class="leader-title">
+       Global Beauty Strategist
+      </p>
+      <p class="leader-bio">
+       Led brand transformations at Estée Lauder, NARS &amp; disruptors.
+      </p>
+     </div>
+     <div class="leader-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="leader-gradient">
+      </div>
+      <h4 class="leader-name">
+       Andy Borinstein
+      </h4>
+      <p class="leader-title">
+       Strategic Research Specialist
+      </p>
+      <p class="leader-bio">
+       Turns complex data into board‑ready strategies.
+      </p>
+     </div>
+     <div class="leader-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="leader-gradient">
+      </div>
+      <h4 class="leader-name">
+       Brian Brett
+      </h4>
+      <p class="leader-title">
+       Insights Leader
+      </p>
+      <p class="leader-bio">
+       Pioneer in beauty consumer psychology &amp; purchase behavior.
+      </p>
+     </div>
+     <div class="leader-card" data-aos="fade-up" data-aos-delay="300">
+      <div class="leader-gradient">
+      </div>
+      <h4 class="leader-name">
+       Vidur Bhandari
+      </h4>
+      <p class="leader-title">
+       Strategy Visionary
+      </p>
+      <p class="leader-bio">
+       Cuts through data overload to craft transformative strategy.
+      </p>
+     </div>
+     <div class="leader-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="leader-gradient">
+      </div>
+      <h4 class="leader-name">
+       John Bekier
+      </h4>
+      <p class="leader-title">
+       Analytical Strategy Leader
+      </p>
+      <p class="leader-bio">
+       Leverages advanced analytics to uncover deep insights.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- ░░░ CTA ░░░ -->
+  <section class="screen cta" id="contact">
+   <div class="cta-bg">
+    <div class="cta-gradient-1">
+    </div>
+    <div class="cta-gradient-2">
+    </div>
+    <div class="cta-particles">
+     <div class="cta-particle">
+     </div>
+     <div class="cta-particle">
+     </div>
+     <div class="cta-particle">
+     </div>
+    </div>
+   </div>
+   <div class="cta-content fade-in">
+    <h2 class="cta-title">
+     <span class="word-animate">
+      15
+     </span>
+     <span class="word-animate">
+      minutes
+     </span>
+     <span class="word-animate">
+      to
+     </span>
+     <span class="word-animate">
+      see
+     </span>
+     <span class="word-animate">
+      your
+     </span>
+     <span class="word-animate">
+      hidden
+     </span>
+     <span class="word-animate">
+      growth.
+     </span>
+    </h2>
+    <p class="cta-subtitle">
+     Let me show you how to strengthen your beauty brand's loyalty—before competitors figure it out.
+    </p>
+    <a class="cta-button" href="https://calendly.com/elaine-sheng-beyondinsights" rel="noopener noreferrer" target="_blank">
+     <span class="button-bg">
+     </span>
+     <span class="button-text">
+      Book My 15‑Min Strategy Call
+     </span>
+     <span class="button-arrow">
+      →
+     </span>
     </a>
     <p class="cta-contact">
-      <a href="mailto:Elaine.Sheng@BeyondInsights.com" class="email-link">Elaine.Sheng@BeyondInsights.com</a><br>
-      <a href="https://www.beyondinsights.com" class="website-link" target="_blank" rel="noopener noreferrer">www.beyondinsights.com</a>
+     <a class="email-link" href="mailto:Elaine.Sheng@BeyondInsights.com">
+      Elaine.Sheng@BeyondInsights.com
+     </a>
+     <br/>
+     <a class="website-link" href="https://www.beyondinsights.com" rel="noopener noreferrer" target="_blank">
+      www.beyondinsights.com
+     </a>
     </p>
-  </div>
-</section>
-  
+   </div>
+  </section>
   <!-- ░░░ FOOTER ░░░ -->
   <footer class="footer">
-    <div class="footer-content">
-      <img src="beyond-insights-logo.png" alt="BEYOND Insights" class="footer-logo">
-      <p class="footer-tagline">Inspire Change</p>
-
-      <div class="social-proof">
-        <p>Our collective experience includes:</p>
-        <div class="brand-logos">
-          <span>Vogue</span><span>•</span><span>Estée Lauder</span><span>•</span><span>NARS</span><span>•</span><span>Shiseido</span><span>•</span><span>Maybelline</span><span>•</span><span>InStyle</span>
-        </div>
-      </div>
-
-      <p class="copyright">© 2025 BEYOND Insights. All rights reserved.</p>
+   <div class="footer-content">
+    <img alt="BEYOND Insights" class="footer-logo" src="beyond-insights-logo.png"/>
+    <p class="footer-tagline">
+     Inspire Change
+    </p>
+    <div class="social-proof">
+     <p>
+      Our collective experience includes:
+     </p>
+     <div class="brand-logos">
+      <span>
+       Vogue
+      </span>
+      <span>
+       •
+      </span>
+      <span>
+       Estée Lauder
+      </span>
+      <span>
+       •
+      </span>
+      <span>
+       NARS
+      </span>
+      <span>
+       •
+      </span>
+      <span>
+       Shiseido
+      </span>
+      <span>
+       •
+      </span>
+      <span>
+       Maybelline
+      </span>
+      <span>
+       •
+      </span>
+      <span>
+       InStyle
+      </span>
+     </div>
     </div>
-
-    <!-- KPI source notes -->
-    <section id="sources" class="kpi-sources">
-      <h4>Source Notes</h4>
-      <ol>
-        <li id="src-cac">¹ 2024 McKinsey Beauty CPM &amp; CAC Tracker (<em>US Direct‑to‑Consumer Index</em>).</li>
-        <li id="src-switch">² BEYOND Insights Loyalty Multiverse™ database (12‑country rolling study, Q1‑2025).</li>
-        <li id="src-vulnerable">³ PowerReviews “Beauty Consumer Confidence Pulse” wave 6, Feb 2025.</li>
-      </ol>
-    </section>
+    <p class="copyright">
+     © 2025 BEYOND Insights. All rights reserved.
+    </p>
+   </div>
+   <!-- KPI source notes -->
+   <section class="kpi-sources" id="sources">
+    <h4>
+     Source Notes
+    </h4>
+    <ol>
+     <li id="src-cac">
+      ¹ 2024 McKinsey Beauty CPM &amp; CAC Tracker (
+      <em>
+       US Direct‑to‑Consumer Index
+      </em>
+      ).
+     </li>
+     <li id="src-switch">
+      ² BEYOND Insights Loyalty Multiverse™ database (12‑country rolling study, Q1‑2025).
+     </li>
+     <li id="src-vulnerable">
+      ³ PowerReviews “Beauty Consumer Confidence Pulse” wave 6, Feb 2025.
+     </li>
+    </ol>
+   </section>
   </footer>
-
   <!-- Sticky CTA -->
-  <a href="#contact" class="sticky-cta"><span class="sticky-text">Book Strategy Call</span><span class="sticky-arrow">→</span></a>
-
+  <a class="sticky-cta" href="#contact">
+   <span class="sticky-text">
+    Book Strategy Call
+   </span>
+   <span class="sticky-arrow">
+    →
+   </span>
+  </a>
   <!-- ░░░ SCRIPTS ░░░ -->
   <script>
-    /* ---------- SECTION SMOOTH‑SCROLL ---------- */
+   /* ---------- SECTION SMOOTH‑SCROLL ---------- */
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         const target=document.querySelector(a.getAttribute('href'));
@@ -2742,6 +1814,62 @@ a href="https://calendly.com/elaine-sheng-beyondinsights" class="cta-button" tar
     const scrollToIdx=i=>screens[i]?.scrollIntoView({behavior:'smooth'});
     document.getElementById('nextPage').onclick=()=>{idx=Math.min(idx+1,screens.length-1);scrollToIdx(idx);};
     document.getElementById('prevPage').onclick=()=>{idx=Math.max(idx-1,0);scrollToIdx(idx);};
+
+   document.addEventListener('DOMContentLoaded', function() {
+        // Ensure "Will You?" is properly separated
+        const hero = document.querySelector('.hero, #hero');
+        if (hero) {
+            const texts = hero.querySelectorAll('p, h1, h2');
+            texts.forEach(el => {
+                if (el.textContent.includes('Will you?') || el.textContent.includes('Will You?')) {
+                    el.style.display = 'block';
+                    el.style.clear = 'both';
+                    el.style.margin = '2rem auto';
+                }
+            });
+        }
+        
+        // Fix research section
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.textContent.includes('Traditional Research')) {
+                section.style.background = '#0a0a0a';
+                section.style.color = 'white';
+                section.style.padding = '5rem 2rem';
+                
+                // Fix the title
+                const h2 = section.querySelector('h2');
+                if (h2) {
+                    h2.innerHTML = h2.textContent.replace(/(Won't Save You|Won't Save You)/gi, '<strong>$1</strong>');
+                }
+            }
+        });
+    });
   </script>
-</body>
+<script>
+// Better iframe auto-resize
+function resizeCaseStudyIframe() {
+  const iframe = document.querySelector('#beyond-insights-casestudy iframe');
+  if (iframe && iframe.contentWindow) {
+    try {
+      const height = iframe.contentWindow.document.documentElement.scrollHeight;
+      iframe.style.height = height + 'px';
+    } catch (e) {
+      // Cross-origin issue, default to viewport height
+      iframe.style.height = '100vh';
+    }
+  }
+}
+
+// Resize on load and window resize
+window.addEventListener('load', resizeCaseStudyIframe);
+window.addEventListener('resize', resizeCaseStudyIframe);
+
+// Also listen for iframe load
+const caseStudyIframe = document.querySelector('#beyond-insights-casestudy iframe');
+if (caseStudyIframe) {
+  caseStudyIframe.addEventListener('load', resizeCaseStudyIframe);
+}
+</script>
+ </body>
 </html>
