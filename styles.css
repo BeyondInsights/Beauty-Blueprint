@@ -5278,3 +5278,12 @@ body * {
     min-height: 100vh !important;
     padding-bottom: 300px !important;
 }
+/* Add more dark purple space after the blueprint modules */
+.modules {
+    margin-bottom: 150px !important;  /* Adds space after the 6 cards */
+}
+
+/* Or if that doesn't work, try this */
+.screen.solution .container {
+    padding-bottom: 200px !important;
+}
