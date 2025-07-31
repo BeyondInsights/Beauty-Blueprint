@@ -94,7 +94,32 @@
       white-space: nowrap;
     }
   </style>
- </head>
+<head>
+  ...
+  <style>
+    /* Add these to your existing style tag in the HTML */
+    .tariffs-text,
+    .tiktok-text,
+    .small-text {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    footer {
+        border-bottom: none !important;
+    }
+    
+    /* ADD THE WHITE SPACE FIX HERE */
+    #blueprint {
+      margin-bottom: 0 !important;
+      padding-bottom: 4rem !important;
+    }
+    
+    .screen.cta {
+      margin-top: 0 !important;
+    }
+  </style>
+</head>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
