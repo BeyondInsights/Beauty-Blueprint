@@ -1987,5 +1987,22 @@ fetch('prestige-beauty-case-study.html')
     document.getElementById('case-study-content').innerHTML = styles + content;
   });
 </script>
- </body>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the case study section
+    const caseStudySection = document.querySelector('#beyond-insights-casestudy');
+    if (caseStudySection) {
+        // Remove inline min-height style
+        caseStudySection.style.minHeight = 'auto';
+        caseStudySection.style.height = 'auto';
+        
+        // Find any spacer divs
+        const spacerDiv = caseStudySection.querySelector('div[style*="height: 1px"]');
+        if (spacerDiv) {
+            spacerDiv.remove();
+        }
+    }
+});
+</script>
+</body>
 </html>
