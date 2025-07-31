@@ -1286,13 +1286,24 @@ window.addEventListener('load', function() {
 
 
 <!-- CASE STUDY CONTENT -->
-<section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 0 !important;">
-  <iframe 
-    src="prestige-beauty-case-study.html" 
-    style="width: 100% !important; height: 2000px !important; border: none !important; display: block !important; visibility: visible !important; opacity: 1 !important;"
-    title="Laneige Case Study">
-  </iframe>
+<section id="beyond-insights-casestudy" class="screen">
+  <div id="case-study-content" style="background: white; min-height: 100vh;">
+    <!-- Content will be loaded here -->
+  </div>
 </section>
+
+<script>
+// Add this right before your closing </body> tag
+fetch('prestige-beauty-case-study.html')
+  .then(response => response.text())
+  .then(html => {
+    // Extract just the body content
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const content = doc.body.innerHTML;
+    document.getElementById('case-study-content').innerHTML = content;
+  });
+</script>
 
   <!-- ░░░ DECISION ░░░ -->
   <section class="screen decision">
