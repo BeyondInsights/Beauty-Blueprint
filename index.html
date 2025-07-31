@@ -1286,15 +1286,22 @@ window.addEventListener('load', function() {
 
 
 <!-- CASE STUDY CONTENT -->
-<section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 20px !important;">
+<section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 0 !important;">
   <div style="height: 1px; opacity: 0;"></div>
   <iframe 
     src="prestige-beauty-case-study.html" 
-    style="width: 100% !important; height: 8500px !important; border: none !important; display: block !important;"
+    style="width: 100% !important; height: 7500px !important; border: none !important; display: block !important; margin-top: -100px !important;"
     title="Laneige Case Study"
     scrolling="no">
   </iframe>
 </section>
+
+<style>
+/* Override the case study's internal padding when in iframe */
+#beyond-insights-casestudy {
+  margin-bottom: -100px !important; /* Pull next section up */
+}
+</style>
  
   <!-- ░░░ DECISION ░░░ -->
   <section class="screen decision">
