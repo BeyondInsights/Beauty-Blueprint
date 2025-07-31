@@ -5297,3 +5297,17 @@ body * {
 .screen.solution {
     margin-bottom: 80px !important;
 }
+/* Add white gap between button section and blueprint stepper */
+.blueprint-stepper {
+    margin-top: 60px !important;  /* Creates white space above */
+}
+
+/* Or if that section has a different class, try */
+#blueprint + section {
+    margin-top: 60px !important;  /* White gap before next section */
+}
+
+/* Alternative - add bottom margin to the button section */
+.cta-band, .purple-band {  /* whatever class that purple button section has */
+    margin-bottom: 60px !important;
+}
