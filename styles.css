@@ -5311,3 +5311,18 @@ body * {
 .cta-band, .purple-band {  /* whatever class that purple button section has */
     margin-bottom: 60px !important;
 }
+/* Add white space between purple band and stepper section */
+.screen.blueprint-stepper {
+    margin-top: 80px !important;  /* Creates white gap above */
+    padding-top: 100px !important;  /* Additional space inside */
+}
+
+/* Or try targeting the transformation band if it has a specific class */
+.transformation-band, .purple-band, .blueprint-band {
+    margin-bottom: 80px !important;
+}
+
+/* Alternative - add space before blueprint stepper */
+.stepper {
+    margin-top: 100px !important;
+}
