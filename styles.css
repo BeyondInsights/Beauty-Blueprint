@@ -5288,3 +5288,12 @@ body * {
 .screen.solution .container {
     padding-bottom: 100px !important;  /* Reduced from 200px */
 }
+/* Minimal dark purple after cards */
+.modules {
+    margin-bottom: 20px !important;
+}
+
+/* Bigger white gap */
+.screen.solution {
+    margin-bottom: 80px !important;
+}
