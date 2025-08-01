@@ -337,8 +337,8 @@ window.addEventListener('load', function() {
     
     <!-- PDF button on right -->
     <button id="downloadPDF" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); padding: 8px 16px; background: linear-gradient(135deg, #7434ac 0%, #e4a324 100%); color: white; border: none; border-radius: 20px; font-weight: 600; cursor: pointer; font-size: 0.85rem;">
-      Download Beauty Blueprint Overview
-    </button>
+  Save as PDF
+</button>
   </div>
 </nav>
    </div>
@@ -1945,51 +1945,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 document.getElementById('downloadPDF').addEventListener('click', function() {
-  console.log('PDF generation started...'); // Debug line
-  
-  // Show loading state
-  this.innerHTML = 'Generating PDF...';
-  const button = this;
-  
-  // Hide elements that might cause issues
-  const elementsToHide = document.querySelectorAll('video, iframe, .button-bg');
-  elementsToHide.forEach(el => el.style.display = 'none');
-  
-  // PDF options
-  const opt = {
-    margin: 0.5,
-    filename: 'Beauty-Brand-Blueprint-Overview.pdf',
-    image: { type: 'jpeg', quality: 0.9 },
-    html2canvas: { 
-      scale: 1, // Reduced scale
-      useCORS: true,
-      logging: true, // Enable logging
-      allowTaint: true
-    },
-    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
-  
-  // Generate PDF
-  html2pdf()
-    .set(opt)
-    .from(document.body)
-    .save()
-    .then(() => {
-      console.log('PDF generated successfully');
-      button.innerHTML = 'Download Beauty Blueprint Overview';
-      // Show hidden elements again
-      elementsToHide.forEach(el => el.style.display = '');
-    })
-    .catch((error) => {
-      console.error('PDF generation failed:', error);
-      alert('PDF generation failed. Please try again.');
-      button.innerHTML = 'Download Case Study';
-      // Show hidden elements again
-      elementsToHide.forEach(el => el.style.display = '');
-    });
+  window.print();
 });
 </script>
 </body>
