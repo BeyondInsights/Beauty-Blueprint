@@ -1945,9 +1945,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-document.getElementById('downloadPDF').addEventListener('click', function() {
-  window.print();
+// Wait for the page to fully load
+window.addEventListener('DOMContentLoaded', function() {
+  const downloadBtn = document.getElementById('downloadPDF');
+  
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', function() {
+      console.log('PDF generation started...');
+      
+      // Show loading state
+      this.innerHTML = 'Generating PDF...';
+      const button = this;
+      
+      // PDF options
+      const opt = {
+        margin: 0.5,
+        filename: 'Beauty-Brand-Blueprint-Overview.pdf',
+        image: { type: 'jpeg', quality: 0.9 },
+        html2canvas: { 
+          scale: 1,
+          useCORS: true,
+          logging: false
+        },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      
+      // Generate PDF
+      html2pdf()
+        .set(opt)
+        .from(document.body)
+        .save()
+        .then(() => {
+          console.log('PDF generated successfully');
+          button.innerHTML = 'Save as PDF';
+        })
+        .catch((error) => {
+          console.error('PDF generation failed:', error);
+          button.innerHTML = 'Save as PDF';
+          // Fallback to print
+          window.print();
+        });
+    });
+  } else {
+    console.error('Download button not found');
+  }
 });
 </script>
 </body>
