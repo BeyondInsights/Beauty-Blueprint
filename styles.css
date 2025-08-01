@@ -27,7 +27,15 @@
 #beyond-insights-casestudy {
   transition: height 0.3s ease;
 }
+/* Remove excessive gap */
+#beyond-insights-casestudy {
+    min-height: auto !important;
+    padding-bottom: 40px !important;
+}
 
+.screen.decision {
+    margin-top: 40px !important; /* reduced from whatever it was */
+}
 /* ─────────  LANEIGE CASE STUDY  ───────── */
 .case-study{background:linear-gradient(to bottom,var(--white)0%,#f8f5ff 100%);
   padding:120px 20px;position:relative;overflow:hidden}
@@ -934,12 +942,12 @@ h2 {
     transform: rotate(-5deg);
 }
 
+/* For the gap comparison grid */
 .gap-comparison {
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+    align-items: stretch; /* Ensure both columns have same height */
 }
 
 .gap-column {
@@ -949,12 +957,18 @@ h2 {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
 }
 
+/* Ensure OLD PLAYBOOK column matches the Blueprint column */
 .old-playbook {
-    background: #f5f5f5;
-    border: 3px solid #e0e0e0;
-    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    justify-content: flex-start; /* Align content to top */
 }
 
+.old-playbook h3 {
+    text-align: center;
+    margin-bottom: 40px; /* Match the Blueprint's spacing */
+}
 .new-blueprint {
     background: linear-gradient(135deg, rgba(116, 52, 172, 0.08) 0%, rgba(228, 163, 36, 0.08) 100%);
     border: 3px solid var(--royal-purple);
@@ -967,6 +981,10 @@ h2 {
     margin-bottom: 40px;
     text-align: center;
     font-weight: 600;
+    height: 60px; /* Fixed height for both titles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .strike-through {
@@ -1114,8 +1132,8 @@ h2 {
 
 .section-subtitle {
     text-align: center;
-    font-size: 1.4rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.8rem !important;
+    color: #e4a324 !important; /* gold color */
     margin-bottom: 60px;
 }
 
@@ -5395,4 +5413,69 @@ body * {
 section#beyond-insights-casestudy {
     min-height: auto !important;
     height: auto !important;
+}
+/* Blueprint module improvements */
+.module p {
+    text-align: left !important;
+    line-height: 1.6 !important;
+}
+
+.module-result {
+    text-align: left !important;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.result-label {
+    color: #e4a324 !important;
+    font-weight: 700 !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+}
+
+/* Align "You get" boxes */
+.module-result {
+    min-height: 120px; /* ensures consistent height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer brand centering */
+footer .container {
+    text-align: center;
+}
+
+footer div[style*="flex"] {
+    margin: 0 auto !important;
+}
+
+/* Add back flex to make auto margin work */
+.module {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push "You get" sections to bottom and ensure consistent height */
+.module-result {
+  margin-top: auto;
+  padding-top: 1rem; /* Reduced from 2rem */
+  min-height: 180px; /* Increased to ensure alignment */
+}
+
+/* Remove the extra margin that's doubling up */
+/* DELETE this part:
+.module-result > div {
+  margin-top: 2rem;
+}
+/* Quick fix for alignment */
+.module {
+  display: flex;
+  flex-direction: column;
+}
+
+.module-result {
+  margin-top: auto;
+  min-height: 180px;
 }
