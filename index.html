@@ -1912,30 +1912,6 @@ if (caseStudyIframe) {
 }
 </script>
 <script>
-// Add this right before your closing </body> tag
-fetch('prestige-beauty-case-study.html')
-  .then(response => response.text())
-  .then(html => {
-    const caseStudyContent = document.getElementById('case-study-content');
-    if (caseStudyContent) {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      
-      // Get the styles from the head
-      const styles = doc.head.innerHTML;
-      
-      // Get the body content
-      const content = doc.body.innerHTML;
-      
-      // Inject both styles and content
-      caseStudyContent.innerHTML = styles + content;
-    }
-  })
-  .catch(error => {
-    console.error('Failed to load case study:', error);
-  });
-</script>
-<script>
 document.addEventListener('DOMContentLoaded', function() {
     // Find the case study section
     const caseStudySection = document.querySelector('#beyond-insights-casestudy');
@@ -1952,8 +1928,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
  </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
- <script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
 // Wait for the page to fully load
 window.addEventListener('DOMContentLoaded', function() {
   const downloadBtn = document.getElementById('downloadPDF');
