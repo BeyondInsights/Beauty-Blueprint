@@ -1916,17 +1916,23 @@ if (caseStudyIframe) {
 fetch('prestige-beauty-case-study.html')
   .then(response => response.text())
   .then(html => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    
-    // Get the styles from the head
-    const styles = doc.head.innerHTML;
-    
-    // Get the body content
-    const content = doc.body.innerHTML;
-    
-    // Inject both styles and content
-    document.getElementById('case-study-content').innerHTML = styles + content;
+    const caseStudyContent = document.getElementById('case-study-content');
+    if (caseStudyContent) {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      
+      // Get the styles from the head
+      const styles = doc.head.innerHTML;
+      
+      // Get the body content
+      const content = doc.body.innerHTML;
+      
+      // Inject both styles and content
+      caseStudyContent.innerHTML = styles + content;
+    }
+  })
+  .catch(error => {
+    console.error('Failed to load case study:', error);
   });
 </script>
 <script>
