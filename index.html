@@ -29,6 +29,49 @@
   body { zoom: 0.8; }
 }
 </style>
+<style>
+@media print {
+  /* Force landscape orientation */
+  @page {
+    size: landscape;
+    margin: 0.5in;
+  }
+  
+  /* Hide navigation and buttons */
+  .nav, #downloadPDF, .book-briefing, .button-bg, 
+  #prevPage, #nextPage { display: none !important; }
+  
+  /* Ensure content fits on pages */
+  .screen { 
+    page-break-after: always;
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
+  /* Fix backgrounds for print */
+  * { 
+    -webkit-print-color-adjust: exact !important; 
+    print-color-adjust: exact !important; 
+  }
+  
+  /* Scale down for better fit - adjusted for landscape */
+  body { 
+    zoom: 0.7;
+    width: 100%;
+  }
+  
+  /* Prevent breaking inside elements */
+  .module, .phase-box, .impact-metric {
+    page-break-inside: avoid;
+  }
+  
+  /* Remove shadows for cleaner print */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
+</style>
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1948,6 +1991,7 @@ window.addEventListener('DOMContentLoaded', function() {
   
   if (downloadBtn) {
     downloadBtn.addEventListener('click', function() {
+      alert('In the print dialog:\n1. Choose "Save as PDF"\n2. Click "More settings"\n3. Uncheck "Headers and footers"\n4. Set "Layout" to Landscape\n5. Set "Scale" to 70-80%');
       window.print();
     });
   }
