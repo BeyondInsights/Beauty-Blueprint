@@ -14,7 +14,21 @@
   }
 
 </style>
-
+<style>
+@media print {
+  /* Hide navigation and buttons */
+  .nav, #downloadPDF, .book-briefing, .button-bg { display: none !important; }
+  
+  /* Ensure content fits on pages */
+  .screen { page-break-after: always; }
+  
+  /* Fix backgrounds for print */
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  
+  /* Scale down for better fit */
+  body { zoom: 0.8; }
+}
+</style>
  <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1928,51 +1942,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
  </script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-// Wait for the page to fully load
+ <script>
 window.addEventListener('DOMContentLoaded', function() {
   const downloadBtn = document.getElementById('downloadPDF');
   
   if (downloadBtn) {
     downloadBtn.addEventListener('click', function() {
-      console.log('PDF generation started...');
-      
-      // Show loading state
-      this.innerHTML = 'Generating PDF...';
-      const button = this;
-      
-      // PDF options
-      const opt = {
-        margin: 0.5,
-        filename: 'Beauty-Brand-Blueprint-Overview.pdf',
-        image: { type: 'jpeg', quality: 0.9 },
-        html2canvas: { 
-          scale: 1,
-          useCORS: true,
-          logging: false
-        },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      };
-      
-      // Generate PDF
-      html2pdf()
-        .set(opt)
-        .from(document.body)
-        .save()
-        .then(() => {
-          console.log('PDF generated successfully');
-          button.innerHTML = 'Save as PDF';
-        })
-        .catch((error) => {
-          console.error('PDF generation failed:', error);
-          button.innerHTML = 'Save as PDF';
-          // Fallback to print
-          window.print();
-        });
+      window.print();
     });
-  } else {
-    console.error('Download button not found');
   }
 });
 </script>
