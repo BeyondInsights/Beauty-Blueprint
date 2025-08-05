@@ -34,8 +34,7 @@
 }
 
 .screen.decision {
-    margin-top: 40px !important; /* reduced from whatever it was */
-}
+    margin-top: 40px !important; /* reduced from whatever it was */}
 /* ─────────  LANEIGE CASE STUDY  ───────── */
 .case-study{background:linear-gradient(to bottom,var(--white)0%,#f8f5ff 100%);
   padding:120px 20px;position:relative;overflow:hidden}
@@ -5478,4 +5477,25 @@ footer div[style*="flex"] {
 .module-result {
   margin-top: auto;
   min-height: 180px;
+}
+/* Prevent the Blueprint text from wrapping */
+.hero-sub strong {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Optional: If the whole subtitle is wrapping awkwardly */
+.hero-sub {
+    font-size: 1.3rem !important;
+    line-height: 1.9 !important;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-sub strong {
+        display: block; /* Put Blueprint™ on its own line on mobile */
+        margin-top: 0.5rem;
+    }
 }
