@@ -5526,3 +5526,26 @@ a[class*="cta"]:contains("Unlock"),
     margin-top: 3rem !important;
     display: inline-block !important;
 }
+
+/* Push the button down */
+.hero-cta {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Or if it has a different class name, try this */
+.cta-button,
+a[href="#blueprint"] {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* If you need even more space above the button */
+.hero-sub {
+    margin-bottom: 2.5rem !important;
+}
+/* Add space after the Blueprint text paragraph */
+.hero-sub {
+    padding-bottom: 2rem !important;
+    margin-bottom: 2rem !important;
+}
