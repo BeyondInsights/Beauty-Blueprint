@@ -5499,3 +5499,12 @@ footer div[style*="flex"] {
         margin-top: 0.5rem;
     }
 }
+
+
+/* Force no wrapping with higher specificity */
+.hero .hero-sub strong,
+.hero-content .hero-sub strong,
+section.hero .hero-sub strong {
+    white-space: nowrap !important;
+    display: inline-block !important;
+}
