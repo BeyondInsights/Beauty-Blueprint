@@ -5508,3 +5508,15 @@ section.hero .hero-sub strong {
     white-space: nowrap !important;
     display: inline-block !important;
 }
+/* Make the hero content wider to accommodate the text */
+.hero-content {
+    max-width: 1200px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+
+.hero-sub {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    font-size: 1.2rem !important; /* Slightly smaller font */
+}
