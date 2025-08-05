@@ -5520,3 +5520,9 @@ section.hero .hero-sub strong {
     margin: 0 auto !important;
     font-size: 1.2rem !important; /* Slightly smaller font */
 }
+/* Target button by its text content */
+a[class*="cta"]:contains("Unlock"),
+.hero a[href*="blueprint"] {
+    margin-top: 3rem !important;
+    display: inline-block !important;
+}
