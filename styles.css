@@ -5549,3 +5549,25 @@ a[href="#blueprint"] {
     padding-bottom: 2rem !important;
     margin-bottom: 2rem !important;
 }
+/* Make leadership grid show all 4 people in one row */
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* On tablets, switch to 2x2 */
+@media (max-width: 1200px) {
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* On mobile, single column */
+@media (max-width: 600px) {
+    .leadership-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
