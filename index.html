@@ -1631,6 +1631,896 @@ window.addEventListener('load', function() {
  </div>
 </section>
 
+<!-- ░░░ BLUEPRINT METHODOLOGY DEEP-DIVES (modules 2-6) ░░░ -->
+
+<!-- Module 02: Brand Momentum -->
+<section class="screen bm-section" id="brand-momentum">
+  <style>
+    .bm-section .bm-wrap { width: 100%; }
+    .bm-section{background:var(--dark-bg);color:var(--white)}
+    .bm-section .bm-eyebrow {
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--fire-bush);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .bm-section .bm-title {
+      text-align: center;
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 0.5rem;
+      color: var(--white);
+    }
+    .bm-section .bm-subtitle {
+      text-align: center;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,.8);
+      margin: 0 auto 2.25rem;
+      max-width: 900px;
+    }
+    .bm-section .bm-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2.25rem;
+    }
+    .bm-section .bm-intro-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+    }
+    .bm-section .bm-intro-label {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--fire-bush);
+      margin-bottom: 0.6rem;
+    }
+    .bm-section .bm-intro-card p {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,.85);
+    }
+    .bm-section .bm-matrix {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: stretch;
+    }
+    .bm-section .bm-yaxis {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      align-items: center;
+      justify-items: center;
+      width: 2.6rem;
+    }
+    .bm-section .bm-yaxis-title {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--fire-bush);
+      grid-row: 1 / 4;
+      align-self: center;
+    }
+    .bm-section .bm-axis-end {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,.55);
+    }
+    .bm-section .bm-grid-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .bm-section .bm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .bm-section .bm-cell {
+      border-radius: 16px;
+      padding: 1.6rem 1.4rem;
+      min-height: 175px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .bm-section .bm-cell-name {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.55rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,.35);
+    }
+    .bm-section .bm-cell-desc {
+      font-size: 0.92rem;
+      line-height: 1.45;
+      color: rgba(255,255,255,.92);
+      margin: 0;
+      max-width: 340px;
+      align-self: center;
+    }
+    .bm-section .bm-igniters   { background: linear-gradient(150deg, var(--wisteria), var(--royal-purple)); }
+    .bm-section .bm-fireicons  { background: linear-gradient(150deg, var(--rose), var(--purple)); }
+    .bm-section .bm-slowburners{ background: linear-gradient(150deg, var(--royal-purple), #4a1f73); }
+    .bm-section .bm-steadyflames{ background: linear-gradient(150deg, var(--fire-bush), #c47e12); }
+    .bm-section .bm-steadyflames .bm-cell-name,
+    .bm-section .bm-steadyflames .bm-cell-desc { color: #1a0f2e; text-shadow: none; }
+    .bm-section .bm-xaxis {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.2rem 0.4rem 0;
+    }
+    .bm-section .bm-xaxis-title {
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--fire-bush);
+      flex: 1;
+      text-align: center;
+    }
+    .bm-section .bm-xaxis .bm-axis-end {
+      writing-mode: horizontal-tb;
+      transform: none;
+    }
+    @media (max-width: 980px) {
+      .bm-section .bm-title { font-size: 2.1rem; }
+      .bm-section .bm-subtitle { font-size: 1.1rem; }
+      .bm-section .bm-intro { grid-template-columns: 1fr; }
+      .bm-section .bm-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+      .bm-section .bm-cell { min-height: 0; }
+      .bm-section .bm-yaxis { display: none; }
+      .bm-section .bm-matrix { grid-template-columns: 1fr; }
+    }
+  </style>
+  <div class="container fade-in">
+    <div class="bm-wrap">
+      <div class="bm-eyebrow">Module 02 &middot; Brand Momentum</div>
+      <h2 class="bm-title">Brand Momentum <span style="color:var(--fire-bush)">Framework</span></h2>
+      <p class="bm-subtitle">Classifying Brands for Strategic Action</p>
+      <div class="bm-intro">
+        <div class="bm-intro-card">
+          <span class="bm-intro-label">What It Is</span>
+          <p>Classifies brands into four distinct quadrants &mdash; based on emotional passion and marketplace brand engagement.</p>
+        </div>
+        <div class="bm-intro-card">
+          <span class="bm-intro-label">Why It Matters</span>
+          <p>Strategic benchmarking illuminates where brands stand relative to competitors, spotlighting hidden opportunities, and enabling smarter strategic decisions.</p>
+        </div>
+      </div>
+      <div class="bm-matrix">
+        <div class="bm-yaxis">
+          <span class="bm-axis-end">Strong</span>
+          <span class="bm-yaxis-title">Brand Passion</span>
+          <span class="bm-axis-end">Weak</span>
+        </div>
+        <div class="bm-grid-col">
+          <div class="bm-grid">
+            <div class="bm-cell bm-igniters">
+              <div class="bm-cell-name">Igniters</div>
+              <p class="bm-cell-desc">Emerging or niche brands rapidly gaining passionate followers, poised for mainstream breakout.</p>
+            </div>
+            <div class="bm-cell bm-fireicons">
+              <div class="bm-cell-name">Fire Icons</div>
+              <p class="bm-cell-desc">Brands that burn brightly, dominate the marketplace conversation, and command strong loyalty.</p>
+            </div>
+            <div class="bm-cell bm-slowburners">
+              <div class="bm-cell-name">Slow Burners</div>
+              <p class="bm-cell-desc">Underperforming or niche brands lacking strong emotional connections or visibility.</p>
+            </div>
+            <div class="bm-cell bm-steadyflames">
+              <div class="bm-cell-name">Steady Flames</div>
+              <p class="bm-cell-desc">Brands consistently recognized and purchased, yet need strategies to deepen emotional bonds and elevate consumer passion.</p>
+            </div>
+          </div>
+          <div class="bm-xaxis">
+            <span class="bm-axis-end">Weak</span>
+            <span class="bm-xaxis-title">Brand Engagement</span>
+            <span class="bm-axis-end">Strong</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 03: Perceptual Landscape -->
+<section class="screen pl-section" id="perceptual-landscape">
+  <style>
+    .pl-section{background:var(--dark-bg);color:var(--white);display:flex;align-items:center;justify-content:center;padding:3rem 2rem;}
+    .pl-section .container{max-width:1400px;margin:0 auto;width:100%;}
+    .pl-head{text-align:center;margin-bottom:1.5rem;}
+    .pl-eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--fire-bush);font-size:.95rem;font-weight:700;margin-bottom:.6rem;}
+    .pl-title{font-size:3rem;font-weight:800;line-height:1.1;margin:0 0 .5rem;}
+    .pl-sub{font-size:1.3rem;color:rgba(255,255,255,.8);font-weight:500;margin:0 auto;max-width:820px;}
+    .pl-explain{font-size:.98rem;color:rgba(255,255,255,.6);max-width:780px;margin:.8rem auto 0;line-height:1.5;}
+    .pl-legend{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin:1.4rem 0 .5rem;}
+    .pl-leg{display:flex;align-items:center;gap:.55rem;font-size:.95rem;font-weight:600;color:rgba(255,255,255,.85);}
+    .pl-dot{width:14px;height:14px;border-radius:50%;flex:none;box-shadow:0 0 10px currentColor;}
+    .pl-dot.s{background:var(--rose);color:var(--rose);}
+    .pl-dot.g{background:#2fc4c4;color:#2fc4c4;}
+    .pl-stage{position:relative;width:100%;max-width:1080px;height:640px;margin:0 auto;}
+    .pl-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;}
+    .pl-spoke{stroke:rgba(255,255,255,.16);stroke-width:1;}
+    .pl-spoke-strong{stroke:var(--rose);stroke-width:2;filter:drop-shadow(0 0 4px rgba(235,4,115,.5));}
+    .pl-spoke-sig{stroke:#2fc4c4;stroke-width:2;filter:drop-shadow(0 0 4px rgba(47,196,196,.5));}
+    .pl-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:140px;height:140px;border-radius:50%;
+      background:radial-gradient(circle at 35% 30%,var(--wisteria),var(--royal-purple) 55%,var(--purple));
+      display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+      box-shadow:0 0 0 6px rgba(228,163,36,.25),0 0 35px rgba(116,52,172,.8);z-index:3;}
+    .pl-hub span{font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;color:rgba(255,255,255,.7);}
+    .pl-hub strong{font-size:1.15rem;font-weight:800;line-height:1.1;margin-top:.15rem;}
+    .pl-chip{position:absolute;transform:translate(-50%,-50%);max-width:140px;padding:.42rem .65rem;border-radius:12px;
+      font-size:.74rem;font-weight:600;line-height:1.2;text-align:center;
+      background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.78);
+      backdrop-filter:blur(3px);z-index:2;}
+    .pl-chip.pl-strong{background:rgba(235,4,115,.16);border-color:var(--rose);color:#fff;
+      box-shadow:0 0 16px rgba(235,4,115,.45);font-weight:700;}
+    .pl-chip.pl-sig{background:rgba(47,196,196,.14);border-color:#2fc4c4;color:#fff;
+      box-shadow:0 0 16px rgba(47,196,196,.4);font-weight:700;}
+    @media(max-width:980px){
+      .pl-title{font-size:2.1rem;}
+      .pl-sub{font-size:1.1rem;}
+      .pl-stage{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem;height:auto;}
+      .pl-svg{display:none;}
+      .pl-hub{position:static;transform:none;order:-1;flex:0 0 100%;margin:0 auto .4rem;}
+      .pl-chip{position:static!important;transform:none!important;max-width:none;}
+    }
+  </style>
+  <div class="container fade-in">
+    <div class="pl-head">
+      <div class="pl-eyebrow">Module 03 &middot; Perceptual Landscape</div>
+      <h2 class="pl-title">Brand Perceptual Landscape: <span style="color:var(--fire-bush)">Identifying Distinctive Attributes</span></h2>
+      <p class="pl-sub">Mapping which attributes truly set the brand apart</p>
+      <p class="pl-explain">This view separates genuine differentiators from category table stakes, isolating the white-space attributes a brand can credibly own.</p>
+      <div class="pl-legend">
+        <div class="pl-leg"><span class="pl-dot s"></span>Strongest differentiator</div>
+        <div class="pl-leg"><span class="pl-dot g"></span>Significant differentiator</div>
+      </div>
+    </div>
+    <div class="pl-stage">
+      <svg class="pl-svg" preserveAspectRatio="none" aria-hidden="true">
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="50%"   y2="7%"/>
+        <line class="pl-spoke-sig"    x1="50%" y1="50%" x2="63%"   y2="9.1%"/>
+        <line class="pl-spoke-sig"    x1="50%" y1="50%" x2="74.7%" y2="15.2%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="84%"   y2="24.7%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="89.9%" y2="36.7%"/>
+        <line class="pl-spoke-sig"    x1="50%" y1="50%" x2="92%"   y2="50%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="89.9%" y2="63.3%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="84%"   y2="75.3%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="74.7%" y2="84.8%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="63%"   y2="90.9%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="50%"   y2="93%"/>
+        <line class="pl-spoke-strong" x1="50%" y1="50%" x2="37%"   y2="90.9%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="25.3%" y2="84.8%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="16%"   y2="75.3%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="10.1%" y2="63.3%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="8%"    y2="50%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="10.1%" y2="36.7%"/>
+        <line class="pl-spoke"        x1="50%" y1="50%" x2="16%"   y2="24.7%"/>
+        <line class="pl-spoke-strong" x1="50%" y1="50%" x2="25.3%" y2="15.2%"/>
+        <line class="pl-spoke-strong" x1="50%" y1="50%" x2="37%"   y2="9.1%"/>
+      </svg>
+      <div class="pl-hub"><span>Your</span><strong>Brand</strong></div>
+      <div class="pl-chip"          style="left:50%;top:7%">Glamorous / Sexy</div>
+      <div class="pl-chip pl-sig"   style="left:63%;top:9.1%">Luxury / Sophisticated</div>
+      <div class="pl-chip pl-sig"   style="left:74.7%;top:15.2%">Professional / Experienced</div>
+      <div class="pl-chip"          style="left:84%;top:24.7%">Trustworthy / Reliable</div>
+      <div class="pl-chip"          style="left:89.9%;top:36.7%">Scientific / Intelligent</div>
+      <div class="pl-chip pl-sig"   style="left:92%;top:50%">Environmental Steward</div>
+      <div class="pl-chip"          style="left:89.9%;top:63.3%">Innovative / Creative</div>
+      <div class="pl-chip"          style="left:84%;top:75.3%">Empowerment / Strength</div>
+      <div class="pl-chip"          style="left:74.7%;top:84.8%">Understand my Needs</div>
+      <div class="pl-chip"          style="left:63%;top:90.9%">In touch with today's culture and beauty trends</div>
+      <div class="pl-chip"          style="left:50%;top:93%">Is a brand I hear people talking about</div>
+      <div class="pl-chip pl-strong" style="left:37%;top:90.9%">Frequently catches my attention</div>
+      <div class="pl-chip"          style="left:25.3%;top:84.8%">Would Seriously Consider for Skincare</div>
+      <div class="pl-chip"          style="left:16%;top:75.3%">Would Seriously Consider for Makeup</div>
+      <div class="pl-chip"          style="left:10.1%;top:63.3%">A Leading Beauty Authority</div>
+      <div class="pl-chip"          style="left:8%;top:50%">I aspire to use more in the future</div>
+      <div class="pl-chip"          style="left:10.1%;top:36.7%">Would greatly miss if no longer available</div>
+      <div class="pl-chip"          style="left:16%;top:24.7%">I feel proud to use</div>
+      <div class="pl-chip pl-strong" style="left:25.3%;top:15.2%">Edgy / Bold</div>
+      <div class="pl-chip pl-strong" style="left:37%;top:9.1%">Youthful / Playful</div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 04: Brand Edge -->
+<section class="screen be-section" id="brand-edge">
+  <style>
+    .be-section{
+      background:var(--dark-bg);
+      color:var(--white);
+      padding:3.5rem 2rem;
+      box-sizing:border-box;
+    }
+    .be-section .container{
+      max-width:1400px;
+      margin:0 auto;
+    }
+    .be-section *{box-sizing:border-box;}
+    .be-header{text-align:center;margin-bottom:2.4rem;}
+    .be-eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      color:var(--fire-bush);
+      font-size:.95rem;
+      font-weight:700;
+      margin:0 0 .9rem;
+    }
+    .be-title{
+      font-size:3rem;
+      font-weight:800;
+      line-height:1.1;
+      margin:0 0 .7rem;
+    }
+    .be-subtitle{
+      font-size:1.2rem;
+      font-weight:400;
+      color:rgba(255,255,255,.8);
+      margin:0;
+    }
+    .be-intro{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.6rem;
+      margin-bottom:2.4rem;
+    }
+    .be-panel{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:16px;
+      padding:1.6rem 1.8rem;
+    }
+    .be-panel-label{
+      display:inline-block;
+      font-size:.85rem;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--fire-bush);
+      margin-bottom:.7rem;
+    }
+    .be-panel p{
+      margin:0;
+      font-size:1.02rem;
+      line-height:1.6;
+      color:rgba(255,255,255,.9);
+    }
+    .be-panel p strong{color:var(--white);font-weight:700;}
+    .be-kpi{
+      margin-top:1.3rem;
+      padding-top:1.2rem;
+      border-top:1px solid rgba(255,255,255,.1);
+    }
+    .be-kpi-title{
+      font-size:.72rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.55);
+      margin:0 0 .85rem;
+    }
+    .be-bar-row{
+      display:grid;
+      grid-template-columns:88px 1fr;
+      align-items:center;
+      gap:.7rem;
+      margin-bottom:.55rem;
+    }
+    .be-bar-label{
+      font-size:.72rem;
+      color:rgba(255,255,255,.7);
+      text-align:right;
+      white-space:nowrap;
+    }
+    .be-bar-track{
+      position:relative;
+      height:10px;
+      background:rgba(255,255,255,.08);
+      border-radius:6px;
+      overflow:hidden;
+    }
+    .be-bar-fill{
+      position:absolute;
+      top:0;left:0;
+      height:100%;
+      border-radius:6px;
+    }
+    .be-bar-marker{
+      position:absolute;
+      top:-3px;
+      width:2px;
+      height:16px;
+      background:rgba(255,255,255,.65);
+      border-radius:2px;
+    }
+    .be-up{background:linear-gradient(90deg,var(--fire-bush),#f6c95a);}
+    .be-down{background:linear-gradient(90deg,var(--rose),var(--red-ribbon));}
+    .be-kpi-legend{
+      display:flex;
+      gap:1.3rem;
+      margin-top:.9rem;
+      font-size:.68rem;
+      color:rgba(255,255,255,.6);
+      flex-wrap:wrap;
+    }
+    .be-kpi-legend span{display:inline-flex;align-items:center;gap:.4rem;}
+    .be-dot{width:10px;height:10px;border-radius:3px;display:inline-block;}
+    .be-dot-up{background:var(--fire-bush);}
+    .be-dot-down{background:var(--rose);}
+    .be-dot-mark{width:2px;height:12px;background:rgba(255,255,255,.65);border-radius:2px;}
+    .be-columns{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.6rem;
+    }
+    .be-col{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:16px;
+      padding:1.7rem 1.9rem;
+    }
+    .be-col-head{
+      font-size:1.35rem;
+      font-weight:800;
+      color:var(--fire-bush);
+      margin:0 0 1.3rem;
+    }
+    .be-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+    .be-list li{
+      position:relative;
+      padding-left:1.6rem;
+      margin-bottom:1.25rem;
+    }
+    .be-list li:last-child{margin-bottom:0;}
+    .be-list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.5em;
+      width:9px;height:9px;
+      border-radius:50%;
+      background:var(--fire-bush);
+      transform:translateY(-50%);
+    }
+    .be-lead{
+      display:block;
+      font-weight:700;
+      color:var(--white);
+      font-size:1.05rem;
+      margin-bottom:.25rem;
+    }
+    .be-desc{
+      display:block;
+      font-size:.95rem;
+      line-height:1.55;
+      color:rgba(255,255,255,.82);
+    }
+    .be-list.be-outcomes li{font-size:1rem;line-height:1.55;color:rgba(255,255,255,.9);}
+    .be-list.be-outcomes li strong{color:var(--white);font-weight:700;}
+    @media(max-width:980px){
+      .be-section{padding:2.4rem 1.2rem;}
+      .be-title{font-size:2.1rem;}
+      .be-subtitle{font-size:1.05rem;}
+      .be-intro,.be-columns{grid-template-columns:1fr;}
+    }
+  </style>
+  <div class="container fade-in">
+    <header class="be-header">
+      <p class="be-eyebrow">Module 04 &middot; Brand Edge</p>
+      <h2 class="be-title">Brand Edge Assessment</h2>
+      <p class="be-subtitle">Future-Proofing Brands Through <span style="color:var(--fire-bush)">Strategic Clarity</span></p>
+    </header>
+    <div class="be-intro">
+      <div class="be-panel">
+        <span class="be-panel-label">What It Is</span>
+        <p>A sophisticated approach to <strong>measuring brand strength that identifies gaps in key performance indicators</strong>, highlighting where a brand is outperforming or underperforming relative to its perceived market position.</p>
+        <div class="be-kpi" aria-hidden="true">
+          <p class="be-kpi-title">KPI Gaps vs. Perceived Position</p>
+          <div class="be-bar-row">
+            <span class="be-bar-label">Awareness</span>
+            <div class="be-bar-track">
+              <div class="be-bar-fill be-up" style="width:82%"></div>
+              <div class="be-bar-marker" style="left:60%"></div>
+            </div>
+          </div>
+          <div class="be-bar-row">
+            <span class="be-bar-label">Trust</span>
+            <div class="be-bar-track">
+              <div class="be-bar-fill be-up" style="width:71%"></div>
+              <div class="be-bar-marker" style="left:58%"></div>
+            </div>
+          </div>
+          <div class="be-bar-row">
+            <span class="be-bar-label">Loyalty</span>
+            <div class="be-bar-track">
+              <div class="be-bar-fill be-down" style="width:38%"></div>
+              <div class="be-bar-marker" style="left:62%"></div>
+            </div>
+          </div>
+          <div class="be-bar-row">
+            <span class="be-bar-label">Innovation</span>
+            <div class="be-bar-track">
+              <div class="be-bar-fill be-down" style="width:44%"></div>
+              <div class="be-bar-marker" style="left:65%"></div>
+            </div>
+          </div>
+          <div class="be-kpi-legend">
+            <span><i class="be-dot be-dot-up"></i> Outperforming</span>
+            <span><i class="be-dot be-dot-down"></i> Underperforming</span>
+            <span><i class="be-dot be-dot-mark"></i> Perceived position</span>
+          </div>
+        </div>
+      </div>
+      <div class="be-panel">
+        <span class="be-panel-label">Why It Matters</span>
+        <p>Isolates genuine <strong>brand strengths from artificial advantages</strong> like media spend or distribution reach &mdash; revealing true competitive positioning, hidden opportunities, and actionable insights for growth.</p>
+      </div>
+    </div>
+    <div class="be-columns">
+      <div class="be-col">
+        <h3 class="be-col-head">Strategic Insight Areas</h3>
+        <ul class="be-list">
+          <li>
+            <span class="be-lead">Authentic vs. Inherited Strength</span>
+            <span class="be-desc">Brand perceptions and consumer behaviors versus competitors.</span>
+          </li>
+          <li>
+            <span class="be-lead">Category-Specific Patterns</span>
+            <span class="be-desc">Where and why a brand surpasses or trails competitors, beyond conventional market share metrics.</span>
+          </li>
+          <li>
+            <span class="be-lead">Price Tier &amp; Life Cycle Context</span>
+            <span class="be-desc">Evaluate consumer expectations aligned with your brand's pricing strategy and maturity stage: perceived quality, efficacy, and innovation compared to peers.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="be-col">
+        <h3 class="be-col-head">Actionable Outcomes</h3>
+        <ul class="be-list be-outcomes">
+          <li><strong>Strategically reallocate resources</strong> for maximum impact.</li>
+          <li><strong>Sharpen competitive positioning</strong> through targeted differentiation.</li>
+          <li><strong>Identify clear pathways</strong> for sustained category leadership and growth.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 05: Infidelity Index -->
+<style>
+.ii-section{background:var(--dark-bg);color:var(--white);padding:3rem 2.5rem;display:flex;align-items:center;}
+.ii-section .container{width:100%;max-width:1400px;margin:0 auto;}
+.ii-header{text-align:center;margin-bottom:1.8rem;}
+.ii-eyebrow{text-transform:uppercase;letter-spacing:.18em;color:var(--fire-bush);font-size:.95rem;font-weight:700;margin-bottom:.6rem;}
+.ii-title{font-size:3rem;font-weight:800;line-height:1.1;margin:0 0 .35rem;}
+.ii-subtitle{font-size:1.15rem;font-weight:500;color:rgba(255,255,255,.72);margin:0;}
+.ii-intro{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem;}
+.ii-blurb{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.1rem 1.3rem;border-left:3px solid var(--fire-bush);}
+.ii-blurb h3{margin:0 0 .4rem;font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--fire-bush);}
+.ii-blurb p{margin:0;font-size:.98rem;line-height:1.5;color:rgba(255,255,255,.85);}
+.ii-flow{display:grid;grid-template-columns:auto auto auto;gap:0 1rem;align-items:stretch;justify-content:center;}
+.ii-group{display:flex;flex-direction:column;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;}
+.ii-ghead{padding:.7rem .9rem;text-align:center;font-weight:800;font-size:.92rem;letter-spacing:.04em;text-transform:uppercase;color:var(--white);}
+.ii-ghead small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.1em;opacity:.85;margin-top:.15rem;}
+.ii-g1 .ii-ghead{background:var(--royal-purple);}
+.ii-g2 .ii-ghead{background:var(--red-ribbon);}
+.ii-g3 .ii-ghead{background:var(--purple);}
+.ii-cards{display:grid;gap:.65rem;padding:.8rem;}
+.ii-g2 .ii-cards,.ii-g3 .ii-cards{grid-template-columns:repeat(3,minmax(150px,1fr));}
+.ii-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:.7rem .8rem;}
+.ii-card .ii-name{display:block;font-weight:800;font-size:.86rem;letter-spacing:.03em;color:var(--fire-bush);margin-bottom:.3rem;}
+.ii-card p{margin:0;font-size:.78rem;line-height:1.4;color:rgba(255,255,255,.8);}
+.ii-arrow{align-self:center;color:var(--fire-bush);font-size:1.6rem;font-weight:800;line-height:1;}
+.ii-track{margin-top:1.1rem;}
+.ii-divorced{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;}
+.ii-divorced .ii-ghead{background:var(--rose);}
+.ii-divorced .ii-cards{grid-template-columns:repeat(3,1fr);}
+.ii-trackline{display:flex;align-items:center;gap:.6rem;justify-content:center;margin-bottom:.7rem;color:rgba(255,255,255,.55);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.ii-trackline span{color:var(--rose);font-weight:800;}
+@media(max-width:980px){
+ .ii-title{font-size:2.1rem;}
+ .ii-intro{grid-template-columns:1fr;}
+ .ii-flow{grid-template-columns:1fr;}
+ .ii-arrow{transform:rotate(90deg);justify-self:center;padding:.2rem 0;}
+ .ii-g2 .ii-cards,.ii-g3 .ii-cards,.ii-divorced .ii-cards{grid-template-columns:1fr;}
+}
+</style>
+<section class="screen ii-section" id="infidelity-index">
+  <div class="container fade-in">
+    <div class="ii-header">
+      <div class="ii-eyebrow">Module 05 &middot; Infidelity Index</div>
+      <h2 class="ii-title">Infidelity Index &amp; Relationship Pathways</h2>
+      <p class="ii-subtitle"><span style="color:var(--fire-bush)">Stages of Consumer Engagement</span></p>
+    </div>
+    <div class="ii-intro">
+      <div class="ii-blurb">
+        <h3>What It Is</h3>
+        <p>Provides strategic clarity on consumer relationships across distinct stages, empowering tailored, precise marketing actions.</p>
+      </div>
+      <div class="ii-blurb">
+        <h3>Why It Matters</h3>
+        <p>Reveals clear strategic pathways &mdash; each stage demands unique marketing interventions to drive acquisition, deepen loyalty, or re-ignite engagement.</p>
+      </div>
+    </div>
+    <div class="ii-flow">
+      <div class="ii-group ii-g1">
+        <div class="ii-ghead">Unaware<small>START</small></div>
+        <div class="ii-cards">
+          <div class="ii-card">
+            <span class="ii-name">Unaware</span>
+            <p>No current brand exposure or knowledge &mdash; opportunity to build awareness and intrigue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ii-arrow" aria-hidden="true">&rarr;</div>
+      <div class="ii-group ii-g2">
+        <div class="ii-ghead">Aware, But Never Purchased</div>
+        <div class="ii-cards">
+          <div class="ii-card">
+            <span class="ii-name">Resistant</span>
+            <p>Actively uninterested; requires strategic repositioning or innovative messaging.</p>
+          </div>
+          <div class="ii-card">
+            <span class="ii-name">Detached</span>
+            <p>Indifferent; opportunity to clarify brand value and differentiation.</p>
+          </div>
+          <div class="ii-card">
+            <span class="ii-name">Curious</span>
+            <p>Open-minded; strategic focus on inspiring trial through targeted engagement.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ii-arrow" aria-hidden="true">&rarr;</div>
+      <div class="ii-group ii-g3">
+        <div class="ii-ghead">Active Customers</div>
+        <div class="ii-cards">
+          <div class="ii-card">
+            <span class="ii-name">Promiscuous</span>
+            <p>Frequently switch brands; targeted offers and tailored strategies critical.</p>
+          </div>
+          <div class="ii-card">
+            <span class="ii-name">Explorer</span>
+            <p>Open to experimentation; deepen relevance through tailored innovations.</p>
+          </div>
+          <div class="ii-card">
+            <span class="ii-name">Brand Faithful</span>
+            <p>Highly loyal; leverage advocacy and maintain deep emotional bonds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ii-track">
+      <div class="ii-trackline"><span>&#8635; Re-Engagement Track</span> &middot; Divorced</div>
+      <div class="ii-divorced">
+        <div class="ii-ghead">Divorced</div>
+        <div class="ii-cards">
+          <div class="ii-card">
+            <span class="ii-name">Not Open to Reconciliation</span>
+            <p>Actively uninterested; requires strategic repositioning or innovative messaging.</p>
+          </div>
+          <div class="ii-card">
+            <span class="ii-name">Open to Reconciliation</span>
+            <p>Opportunities exist to strategically rebuild relevance.</p>
+          </div>
+          <div class="ii-card">
+            <span class="ii-name">Seek Reconciliation</span>
+            <p>Open-minded; strategic focus on inspiring trial through targeted engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module 06: Loyalty Multiverse -->
+<section class="screen lm-section" id="loyalty-multiverse">
+  <style>
+    .lm-section {
+      background: var(--dark-bg);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+    .lm-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(60% 55% at 18% 22%, rgba(116,52,172,.45), transparent 60%),
+        radial-gradient(55% 50% at 82% 28%, rgba(152,6,157,.40), transparent 62%),
+        radial-gradient(70% 60% at 50% 100%, rgba(235,4,115,.28), transparent 60%),
+        radial-gradient(40% 40% at 75% 80%, rgba(148,84,176,.30), transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .lm-section .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .lm-header {
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+    .lm-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      color: var(--fire-bush);
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: .7rem;
+    }
+    .lm-title {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 .55rem;
+    }
+    .lm-subtitle {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: rgba(255,255,255,.82);
+      margin: 0;
+    }
+    .lm-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+      margin: 1.6rem 0;
+    }
+    .lm-intro-panel {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px;
+      padding: 1.25rem 1.4rem;
+      font-size: 1.02rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,.9);
+    }
+    .lm-intro-label {
+      display: block;
+      color: var(--fire-bush);
+      font-weight: 800;
+      letter-spacing: .04em;
+      margin-bottom: .35rem;
+    }
+    .lm-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .lm-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .lm-card-head {
+      background: linear-gradient(135deg, var(--royal-purple), var(--rose));
+      padding: .85rem 1.2rem;
+      font-weight: 800;
+      font-size: 1.12rem;
+      color: var(--white);
+      text-align: center;
+      border-bottom: 2px solid var(--fire-bush);
+    }
+    .lm-card:nth-child(2) .lm-card-head {
+      background: linear-gradient(135deg, var(--purple), var(--red-ribbon));
+    }
+    .lm-card:nth-child(3) .lm-card-head {
+      background: linear-gradient(135deg, var(--wisteria), var(--royal-purple));
+    }
+    .lm-card-body {
+      padding: 1.15rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: .85rem;
+    }
+    .lm-card-body p {
+      margin: 0;
+      font-size: .98rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,.88);
+    }
+    .lm-card-body strong {
+      color: var(--fire-bush);
+    }
+    .lm-banner {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-left: 4px solid var(--fire-bush);
+      border-radius: 14px;
+      padding: 1.25rem 1.6rem;
+      font-size: 1.08rem;
+      line-height: 1.55;
+      font-style: italic;
+      text-align: center;
+      color: rgba(255,255,255,.92);
+    }
+    @media (max-width: 980px) {
+      .lm-title { font-size: 2.1rem; }
+      .lm-intro { grid-template-columns: 1fr; }
+      .lm-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+  <div class="container fade-in">
+    <div class="lm-header">
+      <div class="lm-eyebrow">Module 06 &middot; Loyalty Multiverse</div>
+      <h2 class="lm-title">Navigating the <span style="color:var(--fire-bush)">Loyalty Multiverse</span></h2>
+      <p class="lm-subtitle">Pathways to Stronger Brand Engagement</p>
+    </div>
+    <div class="lm-intro">
+      <div class="lm-intro-panel">
+        <span class="lm-intro-label">What It Is</span>
+        Loyalty is no longer linear &mdash; it's a dynamic, interconnected web of opportunities and challenges that can be quantified.
+      </div>
+      <div class="lm-intro-panel">
+        <span class="lm-intro-label">Why It Matters</span>
+        Decode this complexity by mapping and prioritizing the relationships between emotional and functional brand attributes and consumer actions, revealing cause-and-effect pathways to deeper engagement.
+      </div>
+    </div>
+    <div class="lm-cards">
+      <div class="lm-card">
+        <div class="lm-card-head">Quantifiable Impact</div>
+        <div class="lm-card-body">
+          <p>Pinpoint how changes in <strong>perceptions</strong> and drivers (emotional and functional) impact loyalty.</p>
+          <p>Delivers precise, actionable guidance, showing you exactly which attributes move the needle.</p>
+        </div>
+      </div>
+      <div class="lm-card">
+        <div class="lm-card-head">Tailored to Your Brand and Audiences</div>
+        <div class="lm-card-body">
+          <p>Every brand and consumer segment has unique drivers of engagement.</p>
+          <p>Identifies <strong>customized pathways</strong>, clarifying how different targets (lapsed users, loyalists, or promiscuous) respond differently to brand attribute improvements.</p>
+        </div>
+      </div>
+      <div class="lm-card">
+        <div class="lm-card-head">Prioritize for Maximum ROI</div>
+        <div class="lm-card-body">
+          <p>Clearly prioritizes which attribute improvements will yield the most significant loyalty gains.</p>
+          <p>By clarifying cause-and-effect relationships, brands can allocate resources and amplify marketing effectiveness.</p>
+        </div>
+      </div>
+    </div>
+    <div class="lm-banner">
+      Just as navigating a multiverse requires precision and strategy, our approach equips your brand with the insights needed to confidently enhance consumer relationships, deepen emotional connections, and secure long-term competitive advantage.
+    </div>
+  </div>
+</section>
+
 <!-- CASE STUDY CONTENT -->
 <section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 20px 20px 0 20px !important; min-height: auto !important; margin-bottom: 0 !important;">
  <div style="height: 1px; opacity: 0;"></div>
