@@ -1766,6 +1766,251 @@ window.addEventListener('load', function() {
 </div>
 </section>
 
+<!-- Module 02 Example: Brand Momentum Mapping -->
+<section class="screen bmm-section" id="brand-momentum-map">
+<style>
+.bmm-section{
+  --bmm-igniters:#9454b0;
+  --bmm-icons:#98069d;
+  --bmm-slow:#f10b25;
+  --bmm-steady:#e4a324;
+  box-sizing:border-box;
+  background:var(--dark-bg,#1a0f2e);
+  color:var(--white,#fff);
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:32px 40px;
+  font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+  overflow:hidden;
+}
+.bmm-section *{box-sizing:border-box;}
+.bmm-section .container{
+  width:100%;
+  max-width:1280px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.bmm-header{margin-bottom:18px;}
+.bmm-eyebrow{
+  color:var(--fire-bush,#e4a324);
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin:0 0 6px;
+}
+.bmm-title{
+  font-size:2.1rem;
+  font-weight:800;
+  margin:0 0 4px;
+  line-height:1.1;
+}
+.bmm-title span{color:var(--fire-bush,#e4a324);}
+.bmm-subtitle{
+  margin:0;
+  font-size:1rem;
+  color:rgba(255,255,255,0.72);
+  font-style:italic;
+}
+.bmm-plot-wrap{
+  flex:1;
+  display:grid;
+  grid-template-columns:34px 1fr;
+  grid-template-rows:1fr 34px;
+  gap:8px;
+  min-height:560px;
+}
+.bmm-yaxis{
+  grid-column:1;grid-row:1;
+  display:flex;align-items:center;justify-content:center;
+}
+.bmm-yaxis-inner{
+  transform:rotate(-180deg);
+  writing-mode:vertical-rl;
+  display:flex;align-items:center;justify-content:space-between;
+  height:100%;
+  font-weight:700;
+}
+.bmm-yaxis-label{
+  color:var(--fire-bush,#e4a324);
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  font-size:0.92rem;
+}
+.bmm-axis-end{
+  font-size:0.66rem;
+  color:rgba(255,255,255,0.55);
+  letter-spacing:0.08em;
+}
+.bmm-xaxis{
+  grid-column:2;grid-row:2;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.bmm-xaxis-ends{
+  width:100%;
+  display:flex;justify-content:space-between;
+  font-size:0.66rem;
+  color:rgba(255,255,255,0.55);
+  letter-spacing:0.08em;
+  margin-bottom:2px;
+}
+.bmm-xaxis-label{
+  color:var(--fire-bush,#e4a324);
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  font-size:0.92rem;
+}
+.bmm-grid{
+  grid-column:2;grid-row:1;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:10px;
+  overflow:hidden;
+  min-height:0;
+}
+.bmm-quad{
+  position:relative;
+  overflow:hidden;
+}
+.bmm-quad:nth-child(1){border-right:1px dashed rgba(255,255,255,0.22);border-bottom:1px dashed rgba(255,255,255,0.22);}
+.bmm-quad:nth-child(2){border-bottom:1px dashed rgba(255,255,255,0.22);}
+.bmm-quad:nth-child(3){border-right:1px dashed rgba(255,255,255,0.22);}
+.bmm-q-tl{background:rgba(148,84,176,0.20);}
+.bmm-q-tr{background:rgba(152,6,157,0.22);}
+.bmm-q-bl{background:rgba(241,11,37,0.16);}
+.bmm-q-br{background:rgba(228,163,36,0.16);}
+.bmm-q-head{
+  position:absolute;
+  top:10px;
+  font-size:0.82rem;
+  font-weight:800;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--white,#fff);
+  z-index:3;
+}
+.bmm-q-tl .bmm-q-head,.bmm-q-bl .bmm-q-head{left:12px;}
+.bmm-q-tr .bmm-q-head,.bmm-q-br .bmm-q-head{right:12px;text-align:right;}
+.bmm-q-tl .bmm-q-head{color:#d8b8ec;}
+.bmm-q-tr .bmm-q-head{color:#f0a6f3;}
+.bmm-q-bl .bmm-q-head{color:#ff9aa3;}
+.bmm-q-br .bmm-q-head{color:var(--fire-bush,#e4a324);}
+.bmm-q-cap{
+  position:absolute;
+  bottom:10px;
+  max-width:160px;
+  font-size:0.66rem;
+  line-height:1.3;
+  color:rgba(255,255,255,0.7);
+  z-index:1;
+}
+.bmm-q-tl .bmm-q-cap,.bmm-q-bl .bmm-q-cap{left:12px;}
+.bmm-q-tr .bmm-q-cap,.bmm-q-br .bmm-q-cap{right:12px;text-align:right;}
+.bmm-bubble{
+  position:absolute;
+  z-index:2;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:0.72rem;
+  font-weight:700;
+  white-space:nowrap;
+  box-shadow:0 3px 10px rgba(0,0,0,0.35);
+  transition:transform 0.15s ease;
+}
+.bmm-bubble:hover{transform:scale(1.07);z-index:5;}
+.bmm-b-purple{background:var(--wisteria,#9454b0);color:#fff;}
+.bmm-b-magenta{background:var(--purple,#98069d);color:#fff;}
+.bmm-b-rose{background:var(--rose,#eb0473);color:#fff;}
+.bmm-b-red{background:var(--red-ribbon,#f10b25);color:#fff;}
+.bmm-b-gold{background:var(--fire-bush,#e4a324);color:#2a1b06;}
+.bmm-b-light{background:#fff;color:#2a1640;}
+.bmm-footnote{
+  margin-top:12px;
+  font-size:0.72rem;
+  color:rgba(255,255,255,0.5);
+  font-style:italic;
+  text-align:right;
+}
+@media(max-width:980px){
+  .bmm-section{padding:20px 16px;min-height:auto;}
+  .bmm-title{font-size:1.5rem;}
+  .bmm-subtitle{font-size:0.88rem;}
+  .bmm-plot-wrap{grid-template-columns:26px 1fr;grid-template-rows:1fr 30px;}
+  .bmm-grid{min-height:560px;}
+  .bmm-yaxis-label,.bmm-xaxis-label{font-size:0.72rem;}
+  .bmm-q-head{font-size:0.68rem;}
+  .bmm-q-cap{font-size:0.58rem;max-width:120px;}
+  .bmm-bubble{font-size:0.6rem;padding:4px 8px;}
+}
+</style>
+<div class="container fade-in">
+  <header class="bmm-header">
+    <p class="bmm-eyebrow">Module 02 Example - Brand Momentum Mapping</p>
+    <h2 class="bmm-title">Brand Momentum <span>Mapping</span></h2>
+    <p class="bmm-subtitle">Where leading prestige brands land (illustrative)</p>
+  </header>
+  <div class="bmm-plot-wrap">
+    <div class="bmm-yaxis">
+      <div class="bmm-yaxis-inner">
+        <span class="bmm-axis-end">WEAK</span>
+        <span class="bmm-yaxis-label">Brand Passion</span>
+        <span class="bmm-axis-end">STRONG</span>
+      </div>
+    </div>
+    <div class="bmm-grid">
+      <div class="bmm-quad bmm-q-tl">
+        <div class="bmm-q-head">Igniters</div>
+        <div class="bmm-q-cap">Strong emotional pull and potential but not yet mainstream</div>
+        <span class="bmm-bubble bmm-b-purple" style="top:30%;left:14%;">Charlotte Tilbury</span>
+        <span class="bmm-bubble bmm-b-light" style="top:18%;left:52%;">Rare Beauty</span>
+        <span class="bmm-bubble bmm-b-purple" style="top:54%;left:30%;">Laneige</span>
+        <span class="bmm-bubble bmm-b-light" style="top:72%;left:18%;">Tarte</span>
+        <span class="bmm-bubble bmm-b-purple" style="top:46%;left:60%;">La Mer</span>
+      </div>
+      <div class="bmm-quad bmm-q-tr">
+        <div class="bmm-q-head">Blazing / Fire Icons</div>
+        <div class="bmm-q-cap">Dominate both the cultural conversation and consumer adoption</div>
+        <span class="bmm-bubble bmm-b-rose" style="top:42%;left:10%;">Fenty Beauty</span>
+        <span class="bmm-bubble bmm-b-magenta" style="top:20%;left:64%;">MAC</span>
+        <span class="bmm-bubble bmm-b-magenta" style="top:34%;left:46%;">Dior</span>
+        <span class="bmm-bubble bmm-b-light" style="top:58%;left:30%;">NARS</span>
+        <span class="bmm-bubble bmm-b-light" style="top:62%;left:58%;">The Ordinary</span>
+      </div>
+      <div class="bmm-quad bmm-q-bl">
+        <div class="bmm-q-head">Slow Burners</div>
+        <div class="bmm-q-cap">Face low awareness or weaker brand imagery, yet may have unique niches to build upon</div>
+        <span class="bmm-bubble bmm-b-light" style="top:26%;left:42%;">Fresh</span>
+        <span class="bmm-bubble bmm-b-red" style="top:50%;left:18%;">Summer Fridays</span>
+        <span class="bmm-bubble bmm-b-red" style="top:66%;left:46%;">Supergoop</span>
+      </div>
+      <div class="bmm-quad bmm-q-br">
+        <div class="bmm-q-head">Steady Flames</div>
+        <div class="bmm-q-cap">Chosen for reliability but spark less excitement</div>
+        <span class="bmm-bubble bmm-b-light" style="top:30%;left:20%;">Clinique</span>
+        <span class="bmm-bubble bmm-b-gold" style="top:52%;left:48%;">e.l.f</span>
+        <span class="bmm-bubble bmm-b-gold" style="top:70%;left:18%;">Laura Mercier</span>
+      </div>
+    </div>
+    <div class="bmm-xaxis">
+      <div class="bmm-xaxis-ends">
+        <span>WEAK</span>
+        <span>STRONG</span>
+      </div>
+      <span class="bmm-xaxis-label">Brand Engagement: Usage &amp; Consideration</span>
+    </div>
+  </div>
+  <p class="bmm-footnote">Illustrative positioning for discussion.</p>
+</div>
+</section>
+
 <!-- Module 03: Perceptual Landscape -->
 <section class="screen pl-section" id="perceptual-landscape">
 <style>
@@ -1963,6 +2208,194 @@ window.addEventListener('load', function() {
   </div>
 </section>
 
+<!-- Module 04 Example: Brand Edge Assessment -->
+<section class="screen bee-section" id="brand-edge-example">
+<style>
+.bee-section{
+  --maj-str:#1b6ec2; --str:#5fb0ee; --weak:#f48fb1; --maj-weak:#f10b25;
+  background:var(--dark-bg); color:var(--white);
+  font-family:"Segoe UI",Helvetica,Arial,sans-serif;
+  padding:48px 40px; box-sizing:border-box; min-height:100vh;
+}
+.bee-section *{box-sizing:border-box;}
+.bee-section .container{max-width:1280px; margin:0 auto;}
+.bee-section .bee-eyebrow{
+  color:var(--fire-bush); font-size:.78rem; font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase; margin:0 0 10px;
+}
+.bee-section .bee-title{
+  font-size:2.3rem; font-weight:800; margin:0 0 8px; line-height:1.1;
+}
+.bee-section .bee-title span{color:var(--fire-bush);}
+.bee-section .bee-sub{
+  margin:0 0 26px; font-size:1rem; color:rgba(255,255,255,.72); max-width:760px;
+}
+.bee-section .bee-legend{
+  display:flex; flex-wrap:wrap; gap:18px 26px; margin:0 0 28px;
+  padding:14px 18px; background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1); border-radius:10px;
+}
+.bee-section .bee-legend .bee-li{
+  display:flex; align-items:center; gap:9px; font-size:.82rem;
+  color:rgba(255,255,255,.85); font-weight:600;
+}
+.bee-section .bee-legend .bee-sw{width:26px; height:11px; border-radius:3px; flex:none;}
+.bee-section .bee-sw.maj-str{background:var(--maj-str);}
+.bee-section .bee-sw.str{background:var(--str);}
+.bee-section .bee-sw.weak{background:var(--weak);}
+.bee-section .bee-sw.maj-weak{background:var(--maj-weak);}
+.bee-section .bee-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+}
+.bee-section .bee-col{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:12px; padding:16px 14px; display:flex; flex-direction:column;
+}
+.bee-section .bee-col-head{
+  text-align:center; padding-bottom:12px; margin-bottom:12px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.bee-section .bee-tag{
+  display:inline-block; font-size:.62rem; font-weight:800;
+  letter-spacing:.13em; text-transform:uppercase;
+  padding:3px 9px; border-radius:20px; margin-bottom:10px;
+  color:#fff;
+}
+.bee-section .bee-tag.t1{background:var(--royal-purple);}
+.bee-section .bee-tag.t2{background:var(--rose);}
+.bee-section .bee-tag.t3{background:var(--purple);}
+.bee-section .bee-tag.t4{background:#6d6f7a;}
+.bee-section .bee-brand{
+  font-size:1.25rem; font-weight:800; line-height:1.05; letter-spacing:.02em;
+}
+.bee-section .bee-brand.b-clinique{font-family:Georgia,"Times New Roman",serif; letter-spacing:.04em;}
+.bee-section .bee-brand.b-ordinary{font-weight:700;}
+.bee-section .bee-brand.b-ordinary em{font-style:italic; font-weight:800;}
+.bee-section .bee-brand.b-laneige{font-weight:300; letter-spacing:.32em; font-size:1.15rem;}
+.bee-section .bee-brand.b-summer{font-weight:700; letter-spacing:.22em; font-size:.95rem; color:rgba(255,255,255,.8);}
+.bee-section .bee-row{margin-bottom:9px;}
+.bee-section .bee-lbl{
+  font-size:.72rem; color:rgba(255,255,255,.82); margin-bottom:3px; line-height:1.15;
+}
+.bee-section .bee-track{
+  height:9px; border-radius:5px; background:rgba(255,255,255,.07); overflow:hidden;
+}
+.bee-section .bee-bar{height:100%; border-radius:5px;}
+.bee-section .bee-bar.maj-str{background:var(--maj-str);}
+.bee-section .bee-bar.str{background:var(--str);}
+.bee-section .bee-bar.weak{background:var(--weak);}
+.bee-section .bee-bar.maj-weak{background:var(--maj-weak);}
+.bee-section .bee-spacer{flex:1; min-height:8px;}
+.bee-section .bee-divider{
+  border-top:1px dashed rgba(255,255,255,.16); margin:6px 0 10px;
+}
+.bee-section .bee-foot{
+  margin-top:24px; font-size:.74rem; color:rgba(255,255,255,.5);
+  border-top:1px solid rgba(255,255,255,.1); padding-top:14px;
+}
+@media(max-width:980px){
+  .bee-section{padding:32px 18px;}
+  .bee-section .bee-title{font-size:1.7rem;}
+  .bee-section .bee-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:560px){
+  .bee-section .bee-grid{grid-template-columns:1fr;}
+}
+</style>
+<div class="container fade-in">
+  <p class="bee-eyebrow">Module 04 Example - Brand Edge Assessment</p>
+  <h2 class="bee-title">Brand <span>Edge Assessment</span></h2>
+  <p class="bee-sub">Authentic strengths vs. vulnerabilities, four brands compared (illustrative).</p>
+  <div class="bee-legend">
+    <span class="bee-li"><span class="bee-sw maj-str"></span>Major Strength</span>
+    <span class="bee-li"><span class="bee-sw str"></span>Strength</span>
+    <span class="bee-li"><span class="bee-sw weak"></span>Weakness</span>
+    <span class="bee-li"><span class="bee-sw maj-weak"></span>Major Weakness</span>
+  </div>
+  <div class="bee-grid">
+    <div class="bee-col">
+      <div class="bee-col-head">
+        <span class="bee-tag t1">Steady Flame</span>
+        <div class="bee-brand b-clinique">CLINIQUE</div>
+      </div>
+      <div class="bee-row"><div class="bee-lbl">Trustworthy/Reliable</div><div class="bee-track"><div class="bee-bar maj-str" style="width:98%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Ever Purchased</div><div class="bee-track"><div class="bee-bar maj-str" style="width:94%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Professional/Experienced</div><div class="bee-track"><div class="bee-bar maj-str" style="width:88%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Recent Purchaser of Skincare</div><div class="bee-track"><div class="bee-bar maj-str" style="width:80%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Recent Purchaser</div><div class="bee-track"><div class="bee-bar maj-str" style="width:72%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Luxury/Sophisticated</div><div class="bee-track"><div class="bee-bar maj-str" style="width:55%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">A Brand I Trust</div><div class="bee-track"><div class="bee-bar maj-str" style="width:42%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Leading Beauty Authority</div><div class="bee-track"><div class="bee-bar str" style="width:34%"></div></div></div>
+      <div class="bee-divider"></div>
+      <div class="bee-row"><div class="bee-lbl">Would Greatly Miss</div><div class="bee-track"><div class="bee-bar weak" style="width:36%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Don't Usually Think About</div><div class="bee-track"><div class="bee-bar weak" style="width:44%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Innovative/Creative</div><div class="bee-track"><div class="bee-bar maj-weak" style="width:70%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Seriously Consider for Makeup</div><div class="bee-track"><div class="bee-bar maj-weak" style="width:82%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Seriously Consider for Skincare</div><div class="bee-track"><div class="bee-bar maj-weak" style="width:90%"></div></div></div>
+    </div>
+    <div class="bee-col">
+      <div class="bee-col-head">
+        <span class="bee-tag t2">Fire Icon</span>
+        <div class="bee-brand b-ordinary">The <em>Ordinary.</em></div>
+      </div>
+      <div class="bee-row"><div class="bee-lbl">Recent Purchaser of Skincare</div><div class="bee-track"><div class="bee-bar str" style="width:88%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Familiar With</div><div class="bee-track"><div class="bee-bar str" style="width:80%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Environmental Steward</div><div class="bee-track"><div class="bee-bar str" style="width:72%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Scientific/Intelligent</div><div class="bee-track"><div class="bee-bar str" style="width:64%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Brand I Think About*</div><div class="bee-track"><div class="bee-bar str" style="width:56%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Ever Purchased</div><div class="bee-track"><div class="bee-bar str" style="width:50%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Trustworthy/Reliable</div><div class="bee-track"><div class="bee-bar str" style="width:44%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Understands My Needs</div><div class="bee-track"><div class="bee-bar str" style="width:38%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Frequently Catches Attention</div><div class="bee-track"><div class="bee-bar str" style="width:30%"></div></div></div>
+      <div class="bee-divider"></div>
+      <div class="bee-row"><div class="bee-lbl">Would Greatly Miss</div><div class="bee-track"><div class="bee-bar weak" style="width:34%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Leading Beauty Authority</div><div class="bee-track"><div class="bee-bar weak" style="width:44%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Glamorous/Sexy</div><div class="bee-track"><div class="bee-bar weak" style="width:54%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Luxury/Sophisticated</div><div class="bee-track"><div class="bee-bar maj-weak" style="width:78%"></div></div></div>
+    </div>
+    <div class="bee-col">
+      <div class="bee-col-head">
+        <span class="bee-tag t3">Igniter</span>
+        <div class="bee-brand b-laneige">LANEIGE</div>
+      </div>
+      <div class="bee-row"><div class="bee-lbl">Seriously Consider for Skincare</div><div class="bee-track"><div class="bee-bar str" style="width:86%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Familiar With</div><div class="bee-track"><div class="bee-bar str" style="width:76%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Approachable/Caring</div><div class="bee-track"><div class="bee-bar str" style="width:68%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Brand I Think About*</div><div class="bee-track"><div class="bee-bar str" style="width:60%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">In Touch With Today's Trends</div><div class="bee-track"><div class="bee-bar str" style="width:52%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Recommend to Others</div><div class="bee-track"><div class="bee-bar str" style="width:44%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Frequently Catches My Attention</div><div class="bee-track"><div class="bee-bar str" style="width:36%"></div></div></div>
+      <div class="bee-spacer"></div>
+      <div class="bee-divider"></div>
+      <div class="bee-row"><div class="bee-lbl">Leading Beauty Authority</div><div class="bee-track"><div class="bee-bar weak" style="width:40%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Empowering/Strong</div><div class="bee-track"><div class="bee-bar maj-weak" style="width:66%"></div></div></div>
+    </div>
+    <div class="bee-col">
+      <div class="bee-col-head">
+        <span class="bee-tag t4">Slow Burner</span>
+        <div class="bee-brand b-summer">SUMMER FRIDAYS</div>
+      </div>
+      <div class="bee-row"><div class="bee-lbl">Seriously Consider for Skincare</div><div class="bee-track"><div class="bee-bar str" style="width:84%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Innovative/Creative</div><div class="bee-track"><div class="bee-bar str" style="width:76%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Fresh/Youthful</div><div class="bee-track"><div class="bee-bar str" style="width:68%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Environmental Steward</div><div class="bee-track"><div class="bee-bar str" style="width:60%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Familiar With</div><div class="bee-track"><div class="bee-bar str" style="width:52%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Aspire to Use More Often</div><div class="bee-track"><div class="bee-bar str" style="width:44%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Brand People Are Talking About</div><div class="bee-track"><div class="bee-bar str" style="width:38%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Frequently Catches My Attention</div><div class="bee-track"><div class="bee-bar str" style="width:32%"></div></div></div>
+      <div class="bee-divider"></div>
+      <div class="bee-row"><div class="bee-lbl">Leading Beauty Authority</div><div class="bee-track"><div class="bee-bar weak" style="width:34%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">A Brand I Trust</div><div class="bee-track"><div class="bee-bar weak" style="width:42%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Luxury/Sophisticated</div><div class="bee-track"><div class="bee-bar weak" style="width:50%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Professional/Experienced</div><div class="bee-track"><div class="bee-bar weak" style="width:58%"></div></div></div>
+      <div class="bee-row"><div class="bee-lbl">Trustworthy/Reliable</div><div class="bee-track"><div class="bee-bar weak" style="width:64%"></div></div></div>
+    </div>
+  </div>
+  <p class="bee-foot">*Statement: "Brand I usually don't think about." The Ordinary and Laneige score the inverse. Illustrative example.</p>
+</div>
+</section>
+
 <!-- Module 05: Infidelity Index -->
 <section class="screen ii-section" id="infidelity-index">
   <style>
@@ -2076,6 +2509,238 @@ window.addEventListener('load', function() {
       </div>
     </div>
   </div>
+</section>
+
+<!-- Module 05 Example: Clinique Relationship Pathways -->
+<section class="screen iic-section" id="infidelity-clinique">
+<style>
+.iic-section{box-sizing:border-box;background:var(--dark-bg);color:var(--white);min-height:100vh;width:100%;padding:32px 36px;font-family:'Segoe UI',Arial,Helvetica,sans-serif;overflow:hidden}
+.iic-section *,.iic-section *::before,.iic-section *::after{box-sizing:border-box}
+.iic-section .container{max-width:1280px;margin:0 auto}
+.iic-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:22px}
+.iic-eyebrow{color:var(--fire-bush);font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin:0 0 6px}
+.iic-title{font-size:34px;font-weight:800;margin:0;line-height:1.1}
+.iic-title span{color:var(--fire-bush)}
+.iic-badge{flex:0 0 auto;border:2px solid var(--white);background:#000;color:var(--white);font-weight:800;letter-spacing:.34em;font-size:20px;padding:14px 20px 14px 26px;border-radius:4px}
+.iic-timeline{position:relative;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;column-gap:26px;row-gap:14px;align-items:end}
+.iic-group-header{font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:9px 14px;border-radius:6px;margin-bottom:12px}
+.iic-gh-red{background:var(--red-ribbon)}
+.iic-gh-purple{background:var(--purple)}
+.iic-gh-pink{background:#b00863}
+.iic-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.iic-card{border-radius:8px;padding:12px 13px;position:relative;min-height:118px}
+.iic-card h4{margin:0 0 6px;font-size:13.5px;font-weight:800;letter-spacing:.03em;text-transform:uppercase}
+.iic-card p{margin:0;font-size:11.5px;line-height:1.4;opacity:.95}
+.iic-red{background:var(--red-ribbon)}
+.iic-purple{background:var(--purple)}
+.iic-pink{background:#b00863}
+.iic-black{background:#0c0712;border:1px solid rgba(255,255,255,.18)}
+.iic-highlight{outline:3px solid var(--fire-bush);outline-offset:2px;box-shadow:0 0 0 6px rgba(228,163,36,.18)}
+.iic-pct{display:block;font-size:30px;font-weight:900;color:var(--fire-bush);line-height:1;margin:6px 0 4px}
+.iic-track{grid-column:1 / -1;position:relative;height:18px;margin:6px 0 4px}
+.iic-track .iic-line{position:absolute;top:50%;left:0;right:26px;height:5px;transform:translateY(-50%);background:linear-gradient(90deg,var(--rose),var(--red-ribbon),var(--purple))}
+.iic-track .iic-arrow{position:absolute;top:50%;right:0;transform:translateY(-50%);width:0;height:0;border-top:11px solid transparent;border-bottom:11px solid transparent;border-left:20px solid var(--purple)}
+.iic-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:13px;height:13px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 3px rgba(235,4,115,.35)}
+.iic-bottom{grid-column:1 / -1;display:grid;grid-template-columns:1fr 3fr;gap:26px;align-items:start}
+.iic-unaware{align-self:start}
+.iic-divorced .iic-gh-pink{margin-top:12px;margin-bottom:0}
+@media(max-width:980px){
+  .iic-header{flex-direction:column;align-items:flex-start}
+  .iic-timeline{display:block}
+  .iic-cards{grid-template-columns:1fr;margin-bottom:10px}
+  .iic-track{display:none}
+  .iic-bottom{display:block}
+  .iic-unaware{margin-bottom:18px}
+  .iic-group-header{margin-top:14px}
+}
+</style>
+<div class="container fade-in">
+  <div class="iic-header">
+    <div>
+      <p class="iic-eyebrow">Module 05 Example - Clinique</p>
+      <h2 class="iic-title">Clinique: <span>Relationship Pathways</span></h2>
+    </div>
+    <div class="iic-badge">CLINIQUE</div>
+  </div>
+  <div class="iic-timeline">
+    <div>
+      <div class="iic-group-header iic-gh-red">Aware, But Never Purchased</div>
+      <div class="iic-cards">
+        <div class="iic-card iic-red">
+          <h4>Resistant</h4>
+          <p>Actively uninterested; requires strategic repositioning or innovative messaging.</p>
+        </div>
+        <div class="iic-card iic-red">
+          <h4>Detached</h4>
+          <p>Indifferent; opportunity to clarify brand value and differentiation.</p>
+        </div>
+        <div class="iic-card iic-red iic-highlight">
+          <h4>Curious</h4>
+          <span class="iic-pct">45%</span>
+          <p>Open-minded.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="iic-group-header iic-gh-purple">Active Customers</div>
+      <div class="iic-cards">
+        <div class="iic-card iic-purple">
+          <h4>Promiscuous</h4>
+          <p>Frequently switch brands; targeted offers and tailored strategies critical.</p>
+        </div>
+        <div class="iic-card iic-purple iic-highlight">
+          <h4>Explorer</h4>
+          <span class="iic-pct">30%</span>
+          <p>Open to experimentation.</p>
+        </div>
+        <div class="iic-card iic-purple">
+          <h4>Brand Faithful</h4>
+          <p>Highly loyal; leverage advocacy and maintain deep emotional bonds.</p>
+        </div>
+      </div>
+    </div>
+    <div class="iic-track">
+      <div class="iic-line"></div>
+      <span class="iic-dot" style="left:8%"></span>
+      <span class="iic-dot" style="left:30%"></span>
+      <span class="iic-dot" style="left:52%"></span>
+      <span class="iic-dot" style="left:74%"></span>
+      <div class="iic-arrow"></div>
+    </div>
+    <div class="iic-bottom">
+      <div class="iic-unaware">
+        <div class="iic-card iic-black">
+          <h4>Unaware</h4>
+          <p>No current brand exposure or knowledge, an opportunity to build awareness and intrigue.</p>
+        </div>
+      </div>
+      <div class="iic-divorced">
+        <div class="iic-cards">
+          <div class="iic-card iic-pink">
+            <h4>Not Open to Reconciliation</h4>
+            <p>Actively uninterested; requires strategic repositioning or innovative messaging.</p>
+          </div>
+          <div class="iic-card iic-pink">
+            <h4>Open to Reconciliation</h4>
+            <p>Opportunities exist to strategically rebuild relevance.</p>
+          </div>
+          <div class="iic-card iic-pink">
+            <h4>Seek Reconciliation</h4>
+            <p>Open-minded; strategic focus on inspiring trial through targeted engagement.</p>
+          </div>
+        </div>
+        <div class="iic-group-header iic-gh-pink">Divorced</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Module 05 Example: Stage Composition by Brand -->
+<section class="screen iit-section" id="infidelity-table">
+<style>
+.iit-section{background:var(--dark-bg,#1a0f2e);color:var(--white,#fff);padding:48px 40px;box-sizing:border-box;font-family:"Segoe UI",Helvetica,Arial,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.iit-section .container{max-width:1180px;width:100%;margin:0 auto}
+.iit-section .iit-eyebrow{color:var(--fire-bush,#e4a324);font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin:0 0 10px}
+.iit-section .iit-title{font-size:2.3rem;font-weight:800;line-height:1.1;margin:0 0 14px;color:var(--white,#fff)}
+.iit-section .iit-title span{color:var(--fire-bush,#e4a324)}
+.iit-section .iit-subtitle{font-size:.98rem;line-height:1.5;color:rgba(255,255,255,.72);max-width:880px;margin:0 0 28px}
+.iit-section .iit-tablewrap{width:100%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.10)}
+.iit-section table.iit-table{width:100%;border-collapse:collapse;font-size:.93rem}
+.iit-section table.iit-table th,.iit-section table.iit-table td{padding:11px 18px;text-align:left;vertical-align:middle}
+.iit-section table.iit-table thead th{background:rgba(255,255,255,.06);color:var(--white,#fff);font-weight:700;font-size:.9rem;border-bottom:1px solid rgba(255,255,255,.14)}
+.iit-section table.iit-table thead th.iit-num{text-align:right}
+.iit-section table.iit-table thead th.iit-stagehead{font-weight:700;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.iit-section td.iit-num,.iit-section th.iit-num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.iit-section tr.iit-group td{font-weight:800;color:var(--white,#fff);letter-spacing:.04em;text-transform:uppercase;font-size:.92rem}
+.iit-section tr.iit-g-unaware td{background:#0d0817}
+.iit-section tr.iit-g-active td{background:var(--royal-purple,#7434ac)}
+.iit-section tr.iit-g-familiar td{background:var(--red-ribbon,#f10b25)}
+.iit-section tr.iit-g-divorced td{background:#b00863}
+.iit-section tr.iit-sub td{background:rgba(255,255,255,.04);color:rgba(255,255,255,.88)}
+.iit-section tr.iit-sub:nth-of-type(even) td{background:rgba(255,255,255,.07)}
+.iit-section tr.iit-sub td.iit-stage{padding-left:42px;color:rgba(255,255,255,.82)}
+.iit-section .iit-foot{margin-top:14px;font-size:.78rem;color:rgba(255,255,255,.5)}
+@media(max-width:980px){
+.iit-section{padding:32px 18px}
+.iit-section .iit-title{font-size:1.7rem}
+.iit-section .iit-tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.iit-section table.iit-table{min-width:720px}
+}
+</style>
+<div class="container fade-in">
+<p class="iit-eyebrow">Module 05 Example - By Brand</p>
+<h2 class="iit-title">Stages of <span>Consumer Engagement</span></h2>
+<p class="iit-subtitle">Within each type, every brand has its own composition of consumers (illustrative). Values are % of total consumers; sub-rows are the composition within each group.</p>
+<div class="iit-tablewrap">
+<table class="iit-table">
+<thead>
+<tr>
+<th class="iit-stagehead">Stage</th>
+<th class="iit-num">Clinique</th>
+<th class="iit-num">The Ordinary</th>
+<th class="iit-num">Laneige</th>
+<th class="iit-num">Summer Fridays</th>
+</tr>
+</thead>
+<tbody>
+<tr class="iit-group iit-g-unaware">
+<td>Unaware</td>
+<td class="iit-num">14</td><td class="iit-num">42</td><td class="iit-num">54</td><td class="iit-num">60</td>
+</tr>
+<tr class="iit-group iit-g-active">
+<td>Active Customers</td>
+<td class="iit-num">29</td><td class="iit-num">17</td><td class="iit-num">13</td><td class="iit-num">5</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Brand Engaged</td>
+<td class="iit-num">51</td><td class="iit-num">40</td><td class="iit-num">45</td><td class="iit-num">20</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Explorer</td>
+<td class="iit-num">30</td><td class="iit-num">36</td><td class="iit-num">27</td><td class="iit-num">28</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Promiscuous</td>
+<td class="iit-num">19</td><td class="iit-num">24</td><td class="iit-num">28</td><td class="iit-num">53</td>
+</tr>
+<tr class="iit-group iit-g-familiar">
+<td>Familiar Never Purchased</td>
+<td class="iit-num">32</td><td class="iit-num">47</td><td class="iit-num">54</td><td class="iit-num">62</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Resistant to Brand</td>
+<td class="iit-num">4</td><td class="iit-num">3</td><td class="iit-num">4</td><td class="iit-num">2</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Detached from Brand</td>
+<td class="iit-num">52</td><td class="iit-num">54</td><td class="iit-num">50</td><td class="iit-num">55</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Curious about Brand</td>
+<td class="iit-num">45</td><td class="iit-num">43</td><td class="iit-num">46</td><td class="iit-num">43</td>
+</tr>
+<tr class="iit-group iit-g-divorced">
+<td>Divorced (Lapsed Customer)</td>
+<td class="iit-num">39</td><td class="iit-num">36</td><td class="iit-num">34</td><td class="iit-num">33</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Not Open to Reconciliation</td>
+<td class="iit-num">15</td><td class="iit-num">8</td><td class="iit-num">7</td><td class="iit-num">9</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Open to Reconciliation</td>
+<td class="iit-num">54</td><td class="iit-num">52</td><td class="iit-num">53</td><td class="iit-num">41</td>
+</tr>
+<tr class="iit-sub">
+<td class="iit-stage">Seek Reconciliation</td>
+<td class="iit-num">31</td><td class="iit-num">39</td><td class="iit-num">40</td><td class="iit-num">49</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="iit-foot">Illustrative. Group rows show % of total consumers; sub-rows show the composition within each group.</p>
+</div>
 </section>
 
 <!-- Module 06: Loyalty Multiverse -->
@@ -2257,6 +2922,107 @@ window.addEventListener('load', function() {
       Just as navigating a multiverse requires precision and strategy, our approach equips your brand with the insights needed to confidently enhance consumer relationships, deepen emotional connections, and secure long-term competitive advantage.
     </div>
   </div>
+</section>
+
+<!-- Module 06: Validating Core Drivers (EFA/CFA) -->
+<section class="screen smc-section" id="sem-constructs">
+<style>
+.smc-section{box-sizing:border-box;background:var(--dark-bg);color:var(--white);min-height:100vh;width:100%;padding:3rem 3.5rem;font-family:'Segoe UI',Helvetica,Arial,sans-serif;overflow:auto;}
+.smc-section *{box-sizing:border-box;}
+.smc-section .container{max-width:1500px;margin:0 auto;}
+.smc-section .smc-eyebrow{color:var(--fire-bush);font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.6rem;}
+.smc-section .smc-title{font-size:2.3rem;font-weight:800;line-height:1.15;margin:0 0 2rem;}
+.smc-section .smc-title span{color:var(--fire-bush);}
+.smc-section .smc-grid{display:grid;grid-template-columns:30% 70%;gap:2.2rem;align-items:start;}
+.smc-section .smc-intro p{font-size:.95rem;line-height:1.55;color:rgba(255,255,255,.9);margin:0 0 1.1rem;}
+.smc-section .smc-note{font-size:.8rem;line-height:1.5;color:rgba(255,255,255,.5);border-left:3px solid var(--fire-bush);padding-left:.9rem;margin-top:1.4rem;font-style:italic;}
+.smc-section .smc-table-wrap{overflow:hidden;border-radius:10px;border:1px solid rgba(255,255,255,.08);}
+.smc-section table{width:100%;border-collapse:collapse;font-size:.9rem;}
+.smc-section thead th{background:linear-gradient(90deg,var(--royal-purple),var(--purple));color:var(--white);text-align:left;font-size:.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.85rem 1rem;}
+.smc-section tbody td{padding:.8rem 1rem;vertical-align:top;line-height:1.45;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.06);}
+.smc-section tbody tr:nth-child(even){background:rgba(255,255,255,.04);}
+.smc-section tbody tr:hover{background:rgba(228,163,36,.08);}
+.smc-section .smc-construct{color:var(--fire-bush);font-weight:700;white-space:nowrap;}
+.smc-section .smc-inputs{color:rgba(255,255,255,.72);font-size:.86rem;}
+@media(max-width:980px){
+.smc-section{padding:2rem 1.4rem;}
+.smc-section .smc-title{font-size:1.7rem;}
+.smc-section .smc-grid{grid-template-columns:1fr;gap:1.6rem;}
+.smc-section table{font-size:.82rem;}
+.smc-section .smc-construct{white-space:normal;}
+.smc-section thead th,.smc-section tbody td{padding:.65rem .7rem;}
+}
+</style>
+<div class="container fade-in">
+<div class="smc-eyebrow">Module 06 - Validating the Model</div>
+<h2 class="smc-title">Validating Core Drivers via <span>EFA/CFA</span></h2>
+<div class="smc-grid">
+<div class="smc-intro">
+<p>These constructs were confirmed through Exploratory Factor Analysis (EFA) to identify the key groupings of drivers influencing brand consideration.</p>
+<p>Confirmatory Factor Analysis (CFA) then validated each factor's distinctiveness and reliability.</p>
+<p>Brands can leverage these constructs to see which importance drivers resonate most with targeted consumers, and tailor strategies accordingly.</p>
+<p class="smc-note">Hypotheses were developed for each latent construct to determine its impact in the SEM. A strong contributor gives clear, data-driven action items.</p>
+</div>
+<div class="smc-table-wrap">
+<table>
+<thead>
+<tr>
+<th>Latent Driver Construct</th>
+<th>Inputs</th>
+<th>Focus if Strong Contributor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="smc-construct">Heritage &amp; Trust</td>
+<td class="smc-inputs">A brand I trust; well-known brand with a long history of quality products; I would recommend to others; imagery: classic, reliable, experienced</td>
+<td>Leverage legacy, dermatologist endorsements, premium formulations, and heritage-driven storytelling.</td>
+</tr>
+<tr>
+<td class="smc-construct">Innovation &amp; Relevance</td>
+<td class="smc-inputs">In touch with today's trends; frequently catches my attention; a brand I hear people talking about</td>
+<td>Modernize the brand image with on-trend visuals, influencer partnerships, and streamlined experiences.</td>
+</tr>
+<tr>
+<td class="smc-construct">Product Development Excellence</td>
+<td class="smc-inputs">Consumer input; comprehensive product range; innovative products; customization features</td>
+<td>Emphasize a robust pipeline of new, consumer-driven innovations; highlight product range and personalization.</td>
+</tr>
+<tr>
+<td class="smc-construct">Clean &amp; Ethical Beauty</td>
+<td class="smc-inputs">Cruelty-free and vegan; eco-friendly practices; supports social causes; certified clean</td>
+<td>Promote ethical and sustainable credentials and philanthropic initiatives; showcase cruelty-free or eco-friendly logos.</td>
+</tr>
+<tr>
+<td class="smc-construct">Brand Heritage</td>
+<td class="smc-inputs">Premium ingredients; luxury experience; well-known brand history</td>
+<td>Leverage brand legacy, premium positioning, and historical credibility through heritage storytelling.</td>
+</tr>
+<tr>
+<td class="smc-construct">Expert Authority</td>
+<td class="smc-inputs">Award-winning products; dermatologist founder; product safety certifications</td>
+<td>Emphasize clinical and medical credibility; highlight product awards and rigorous safety testing.</td>
+</tr>
+<tr>
+<td class="smc-construct">Technical Innovation</td>
+<td class="smc-inputs">Digital tools; advanced technology; cutting-edge technology</td>
+<td>Develop tech-driven consumer experiences (AR, AI-based recommendations); position the brand as forward-thinking.</td>
+</tr>
+<tr>
+<td class="smc-construct">Diversity &amp; Inclusion</td>
+<td class="smc-inputs">Cultural diversity in advertising; understands and caters to unique beauty needs; diverse founder background; collaborates with diverse influencers</td>
+<td>Expand inclusivity in marketing and product ranges; partner with diverse influencers; serve all skin tones and cultural needs.</td>
+</tr>
+<tr>
+<td class="smc-construct">External Validation</td>
+<td class="smc-inputs">Celebrity endorsements; live chat; new brand recommendations; makeup artist founder; top-10 lists</td>
+<td>Leverage third-party credibility (media mentions, top-10 lists, influencer endorsements); offer interactive services to build trust.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </section>
 
 <!-- Module 06b: SEM Map (illustrative) -->
