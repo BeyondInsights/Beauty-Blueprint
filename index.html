@@ -1405,6 +1405,232 @@ window.addEventListener('load', function() {
 </head>
 <body>
 
+<!-- ░░░ THE BEAUTY COLLECTIVE (segmentation) ░░░ -->
+<style>
+/* ===== The Beauty Collective segment slides ===== */
+.bc-section{background:var(--dark-bg);color:#fff;position:relative;overflow:hidden}
+.bc-section .container{max-width:1400px;margin:0 auto;width:100%;position:relative;z-index:2}
+.bc-glow{position:absolute;width:760px;height:760px;border-radius:50%;filter:blur(120px);opacity:.18;pointer-events:none}
+.bc-glow.g1{background:var(--fire-bush);top:-380px;left:-300px}
+.bc-glow.g2{background:var(--royal-purple);bottom:-380px;right:-300px}
+.bc-eyebrow{display:block;text-align:center;letter-spacing:3px;text-transform:uppercase;font-size:.95rem;color:var(--fire-bush);font-weight:700;margin-bottom:14px}
+.bc-title{text-align:center;font-size:3.2rem;font-weight:800;line-height:1.1;margin:0 0 12px}
+.bc-sub{text-align:center;font-size:1.35rem;color:rgba(255,255,255,.8);margin:0 auto 48px;max-width:920px;line-height:1.4}
+.bc-gold{color:var(--fire-bush)}
+/* slide 1 donut + legend */
+.bc-overview{display:grid;grid-template-columns:minmax(320px,420px) 1fr;gap:56px;align-items:center}
+.bc-donut-wrap{display:flex;justify-content:center}
+.bc-donut{width:380px;height:380px;border-radius:50%;position:relative;
+  background:conic-gradient(#98069d 0 25%,#fc5fab 25% 45%,#336600 45% 63%,#fd94c7 63% 74%,#f10b25 74% 84%,#703e85 84% 93%,#0077ff 93% 100%);
+  box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.bc-donut::after{content:"";position:absolute;inset:27%;border-radius:50%;background:var(--dark-bg)}
+.bc-donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2}
+.bc-donut-center b{font-size:3rem;font-weight:800;line-height:1;color:#fff}
+.bc-donut-center span{font-size:.85rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:6px}
+.bc-legend{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.bc-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-left-width:5px;border-radius:14px;padding:15px 17px;transition:transform .25s,background .25s}
+.bc-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
+.bc-card .bc-row1{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.bc-card .bc-name{font-weight:700;font-size:1.02rem;line-height:1.2}
+.bc-card .bc-pct{font-size:1.5rem;font-weight:800;flex:none}
+.bc-card .bc-tag{font-style:italic;font-size:.83rem;color:rgba(255,255,255,.7);margin:8px 0 10px;line-height:1.35}
+.bc-card .bc-stats{display:flex;gap:14px;font-size:.76rem;color:rgba(255,255,255,.85);border-top:1px solid rgba(255,255,255,.12);padding-top:8px}
+.bc-card .bc-stats b{color:var(--fire-bush)}
+/* slide 2 description cards */
+.bc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px}
+.bc-desc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-top:4px solid;border-radius:16px;padding:24px 26px 26px}
+.bc-desc .bc-dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:10px;vertical-align:middle}
+.bc-desc h4{font-size:1.22rem;margin:0 0 6px;font-weight:700}
+.bc-desc .bc-tag{font-style:italic;color:var(--fire-bush);font-size:.92rem;margin:0 0 14px;line-height:1.4}
+.bc-desc p{font-size:.93rem;line-height:1.55;color:rgba(255,255,255,.82);margin:0}
+/* slide 3 stacked bars */
+.bc-bars{display:grid;grid-template-columns:260px repeat(4,1fr);gap:28px;align-items:end;max-width:1180px;margin:0 auto}
+.bc-axis{display:flex;flex-direction:column;justify-content:center;gap:14px;height:560px}
+.bc-leg{display:flex;align-items:center;gap:10px;font-size:.88rem;color:rgba(255,255,255,.9)}
+.bc-leg i{width:14px;height:14px;border-radius:3px;display:inline-block;flex:none}
+.bc-barcell{display:flex;flex-direction:column}
+.bc-bar{display:flex;flex-direction:column;height:560px;border-radius:10px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.4)}
+.bc-seg{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:1rem;text-shadow:0 1px 3px rgba(0,0,0,.45);min-height:0}
+.bc-collabel{text-align:center;margin-top:14px;font-size:.95rem;color:#fff;font-weight:700}
+.bc-note{text-align:center;margin-top:34px;font-size:.82rem;color:rgba(255,255,255,.5);max-width:900px;margin-left:auto;margin-right:auto}
+@media(max-width:980px){
+ .bc-overview{grid-template-columns:1fr}
+ .bc-legend{grid-template-columns:1fr}
+ .bc-bars{grid-template-columns:1fr;gap:18px}
+ .bc-axis{height:auto;flex-direction:row;flex-wrap:wrap}
+ .bc-bar{height:320px}
+}
+</style>
+
+<!-- Beauty Collective – Slide 1: segmentation overview -->
+<section class="screen bc-section" id="beauty-collective">
+ <div class="bc-glow g1"></div><div class="bc-glow g2"></div>
+ <div class="container fade-in">
+  <span class="bc-eyebrow">The Segmentation</span>
+  <h2 class="bc-title">The <span class="bc-gold">Beauty Collective</span></h2>
+  <p class="bc-sub">Segmenting the engaged prestige beauty consumer into seven distinct, addressable segments</p>
+  <div class="bc-overview">
+   <div class="bc-donut-wrap">
+    <div class="bc-donut"><div class="bc-donut-center"><b>7</b><span>Segments</span></div></div>
+   </div>
+   <div class="bc-legend">
+    <div class="bc-card" style="border-left-color:#98069d">
+     <div class="bc-row1"><span class="bc-name" style="color:#d56ad8">Designer Beauty Trendsetters</span><span class="bc-pct" style="color:#d56ad8">25%</span></div>
+     <div class="bc-tag">&ldquo;Beauty is my runway&mdash;bold moves only, and always one step ahead&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$1,006</b></span><span>Makeup <b>53%</b></span><span>Skincare <b>47%</b></span></div>
+    </div>
+    <div class="bc-card" style="border-left-color:#fc5fab">
+     <div class="bc-row1"><span class="bc-name" style="color:#fc7ab8">Heritage Brand Loyalists</span><span class="bc-pct" style="color:#fc7ab8">20%</span></div>
+     <div class="bc-tag">&ldquo;I trust what stands the test of time&mdash;because true beauty never needs to chase trends&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$430</b></span><span>Makeup <b>47%</b></span><span>Skincare <b>53%</b></span></div>
+    </div>
+    <div class="bc-card" style="border-left-color:#336600">
+     <div class="bc-row1"><span class="bc-name" style="color:#8ec63f">Purpose-Driven Beauty Changemakers</span><span class="bc-pct" style="color:#8ec63f">18%</span></div>
+     <div class="bc-tag">&ldquo;Where clean ingredients, ethical sourcing, and cultural respect spark real social impact&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$362</b></span><span>Makeup <b>51%</b></span><span>Skincare <b>49%</b></span></div>
+    </div>
+    <div class="bc-card" style="border-left-color:#fd94c7">
+     <div class="bc-row1"><span class="bc-name" style="color:#fda9d2">Beauty Connectors</span><span class="bc-pct" style="color:#fda9d2">11%</span></div>
+     <div class="bc-tag">&ldquo;Shared Beauty&mdash;celebrating connection, community, and beauty brands that resonate with her world&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$665</b></span><span>Makeup <b>50%</b></span><span>Skincare <b>50%</b></span></div>
+    </div>
+    <div class="bc-card" style="border-left-color:#f10b25">
+     <div class="bc-row1"><span class="bc-name" style="color:#ff5566">Cultural Beauty Visionaries</span><span class="bc-pct" style="color:#ff5566">10%</span></div>
+     <div class="bc-tag">&ldquo;Blending diversity, sustainability, chic style, and confident beauty&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$635</b></span><span>Makeup <b>52%</b></span><span>Skincare <b>48%</b></span></div>
+    </div>
+    <div class="bc-card" style="border-left-color:#703e85">
+     <div class="bc-row1"><span class="bc-name" style="color:#b98fce">Luxury Beauty Innovators</span><span class="bc-pct" style="color:#b98fce">9%</span></div>
+     <div class="bc-tag">&ldquo;Redefining beauty through luxury, technology, and bold innovation&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$1,118</b></span><span>Makeup <b>50%</b></span><span>Skincare <b>50%</b></span></div>
+    </div>
+    <div class="bc-card" style="border-left-color:#0077ff">
+     <div class="bc-row1"><span class="bc-name" style="color:#4d9fff">Artistic Beauty Rebels</span><span class="bc-pct" style="color:#4d9fff">7%</span></div>
+     <div class="bc-tag">&ldquo;Beauty as Art&mdash;Fearless, bold, and unapologetically expressive&rdquo;</div>
+     <div class="bc-stats"><span>Spend <b>$813</b></span><span>Makeup <b>60%</b></span><span>Skincare <b>40%</b></span></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- Beauty Collective – Slide 2: segment descriptions -->
+<section class="screen bc-section" id="beauty-collective-meet">
+ <div class="bc-glow g2"></div>
+ <div class="container fade-in">
+  <span class="bc-eyebrow">Who She Is</span>
+  <h2 class="bc-title">Meet the <span class="bc-gold">Beauty Collective</span> Prestige Segments</h2>
+  <p class="bc-sub">Seven distinct mindsets &mdash; each with her own motivations, triggers, and path to loyalty</p>
+  <div class="bc-grid">
+   <div class="bc-desc" style="border-top-color:#98069d">
+    <h4><span class="bc-dot" style="background:#98069d"></span>Designer Beauty Trendsetters</h4>
+    <div class="bc-tag">&ldquo;Beauty is my runway&mdash;bold moves only, and always one step ahead&rdquo;</div>
+    <p>She is the runway visionary, seamlessly integrating high-fashion influence with innovative beauty technologies. Her bold, polished, and sophisticated style sets her apart as a tastemaker, inspiring others to follow her lead. Unlike others, she prioritizes exclusivity, designer aesthetics, and staying ahead of beauty trends, making her a key opinion leader in both the fashion and beauty spaces. Her focus on refinement and luxury gives her an aspirational edge.</p>
+   </div>
+   <div class="bc-desc" style="border-top-color:#fc5fab">
+    <h4><span class="bc-dot" style="background:#fc5fab"></span>Heritage Brand Loyalists</h4>
+    <div class="bc-tag">&ldquo;I trust what stands the test of time&mdash;because true beauty never needs to chase trends&rdquo;</div>
+    <p>She values the timeless over the trendy, trusting legacy brands with proven quality, consistency, and authenticity. Her classic approach to beauty prioritizes reliability and familiarity, setting her apart from segments that chase novelty or experimentation. Unlike others, she remains loyal to what has stood the test of time, finding comfort and assurance in products rooted in tradition and heritage.</p>
+   </div>
+   <div class="bc-desc" style="border-top-color:#336600">
+    <h4><span class="bc-dot" style="background:#336600"></span>Purpose-Driven Beauty Changemakers</h4>
+    <div class="bc-tag">&ldquo;Where clean ingredients, ethical sourcing, and cultural respect spark real social impact&rdquo;</div>
+    <p>She is the conscious consumer, driven by a commitment to sustainability, transparency, and ethical innovation. Her beauty choices reflect her values, prioritizing brands that champion environmental and social causes. What sets her apart is her focus on aligning her personal beliefs with her purchases, making her an advocate for change in the beauty industry. She&rsquo;s less interested in aesthetics for aesthetics&rsquo; sake and more in beauty as a platform for purpose.</p>
+   </div>
+   <div class="bc-desc" style="border-top-color:#fd94c7">
+    <h4><span class="bc-dot" style="background:#fd94c7"></span>Beauty Connectors</h4>
+    <div class="bc-tag">&ldquo;Shared Beauty&mdash;celebrating connection, community, and beauty brands that resonate with her world&rdquo;</div>
+    <p>She thrives in social spaces, valuing the shared excitement of beauty with her community. Unlike others, she focuses on peer validation, social proof, and how beauty can enhance her connection to others. Her practical, approachable take on beauty sets her apart from those who prioritize self-expression or luxury. She is deeply influenced by group trends and personal recommendations, making her a key amplifier for brands seeking word-of-mouth engagement.</p>
+   </div>
+   <div class="bc-desc" style="border-top-color:#f10b25">
+    <h4><span class="bc-dot" style="background:#f10b25"></span>Cultural Beauty Visionaries</h4>
+    <div class="bc-tag">&ldquo;Blending diversity, sustainability, chic style, and confident beauty&rdquo;</div>
+    <p>She is the cultural storyteller, blending heritage, representation, and artistry in her beauty choices. Unlike others, she values authenticity and inclusivity, seeking products that reflect her cultural identity and amplify underrepresented voices. Her ability to merge diverse influences with bold, creative expression sets her apart as someone who uses beauty as a canvas for cultural storytelling and global inspiration.</p>
+   </div>
+   <div class="bc-desc" style="border-top-color:#703e85">
+    <h4><span class="bc-dot" style="background:#703e85"></span>Luxury Beauty Innovators</h4>
+    <div class="bc-tag">&ldquo;Redefining beauty through luxury, technology, and bold innovation&rdquo;</div>
+    <p>She is the tech-forward spender, investing in cutting-edge advancements and high-performance luxury products. Unlike others, she seeks beauty solutions that marry scientific rigor with indulgence, prioritizing efficacy and innovation. Her high disposable income and willingness to spend make her one of the most lucrative segments, standing apart for her pursuit of results-driven, status-elevating beauty.</p>
+   </div>
+   <div class="bc-desc" style="border-top-color:#0077ff">
+    <h4><span class="bc-dot" style="background:#0077ff"></span>Artistic Beauty Rebels</h4>
+    <div class="bc-tag">&ldquo;Beauty as Art&mdash;Fearless, bold, and unapologetically expressive&rdquo;</div>
+    <p>She is the daring creator, redefining beauty as a form of bold self-expression and artistry. Unlike others, she thrives on breaking boundaries, embracing avant-garde aesthetics and experimental styles. Her individuality and fearlessness make her a trend disruptor, using beauty as a tool for rebellion and emotional storytelling. She stands apart for her focus on creativity and innovation over tradition or practicality.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- Beauty Collective – Slide 3: her share of beauty spend -->
+<section class="screen bc-section" id="beauty-collective-spend">
+ <div class="bc-glow g1"></div>
+ <div class="container fade-in">
+  <span class="bc-eyebrow">Where the Dollars Are</span>
+  <h2 class="bc-title">Her Share of <span class="bc-gold">Beauty Spend</span></h2>
+  <p class="bc-sub">Population share rarely equals wallet share &mdash; the high-value segments punch well above their size</p>
+  <div class="bc-bars">
+   <div class="bc-axis">
+    <div class="bc-leg"><i style="background:#0077ff"></i>Artistic Beauty Rebels</div>
+    <div class="bc-leg"><i style="background:#703e85"></i>Luxury Beauty Innovators</div>
+    <div class="bc-leg"><i style="background:#f10b25"></i>Cultural Beauty Visionaries</div>
+    <div class="bc-leg"><i style="background:#336600"></i>Purpose-Driven Beauty Changemakers</div>
+    <div class="bc-leg"><i style="background:#fd94c7"></i>Beauty Connectors</div>
+    <div class="bc-leg"><i style="background:#fc5fab"></i>Heritage Brand Loyalists</div>
+    <div class="bc-leg"><i style="background:#98069d"></i>Designer Beauty Trendsetters</div>
+   </div>
+   <div class="bc-barcell">
+    <div class="bc-bar">
+     <div class="bc-seg" style="flex:7;background:#0077ff">7%</div>
+     <div class="bc-seg" style="flex:9;background:#703e85">9%</div>
+     <div class="bc-seg" style="flex:10;background:#f10b25">10%</div>
+     <div class="bc-seg" style="flex:18;background:#336600">18%</div>
+     <div class="bc-seg" style="flex:11;background:#fd94c7">11%</div>
+     <div class="bc-seg" style="flex:20;background:#fc5fab">20%</div>
+     <div class="bc-seg" style="flex:25;background:#98069d">25%</div>
+    </div>
+    <div class="bc-collabel">Share of People</div>
+   </div>
+   <div class="bc-barcell">
+    <div class="bc-bar">
+     <div class="bc-seg" style="flex:19;background:#0077ff">19%</div>
+     <div class="bc-seg" style="flex:21;background:#703e85">21%</div>
+     <div class="bc-seg" style="flex:13;background:#f10b25">13%</div>
+     <div class="bc-seg" style="flex:7;background:#336600">7%</div>
+     <div class="bc-seg" style="flex:13;background:#fd94c7">13%</div>
+     <div class="bc-seg" style="flex:8;background:#fc5fab">8%</div>
+     <div class="bc-seg" style="flex:20;background:#98069d">20%</div>
+    </div>
+    <div class="bc-collabel">Share of Makeup Spend</div>
+   </div>
+   <div class="bc-barcell">
+    <div class="bc-bar">
+     <div class="bc-seg" style="flex:14;background:#0077ff">14%</div>
+     <div class="bc-seg" style="flex:23;background:#703e85">23%</div>
+     <div class="bc-seg" style="flex:13;background:#f10b25">13%</div>
+     <div class="bc-seg" style="flex:7;background:#336600">7%</div>
+     <div class="bc-seg" style="flex:14;background:#fd94c7">14%</div>
+     <div class="bc-seg" style="flex:10;background:#fc5fab">10%</div>
+     <div class="bc-seg" style="flex:20;background:#98069d">20%</div>
+    </div>
+    <div class="bc-collabel">Share of Skincare Spend</div>
+   </div>
+   <div class="bc-barcell">
+    <div class="bc-bar">
+     <div class="bc-seg" style="flex:16;background:#0077ff">16%</div>
+     <div class="bc-seg" style="flex:22;background:#703e85">22%</div>
+     <div class="bc-seg" style="flex:13;background:#f10b25">13%</div>
+     <div class="bc-seg" style="flex:7;background:#336600">7%</div>
+     <div class="bc-seg" style="flex:13;background:#fd94c7">13%</div>
+     <div class="bc-seg" style="flex:9;background:#fc5fab">9%</div>
+     <div class="bc-seg" style="flex:20;background:#98069d">20%</div>
+    </div>
+    <div class="bc-collabel">Share of Total Beauty Spend</div>
+   </div>
+  </div>
+  <p class="bc-note">Share of People reflects the segmentation sizing shown on the overview donut. Read each column top-to-bottom in the legend order above.</p>
+ </div>
+</section>
+
 <!-- CASE STUDY CONTENT -->
 <section id="beyond-insights-casestudy" class="screen" style="background: white !important; padding: 20px 20px 0 20px !important; min-height: auto !important; margin-bottom: 0 !important;">
  <div style="height: 1px; opacity: 0;"></div>
