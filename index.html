@@ -3306,121 +3306,117 @@ window.addEventListener('load', function() {
 .cp-sim-split{font-size:.8rem;color:rgba(255,255,255,.82);margin-top:14px;line-height:1.55;}
 .cp-sim-split b{color:#e4c06a;}
 @media(max-width:900px){.cp-sim-grid{grid-template-columns:1fr;}}
+/* Real-data board view: snapshot, wins/leaks, the move */
+.cp-snap{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:4px 0 20px;}
+.cp-stat{background:#fff;border:1px solid #e7ddf2;border-radius:14px;padding:16px 18px;box-shadow:0 6px 22px rgba(116,52,172,.07);}
+.cp-stat .n{font-size:2.1rem;font-weight:900;color:#7434ac;line-height:1;}
+.cp-stat .n small{font-size:.85rem;font-weight:800;color:#c98a10;}
+.cp-stat .l{font-size:.84rem;color:#3d2a55;font-weight:800;margin-top:6px;line-height:1.25;}
+.cp-stat .s{font-size:.72rem;color:#9686a8;margin-top:3px;line-height:1.3;}
+.cp-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px;}
+.cp-col{border-radius:16px;padding:18px 20px;box-shadow:0 8px 26px rgba(116,52,172,.08);}
+.cp-col.win{background:#fff;border:1px solid #d9c7ef;}
+.cp-col.leak{background:#fff;border:1px solid #f3c9c9;}
+.cp-col h4{margin:0 0 10px;font-size:1.06rem;font-weight:900;display:flex;align-items:center;gap:9px;}
+.cp-col.win h4{color:#5d2e9e;}
+.cp-col.leak h4{color:#b3261e;}
+.cp-col h4 .chip{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;font-weight:800;padding:3px 9px;border-radius:20px;}
+.cp-col.win h4 .chip{background:#efe7f9;color:#7434ac;}
+.cp-col.leak h4 .chip{background:#fbe3e1;color:#c0392b;}
+.cp-item{display:flex;align-items:baseline;gap:11px;padding:9px 0;border-top:1px solid #f0ecf6;font-size:.9rem;color:#3d2a55;}
+.cp-item.first{border-top:none;}
+.cp-item .v{flex:none;font-weight:900;font-size:1rem;width:62px;}
+.cp-col.win .cp-item .v{color:#7434ac;}
+.cp-col.leak .cp-item .v{color:#d1483b;}
+.cp-item .t{line-height:1.32;}
+.cp-item .t b{color:#241033;}
+.cp-move{background:linear-gradient(135deg,#2a1245,#4a1d6e);color:#fff;border-radius:16px;padding:22px 26px;margin-bottom:8px;box-shadow:0 10px 30px rgba(74,29,110,.3);}
+.cp-move .eyebrow2{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#e4c06a;font-weight:800;margin-bottom:8px;}
+.cp-move .big{font-size:1.22rem;font-weight:700;line-height:1.45;}
+.cp-move .big b{color:#e4c06a;font-weight:800;}
+@media(max-width:900px){.cp-snap{grid-template-columns:1fr;}.cp-2col{grid-template-columns:1fr;}}
 </style>
 <div class="container fade-in">
   <p class="cp-eyebrow">Module 06 &middot; The Boardroom View</p>
-  <h2 class="cp-title">3 Paths to Move <span>Purchase Consideration</span></h2>
-  <p class="cp-sub">The same model as the map &mdash; translated. Each lever reaches consideration <b>two ways</b>: on its own, and by reshaping a <b>perception</b> in the customer's mind.</p>
-  <div class="cp-intro">
-    <b>First, what is a &ldquo;mediator&rdquo;?</b> Clinique rarely changes a customer's mind directly. It changes a <b>perception</b> &mdash; and the perception changes the customer. Those in-between perceptions are <b>brand imagery</b>: the words people attach to how a brand looks and feels (&ldquo;professional,&rdquo; &ldquo;premium,&rdquo; &ldquo;modern&rdquo;). That is what &ldquo;via imagery&rdquo; means.<br><br>
-    <b>How to read each path:</b> the straight <span style="color:#7434ac;font-weight:800;">bottom line</span> is the lever's <b>direct</b> effect &mdash; its contribution to consideration on its own (<i>c&prime;</i>). The <span style="color:#b07d18;font-weight:800;">top route</span> is the <b>indirect</b> effect: the lever lifts an imagery perception (<i>a</i>), and that perception lifts consideration (<i>b</i>). Multiply the two hops (<i>a&times;b</i>) for the indirect effect, then add the direct line for the <b>total</b>.
+  <h2 class="cp-title">Famous &amp; Trusted &mdash; <span>but Not Yet Chosen</span></h2>
+  <p class="cp-sub">What the brand-tracking data says about Clinique today &mdash; and the single move that turns its heritage into growth.</p>
+
+  <div class="cp-snap">
+    <div class="cp-stat"><div class="n">85%</div><div class="l">Familiar with Clinique</div><div class="s">Near-universal &mdash; among the highest in beauty</div></div>
+    <div class="cp-stat"><div class="n">#1 <small>most trusted</small></div><div class="l">Trust in the category</div><div class="s">Highest of all 20 brands measured (z = +2.0)</div></div>
+    <div class="cp-stat"><div class="n">66%</div><div class="l">Would seriously consider</div><div class="s">Solid &mdash; but capped by relevance, not trust</div></div>
   </div>
 
-  <div class="cp-lane">
-    <div class="cp-lane-head"><span class="cp-badge">1</span><span class="cp-lane-title">Lead With Heritage</span><span class="cp-tag">Protect the core</span></div>
-    <p class="cp-action">Put Clinique's dermatologist-guided origin &mdash; <i>Allergy Tested. 100% Fragrance Free.</i> &mdash; at the heart of the brand story. This is the single strongest lever, and it is uniquely Clinique's to own.</p>
-    <div class="med">
-      <div class="med-lever"><span class="lab">Lever</span><span class="nm">Heritage &amp; Trust</span></div>
-      <div class="med-a"><span class="ar">&#8599;</span><span class="v">a = .20</span><small>lifts imagery</small></div>
-      <div class="med-med"><span class="lab">Mediator &middot; Brand imagery</span><span class="nm">&ldquo;Professional &amp; Experienced&rdquo;</span></div>
-      <div class="med-b"><span class="ar">&#8600;</span><span class="v">b = .40</span><small>imagery &rarr; consid.</small></div>
-      <div class="med-out"><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
-      <div class="med-direct"><span class="pill">Direct&nbsp; c&prime; = .64</span></div>
-      <div class="med-math">Direct <b>.64</b> &nbsp;+&nbsp; Indirect <span class="ind">(a&times;b = .20&times;.40 = .08)</span> &nbsp;=&nbsp; <b>Total .72</b></div>
+  <div class="cp-2col">
+    <div class="cp-col win">
+      <h4><span class="chip">Strength</span> Where Clinique wins</h4>
+      <div class="cp-item first"><span class="v">#1</span><span class="t"><b>Most-trusted brand</b> in the category &mdash; the scarcest, hardest-to-build equity in beauty</span></div>
+      <div class="cp-item"><span class="v">85%</span><span class="t"><b>Known by nearly everyone</b> &mdash; there is no awareness problem to solve</span></div>
+      <div class="cp-item"><span class="v">58%</span><span class="t"><b>Luxury &amp; Sophisticated</b>, plus Professional / Experienced (44%) &mdash; strong heritage signals</span></div>
+    </div>
+    <div class="cp-col leak">
+      <h4><span class="chip">Gap</span> Where Clinique leaks</h4>
+      <div class="cp-item first"><span class="v">41%</span><span class="t"><b>Innovative</b> &mdash; 20 pts below the category average of 61%; its single weakest score</span></div>
+      <div class="cp-item"><span class="v">32%</span><span class="t"><b>&ldquo;Understands my needs&rdquo;</b> and <b>&ldquo;would greatly miss it&rdquo;</b> &mdash; near the bottom of the set</span></div>
+      <div class="cp-item"><span class="v">34%</span><span class="t"><b>Fresh / Youthful</b> (Edgy / Bold just 17%) &mdash; the brand reads classic, not current</span></div>
     </div>
   </div>
 
-  <div class="cp-lane">
-    <div class="cp-lane-head"><span class="cp-badge">2</span><span class="cp-lane-title">Prove the Expertise</span><span class="cp-tag">Protect the core</span></div>
-    <p class="cp-action">Foreground dermatologist development, testing rigor, and visible efficacy &mdash; credibility a 50+ year heritage brand can claim more believably than newer rivals.</p>
-    <div class="med">
-      <div class="med-lever"><span class="lab">Lever</span><span class="nm">Expert Authority</span></div>
-      <div class="med-a"><span class="ar">&#8599;</span><span class="v">a = .15</span><small>lifts imagery</small></div>
-      <div class="med-med"><span class="lab">Mediator &middot; Brand imagery</span><span class="nm">&ldquo;Premium &amp; Credible&rdquo;</span></div>
-      <div class="med-b"><span class="ar">&#8600;</span><span class="v">b = .40</span><small>imagery &rarr; consid.</small></div>
-      <div class="med-out"><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
-      <div class="med-direct"><span class="pill">Direct&nbsp; c&prime; = .56</span></div>
-      <div class="med-math">Direct <b>.56</b> &nbsp;+&nbsp; Indirect <span class="ind">(a&times;b = .15&times;.40 = .06)</span> &nbsp;=&nbsp; <b>Total .62</b></div>
-    </div>
+  <div class="cp-move">
+    <div class="eyebrow2">The one move</div>
+    <div class="big">Clinique already owns <b>trust</b> &mdash; the hardest thing in beauty to earn. The growth isn&rsquo;t <i>more</i> trust; it&rsquo;s <b>turning that trust into desire.</b> Make the brand feel current and personally relevant, and consideration follows &mdash; <b>without spending down the heritage</b> that sets it apart.</div>
   </div>
 
-  <div class="cp-lane cp-lane--hero">
-    <div class="cp-lane-head"><span class="cp-badge">3</span><span class="cp-lane-title">Modernize Without Losing the Core</span><span class="cp-tag">The mediator path</span></div>
-    <p class="cp-action">Innovation's <b>direct</b> effect is modest (.31) &mdash; but most of its power (<b>+.22</b>) travels <i>indirectly</i>, by refreshing how the brand looks and feels. Use new formulas, tools, and collaborations to shift imagery from &ldquo;classic / expert&rdquo; toward &ldquo;classic <i>and</i> contemporary.&rdquo; For a heritage brand, innovation earns consideration mainly by reshaping perception &mdash; not on its own.</p>
-    <div class="med">
-      <div class="med-lever"><span class="lab">Lever</span><span class="nm">Innovation &amp; Relevance</span></div>
-      <div class="med-a"><span class="ar">&#8599;</span><span class="v">a = .55</span><small>strongly lifts imagery</small></div>
-      <div class="med-med"><span class="lab">Mediator &middot; Brand imagery&nbsp; <span style="color:#c98a10;">&#9733; the real driver</span></span><span class="nm">&ldquo;Modern &amp; In-touch&rdquo; &mdash; heritage, but current</span></div>
-      <div class="med-b"><span class="ar">&#8600;</span><span class="v">b = .40</span><small>imagery &rarr; consid.</small></div>
-      <div class="med-out"><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
-      <div class="med-direct"><span class="pill">Direct&nbsp; c&prime; = .31</span></div>
-      <div class="med-math">Direct <b>.31</b> &nbsp;+&nbsp; Indirect <span class="ind">(a&times;b = .55&times;.40 = <b style="color:#c98a10;">.22</b>)</span> &nbsp;=&nbsp; <b>Total .53</b> &mdash; <i>most of it travels through imagery</i></div>
-    </div>
-  </div>
-
-  <div class="cp-guard"><b>Mind the drag:</b> Competitor Pull is the only <b>negative</b> path (&minus;.45) &mdash; younger prestige rivals siphoning consideration. Closing the relevance gap in Path 3 is also the best defense against it.</div>
-
-  <div class="cp-sim-h"><span class="pill">Interactive</span><h3>Consideration Simulator</h3></div>
+  <div class="cp-sim-h"><span class="pill">Interactive</span><h3>What would lift consideration?</h3></div>
   <div class="cp-sim" id="cpSim">
-    <p class="lead">Drag any lever to improve it and watch projected <b>Purchase Consideration</b> move. Each lever adds points two ways &mdash; <b>directly</b>, and <b>through brand imagery</b> (the mediator). Reducing Competitor Pull removes its drag.</p>
+    <p class="lead">Clinique&rsquo;s consideration sits at <b>66%</b> today. Drag each lever to see the projected move. The point of the exercise: trust is <b>near its ceiling</b> (little left to gain), while <b>relevance &amp; desire</b> is where the headroom is.</p>
     <div class="cp-sim-grid">
       <div class="cp-sim-controls">
         <div class="cp-sim-row">
-          <div class="cp-sim-lab"><span>Heritage &amp; Trust</span><span class="pct" id="pct_her">0%</span></div>
-          <input type="range" class="cp-sim-range" data-key="her" min="0" max="50" step="1" value="0">
-          <div class="cp-sim-contrib" id="ctr_her">+0.0 pts</div>
+          <div class="cp-sim-lab"><span>Trust &amp; Heritage <span style="color:#9686a8;font-weight:600;">&middot; near maxed</span></span><span class="pct" id="pct_tru">0%</span></div>
+          <input type="range" class="cp-sim-range" data-key="tru" min="0" max="100" step="5" value="0">
+          <div class="cp-sim-contrib" id="ctr_tru">+0.0 pts &mdash; limited headroom</div>
         </div>
         <div class="cp-sim-row">
-          <div class="cp-sim-lab"><span>Expert Authority</span><span class="pct" id="pct_exp">0%</span></div>
-          <input type="range" class="cp-sim-range" data-key="exp" min="0" max="50" step="1" value="0">
-          <div class="cp-sim-contrib" id="ctr_exp">+0.0 pts</div>
-        </div>
-        <div class="cp-sim-row">
-          <div class="cp-sim-lab"><span>Innovation &amp; Relevance</span><span class="pct" id="pct_inn">0%</span></div>
-          <input type="range" class="cp-sim-range" data-key="inn" min="0" max="50" step="1" value="0">
-          <div class="cp-sim-contrib" id="ctr_inn">+0.0 pts</div>
-        </div>
-        <div class="cp-sim-row">
-          <div class="cp-sim-lab"><span>Reduce Competitor Pull</span><span class="pct" id="pct_cmp">0%</span></div>
-          <input type="range" class="cp-sim-range" data-key="cmp" min="0" max="50" step="1" value="0">
-          <div class="cp-sim-contrib" id="ctr_cmp">+0.0 pts</div>
+          <div class="cp-sim-lab"><span>Relevance &amp; Desire <span style="color:#c98a10;font-weight:700;">&middot; big upside</span></span><span class="pct" id="pct_rel">0%</span></div>
+          <input type="range" class="cp-sim-range" data-key="rel" min="0" max="100" step="5" value="0">
+          <div class="cp-sim-contrib" id="ctr_rel">+0.0 pts</div>
         </div>
         <button class="cp-sim-reset" id="simReset">Reset</button>
+        <p style="font-size:.72rem;color:#9686a8;margin:14px 0 0;line-height:1.45;">Each slider = how much of the gap you close. Sensitivities are illustrative (pending the SEM); the <b>66% baseline is real</b>.</p>
       </div>
       <div class="cp-sim-out">
-        <div class="cp-sim-cap">Projected Purchase Consideration</div>
-        <div class="cp-sim-big" id="simNow">38.0%</div>
-        <div class="cp-sim-delta" id="simDelta">+0.0 pts vs. 38% baseline</div>
-        <div class="cp-sim-bar"><div class="cp-sim-tick" style="left:38%"></div><div class="cp-sim-fill" id="simFill" style="width:38%"></div></div>
-        <div class="cp-sim-scale"><span>0%</span><span>&#9650; baseline 38%</span><span>100%</span></div>
-        <div class="cp-sim-split" id="simSplit">Lift comes from <b>+0.0 pts</b> direct and <b>+0.0 pts</b> through imagery.</div>
+        <div class="cp-sim-cap">Projected &mdash; Would Seriously Consider</div>
+        <div class="cp-sim-big" id="simNow">66.0%</div>
+        <div class="cp-sim-delta" id="simDelta">+0.0 pts vs. 66% today</div>
+        <div class="cp-sim-bar"><div class="cp-sim-tick" style="left:66%"></div><div class="cp-sim-fill" id="simFill" style="width:66%"></div></div>
+        <div class="cp-sim-scale"><span>0%</span><span>&#9650; today 66%</span><span>100%</span></div>
+        <div class="cp-sim-split" id="simSplit">Lift comes from <b>+0.0 pts</b> relevance and <b>+0.0 pts</b> trust.</div>
       </div>
     </div>
   </div>
   <script>
   (function(){
-    var cfg={baseline:38,scale:22,cap:95,
-      L:{her:{c:.64,a:.20,b:.40},exp:{c:.56,a:.15,b:.40},inn:{c:.31,a:.55,b:.40}},
-      cmp:.45};
+    var cfg={base:66,cap:90,relMax:18,truMax:3};
     var root=document.getElementById('cpSim');
     if(!root)return;
     var ranges=root.querySelectorAll('.cp-sim-range');
     function f1(n){return (n>=0?'+':'')+n.toFixed(1);}
     function recalc(){
-      var dir=0,ind=0;
+      var rel=0,tru=0;
       Array.prototype.forEach.call(ranges,function(r){
-        var k=r.getAttribute('data-key'),fr=parseFloat(r.value)/100,d=0,i=0;
-        if(k==='cmp'){d=cfg.cmp*fr*cfg.scale;}
-        else{var x=cfg.L[k];d=x.c*fr*cfg.scale;i=x.a*x.b*fr*cfg.scale;}
-        dir+=d;ind+=i;
+        var k=r.getAttribute('data-key'),fr=parseFloat(r.value)/100,pts=0;
+        if(k==='rel'){pts=fr*cfg.relMax;rel=pts;}
+        else if(k==='tru'){pts=fr*cfg.truMax;tru=pts;}
         var p=document.getElementById('pct_'+k);if(p)p.textContent=Math.round(fr*100)+'%';
-        var c=document.getElementById('ctr_'+k);if(c)c.textContent=f1(d+i)+' pts';
+        var c=document.getElementById('ctr_'+k);
+        if(c){c.innerHTML=(k==='tru')?(f1(pts)+' pts &mdash; limited headroom'):(f1(pts)+' pts');}
       });
-      var delta=dir+ind,proj=Math.min(cfg.baseline+delta,cfg.cap);
+      var delta=rel+tru,proj=Math.min(cfg.base+delta,cfg.cap);
       document.getElementById('simNow').textContent=proj.toFixed(1)+'%';
-      document.getElementById('simDelta').textContent=f1(delta)+' pts vs. '+cfg.baseline+'% baseline';
+      document.getElementById('simDelta').textContent=f1(delta)+' pts vs. '+cfg.base+'% today';
       document.getElementById('simFill').style.width=proj+'%';
-      document.getElementById('simSplit').innerHTML='Lift comes from <b>'+f1(dir)+' pts</b> direct and <b>'+f1(ind)+' pts</b> through imagery.';
+      document.getElementById('simSplit').innerHTML='Lift comes from <b>'+f1(rel)+' pts</b> relevance and <b>'+f1(tru)+' pts</b> trust.';
     }
     Array.prototype.forEach.call(ranges,function(r){r.addEventListener('input',recalc);});
     var rb=document.getElementById('simReset');
@@ -3429,7 +3425,7 @@ window.addEventListener('load', function() {
   })();
   </script>
 
-  <p class="cp-foot">Illustrative example for discussion. Path values &mdash; and the simulator's baseline, scaling, and outputs &mdash; are representative of the SEM above, not fielded Clinique data.</p>
+  <p class="cp-foot">Clinique levels &mdash; familiarity, trust rank, consideration, imagery scores &mdash; are from the brand-performance tracker (Make-up &amp; Skincare consumers). Simulator sensitivities are illustrative for discussion pending the fitted SEM; the 66% baseline is actual.</p>
 </div>
 </section>
 
