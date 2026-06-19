@@ -3248,56 +3248,188 @@ window.addEventListener('load', function() {
   .cp-arrow .ar{transform:rotate(90deg);font-size:1.2rem;}
   .cp-title{font-size:1.6rem;}
 }
+/* Mediation triangle */
+.med{display:grid;grid-template-columns:188px 78px 1fr 78px 168px;column-gap:8px;row-gap:12px;align-items:stretch;margin-top:6px;}
+.med>div{box-sizing:border-box;}
+.med-lever{grid-column:1;grid-row:1 / span 2;background:linear-gradient(135deg,#7434ac,#98069d);color:#fff;border-radius:11px;padding:14px;display:flex;flex-direction:column;justify-content:center;}
+.med-lever .lab{font-size:.56rem;letter-spacing:.15em;text-transform:uppercase;opacity:.82;font-weight:700;margin-bottom:4px;}
+.med-lever .nm{font-size:1.04rem;font-weight:800;line-height:1.18;}
+.med-med{grid-column:3;grid-row:1;background:#fdf6e9;border:1.5px dashed #e4a324;border-radius:11px;padding:11px 14px;color:#5a3d12;display:flex;flex-direction:column;justify-content:center;}
+.med-med .lab{font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;color:#b07d18;font-weight:700;margin-bottom:3px;}
+.med-med .nm{font-size:.95rem;font-weight:700;font-style:italic;line-height:1.22;}
+.med-out{grid-column:5;grid-row:1 / span 2;background:#241033;color:#fff;border-radius:11px;padding:14px;text-align:center;display:flex;flex-direction:column;justify-content:center;}
+.med-out .star{font-size:1.3rem;color:#e4c06a;line-height:1;}
+.med-out .nm{font-size:.96rem;font-weight:800;line-height:1.2;margin-top:3px;}
+.med-a,.med-b{grid-row:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.med-a{grid-column:2;}
+.med-b{grid-column:4;}
+.med-a .ar,.med-b .ar{font-size:1.4rem;color:#e4a324;line-height:.8;}
+.med-a .v,.med-b .v{font-size:.72rem;font-weight:800;color:#7434ac;margin-top:2px;}
+.med-a small,.med-b small{font-size:.56rem;color:#8a7a98;font-weight:600;line-height:1.05;margin-top:1px;}
+.med-direct{grid-column:2 / span 3;grid-row:2;position:relative;display:flex;align-items:center;justify-content:center;height:36px;}
+.med-direct::before{content:"";position:absolute;left:4px;right:12px;top:50%;height:2px;background:#7434ac;}
+.med-direct::after{content:"";position:absolute;right:2px;top:50%;transform:translateY(-50%);border-left:9px solid #7434ac;border-top:6px solid transparent;border-bottom:6px solid transparent;}
+.med-direct .pill{position:relative;z-index:1;background:#fff;border:1.5px solid #7434ac;border-radius:20px;padding:3px 14px;font-size:.74rem;font-weight:800;color:#7434ac;}
+.med-math{grid-column:1 / -1;grid-row:3;margin-top:2px;background:#faf6ff;border:1px dashed #d9c7ef;border-radius:9px;padding:8px 12px;font-size:.82rem;color:#4a3a60;text-align:center;}
+.med-math b{color:#c98a10;}
+.med-math .ind{color:#7434ac;}
+@media(max-width:900px){
+  .med{grid-template-columns:1fr;}
+  .med-lever,.med-med,.med-out,.med-a,.med-b,.med-direct,.med-math{grid-column:1 !important;grid-row:auto !important;}
+  .med-a .ar,.med-b .ar{transform:rotate(90deg);}
+  .med-direct::before,.med-direct::after{display:none;}
+  .med-direct{border:1.5px dashed #7434ac;border-radius:9px;height:auto;padding:7px;}
+}
+/* Simulator */
+.cp-sim-h{display:flex;align-items:center;gap:12px;margin:34px 0 8px;}
+.cp-sim-h h3{margin:0;font-size:1.45rem;font-weight:900;color:#241033;}
+.cp-sim-h .pill{font-size:.6rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#7434ac,#98069d);border-radius:20px;padding:4px 12px;}
+.cp-sim{background:#fff;border:1px solid #e7ddf2;border-radius:16px;padding:24px 26px;box-shadow:0 8px 26px rgba(116,52,172,.09);}
+.cp-sim p.lead{margin:0 0 18px;font-size:.92rem;color:#5b4a6e;line-height:1.5;max-width:840px;}
+.cp-sim p.lead b{color:#7434ac;}
+.cp-sim-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:center;}
+.cp-sim-row{margin-bottom:15px;}
+.cp-sim-lab{display:flex;justify-content:space-between;align-items:baseline;font-size:.9rem;font-weight:800;color:#241033;margin-bottom:5px;}
+.cp-sim-lab .pct{color:#7434ac;font-size:.82rem;font-weight:800;}
+.cp-sim-range{width:100%;accent-color:#98069d;height:6px;cursor:pointer;}
+.cp-sim-contrib{font-size:.72rem;color:#9a7c12;font-weight:700;margin-top:3px;}
+.cp-sim-reset{margin-top:8px;background:#f3edfa;border:1px solid #d9c7ef;color:#7434ac;font-weight:800;font-size:.8rem;border-radius:8px;padding:9px 18px;cursor:pointer;}
+.cp-sim-reset:hover{background:#e9ddf7;}
+.cp-sim-out{background:linear-gradient(160deg,#241033,#3a1b5e);border-radius:14px;padding:26px 24px;text-align:center;color:#fff;}
+.cp-sim-cap{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6);}
+.cp-sim-big{font-size:3.3rem;font-weight:900;color:#e4c06a;line-height:1.05;}
+.cp-sim-delta{font-size:.95rem;font-weight:800;color:#8fe6a0;margin:6px 0 16px;}
+.cp-sim-bar{position:relative;height:22px;border-radius:11px;background:rgba(255,255,255,.12);overflow:visible;}
+.cp-sim-fill{position:absolute;left:0;top:0;height:100%;border-radius:11px;background:linear-gradient(90deg,#98069d,#e4a324);transition:width .35s cubic-bezier(.4,0,.2,1);}
+.cp-sim-tick{position:absolute;top:-3px;bottom:-3px;width:2px;background:rgba(255,255,255,.8);z-index:2;}
+.cp-sim-scale{display:flex;justify-content:space-between;font-size:.6rem;color:rgba(255,255,255,.5);margin-top:6px;}
+.cp-sim-split{font-size:.8rem;color:rgba(255,255,255,.82);margin-top:14px;line-height:1.55;}
+.cp-sim-split b{color:#e4c06a;}
+@media(max-width:900px){.cp-sim-grid{grid-template-columns:1fr;}}
 </style>
 <div class="container fade-in">
   <p class="cp-eyebrow">Module 06 &middot; The Boardroom View</p>
   <h2 class="cp-title">3 Paths to Move <span>Purchase Consideration</span></h2>
-  <p class="cp-sub">The same model as the map &mdash; translated. Every lever works by moving a <b>perception</b> in the customer's mind, which moves consideration. Read each lane left to right.</p>
+  <p class="cp-sub">The same model as the map &mdash; translated. Each lever reaches consideration <b>two ways</b>: on its own, and by reshaping a <b>perception</b> in the customer's mind.</p>
   <div class="cp-intro">
-    <b>How to read a path:</b> a <b>lever</b> Clinique can pull &rarr; the <b>perception</b> it shifts (the mediator) &rarr; <b>Purchase Consideration</b>. The number on the first arrow is the <b>direct</b> effect; the number on the second is the <b>indirect</b> effect that travels <i>through</i> the perception. Add them for the <b>total effect</b> &mdash; how much that path moves consideration overall.
+    <b>First, what is a &ldquo;mediator&rdquo;?</b> Clinique rarely changes a customer's mind directly. It changes a <b>perception</b> &mdash; and the perception changes the customer. Those in-between perceptions are <b>brand imagery</b>: the words people attach to how a brand looks and feels (&ldquo;professional,&rdquo; &ldquo;premium,&rdquo; &ldquo;modern&rdquo;). That is what &ldquo;via imagery&rdquo; means.<br><br>
+    <b>How to read each path:</b> the straight <span style="color:#7434ac;font-weight:800;">bottom line</span> is the lever's <b>direct</b> effect &mdash; its contribution to consideration on its own (<i>c&prime;</i>). The <span style="color:#b07d18;font-weight:800;">top route</span> is the <b>indirect</b> effect: the lever lifts an imagery perception (<i>a</i>), and that perception lifts consideration (<i>b</i>). Multiply the two hops (<i>a&times;b</i>) for the indirect effect, then add the direct line for the <b>total</b>.
   </div>
 
   <div class="cp-lane">
     <div class="cp-lane-head"><span class="cp-badge">1</span><span class="cp-lane-title">Lead With Heritage</span><span class="cp-tag">Protect the core</span></div>
     <p class="cp-action">Put Clinique's dermatologist-guided origin &mdash; <i>Allergy Tested. 100% Fragrance Free.</i> &mdash; at the heart of the brand story. This is the single strongest lever, and it is uniquely Clinique's to own.</p>
-    <div class="cp-flow">
-      <div class="cp-cell cp-lever"><span class="lab">Lever</span><span class="nm">Heritage &amp; Trust</span></div>
-      <div class="cp-arrow"><span class="ar">&rarr;</span><span class="v">.64</span><small>direct</small></div>
-      <div class="cp-cell cp-perc"><span class="lab">Perception it moves</span><span class="nm">&ldquo;A trusted name dermatologists stand behind.&rdquo;</span></div>
-      <div class="cp-arrow"><span class="ar">&rarr;</span><span class="v">+.08</span><small>via imagery</small></div>
-      <div class="cp-cell cp-out"><span class="lab">Outcome</span><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
-      <div class="cp-total"><span class="num">.72</span><span class="cap">Total effect</span></div>
+    <div class="med">
+      <div class="med-lever"><span class="lab">Lever</span><span class="nm">Heritage &amp; Trust</span></div>
+      <div class="med-a"><span class="ar">&#8599;</span><span class="v">a = .20</span><small>lifts imagery</small></div>
+      <div class="med-med"><span class="lab">Mediator &middot; Brand imagery</span><span class="nm">&ldquo;Professional &amp; Experienced&rdquo;</span></div>
+      <div class="med-b"><span class="ar">&#8600;</span><span class="v">b = .40</span><small>imagery &rarr; consid.</small></div>
+      <div class="med-out"><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
+      <div class="med-direct"><span class="pill">Direct&nbsp; c&prime; = .64</span></div>
+      <div class="med-math">Direct <b>.64</b> &nbsp;+&nbsp; Indirect <span class="ind">(a&times;b = .20&times;.40 = .08)</span> &nbsp;=&nbsp; <b>Total .72</b></div>
     </div>
   </div>
 
   <div class="cp-lane">
     <div class="cp-lane-head"><span class="cp-badge">2</span><span class="cp-lane-title">Prove the Expertise</span><span class="cp-tag">Protect the core</span></div>
     <p class="cp-action">Foreground dermatologist development, testing rigor, and visible efficacy &mdash; credibility a 50+ year heritage brand can claim more believably than newer rivals.</p>
-    <div class="cp-flow">
-      <div class="cp-cell cp-lever"><span class="lab">Lever</span><span class="nm">Expert Authority</span></div>
-      <div class="cp-arrow"><span class="ar">&rarr;</span><span class="v">.56</span><small>direct</small></div>
-      <div class="cp-cell cp-perc"><span class="lab">Perception it moves</span><span class="nm">&ldquo;Clinically serious &mdash; results you can trust.&rdquo;</span></div>
-      <div class="cp-arrow"><span class="ar">&rarr;</span><span class="v">+.06</span><small>via heritage</small></div>
-      <div class="cp-cell cp-out"><span class="lab">Outcome</span><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
-      <div class="cp-total"><span class="num">.62</span><span class="cap">Total effect</span></div>
+    <div class="med">
+      <div class="med-lever"><span class="lab">Lever</span><span class="nm">Expert Authority</span></div>
+      <div class="med-a"><span class="ar">&#8599;</span><span class="v">a = .15</span><small>lifts imagery</small></div>
+      <div class="med-med"><span class="lab">Mediator &middot; Brand imagery</span><span class="nm">&ldquo;Premium &amp; Credible&rdquo;</span></div>
+      <div class="med-b"><span class="ar">&#8600;</span><span class="v">b = .40</span><small>imagery &rarr; consid.</small></div>
+      <div class="med-out"><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
+      <div class="med-direct"><span class="pill">Direct&nbsp; c&prime; = .56</span></div>
+      <div class="med-math">Direct <b>.56</b> &nbsp;+&nbsp; Indirect <span class="ind">(a&times;b = .15&times;.40 = .06)</span> &nbsp;=&nbsp; <b>Total .62</b></div>
     </div>
   </div>
 
   <div class="cp-lane cp-lane--hero">
     <div class="cp-lane-head"><span class="cp-badge">3</span><span class="cp-lane-title">Modernize Without Losing the Core</span><span class="cp-tag">The mediator path</span></div>
     <p class="cp-action">Innovation's <b>direct</b> effect is modest (.31) &mdash; but most of its power (<b>+.22</b>) travels <i>indirectly</i>, by refreshing how the brand looks and feels. Use new formulas, tools, and collaborations to shift imagery from &ldquo;classic / expert&rdquo; toward &ldquo;classic <i>and</i> contemporary.&rdquo; For a heritage brand, innovation earns consideration mainly by reshaping perception &mdash; not on its own.</p>
-    <div class="cp-flow">
-      <div class="cp-cell cp-lever"><span class="lab">Lever</span><span class="nm">Innovation &amp; Relevance</span></div>
-      <div class="cp-arrow"><span class="ar">&rarr;</span><span class="v">.31</span><small>direct</small></div>
-      <div class="cp-cell cp-perc"><span class="lab">Perception it moves <span style="color:#c98a10;">&#9733; the real driver</span></span><span class="nm">&ldquo;Heritage, but current&rdquo; &mdash; modern, in-touch imagery.</span></div>
-      <div class="cp-arrow"><span class="ar">&rarr;</span><span class="v">+.22</span><small>via imagery</small></div>
-      <div class="cp-cell cp-out"><span class="lab">Outcome</span><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
-      <div class="cp-total"><span class="num">.53</span><span class="cap">Total effect</span></div>
+    <div class="med">
+      <div class="med-lever"><span class="lab">Lever</span><span class="nm">Innovation &amp; Relevance</span></div>
+      <div class="med-a"><span class="ar">&#8599;</span><span class="v">a = .55</span><small>strongly lifts imagery</small></div>
+      <div class="med-med"><span class="lab">Mediator &middot; Brand imagery&nbsp; <span style="color:#c98a10;">&#9733; the real driver</span></span><span class="nm">&ldquo;Modern &amp; In-touch&rdquo; &mdash; heritage, but current</span></div>
+      <div class="med-b"><span class="ar">&#8600;</span><span class="v">b = .40</span><small>imagery &rarr; consid.</small></div>
+      <div class="med-out"><span class="star">&#9733;</span><span class="nm">Purchase Consideration</span></div>
+      <div class="med-direct"><span class="pill">Direct&nbsp; c&prime; = .31</span></div>
+      <div class="med-math">Direct <b>.31</b> &nbsp;+&nbsp; Indirect <span class="ind">(a&times;b = .55&times;.40 = <b style="color:#c98a10;">.22</b>)</span> &nbsp;=&nbsp; <b>Total .53</b> &mdash; <i>most of it travels through imagery</i></div>
     </div>
   </div>
 
   <div class="cp-guard"><b>Mind the drag:</b> Competitor Pull is the only <b>negative</b> path (&minus;.45) &mdash; younger prestige rivals siphoning consideration. Closing the relevance gap in Path 3 is also the best defense against it.</div>
-  <p class="cp-foot">Illustrative example for discussion. Path values are representative of the SEM above, not fielded Clinique data.</p>
+
+  <div class="cp-sim-h"><span class="pill">Interactive</span><h3>Consideration Simulator</h3></div>
+  <div class="cp-sim" id="cpSim">
+    <p class="lead">Drag any lever to improve it and watch projected <b>Purchase Consideration</b> move. Each lever adds points two ways &mdash; <b>directly</b>, and <b>through brand imagery</b> (the mediator). Reducing Competitor Pull removes its drag.</p>
+    <div class="cp-sim-grid">
+      <div class="cp-sim-controls">
+        <div class="cp-sim-row">
+          <div class="cp-sim-lab"><span>Heritage &amp; Trust</span><span class="pct" id="pct_her">0%</span></div>
+          <input type="range" class="cp-sim-range" data-key="her" min="0" max="50" step="1" value="0">
+          <div class="cp-sim-contrib" id="ctr_her">+0.0 pts</div>
+        </div>
+        <div class="cp-sim-row">
+          <div class="cp-sim-lab"><span>Expert Authority</span><span class="pct" id="pct_exp">0%</span></div>
+          <input type="range" class="cp-sim-range" data-key="exp" min="0" max="50" step="1" value="0">
+          <div class="cp-sim-contrib" id="ctr_exp">+0.0 pts</div>
+        </div>
+        <div class="cp-sim-row">
+          <div class="cp-sim-lab"><span>Innovation &amp; Relevance</span><span class="pct" id="pct_inn">0%</span></div>
+          <input type="range" class="cp-sim-range" data-key="inn" min="0" max="50" step="1" value="0">
+          <div class="cp-sim-contrib" id="ctr_inn">+0.0 pts</div>
+        </div>
+        <div class="cp-sim-row">
+          <div class="cp-sim-lab"><span>Reduce Competitor Pull</span><span class="pct" id="pct_cmp">0%</span></div>
+          <input type="range" class="cp-sim-range" data-key="cmp" min="0" max="50" step="1" value="0">
+          <div class="cp-sim-contrib" id="ctr_cmp">+0.0 pts</div>
+        </div>
+        <button class="cp-sim-reset" id="simReset">Reset</button>
+      </div>
+      <div class="cp-sim-out">
+        <div class="cp-sim-cap">Projected Purchase Consideration</div>
+        <div class="cp-sim-big" id="simNow">38.0%</div>
+        <div class="cp-sim-delta" id="simDelta">+0.0 pts vs. 38% baseline</div>
+        <div class="cp-sim-bar"><div class="cp-sim-tick" style="left:38%"></div><div class="cp-sim-fill" id="simFill" style="width:38%"></div></div>
+        <div class="cp-sim-scale"><span>0%</span><span>&#9650; baseline 38%</span><span>100%</span></div>
+        <div class="cp-sim-split" id="simSplit">Lift comes from <b>+0.0 pts</b> direct and <b>+0.0 pts</b> through imagery.</div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var cfg={baseline:38,scale:22,cap:95,
+      L:{her:{c:.64,a:.20,b:.40},exp:{c:.56,a:.15,b:.40},inn:{c:.31,a:.55,b:.40}},
+      cmp:.45};
+    var root=document.getElementById('cpSim');
+    if(!root)return;
+    var ranges=root.querySelectorAll('.cp-sim-range');
+    function f1(n){return (n>=0?'+':'')+n.toFixed(1);}
+    function recalc(){
+      var dir=0,ind=0;
+      Array.prototype.forEach.call(ranges,function(r){
+        var k=r.getAttribute('data-key'),fr=parseFloat(r.value)/100,d=0,i=0;
+        if(k==='cmp'){d=cfg.cmp*fr*cfg.scale;}
+        else{var x=cfg.L[k];d=x.c*fr*cfg.scale;i=x.a*x.b*fr*cfg.scale;}
+        dir+=d;ind+=i;
+        var p=document.getElementById('pct_'+k);if(p)p.textContent=Math.round(fr*100)+'%';
+        var c=document.getElementById('ctr_'+k);if(c)c.textContent=f1(d+i)+' pts';
+      });
+      var delta=dir+ind,proj=Math.min(cfg.baseline+delta,cfg.cap);
+      document.getElementById('simNow').textContent=proj.toFixed(1)+'%';
+      document.getElementById('simDelta').textContent=f1(delta)+' pts vs. '+cfg.baseline+'% baseline';
+      document.getElementById('simFill').style.width=proj+'%';
+      document.getElementById('simSplit').innerHTML='Lift comes from <b>'+f1(dir)+' pts</b> direct and <b>'+f1(ind)+' pts</b> through imagery.';
+    }
+    Array.prototype.forEach.call(ranges,function(r){r.addEventListener('input',recalc);});
+    var rb=document.getElementById('simReset');
+    if(rb)rb.addEventListener('click',function(){Array.prototype.forEach.call(ranges,function(r){r.value=0;});recalc();});
+    recalc();
+  })();
+  </script>
+
+  <p class="cp-foot">Illustrative example for discussion. Path values &mdash; and the simulator's baseline, scaling, and outputs &mdash; are representative of the SEM above, not fielded Clinique data.</p>
 </div>
 </section>
 
