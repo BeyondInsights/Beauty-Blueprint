@@ -1209,43 +1209,58 @@ window.addEventListener('load', function() {
     Purpose‑built methodologies that transform data into strategic advantage
 </p>
 <style>
-.dec4{max-width:1300px;margin:0 auto 2.5rem;}
-.dec4-intro{text-align:center;color:rgba(255,255,255,.92);font-size:1.22rem;line-height:1.5;margin:0 0 2rem;}
+.dec4{max-width:1320px;margin:1rem auto 2.5rem;}
+.dec4-banner{text-align:center;margin-bottom:.5rem;}
+.dec4-chip{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#241033;background:linear-gradient(135deg,#f4b434,#e4a324);border-radius:30px;padding:7px 18px;margin-bottom:16px;box-shadow:0 6px 20px rgba(228,163,36,.3);}
+.dec4-head{font-size:2.1rem;font-weight:900;color:#fff;line-height:1.14;margin:0 0 10px;}
+.dec4-head span{color:#f4b434;}
+.dec4-intro{color:rgba(255,255,255,.82);font-size:1.08rem;line-height:1.5;margin:0 auto;max-width:780px;}
 .dec4-intro b{color:#f4b434;}
-.dec4-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-.dec4-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-top:4px solid #e4a324;border-radius:14px;padding:22px 20px;display:flex;flex-direction:column;}
-.dec4-q-num{font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#e4a324;margin-bottom:10px;}
-.dec4-q{font-size:1.22rem;font-weight:800;color:#fff;margin:0 0 8px;line-height:1.2;}
-.dec4-d{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.45;margin:0 0 16px;flex:1;}
-.dec4-mods{display:flex;flex-wrap:wrap;gap:7px;}
+.dec4-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:2.2rem;}
+.dec4-card{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(116,52,172,.24),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.16);border-top:4px solid #e4a324;border-radius:16px;padding:24px 20px 22px;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease;}
+.dec4-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(0,0,0,.42);}
+.dec4-bignum{position:absolute;top:-20px;right:4px;font-size:6.2rem;font-weight:900;line-height:1;color:rgba(244,180,52,.15);pointer-events:none;}
+.dec4-q-num{position:relative;font-size:.64rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#f4b434;margin-bottom:10px;}
+.dec4-q{position:relative;font-size:1.24rem;font-weight:800;color:#fff;margin:0 0 8px;line-height:1.2;}
+.dec4-d{position:relative;font-size:.9rem;color:rgba(255,255,255,.74);line-height:1.45;margin:0 0 16px;flex:1;}
+.dec4-mods{position:relative;display:flex;flex-wrap:wrap;gap:7px;}
 .dec4-mods span{font-size:.72rem;font-weight:700;color:#fff;background:linear-gradient(135deg,#7434ac,#98069d);border-radius:20px;padding:5px 11px;}
-.dec4-mods span.activate{background:rgba(255,255,255,.12);border:1px solid rgba(244,180,52,.5);color:#f4b434;}
-.dec4-foot{text-align:center;color:rgba(255,255,255,.6);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:2.6rem 0 1.4rem;}
-@media(max-width:1000px){.dec4-grid{grid-template-columns:1fr 1fr;}}
+.dec4-mods span.activate{background:rgba(255,255,255,.1);border:1px solid rgba(244,180,52,.5);color:#f4b434;}
+.dec4-foot{text-align:center;color:rgba(255,255,255,.55);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:2.8rem 0 1.4rem;}
+.dec4-foot::before,.dec4-foot::after{content:"";display:inline-block;width:40px;height:1px;background:rgba(255,255,255,.3);vertical-align:middle;margin:0 14px;}
+@media(max-width:1000px){.dec4-grid{grid-template-columns:1fr 1fr;}.dec4-head{font-size:1.55rem;}}
 @media(max-width:600px){.dec4-grid{grid-template-columns:1fr;}}
 </style>
 <div class="dec4">
-  <p class="dec4-intro">One Blueprint answers <b>four executive decisions</b>, powered by all <b>six methodologies</b> below.</p>
+  <div class="dec4-banner">
+    <span class="dec4-chip">The Decision Framework</span>
+    <h3 class="dec4-head">Four decisions. <span>Six methodologies.</span> One Blueprint.</h3>
+    <p class="dec4-intro">Every beauty leader has to answer the same four questions. The Blueprint is built so each one is powered by proven methodologies, not opinion.</p>
+  </div>
   <div class="dec4-grid">
     <div class="dec4-card">
+      <span class="dec4-bignum">1</span>
       <div class="dec4-q-num">Decision 1</div>
       <h3 class="dec4-q">Who matters most?</h3>
       <p class="dec4-d">Which consumers to defend, win, or deprioritize, and what each is worth.</p>
       <div class="dec4-mods"><span>01 Segmentation</span></div>
     </div>
     <div class="dec4-card">
+      <span class="dec4-bignum">2</span>
       <div class="dec4-q-num">Decision 2</div>
       <h3 class="dec4-q">Where are we winning or leaking?</h3>
       <p class="dec4-d">Brand trajectory, and where loyalty is slipping away to rivals.</p>
       <div class="dec4-mods"><span>02 Brand Momentum</span><span>05 Infidelity Index</span></div>
     </div>
     <div class="dec4-card">
+      <span class="dec4-bignum">3</span>
       <div class="dec4-q-num">Decision 3</div>
       <h3 class="dec4-q">What should we fix or fund?</h3>
       <p class="dec4-d">The distinctive attributes and behavior-changing levers that earn investment.</p>
       <div class="dec4-mods"><span>03 Perceptual Landscape</span><span>04 Brand Edge</span><span>06 Loyalty Growth Driver Model</span></div>
     </div>
     <div class="dec4-card">
+      <span class="dec4-bignum">4</span>
       <div class="dec4-q-num">Decision 4</div>
       <h3 class="dec4-q">How do we activate it?</h3>
       <p class="dec4-d">A funded 90-day roadmap: campaign briefs, CRM audiences, messaging pillars, and innovation priorities.</p>
@@ -3589,7 +3604,60 @@ window.addEventListener('load', function() {
   scrolling="no">
 </iframe>
 </section>
- 
+
+<!-- What You Have in 90 Days (deliverables) -->
+<section class="screen wyh-section" id="deliverables">
+<style>
+.wyh-section{background:linear-gradient(160deg,#ffffff,#f3eef9);color:#241033;font-family:'Segoe UI',Helvetica,Arial,sans-serif;padding:60px 30px;}
+.wyh-section .container{max-width:1400px;margin:0 auto;}
+.wyh-eyebrow{text-transform:uppercase;letter-spacing:.2em;color:#98069d;font-size:.82rem;font-weight:800;margin:0 0 .5rem;text-align:center;}
+.wyh-title{font-size:2.3rem;font-weight:900;line-height:1.12;margin:0 0 .5rem;color:#241033;text-align:center;}
+.wyh-title span{color:#c98a10;}
+.wyh-sub{font-size:1.05rem;color:#5b4a6e;line-height:1.5;margin:0 auto 2.4rem;max-width:760px;text-align:center;}
+.wyh-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+.wyh-card{position:relative;background:#fff;border:1px solid #e7ddf2;border-radius:16px;padding:26px 28px;box-shadow:0 10px 30px rgba(116,52,172,.09);border-left:6px solid #7434ac;}
+.wyh-card .num{font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#c98a10;margin-bottom:8px;}
+.wyh-card h3{font-size:1.4rem;font-weight:900;color:#241033;margin:0 0 8px;line-height:1.18;}
+.wyh-card p{font-size:.95rem;color:#4a3a60;line-height:1.5;margin:0 0 14px;}
+.wyh-tag{display:inline-flex;align-items:center;gap:7px;font-size:.66rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:#5d2e9e;background:#efe7f9;border-radius:20px;padding:5px 12px;}
+.wyh-foot{text-align:center;margin-top:2.4rem;font-size:1.2rem;font-weight:800;color:#241033;}
+.wyh-foot span{color:#c98a10;}
+@media(max-width:850px){.wyh-grid{grid-template-columns:1fr;}.wyh-title{font-size:1.7rem;}}
+</style>
+<div class="container fade-in">
+  <p class="wyh-eyebrow">The Deliverable</p>
+  <h2 class="wyh-title">What You Have in <span>90 Days</span></h2>
+  <p class="wyh-sub">Not a slide library. Four decision-ready outputs, one for each question the Blueprint answers.</p>
+  <div class="wyh-grid">
+    <div class="wyh-card">
+      <div class="num">Output 1</div>
+      <h3>Growth Opportunity Map</h3>
+      <p>Which segments to defend, win, or deprioritize, with the dollar value attached to each.</p>
+      <span class="wyh-tag">Answers Decision 1: Who matters most?</span>
+    </div>
+    <div class="wyh-card">
+      <div class="num">Output 2</div>
+      <h3>Loyalty Leakage Diagnosis</h3>
+      <p>Where consumers are slipping, by stage: curious, promiscuous, lapsed, and divorced.</p>
+      <span class="wyh-tag">Answers Decision 2: Where are we leaking?</span>
+    </div>
+    <div class="wyh-card">
+      <div class="num">Output 3</div>
+      <h3>Driver-to-Dollar Priorities</h3>
+      <p>Which perceptions, claims, experiences, and messages have the greatest modeled impact on behavior.</p>
+      <span class="wyh-tag">Answers Decision 3: What to fix or fund?</span>
+    </div>
+    <div class="wyh-card">
+      <div class="num">Output 4</div>
+      <h3>Activation Roadmap</h3>
+      <p>Campaign briefs, CRM audiences, messaging pillars, innovation implications, and a measurement plan.</p>
+      <span class="wyh-tag">Answers Decision 4: How do we activate?</span>
+    </div>
+  </div>
+  <p class="wyh-foot">A funded roadmap you can act on, <span>not just findings.</span></p>
+</div>
+</section>
+
 <!-- ░░░ DECISION ░░░ -->
 <section class="screen decision" style="margin-top: -150px !important; padding-top: 0 !important;">  <div class="container fade-in">
     <h2 class="section-title">
