@@ -1972,21 +1972,25 @@ window.addEventListener('load', function() {
 .bmm-bubble{
   position:absolute;
   z-index:2;
-  padding:6px 12px;
-  border-radius:999px;
-  font-size:0.72rem;
-  font-weight:700;
+  transform:translate(-50%,-50%);
+  padding:7px 13px;
+  border-radius:8px;
+  font-size:0.74rem;
+  font-weight:800;
+  letter-spacing:0.02em;
   white-space:nowrap;
-  box-shadow:0 3px 10px rgba(0,0,0,0.35);
-  transition:transform 0.15s ease;
+  box-shadow:0 4px 14px rgba(0,0,0,0.42);
+  transition:transform 0.15s ease, box-shadow 0.15s ease;
+  cursor:default;
+  border:1px solid rgba(0,0,0,0.10);
 }
-.bmm-bubble:hover{transform:scale(1.07);z-index:5;}
-.bmm-b-purple{background:var(--wisteria,#9454b0);color:#fff;}
-.bmm-b-magenta{background:var(--purple,#98069d);color:#fff;}
-.bmm-b-rose{background:var(--rose,#eb0473);color:#fff;}
-.bmm-b-red{background:var(--red-ribbon,#f10b25);color:#fff;}
-.bmm-b-gold{background:var(--fire-bush,#e4a324);color:#2a1b06;}
-.bmm-b-light{background:#fff;color:#2a1640;}
+.bmm-bubble:hover{transform:translate(-50%,-50%) scale(1.1);z-index:9;box-shadow:0 8px 22px rgba(0,0,0,0.5);}
+.bmm-b-light{background:#fff;color:#1a0f2e;}
+.bmm-b-dark{background:#141414;color:#fff;border-color:#000;}
+.bmm-b-cream{background:#efe7d8;color:#2a2014;}
+.bmm-b-navy{background:#10233f;color:#fff;}
+.bmm-b-gold{background:linear-gradient(135deg,#f4d27a,#e4a324);color:#2a1b06;}
+.bmm-b-rose{background:#eb0473;color:#fff;}
 .bmm-footnote{
   margin-top:12px;
   font-size:0.72rem;
@@ -2010,7 +2014,7 @@ window.addEventListener('load', function() {
   <header class="bmm-header">
     <p class="bmm-eyebrow">Module 02 Example - Brand Momentum Mapping</p>
     <h2 class="bmm-title">Brand Momentum <span>Mapping</span></h2>
-    <p class="bmm-subtitle">Where leading prestige brands land (illustrative)</p>
+    <p class="bmm-subtitle">Twenty prestige brands, placed by fielded usage and consideration (horizontal) and brand passion (vertical). Hover any brand for its read.</p>
   </header>
   <div class="bmm-plot-wrap">
     <div class="bmm-yaxis">
@@ -2023,35 +2027,39 @@ window.addEventListener('load', function() {
     <div class="bmm-grid">
       <div class="bmm-quad bmm-q-tl">
         <div class="bmm-q-head">Igniters</div>
-        <div class="bmm-q-cap">Strong emotional pull and potential but not yet mainstream</div>
-        <span class="bmm-bubble bmm-b-purple" style="top:30%;left:14%;">Charlotte Tilbury</span>
-        <span class="bmm-bubble bmm-b-light" style="top:18%;left:52%;">Rare Beauty</span>
-        <span class="bmm-bubble bmm-b-purple" style="top:54%;left:30%;">Laneige</span>
-        <span class="bmm-bubble bmm-b-light" style="top:72%;left:18%;">Tarte</span>
-        <span class="bmm-bubble bmm-b-purple" style="top:46%;left:60%;">La Mer</span>
+        <div class="bmm-q-cap">Have strong emotional pull and potential but aren&rsquo;t yet mainstream</div>
+        <span class="bmm-bubble bmm-b-light" style="top:24%;left:30%;" title="Strikes an emotional chord among fans, though still building a broader user base overall.">Rare Beauty</span>
+        <span class="bmm-bubble bmm-b-light" style="top:30%;left:72%;" title="Luxury and glam yield strong desirability, backed by a growing consumer following.">Charlotte Tilbury</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:52%;left:26%;" title="High artistry credibility feeds brand excitement, with usage on a steady upward climb.">Makeup by Mario</span>
+        <span class="bmm-bubble bmm-b-light" style="top:54%;left:74%;" title="Ultra-luxury skincare beloved by a smaller but intensely dedicated clientele.">La Mer</span>
+        <span class="bmm-bubble bmm-b-light" style="top:76%;left:48%;" title="Innovative K-beauty formulae cultivate rising enthusiasm, steadily expanding its user base.">Laneige</span>
       </div>
       <div class="bmm-quad bmm-q-tr">
-        <div class="bmm-q-head">Blazing / Fire Icons</div>
+        <div class="bmm-q-head">Blazing Icons</div>
         <div class="bmm-q-cap">Dominate both the cultural conversation and consumer adoption</div>
-        <span class="bmm-bubble bmm-b-rose" style="top:42%;left:10%;">Fenty Beauty</span>
-        <span class="bmm-bubble bmm-b-magenta" style="top:20%;left:64%;">MAC</span>
-        <span class="bmm-bubble bmm-b-magenta" style="top:34%;left:46%;">Dior</span>
-        <span class="bmm-bubble bmm-b-light" style="top:58%;left:30%;">NARS</span>
-        <span class="bmm-bubble bmm-b-light" style="top:62%;left:58%;">The Ordinary</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:24%;left:22%;" title="Inclusive innovation plus celebrity influence lifts both brand love and widespread uptake.">Fenty Beauty</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:20%;left:72%;" title="Blends artistry with mainstream appeal, achieving both high usage and deep brand passion.">MAC</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:40%;left:48%;" title="Heritage luxury that maintains solid user loyalty, balanced by upscale, aspirational positioning.">Dior</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:58%;left:26%;" title="A trusted, trend-centric favorite with notable creative buzz, paired with respectable user adoption.">NARS</span>
+        <span class="bmm-bubble bmm-b-cream" style="top:62%;left:68%;" title="Science-first affordability fuels loyal devotion, steadily broadening its reach.">The Ordinary</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:78%;left:42%;" title="Appeals broadly thanks to cult-favorite products, fostering decent brand engagement and usage.">Tarte</span>
       </div>
       <div class="bmm-quad bmm-q-bl">
         <div class="bmm-q-head">Slow Burners</div>
-        <div class="bmm-q-cap">Face low awareness or weaker brand imagery, yet may have unique niches to build upon</div>
-        <span class="bmm-bubble bmm-b-light" style="top:26%;left:42%;">Fresh</span>
-        <span class="bmm-bubble bmm-b-red" style="top:50%;left:18%;">Summer Fridays</span>
-        <span class="bmm-bubble bmm-b-red" style="top:66%;left:46%;">Supergoop</span>
+        <div class="bmm-q-cap">Face low awareness or weaker brand imagery yet may have unique niches to build upon</div>
+        <span class="bmm-bubble bmm-b-light" style="top:24%;left:30%;" title="Natural inspirations keep a modest yet consistent following, without standout hype.">Fresh</span>
+        <span class="bmm-bubble bmm-b-light" style="top:26%;left:72%;" title="Known for iconic complexion products like foundations, enjoying solid usage if not top-tier buzz.">Laura Mercier</span>
+        <span class="bmm-bubble bmm-b-light" style="top:48%;left:22%;" title="Clean, gentle solutions with a niche buzz, still scaling in mainstream adoption.">Tower 28</span>
+        <span class="bmm-bubble bmm-b-light" style="top:50%;left:56%;" title="Influencer cachet drives brand intrigue, though usage remains relatively contained.">Summer Fridays</span>
+        <span class="bmm-bubble bmm-b-light" style="top:74%;left:34%;" title="Eco-friendly focus and dedicated fans, but overshadowed by larger competitors.">Josie Maran</span>
+        <span class="bmm-bubble bmm-b-gold" style="top:72%;left:66%;" title="Niche SPF innovations building momentum, gradually converting interest into adoption.">Supergoop</span>
       </div>
       <div class="bmm-quad bmm-q-br">
         <div class="bmm-q-head">Steady Flames</div>
-        <div class="bmm-q-cap">Chosen for reliability but spark less excitement</div>
-        <span class="bmm-bubble bmm-b-light" style="top:30%;left:20%;">Clinique</span>
-        <span class="bmm-bubble bmm-b-gold" style="top:52%;left:48%;">e.l.f</span>
-        <span class="bmm-bubble bmm-b-gold" style="top:70%;left:18%;">Laura Mercier</span>
+        <div class="bmm-q-cap">Are chosen for reliability but spark less excitement</div>
+        <span class="bmm-bubble bmm-b-navy" style="top:28%;left:64%;" title="A prestige powerhouse commanding broad usage, though less perceived as cutting-edge in attitude.">Est&eacute;e Lauder</span>
+        <span class="bmm-bubble bmm-b-dark" style="top:50%;left:32%;" title="Budget-friendly and convenient, driving usage, but does not spark the same aspirational excitement.">e.l.f.</span>
+        <span class="bmm-bubble bmm-b-light" style="top:68%;left:62%;" title="Dermatologist-founded heritage name with wide user adoption, though emotional pull is more moderate.">Clinique</span>
       </div>
     </div>
     <div class="bmm-xaxis">
@@ -2059,10 +2067,10 @@ window.addEventListener('load', function() {
         <span>WEAK</span>
         <span>STRONG</span>
       </div>
-      <span class="bmm-xaxis-label">Brand Engagement: Usage &amp; Consideration</span>
+      <span class="bmm-xaxis-label">Market Reality: Brand Usage &amp; Consideration</span>
     </div>
   </div>
-  <p class="bmm-footnote">Illustrative positioning for discussion.</p>
+  <p class="bmm-footnote">Horizontal position reflects fielded brand usage and consideration. Vertical (Brand Passion) is an editorial read informed by the expectancy analysis. Hover a brand for its profile.</p>
 </div>
 </section>
 
