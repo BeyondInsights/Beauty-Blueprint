@@ -1833,11 +1833,11 @@ window.addEventListener('load', function() {
   background:var(--dark-bg,#1a0f2e);
   color:var(--white,#fff);
   width:100%;
-  min-height:100vh;
+  min-height:auto;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:32px 40px;
+  padding:36px 40px;
   font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
   overflow:hidden;
 }
@@ -1847,7 +1847,7 @@ window.addEventListener('load', function() {
   max-width:1280px;
   display:flex;
   flex-direction:column;
-  height:100%;
+  height:auto;
 }
 .bmm-header{margin-bottom:18px;}
 .bmm-eyebrow{
@@ -1872,12 +1872,12 @@ window.addEventListener('load', function() {
   font-style:italic;
 }
 .bmm-plot-wrap{
-  flex:1;
+  flex:none;
   display:grid;
   grid-template-columns:34px 1fr;
   grid-template-rows:1fr 34px;
   gap:8px;
-  min-height:560px;
+  height:450px;
 }
 .bmm-yaxis{
   grid-column:1;grid-row:1;
@@ -2191,12 +2191,14 @@ window.addEventListener('load', function() {
     .be-track{position:relative;height:15px;background:rgba(255,255,255,.06);border-radius:4px;}
     .be-zero{position:absolute;left:50%;top:-2px;bottom:-2px;width:2px;background:rgba(255,255,255,.45);transform:translateX(-50%);}
     .be-fill{position:absolute;top:2px;bottom:2px;border-radius:3px;}
-    .be-pos{background:linear-gradient(90deg,#36b34a,#5fd06f);}
-    .be-neg{background:linear-gradient(90deg,#ff5566,#f10b25);}
+    .be-str{background:#1b6ec2;}
+    .be-out{background:#5fb0ee;}
+    .be-under{background:#f48fb1;}
+    .be-weak{background:#f10b25;}
     .be-legend{display:flex;gap:1.4rem;margin-top:1rem;font-size:.78rem;color:rgba(255,255,255,.7);flex-wrap:wrap;}
     .be-legend span{display:inline-flex;align-items:center;gap:.45rem;}
     .be-dot{width:12px;height:12px;border-radius:3px;display:inline-block;}
-    .be-dot.g{background:#5fd06f;} .be-dot.r{background:#ff5566;}
+    .be-dot.s{background:#1b6ec2;} .be-dot.o{background:#5fb0ee;} .be-dot.u{background:#f48fb1;} .be-dot.w{background:#f10b25;}
     .be-dot.z{width:2px;height:14px;background:rgba(255,255,255,.45);border-radius:2px;}
     .be-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
     .be-col{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem 1.6rem;}
@@ -2222,25 +2224,28 @@ window.addEventListener('load', function() {
     <p class="be-subtitle">Future-Proofing Brands Through <span>Strategic Clarity</span></p>
     <div class="be-top">
       <div class="be-panel">
-        <p class="be-chart-title">Where the brand outperforms vs. underperforms its perceived position</p>
-        <p class="be-chart-sub">Gap vs. expected position, ranked. Green: authentic strength. Red: vulnerability.</p>
-      <div class="be-row"><div class="be-rlabel">Recent Purchaser, Skincare</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:43.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Innovative / Creative</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:36.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Youthful / Playful</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:30.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Environmental Steward</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:25.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Familiar With</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:20.5%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Hear People Talking About</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:16.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Frequently Catches Attention</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-pos" style="left:50%;width:12.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Leading Beauty Authority</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-neg" style="left:35.0%;width:15.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">A Brand I Trust</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-neg" style="left:28.5%;width:21.5%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Luxury / Sophisticated</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-neg" style="left:22.0%;width:28.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Glamorous / Sexy</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-neg" style="left:17.0%;width:33.0%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Professional / Experienced</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-neg" style="left:10.5%;width:39.5%"></div></div></div>
-      <div class="be-row"><div class="be-rlabel">Trustworthy / Reliable</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-neg" style="left:6.0%;width:44.0%"></div></div></div>
+        <p class="be-chart-title">Clinique: where the brand beats or trails its expected position</p>
+        <p class="be-chart-sub">Bar length is the gap versus the score expected for Clinique&rsquo;s size. Color shows the edge, from Brand Strength to Brand Weakness. Real data.</p>
+      <div class="be-row"><div class="be-rlabel">Trustworthy / Reliable</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-str" style="left:50%;width:31.5%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Ever Purchased</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-str" style="left:50%;width:29.6%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Professional / Experienced</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-str" style="left:50%;width:24.4%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Recent Purchaser, Skincare</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-str" style="left:50%;width:22.3%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Luxury / Sophisticated</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-str" style="left:50%;width:20.0%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">A Brand I Trust</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-out" style="left:50%;width:13.0%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Leading Beauty Authority</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-out" style="left:50%;width:5.7%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Aspire To Use More Often</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-under" style="left:44.1%;width:5.9%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Understands My Needs</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-under" style="left:39.9%;width:10.1%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Edgy / Bold</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-under" style="left:37.8%;width:12.2%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Fresh / Youthful</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-under" style="left:34.0%;width:16.0%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Innovative / Creative</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-weak" style="left:21.9%;width:28.1%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Seriously Consider, Makeup</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-weak" style="left:15.8%;width:34.2%"></div></div></div>
+      <div class="be-row"><div class="be-rlabel">Seriously Consider, Skincare</div><div class="be-track"><span class="be-zero"></span><div class="be-fill be-weak" style="left:6.5%;width:43.5%"></div></div></div>
         <div class="be-legend">
-          <span><i class="be-dot g"></i>Outperforming</span>
-          <span><i class="be-dot r"></i>Underperforming</span>
-          <span><i class="be-dot z"></i>Perceived position</span>
+          <span><i class="be-dot s"></i>Brand Strength</span>
+          <span><i class="be-dot o"></i>Outperforms</span>
+          <span><i class="be-dot z"></i>Parity (expected)</span>
+          <span><i class="be-dot u"></i>Underperforms</span>
+          <span><i class="be-dot w"></i>Brand Weakness</span>
         </div>
       </div>
       <div class="be-panel">
@@ -2372,12 +2377,11 @@ window.addEventListener('load', function() {
 </style>
 <div class="container fade-in">
   <p class="bee-eyebrow">Module 04 Example - Brand Edge Assessment</p>
-  <h2 class="bee-title">Brand <span>Edge Assessment</span></h2>
-  <p class="bee-sub">Every attribute classified by how the brand performs versus the score expected for its size. Bar length is the brand&rsquo;s actual top-2-box score; color is the edge. Real fielded data.</p>
+  <h2 class="bee-title">Brand <span>Strengths &amp; Weaknesses</span></h2>
+  <p class="bee-sub">Each brand&rsquo;s genuine strengths and weaknesses, ranked by how far it beats or trails the score expected for its size. Attributes at parity are omitted. Bar length is the actual top-2-box score; color is the edge. Real fielded data.</p>
   <div class="bee-legend">
     <span class="bee-li"><span class="bee-sw str"></span>Brand Strength</span>
     <span class="bee-li"><span class="bee-sw out"></span>Outperforms</span>
-    <span class="bee-li"><span class="bee-sw par"></span>Parity</span>
     <span class="bee-li"><span class="bee-sw under"></span>Underperforms</span>
     <span class="bee-li"><span class="bee-sw weak"></span>Brand Weakness</span>
   </div>
@@ -2393,15 +2397,6 @@ window.addEventListener('load', function() {
       <div class="bee-row"><div class="bee-lbl"><span>A Brand I Trust</span><b>49%</b></div><div class="bee-track"><div class="bee-bar out" style="width:49%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Leading Beauty Authority</span><b>43%</b></div><div class="bee-track"><div class="bee-bar out" style="width:43%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Recent Purchaser (Makeup)</span><b>21%</b></div><div class="bee-track"><div class="bee-bar out" style="width:21%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Feel Proud To Use</span><b>42%</b></div><div class="bee-track"><div class="bee-bar par" style="width:42%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Glamorous / Sexy</span><b>30%</b></div><div class="bee-track"><div class="bee-bar par" style="width:30%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Catches Attention</span><b>37%</b></div><div class="bee-track"><div class="bee-bar par" style="width:37%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Scientific / Intelligent</span><b>25%</b></div><div class="bee-track"><div class="bee-bar par" style="width:25%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Familiar With</span><b>85%</b></div><div class="bee-track"><div class="bee-bar par" style="width:85%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Talked About</span><b>38%</b></div><div class="bee-track"><div class="bee-bar par" style="width:38%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Environmental Steward</span><b>20%</b></div><div class="bee-track"><div class="bee-bar par" style="width:20%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Recommend To Others</span><b>39%</b></div><div class="bee-track"><div class="bee-bar par" style="width:39%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Approachable / Caring</span><b>28%</b></div><div class="bee-track"><div class="bee-bar par" style="width:28%"></div></div></div>
       <div class="bee-divider"></div>
       <div class="bee-row"><div class="bee-lbl"><span>Would Greatly Miss</span><b>32%</b></div><div class="bee-track"><div class="bee-bar under" style="width:32%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Aspire To Use More Often</span><b>34%</b></div><div class="bee-track"><div class="bee-bar under" style="width:34%"></div></div></div>
@@ -2427,12 +2422,6 @@ window.addEventListener('load', function() {
       <div class="bee-row"><div class="bee-lbl"><span>Innovative / Creative</span><b>64%</b></div><div class="bee-track"><div class="bee-bar out" style="width:64%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Catches Attention</span><b>47%</b></div><div class="bee-track"><div class="bee-bar out" style="width:47%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Recommend To Others</span><b>51%</b></div><div class="bee-track"><div class="bee-bar out" style="width:51%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Aspire To Use More Often</span><b>46%</b></div><div class="bee-track"><div class="bee-bar par" style="width:46%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Recent Purchaser</span><b>10%</b></div><div class="bee-track"><div class="bee-bar par" style="width:10%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>A Brand I Trust</span><b>53%</b></div><div class="bee-track"><div class="bee-bar par" style="width:53%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Professional / Experienced</span><b>37%</b></div><div class="bee-track"><div class="bee-bar par" style="width:37%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Talked About</span><b>46%</b></div><div class="bee-track"><div class="bee-bar par" style="width:46%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Feel Proud To Use</span><b>47%</b></div><div class="bee-track"><div class="bee-bar par" style="width:47%"></div></div></div>
       <div class="bee-divider"></div>
       <div class="bee-row"><div class="bee-lbl"><span>Fresh / Youthful</span><b>44%</b></div><div class="bee-track"><div class="bee-bar under" style="width:44%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Would Greatly Miss</span><b>39%</b></div><div class="bee-track"><div class="bee-bar under" style="width:39%"></div></div></div>
@@ -2453,18 +2442,6 @@ window.addEventListener('load', function() {
       <div class="bee-row"><div class="bee-lbl"><span>Ever Purchased</span><b>21%</b></div><div class="bee-track"><div class="bee-bar out" style="width:21%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Innovative / Creative</span><b>64%</b></div><div class="bee-track"><div class="bee-bar out" style="width:64%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Catches Attention</span><b>48%</b></div><div class="bee-track"><div class="bee-bar out" style="width:48%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Talked About</span><b>50%</b></div><div class="bee-track"><div class="bee-bar par" style="width:50%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Recent Purchaser (Skincare)</span><b>6%</b></div><div class="bee-track"><div class="bee-bar par" style="width:6%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Trustworthy / Reliable</span><b>55%</b></div><div class="bee-track"><div class="bee-bar par" style="width:55%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Understands My Needs</span><b>46%</b></div><div class="bee-track"><div class="bee-bar par" style="width:46%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Scientific / Intelligent</span><b>30%</b></div><div class="bee-track"><div class="bee-bar par" style="width:30%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>A Brand I Trust</span><b>53%</b></div><div class="bee-track"><div class="bee-bar par" style="width:53%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Aspire To Use More Often</span><b>45%</b></div><div class="bee-track"><div class="bee-bar par" style="width:45%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Recent Purchaser</span><b>6%</b></div><div class="bee-track"><div class="bee-bar par" style="width:6%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Professional / Experienced</span><b>36%</b></div><div class="bee-track"><div class="bee-bar par" style="width:36%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Would Greatly Miss</span><b>41%</b></div><div class="bee-track"><div class="bee-bar par" style="width:41%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Luxury / Sophisticated</span><b>52%</b></div><div class="bee-track"><div class="bee-bar par" style="width:52%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Feel Proud To Use</span><b>46%</b></div><div class="bee-track"><div class="bee-bar par" style="width:46%"></div></div></div>
       <div class="bee-divider"></div>
       <div class="bee-row"><div class="bee-lbl"><span>Leading Beauty Authority</span><b>45%</b></div><div class="bee-track"><div class="bee-bar under" style="width:45%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Edgy / Bold</span><b>21%</b></div><div class="bee-track"><div class="bee-bar under" style="width:21%"></div></div></div>
@@ -2481,16 +2458,6 @@ window.addEventListener('load', function() {
       <div class="bee-row"><div class="bee-lbl"><span>Aspire To Use More Often</span><b>49%</b></div><div class="bee-track"><div class="bee-bar out" style="width:49%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Talked About</span><b>51%</b></div><div class="bee-track"><div class="bee-bar out" style="width:51%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Catches Attention</span><b>47%</b></div><div class="bee-track"><div class="bee-bar out" style="width:47%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Would Greatly Miss</span><b>44%</b></div><div class="bee-track"><div class="bee-bar par" style="width:44%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Approachable / Caring</span><b>32%</b></div><div class="bee-track"><div class="bee-bar par" style="width:32%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Ever Purchased</span><b>15%</b></div><div class="bee-track"><div class="bee-bar par" style="width:15%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Edgy / Bold</span><b>23%</b></div><div class="bee-track"><div class="bee-bar par" style="width:23%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Recent Purchaser (Skincare)</span><b>2%</b></div><div class="bee-track"><div class="bee-bar par" style="width:2%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Scientific / Intelligent</span><b>26%</b></div><div class="bee-track"><div class="bee-bar par" style="width:26%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Strong / Empowering</span><b>38%</b></div><div class="bee-track"><div class="bee-bar par" style="width:38%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Recommend To Others</span><b>46%</b></div><div class="bee-track"><div class="bee-bar par" style="width:46%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Feel Proud To Use</span><b>46%</b></div><div class="bee-track"><div class="bee-bar par" style="width:46%"></div></div></div>
-      <div class="bee-row"><div class="bee-lbl"><span>Understands My Needs</span><b>41%</b></div><div class="bee-track"><div class="bee-bar par" style="width:41%"></div></div></div>
       <div class="bee-divider"></div>
       <div class="bee-row"><div class="bee-lbl"><span>Leading Beauty Authority</span><b>45%</b></div><div class="bee-track"><div class="bee-bar under" style="width:45%"></div></div></div>
       <div class="bee-row"><div class="bee-lbl"><span>Recent Purchaser</span><b>2%</b></div><div class="bee-track"><div class="bee-bar under" style="width:2%"></div></div></div>
