@@ -4267,6 +4267,20 @@ window.addEventListener('load', function() {
     &rarr;
    </span>
   </a>
+  <div id="ctaToast" aria-live="polite" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:#241033;color:#fff;padding:13px 24px;border-radius:30px;font-size:.92rem;font-weight:600;box-shadow:0 12px 34px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;z-index:99999;">Copied beauty@beyondinsights.com to your clipboard</div>
+  <script>
+  (function(){
+    var toast=document.getElementById('ctaToast');
+    function show(){ if(!toast)return; toast.style.opacity='1'; toast.style.transform='translateX(-50%) translateY(0)'; clearTimeout(toast._t); toast._t=setTimeout(function(){ toast.style.opacity='0'; toast.style.transform='translateX(-50%) translateY(20px)'; },3200); }
+    var mailLinks=document.querySelectorAll('a[href^="mailto:"]');
+    Array.prototype.forEach.call(mailLinks,function(el){
+      el.addEventListener('click',function(){
+        try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText('beauty@beyondinsights.com'); } }catch(e){}
+        show();
+      });
+    });
+  })();
+  </script>
   <!-- ░░░ SCRIPTS ░░░ -->
   <script>
    /* ---------- SECTION SMOOTH‑SCROLL ---------- */
