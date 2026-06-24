@@ -3695,7 +3695,7 @@ window.addEventListener('load', function() {
 
   <div class="cp-sim-h"><span class="pill">Interactive</span><h3>Gap-Closure Planner</h3></div>
   <div class="cp-sim" id="cpSim">
-    <p class="lead">These are the attributes where Clinique falls below expectation, straight from the expectancy analysis. Each slider <b>starts at Clinique&rsquo;s actual score today</b>. Drag it up toward the category average (shown on each row), or past it, to set a target. The dial shows the average across these gaps.</p>
+    <p class="lead">These are the attributes where Clinique falls below expectation, straight from the expectancy analysis. Each slider <b>starts at Clinique&rsquo;s actual score today</b>. Drag it up toward the category average (shown on each row), or past it, to set a target. The dial shows projected Purchase Consideration, using illustrative driver weights.</p>
     <div class="cp-sim-grid">
       <div class="cp-sim-controls">
         <div class="cp-sim-row">
@@ -3741,13 +3741,13 @@ window.addEventListener('load', function() {
         <button class="cp-sim-reset" id="simReset">Reset to today</button>
       </div>
       <div class="cp-sim-out">
-        <div class="cp-sim-cap">Average across these gap attributes</div>
-        <div class="cp-sim-big" id="simNow">31%</div>
-        <div class="cp-sim-delta" id="simDelta">+0 pts vs. 31% today</div>
-        <div class="cp-sim-bar"><div class="cp-sim-tick" style="left:41%"></div><div class="cp-sim-fill" id="simFill" style="width:31%"></div></div>
-        <div class="cp-sim-scale"><span>0%</span><span>&#9650; category parity 41%</span><span>100%</span></div>
-        <div class="cp-sim-split" id="simSplit"><b>0 of 8</b> attributes at or above category parity.</div>
-        <div style="font-size:.74rem;color:rgba(255,255,255,.62);margin-top:16px;line-height:1.5;">Consideration today is <b style="color:#e4c06a;">66%</b>, about 16 pts below expectation. How far closing these gaps moves consideration is what the SEM quantifies next. This view sizes the gaps; it does not assume the lift.</div>
+        <div class="cp-sim-cap">Projected Purchase Consideration</div>
+        <div class="cp-sim-big" id="simNow">66%</div>
+        <div class="cp-sim-delta" id="simDelta">+0 pts vs. 66% today</div>
+        <div class="cp-sim-bar"><div class="cp-sim-tick" style="left:66%"></div><div class="cp-sim-fill" id="simFill" style="width:66%"></div></div>
+        <div class="cp-sim-scale"><span>0%</span><span>&#9650; today 66%</span><span>100%</span></div>
+        <div class="cp-sim-split" id="simSplit"><b>0 of 8</b> gaps improved &middot; modeled with illustrative driver weights.</div>
+        <div style="font-size:.74rem;color:rgba(255,255,255,.62);margin-top:16px;line-height:1.5;">Driver weights are illustrative, with innovation and aspiration weighted highest. The fielded SEM will replace them with exact coefficients.</div>
       </div>
     </div>
   </div>
@@ -3756,22 +3756,22 @@ window.addEventListener('load', function() {
     var root=document.getElementById('cpSim');
     if(!root)return;
     var ranges=root.querySelectorAll('.cp-sim-range');
-    var baseAvg=31, parity=41;
+    var base=66, cap=96;
+    var beta={innov:0.20,fresh:0.15,aspire:0.15,miss:0.13,needs:0.11,strong:0.08,edgy:0.07,approach:0.08};
     function recalc(){
-      var sum=0,n=0,atPar=0;
+      var lift=0,moved=0;
       Array.prototype.forEach.call(ranges,function(r){
         var k=r.getAttribute('data-key'),cur=parseFloat(r.getAttribute('data-cur')),avg=parseFloat(r.getAttribute('data-avg')),val=parseFloat(r.value);
-        sum+=val;n++;
-        if(val>=avg)atPar++;
+        var d=(val-cur)*(beta[k]||0.1); lift+=d; if(val>cur)moved++;
         var p=document.getElementById('pct_'+k);if(p)p.textContent=val+'%';
         var c=document.getElementById('ctr_'+k);
-        if(c)c.textContent='today '+cur+'%, category average '+avg+'%, +'+(val-cur)+' pts';
+        if(c)c.innerHTML='+'+(val-cur)+' pts on attribute &nbsp;&rarr;&nbsp; <b style="color:#c98a10;">+'+d.toFixed(1)+'</b> pts consideration';
       });
-      var now=sum/n;
-      document.getElementById('simNow').textContent=Math.round(now)+'%';
-      document.getElementById('simDelta').textContent='+'+Math.round(now-baseAvg)+' pts vs. '+baseAvg+'% today';
-      document.getElementById('simFill').style.width=now+'%';
-      document.getElementById('simSplit').innerHTML='<b>'+atPar+' of '+n+'</b> attributes at or above category parity.';
+      var proj=Math.min(base+lift,cap);
+      document.getElementById('simNow').textContent=Math.round(proj)+'%';
+      document.getElementById('simDelta').textContent='+'+Math.round(proj-base)+' pts vs. '+base+'% today';
+      document.getElementById('simFill').style.width=proj+'%';
+      document.getElementById('simSplit').innerHTML='<b>'+moved+' of 8</b> gaps improved &middot; modeled with illustrative driver weights.';
     }
     Array.prototype.forEach.call(ranges,function(r){r.addEventListener('input',recalc);});
     var rb=document.getElementById('simReset');
@@ -3781,8 +3781,8 @@ window.addEventListener('load', function() {
   </script>
 
   <div style="display:flex;align-items:center;gap:14px;background:#f3eef9;border:1.5px dashed #b9a2e0;border-radius:12px;padding:16px 20px;margin-top:16px;color:#5d4a78;font-size:.9rem;line-height:1.45;">
-    <span style="font-size:1.4rem;filter:grayscale(1);opacity:.7;">&#128274;</span>
-    <div><b style="color:#4a2e7a;">SEM-estimated consideration lift appears here</b> once the client&rsquo;s model coefficients are applied. This planner sizes the gaps; it does not estimate business impact yet.</div>
+    <span style="font-size:1.4rem;">&#9888;</span>
+    <div>The projected lift uses <b style="color:#4a2e7a;">illustrative driver weights</b> to show the shape of the model. The client&rsquo;s fielded SEM replaces them with exact coefficients.</div>
   </div>
 
   <p class="cp-foot">All Clinique figures (current %, category average, and expectancy skew) are from the brand-performance tracker for Make-up and Skincare consumers. The expectancy skew shows how far Clinique sits above or below the score expected for a brand of its familiarity and stature.</p>
